@@ -1,6 +1,6 @@
 package D_Boxing;
 
-public class B_IntegerAdd {
+public class B_Unboxing {
 	public static void main(String[] args) {
         Integer num1 = new Integer(7);
         Integer num2 = new Integer(3);

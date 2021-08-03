@@ -1,4 +1,4 @@
-package Generic;
+package A_Generic;
 
 class LandAnimal {
 	int repeat = 1;

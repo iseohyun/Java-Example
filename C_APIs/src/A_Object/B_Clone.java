@@ -1,5 +1,28 @@
 package A_Object;
 
+class Animal implements Cloneable {
+	String name = "³ªºñ";
+	
+	Animal(String init){
+		name = init;
+	}
+	
+	public void info() {
+		System.out.println("Name : " + name);
+	}
+	
+	public Object clone() {
+		Animal animal;
+		try {
+			animal = (Animal)super.clone();
+			return animal;
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+			return null;
+		}		
+	}
+}
+
 public class B_Clone {
 	public static void main(String[] args) {
 		Animal cat01 = new Animal("Ã¶¼ö");

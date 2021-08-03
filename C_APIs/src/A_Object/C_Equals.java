@@ -5,7 +5,7 @@ import A_Object.Animal;
 public class C_Equals {
 	public static void main(String [] str) {
 		Animal cat01 = new Animal("감자");
-		Animal cat02 = new Animal("오이");
+		Animal cat02 = new Animal("감자");
 		
 		System.out.println(cat01.equals(cat02));
 		cat01.info();

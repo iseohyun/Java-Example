@@ -1,4 +1,4 @@
-package Generic;
+package A_Generic;
 class A{
 	String color;
 	A(String init) {
