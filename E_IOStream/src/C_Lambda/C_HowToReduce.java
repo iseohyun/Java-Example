@@ -9,7 +9,13 @@ public class C_HowToReduce {
 		    }
 		};
 
-		Movable movable2 = (str) -> System.out.println("gogo move move" + str);
+		Movable movable2 = (str) -> System.out.println("move move gogo" + str);
+		
+		Car c = new Car();
+		
+		movable.move(" : 01");
+		movable2.move(" : 02");
+		c.move(" : 03");
 	}
 }
 interface Movable{

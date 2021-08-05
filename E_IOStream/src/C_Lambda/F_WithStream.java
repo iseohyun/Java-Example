@@ -24,7 +24,7 @@ class Dog {
     }
 }
 
-public class E3_ {
+public class F_WithStream {
 	public static void main(String [] args) {
 		List<String> names = Arrays.asList("±è°©¼ø", "±è°©µ¹");
 		List<Dog> dogs1 = names.stream().map(x -> new Dog(x)).collect(Collectors.toList());
