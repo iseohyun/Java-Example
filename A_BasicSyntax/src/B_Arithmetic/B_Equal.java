@@ -1,7 +1,7 @@
 package B_Arithmetic;
 
 public class B_Equal {
-	public static void main(String[] arg) {
+	public static void main(String[] args) {
 		int a = 3;
 		int res1, res2;
 		

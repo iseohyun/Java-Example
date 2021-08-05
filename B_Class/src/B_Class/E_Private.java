@@ -1,25 +1,27 @@
 package B_Class;
 
-class ClassPrivate{
-	int val1;
-	private int val2;
-	
-	void setVal2(int val) {
-		val2 = val;
-	}
-	
-	void showAll() {
-		System.out.println("val1 : " + val1 + " / val2 : " + val2);
-	}
-}
-
 public class E_Private {
-	public static void main (String[] args){
-		ClassPrivate cp = new ClassPrivate();
-		cp.val1 = 10;
-		//cp.val2 = 10;
-		cp.setVal2(20);
+	static class Class1{
+		int val1;
+		private int val2;
 		
-		cp.showAll();
+		void setVal2(int val) {
+			val2 = val;
+		}
+		
+		void showAll() {
+			System.out.println("val1 : " + val1 + " / val2 : " + val2);
+		}
+	}
+	
+	public static void main (String[] args){
+		Class1 c1 = new Class1();
+		c1.val1 = 10;
+		
+		//c1.val2 = 10;
+		
+		c1.setVal2(20);
+		
+		c1.showAll();
 	}
 }

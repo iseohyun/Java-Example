@@ -1,7 +1,7 @@
 package A_BasicSyntax;
 
 public class D2_VarBytes {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		System.out.println("byte: " + Byte.BYTES);
 		System.out.println("char: " + Character.BYTES);
 		System.out.println("int: " + Integer.BYTES);

@@ -1,7 +1,7 @@
 package A_Function;
 
 public class D2_CallCallCall {
-	public static void main(String argv[]) {
+	public static void main(String[] args) {
 		func1();
 	}
 
@@ -19,6 +19,7 @@ public class D2_CallCallCall {
 	
 	static void func3() {
 		System.out.println("3: 시작한다.");
+		// TODO : func1()을 호출한다면 어떤 일이 발생할까?
 		System.out.println("3: 끝난다.");
 	}
 }

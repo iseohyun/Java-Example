@@ -1,7 +1,7 @@
 package B_Arithmetic;
 
 public class E_BitCompare {
-	public static void main(String[] arg) {
+	public static void main(String[] args) {
 		int a = 8, b = -8;
 
 		System.out.println("~ ¿¬»ê : "+ ~a);

@@ -1,7 +1,7 @@
 package A_BasicSyntax;
 
 public class D_Variable {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		int a;
 		int abcd;
 		int abcd123;
@@ -9,5 +9,7 @@ public class D_Variable {
 		int ABCD;
 		int ABCDabcd123_$;
 		//int 1234ABCD;
+		
+		// TODO : 변수 'num01'를 선언하세요.  
 	}
 }

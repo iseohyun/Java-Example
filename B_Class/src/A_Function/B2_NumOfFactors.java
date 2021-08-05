@@ -1,10 +1,10 @@
 package A_Function;
 
 public class B2_NumOfFactors {
-	public static void main(String argv[]) {
+	public static void main(String[] args) {
 		func1(1);
-		func2(1, 2);
 		func3(1, 2, 3);
+		func2(1, 2);		
 	}
 
 	static void func1(int input) {

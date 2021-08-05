@@ -1,7 +1,7 @@
 package B_Arithmetic;
 
 public class A1_Bracket {
-	public static void main(String[] arg) {
+	public static void main(String[] args) {
 
 		int r;
 		r = 2+3*6;

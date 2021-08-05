@@ -1,7 +1,7 @@
 package A_Function;
 
 public class D3_Calls {
-	public static void main(String argv[]) {
+	public static void main(String[] args) {
 		func1();
 	}
 

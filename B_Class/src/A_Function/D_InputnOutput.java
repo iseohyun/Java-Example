@@ -1,7 +1,7 @@
 package A_Function;
 
 public class D_InputnOutput {
-	public static void main(String argv[]) {
+	public static void main(String[] args) {
 		int result = 0;
 		result = fun1(1,2);
 		System.out.println(result);

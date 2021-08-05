@@ -1,7 +1,7 @@
 package A_Function;
 
 public class C_Return {
-	public static void main(String argv[]) {
+	public static void main(String[] args) {
 		int output = 0;
 		output = func1(1);
 		System.out.println("Ãâ·Â : " + output);

@@ -1,20 +1,21 @@
 package B_Class;
-class Arr{
-	int a = 0;
-	char c = 'a';
-}
 
 public class F_Array {
-	public static void main (String [] args) {
-		Arr[] array1 = new Arr[5];
-		for(int i = 0; i < array1.length; i++) {
-			array1[i] = new Arr();
-			array1[i].a = i * 2;
-			array1[i].c = (char)('A' + i);
+	static class Class1{
+		int var = 0;
+		char ch = 'a';
+	}
+
+	public static void main (String[] args) {
+		Class1[] arr1 = new Class1[5];
+		for(int i = 0; i < arr1.length; i++) {
+			arr1[i] = new Class1();
+			arr1[i].var = i * 2;
+			arr1[i].ch = (char)('A' + i);
 		}
 		
-		for(int i = 0; i < array1.length; i++) {
-			System.out.println("[ " + array1[i].a + " ] " + array1[i].c);
+		for(Class1 arr : arr1) {
+			System.out.println("[ " + arr.var + " ] " + arr.ch);
 		}
 	}
 }

@@ -1,7 +1,7 @@
 package B_Arithmetic;
 
 public class D2_Compare {
-	public static void main(String[] arg) {
+	public static void main(String[] args) {
 		int num1 = 8, num2 = -8;
 
 		System.out.println("~ ¿¬»ê : "+ ~num1);

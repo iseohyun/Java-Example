@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class D4_LottoQuiz {
 	static int[] lotto = new int[6];
-	public static void main(String argv[]) {
+	public static void main(String[] args) {
 		genLotto();		// 로또 번호를 생성한다.
 		sort();			// 낮은 번호부터 정렬한다.
 		printLotto();	// 로또 번호를 프린터한다. 

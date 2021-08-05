@@ -1,7 +1,7 @@
 package A_BasicSyntax;
 
 public class E_Typecast {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		double d1 = 10;
 		double d2 = 10 + 3.14;
 
@@ -13,5 +13,8 @@ public class E_Typecast {
 
 		System.out.println(n/3);
 		System.out.println((float)n/3);
+		System.out.println(n/3.0);
+		
+		// TODO : 14 ~ 16줄의 차이점을 말해봅시다.
 	}
 }

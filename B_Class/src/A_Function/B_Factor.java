@@ -1,7 +1,7 @@
 package A_Function;
 
 public class B_Factor {
-	public static void main(String argv[]) {
+	public static void main(String[] args) {
 		func(7);
 		func(3);
 		func(1);

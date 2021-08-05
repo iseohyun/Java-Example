@@ -1,13 +1,12 @@
 package B_Class;
 
-class ClassInit {
-	ClassInit(){
-		System.out.println("호출 될까?");
-	}
-}
-
 public class B_initialize {
+	static class Class1 {
+		Class1(){
+			System.out.println("생성시 호출");
+		}
+	}
 	public static void main(String[] args) {
-		ClassInit class1 = new ClassInit();
+		Class1 c1 = new Class1();
 	}
 }

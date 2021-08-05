@@ -1,7 +1,7 @@
 package A_Function;
 
 public class A_Simple {
-	public static void main(String argv[]) {
+	public static void main(String[] args) {
 		func1();
 		func2();
 		func1();

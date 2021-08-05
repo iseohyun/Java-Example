@@ -1,7 +1,7 @@
 package A_Function;
 
 public class E3_Factors {
-	public static void main(String [] argv) {
+	public static void main(String[] args) {
 		func1(val);
 		func1(val);
 		func1(val);

@@ -1,7 +1,7 @@
 package B_Arithmetic;
 
 public class C_plusplus {
-	public static void main(String[] arg) {
+	public static void main(String[] args) {
 		int a = 3;
 		System.out.println("1 : " + a++);
 		System.out.println("* : " + a);

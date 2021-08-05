@@ -15,5 +15,12 @@ public class D2_DblArray2 {
 			}
 			System.out.println();
 		}
+		
+		// TODO : 아래와 같이 출력되도록 변경해보세요.
+		// hint : 읽어오세요. -> x/100 -> x*x
+		//1 4 
+		//9 16 25 36 
+		//49 64 81 
+		//100 
 	}
 }

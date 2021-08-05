@@ -1,22 +1,15 @@
 package B_Class;
 
-class ClassInits {
-	ClassInits(){
-		System.out.println("호출 될까?");
-	}
-	ClassInits(int i){
-		System.out.println("나는 누구?" + i);
-	}
-	ClassInits(char c){
-		System.out.println("여긴 어디?" + c);
+public class B1_overloading {
+	static class Class1 {
+		Class1()		{ System.out.println("전달사항 없음");	}
+		Class1(int i)	{ System.out.println("숫자 : " + i);	}
+		Class1(char c)	{ System.out.println("문자 : " + c);	}
 	}
 	
-}
-
-public class B1_overloading {
 	public static void main(String[] args) {
-		ClassInits class1 = new ClassInits();
-		ClassInits class2 = new ClassInits(1);
-		ClassInits class3 = new ClassInits('A');
+		Class1 c1 = new Class1();
+		Class1 c2 = new Class1(1);
+		Class1 c3 = new Class1('A');
 	}
 }

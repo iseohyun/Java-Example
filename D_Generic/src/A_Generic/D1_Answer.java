@@ -1,5 +1,6 @@
 package A_Generic;
-import java.util.*;
+
+import java.util.ArrayList;
 
 class AnimalListAns<T> {
     ArrayList<T> al = new ArrayList<T>();

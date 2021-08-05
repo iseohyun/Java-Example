@@ -1,5 +1,6 @@
 package A_Generic;
-import java.util.*;
+
+import java.util.ArrayList;
 
 class Duck extends LandAnimal {
 	Duck(){

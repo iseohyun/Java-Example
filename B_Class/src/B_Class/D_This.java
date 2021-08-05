@@ -1,22 +1,24 @@
 package B_Class;
 
-class ClassThis{
-	int num = 10;
-	void fun1(int num) {
-		num = num;
-	}
-	void fun2(int num) {
-		this.num = num;
-	}
-}
-
 public class D_This {
+	static class Class1 {
+		int var = 10;
+		void func1(int var) {
+			this.var = var;
+		}
+		void func2(int var) {
+			var = var;
+		}
+	}
 	public static void main(String[] args) {
-		ClassThis ct = new ClassThis();
-		ct.fun1(20);
-		System.out.println("현재 값 : " + ct.num);
-
-		ct.fun2(30);
-		System.out.println("현재 값 : " + ct.num);
+		Class1 c1 = new Class1();
+		
+		System.out.println("1 : " + c1.var);
+		
+		c1.func1(20);
+		System.out.println("2 : " + c1.var);
+		
+		c1.func2(30);
+		System.out.println("3 : " + c1.var);
 	}
 }

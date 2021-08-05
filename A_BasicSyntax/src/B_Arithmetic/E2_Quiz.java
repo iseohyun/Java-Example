@@ -1,7 +1,7 @@
 package B_Arithmetic;
 
 public class E2_Quiz {
-	public static void main(String[] arg) {
+	public static void main(String[] args) {
 		int a = 64, r = 0;
 
 		// Quiz1. shift(<<, >>)연산을 통해서, 8을 출력하세요.

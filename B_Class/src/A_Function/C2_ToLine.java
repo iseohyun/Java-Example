@@ -1,7 +1,7 @@
 package A_Function;
 
 public class C2_ToLine {
-	public static void main(String argv[]) {
+	public static void main(String[] args) {
 		System.out.println("Ãâ·Â : " + func1(1));
 	}
 

@@ -1,7 +1,7 @@
 package B_Arithmetic;
 
 public class A2_Quiz {
-	public static void main(String[] arg) {
+	public static void main(String[] args) {
 		int a = 2, b = 3, c = 6;
 		int r, r2 = 100, r3 = 5;
 

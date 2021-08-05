@@ -1,15 +1,13 @@
 package B_Class;
 
-class Mothod {
-	void func1() {
-		System.out.println("클레스 함수 = 메소드");
-	}
-}
-
 public class A1_Method {
+	static class Class1{
+		void func1() {};
+	}
+	
 	public static void main(String[] args) {
-		Mothod class1 = new Mothod();
+		Class1 c1 = new Class1();
 		
-		class1.func1();
+		c1.func1();
 	}
 }

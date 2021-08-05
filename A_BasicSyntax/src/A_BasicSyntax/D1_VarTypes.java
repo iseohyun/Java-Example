@@ -1,7 +1,7 @@
 package A_BasicSyntax;
 
 public class D1_VarTypes {
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		byte b = 1;
 		System.out.println("byte: " + b);
 		
@@ -22,5 +22,8 @@ public class D1_VarTypes {
 		
 		double d = 6.5;
 		System.out.println("double: " + d);
+		
+		// TODO 1: 정수타입으로 변수를 선언하고 99999를 대입하세요.
+		// TODO 2: 소수타입으로 변수를 선언하고 3.14를 대입하세요.
 	}
 }

@@ -13,5 +13,7 @@ public class B_Array {
 			grade[i] += 10;
 			System.out.println(grade[i]);
 		}
+		
+		// TODO : 모든 점수가 90점이 되도록 수정하세요.
 	}
 }
