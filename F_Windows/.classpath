@@ -5,6 +5,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="A_AWT"/>
+	<classpathentry kind="src" path="B_SWING"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
