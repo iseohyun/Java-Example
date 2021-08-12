@@ -8,11 +8,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -23,21 +23,22 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JTextArea;
 
+
 public class B_Connect extends JFrame implements KeyListener, ActionListener{
 	GridBagLayout grid = new GridBagLayout();
-	JTextArea view = new JTextArea(20, 40);
+	static JTextArea view = new JTextArea(20, 40);
 	JTextArea input = new JTextArea(10, 40);
 	JLabel pTxt = new JLabel("전할 메시지 :(연결안됨)");
 	JMenu menu = new JMenu("연결");
 	JMenuItem connect = new JMenuItem("연결하기");
 	JMenuItem discon = new JMenuItem("끊기");
+	JMenuItem isConnect = new JMenuItem("확인");
 	JMenuBar bar = new JMenuBar();
 	
 	static ServerSocket server = null;
-	static Socket client = null;
-	static BufferedWriter sendbuf;
-	static BufferedReader readbuf;
-	final static int DEFAULT_PORT = 7776;
+	static Socket client = new Socket();
+	static OutputStream Write;
+	final static int DEFAULT_PORT = 4040;
 	
 	B_Connect() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -49,6 +50,8 @@ public class B_Connect extends JFrame implements KeyListener, ActionListener{
 		connect.addActionListener(this);
 		menu.add(discon);
 		discon.addActionListener(this);
+		menu.add(isConnect);
+		isConnect.addActionListener(this);
 		
 		SetPos(view, 0, 0);
 		view.setEnabled(false);
@@ -76,31 +79,19 @@ public class B_Connect extends JFrame implements KeyListener, ActionListener{
 		add(c);
 	}
 	
-	public void Connect(String address, int port) {
-		try {
-			client = new Socket(address, port);
-			readbuf= new BufferedReader(new InputStreamReader(client.getInputStream()));
-			view.setText(view.getText() + "\n" + readbuf.readLine());
-		} catch (IOException e) {
-			System.out.println("연결되지 않았습니다.");
-		}finally {
-			
-		}
-	}
-	
 	public static void main(String[] args) {
 		new B_Connect();
-		
-		while(true) {
-			try {
-				server = new ServerSocket(DEFAULT_PORT);
-				client = server.accept();
-	
-				sendbuf = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
-				sendbuf.write("연결되었습니다.");
-				sendbuf.flush();
-			}catch(IOException e){
+		view.setText("Server Open : " + DEFAULT_PORT);
+		try {
+			server = new ServerSocket();
+			while(true) {
+				server.bind(new InetSocketAddress(InetAddress.getLocalHost(), DEFAULT_PORT));
+				Socket client = server.accept();
+
+				Peer ust = new Peer(client, view);
+				ust.start();
 			}
+		}catch(IOException e){
 		}
 	}
 
@@ -116,11 +107,11 @@ public class B_Connect extends JFrame implements KeyListener, ActionListener{
 		if(e.getKeyCode() == '\n') {
 			view.setText(view.getText() + "\n 나 : \n" + input.getText());
 			try {
-				sendbuf.write(input.getText().toCharArray());
-				sendbuf.flush();
+				byte[] as = input.getText().getBytes("UTF-8");
+				Write.write(as);
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
-				view.setText(view.getText()+"\n"+"메시지를 전달 할 수 없습니다.");
+				e1.printStackTrace();
 			}
 		}
 	}
@@ -135,23 +126,44 @@ public class B_Connect extends JFrame implements KeyListener, ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		if(e.getSource().equals(connect)){
-			String[] add =	input.getText().split("/");
-			if(add[0] == "") add[0] = "127.0.0.1";
-			int port;
 			try {
-				port = Integer.parseInt(add[1]);
-			}catch(Exception ee) {
-				port = DEFAULT_PORT;
+				client.connect(new InetSocketAddress(InetAddress.getLocalHost(), DEFAULT_PORT));
+				Write = client.getOutputStream();
+				view.setText("연결되었습니다.");
+				Write.write("연결되었습니다.".getBytes());
+				
+				Peer ust = new Peer(client, view);
+				ust.start();
+			} catch (IOException e1) {
 			}
-			Connect(add[0], port);
-		}else {
+		}else if(e.getSource().equals(isConnect)){
+			if(client.isConnected()) {
+				view.setText("연결 상태");
+			}else {
+				view.setText("비연결 상태");
+			}
+		}
+	}
+}
+
+class Peer extends Thread {
+	Socket SS;
+	JTextArea view;
+	Peer(Socket SS, JTextArea view) {
+		this.SS = SS;
+		this.view = view;
+	}
+	
+	public void run() {
+		while(true) {
 			try {
-				view.setText(view.getText()+"\n"+"연결을 해제합니다.");
-				client.close();
-				server.close();
-			}catch(IOException ee) {
+				InputStream IS = SS.getInputStream();
+				byte[] bt = new byte[256];
+				int size = IS.read(bt);
+				String buf = new String(bt, 0, size, "UTF-8");
+				view.setText(view.getText() + "\n" +buf);					
+			} catch (IOException e) {
 			}
 		}
 	}

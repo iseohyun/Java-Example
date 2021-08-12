@@ -9,12 +9,12 @@ import javax.swing.JTree;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 
-public class C_Tree extends JFrame implements TreeSelectionListener{
+public class E_Tree extends JFrame implements TreeSelectionListener{
 	JPanel pn = new JPanel();
 	JTree tr = new JTree();
 	JTextField  path = new JTextField();
 	
-	C_Tree(){
+	E_Tree(){
 		setSize(300, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
@@ -31,7 +31,7 @@ public class C_Tree extends JFrame implements TreeSelectionListener{
 	}
 	
 	public static void main(String[] args) {
-		new C_Tree();
+		new E_Tree();
 	}
 
 	@Override

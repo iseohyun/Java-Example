@@ -16,7 +16,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 
-public class D_Table extends JFrame implements ActionListener {
+public class F_Table extends JFrame implements ActionListener {
 	JPanel p = new JPanel();
 	JPanel pBtn = new JPanel();
 	JScrollPane pTb;
@@ -30,7 +30,7 @@ public class D_Table extends JFrame implements ActionListener {
 	JTextField inputMovie = new JTextField();
 	JTextField inputInfo = new JTextField();
 	
-	D_Table() {
+	F_Table() {
 		// 전체 설정
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
@@ -88,7 +88,7 @@ public class D_Table extends JFrame implements ActionListener {
 	}
 	
 	public static void main(String[] args) {
-		new D_Table();
+		new F_Table();
 	}
 
 	@Override
