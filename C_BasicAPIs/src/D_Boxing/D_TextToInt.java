@@ -5,11 +5,11 @@ public class D_TextToInt {
 		String num = "1234";
 		System.out.println(num + 1);
 		
-		Integer i = new Integer(Integer.parseInt(num));
+		Integer i = Integer.parseInt(num);
 		System.out.println(i + 1);
 		
-		System.out.println(i.toBinaryString(i));
-		System.out.println(i.toHexString(i).toUpperCase());
-		System.out.println(i.toOctalString(i));
+		System.out.println(Integer.toBinaryString(i));
+		System.out.println(Integer.toHexString(i).toUpperCase());
+		System.out.println(Integer.toOctalString(i));
 	}
 }

@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class J_Image extends JFrame{
+	private static final long serialVersionUID = 1L;
+	
 	J_Image() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
@@ -18,6 +20,7 @@ public class J_Image extends JFrame{
 		add(img);
 		pack();
 	}
+	
 	public static void main(String[] args) {
 		new J_Image();
 	}

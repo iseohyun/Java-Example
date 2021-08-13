@@ -1,5 +1,6 @@
 package D_Extends;
 
+@SuppressWarnings("unused")
 public class A3_Private {
 	static class Parent {
 		private int a = 10;

@@ -12,7 +12,7 @@ public class D1_VarTypes {
 		System.out.println("int: " + i);
 		
 		short s = 3;
-		System.out.println("short: " + 4);
+		System.out.println("short: " + s);
 
 		long l = 4;
 		System.out.println("long: " + l);

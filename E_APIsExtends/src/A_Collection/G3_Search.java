@@ -3,10 +3,10 @@ package A_Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public class G4_Search {
+public class G3_Search {
 	public static void main(String[] args) {
 
-		Map<String, Object> hm = new HashMap();
+		Map<String, Object> hm = new HashMap<String, Object>();
 		hm.put("num", 1);
 		hm.put("name", "iseohyun");
 		hm.put("email", "iseohyun@hanmail.net");

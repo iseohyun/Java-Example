@@ -9,7 +9,6 @@ import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
@@ -22,6 +21,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
 public class A_TextOut extends JFrame{
+	private static final long serialVersionUID = 1L;
 	JPanel pTextField = new JPanel();
 	JPanel pPlainText = new JPanel(); 
 	JPanel pStyledText = new JPanel();
@@ -82,11 +82,8 @@ public class A_TextOut extends JFrame{
 		labelFormatted = new JLabel("Formatted Text : ");
 		pTextField.add(labelFormatted);
 		DateFormat df = new SimpleDateFormat("yyyy.mm.dd");
-		Calendar today = Calendar.getInstance();
-		
-		System.out.println();
 		FormaedText = new JFormattedTextField(df);
-		FormaedText.setText(today.getTime().toLocaleString().substring(0, 11));
+		FormaedText.setText("2020.12.31");
 		FormaedText.revalidate();
 		pTextField.add(FormaedText);
 		

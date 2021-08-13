@@ -1,6 +1,5 @@
 package A_Component;
 
-import java.awt.CheckboxGroup;
 import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -15,6 +14,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class B_Button extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
 	JRadioButton rdoFemale = new JRadioButton("여성");
 	JRadioButton rdoMale = new JRadioButton("남성");
 	ButtonGroup Sex = new ButtonGroup();
@@ -50,17 +50,17 @@ public class B_Button extends JFrame implements ActionListener{
 
 		c.gridx = 1;		c.gridy = 2;
 		c.gridwidth = 2;
-		c.fill = c.BOTH;
+		c.fill = GridBagConstraints.BOTH;
 		Grid.setConstraints(btnSend, c);
 		add(btnSend);
 		btnSend.setEnabled(false);
 		
 		c.gridx = 1;		c.gridy = 3;
 		c.gridwidth = 2;
-//		c.fill = c.BOTH;
+		c.fill = GridBagConstraints.BOTH;
 		Grid.setConstraints(view, c);
 		add(view);
-		view.disable();
+		view.setEnabled(false);
 		view.setDisabledTextColor(Color.DARK_GRAY);
 		
 		// Event Setting

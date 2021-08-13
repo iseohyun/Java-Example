@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class C_Random {
 	public static void main(String [] args) {
-		double a = Math.random();
 		System.out.println(Math.random());
 		System.out.println(Math.random());
 		System.out.println(Math.random());

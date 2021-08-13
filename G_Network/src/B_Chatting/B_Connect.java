@@ -25,6 +25,7 @@ import javax.swing.JTextArea;
 
 
 public class B_Connect extends JFrame implements KeyListener, ActionListener{
+	private static final long serialVersionUID = 1L;
 	GridBagLayout grid = new GridBagLayout();
 	static JTextArea view = new JTextArea(20, 40);
 	JTextArea input = new JTextArea(10, 40);

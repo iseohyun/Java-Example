@@ -2,7 +2,7 @@ package D_Boxing;
 
 public class A_Boxing {
 	public static void main(String[] args) {
-		Integer num = new Integer(17);
+		Integer num = 17;
 		int n = num.intValue();
 		System.out.println(n);
 

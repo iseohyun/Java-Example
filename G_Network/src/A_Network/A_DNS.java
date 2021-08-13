@@ -2,7 +2,6 @@ package A_Network;
 
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 public class A_DNS {
 	public static void main(String[] args) throws IOException{

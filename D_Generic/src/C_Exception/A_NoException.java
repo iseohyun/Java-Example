@@ -3,7 +3,9 @@ package C_Exception;
 public class A_NoException {
 	public static void main(String [] args)
 	{
-		byte[] list = {'a', 'b', 'c'};
-//		System.out.write(list);
+		int[] list = new int[3];
+		
+		for(int i = 0; i < 4; i++)
+			list[i] = i;
 	}
 }

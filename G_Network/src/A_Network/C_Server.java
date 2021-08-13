@@ -8,6 +8,7 @@ import java.net.Socket;
 
 public class C_Server {
 	public static void main(String[] args) throws IOException{
+		@SuppressWarnings("resource")
 		ServerSocket serv = new ServerSocket(7777);
 		
 		while(true) {

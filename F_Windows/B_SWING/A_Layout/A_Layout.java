@@ -5,9 +5,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class A_Layout extends JFrame{
+	private static final long serialVersionUID = 1L;
 	final int BUTTON_ = 10;
 	JPanel pn = new JPanel();
 	JButton[] bt = new JButton[10];
+	
 	A_Layout() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		

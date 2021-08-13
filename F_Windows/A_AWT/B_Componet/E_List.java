@@ -7,12 +7,15 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
 public class E_List extends Frame implements ItemListener{
-	private List list1, list2;
+	private static final long serialVersionUID = 1L;
+	List list1 = new List(5, true);
+	List list2 = new List(3);
 	
 	E_List() {
-		list1 = new List(5, true);
-		list2 = new List(3);
-		
+		setLayout(new FlowLayout());
+		add(list1);
+		add(list2);
+
 		list1.add("사과");
 		list1.add("배");
 		list1.add("포도");
@@ -25,12 +28,9 @@ public class E_List extends Frame implements ItemListener{
 		list2.add("볶음면");
 		list2.add("짬짜면");
 		
-		setLayout(new FlowLayout());
-		add(list1);
-		add(list2);
-		
 		list1.addItemListener(this);
 		list2.addItemListener(this);
+		
 		addWindowListener(new WindowExit(this));
 		
 		setSize(300, 400);

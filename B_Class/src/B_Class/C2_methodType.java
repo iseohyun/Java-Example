@@ -1,5 +1,6 @@
 package B_Class;
 
+@SuppressWarnings("static-access")
 public class C2_methodType {
 	static class Class1 {
 		static int classVar = 10;

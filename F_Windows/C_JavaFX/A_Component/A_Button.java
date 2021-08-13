@@ -26,7 +26,6 @@ public class A_Button extends Application implements EventHandler<ActionEvent> {
         label1 = new Label("Label 1");
         label1.setFont(new Font("Arial", 30));
  
- 
         primaryStage.setTitle("Button");
         button1 = new Button("Button 1");
         button1.setOnAction(this);
@@ -36,11 +35,9 @@ public class A_Button extends Application implements EventHandler<ActionEvent> {
         button2.setOnAction(this);
         button2.setPrefSize(100, 30);
  
- 
         hbox.getChildren().add(label1);
         hbox.getChildren().add(button1);
         hbox.getChildren().add(button2);
- 
  
         primaryStage.setScene(new Scene(hbox, 500, 300));
         primaryStage.show();

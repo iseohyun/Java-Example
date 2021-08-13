@@ -6,11 +6,10 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class A_Label extends Frame{
-	private Label lab1;
+	private static final long serialVersionUID = 1L;
+	private Label lab1 = new Label("첫번째 라벨");
 	
 	A_Label() {
-		lab1 = new Label("첫번째 라벨");
-		
 		add(lab1);
 		
 		addWindowListener(new WindowExit(this));

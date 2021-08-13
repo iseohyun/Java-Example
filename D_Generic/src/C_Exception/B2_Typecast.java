@@ -2,7 +2,7 @@ package C_Exception;
 
 public class B2_Typecast {
 	public static void main(String[] args) {
-		Object x = new Integer(0);
+		Object x = 0;
 		try {
 			System.out.println((String)x);
 		}catch(ClassCastException e) {

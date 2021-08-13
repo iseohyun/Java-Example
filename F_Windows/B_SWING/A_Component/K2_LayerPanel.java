@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLayeredPane;
 
 public class K2_LayerPanel extends JFrame{
+	private static final long serialVersionUID = 1L;
 	public K2_LayerPanel() {
 		JLayeredPane jp = getLayeredPane();
 		
@@ -45,6 +46,7 @@ public class K2_LayerPanel extends JFrame{
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
+	
 	public static void main(String[] args) {
 		new K2_LayerPanel();
 	}

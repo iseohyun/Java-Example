@@ -14,6 +14,7 @@ import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
 
 public class G2_PopupMenu extends JFrame implements ActionListener, MouseListener{
+	private static final long serialVersionUID = 1L;
 	JMenuBar bar = new JMenuBar();
 	JPopupMenu popup = new JPopupMenu();
 	String[][] strMenu = {
@@ -98,7 +99,7 @@ public class G2_PopupMenu extends JFrame implements ActionListener, MouseListene
 	
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		if(e.getButton() == e.BUTTON3) {
+		if(e.getButton() == MouseEvent.BUTTON3) {
 			popup.show(this, e.getX(),e.getY());
 		}
 	}

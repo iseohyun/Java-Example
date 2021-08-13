@@ -12,26 +12,24 @@ import java.io.File;
 import java.io.FileReader;
 
 public class H_File extends Frame implements ActionListener{
-	FileDialog fopen, fsave;
-	Button btnOpen, btnSave;
-	TextArea ta;
+	private static final long serialVersionUID = 1L;
+	Button btnOpen = new Button("파일 열기");
+	Button btnSave = new Button("파일 저장");
+	FileDialog fopen = new FileDialog(this, "파일 열기", FileDialog.LOAD);
+	FileDialog fsave = new FileDialog(this, "파일 저장", FileDialog.SAVE);
+	TextArea ta = new TextArea("내용", 33, 80);
 	
 	public H_File() {
-		btnOpen = new Button("파일 열기");
-		btnSave = new Button("파일 저장");
-		ta = new TextArea("내용", 33, 80);
-		
-		fopen = new FileDialog(this, "파일 열기", FileDialog.LOAD);
-		fsave = new FileDialog(this, "파일 저장", FileDialog.SAVE);
-		
 		setLayout(new FlowLayout());
+		
 		add(btnOpen);
 		add(btnSave);
 		add(ta);
-		addWindowListener(new WindowExit(this));
 		
 		btnOpen.addActionListener(this);
 		btnSave.addActionListener(this);
+
+		addWindowListener(new WindowExit(this));
 		
 		setSize(600, 600);
 		setVisible(true);

@@ -17,6 +17,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JTextArea;
 
 public class A_Frame extends JFrame implements KeyListener, ActionListener{
+	private static final long serialVersionUID = 1L;
 	GridBagLayout grid = new GridBagLayout();
 	JTextArea view = new JTextArea(20, 40);
 	JTextArea input = new JTextArea(10, 40);

@@ -8,9 +8,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class A3_GridBagBig extends JFrame{
+	private static final long serialVersionUID = 1L;
 	final int N_BUTTONS = 5;
 	JPanel pn = new JPanel();
 	JButton[] bt = new JButton[N_BUTTONS];
+	
 	A3_GridBagBig() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
@@ -21,7 +23,6 @@ public class A3_GridBagBig extends JFrame{
 		for(int i = 0; i < N_BUTTONS; i++) {
 			bt[i] = new JButton("Button" + i);
 			gbc[i] = new GridBagConstraints();
-//			pn.add(bt[i], gbc[i]);
 		}
 		setContentPane(pn);
 

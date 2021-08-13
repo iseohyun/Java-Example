@@ -43,6 +43,7 @@ class userThread extends Thread {
 }
 
 class connectTread extends Thread {
+	@SuppressWarnings("resource")
 	public void run() {
 		try {
 			int Count = 1;

@@ -4,8 +4,9 @@ import java.awt.Frame;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class D_WindowListener extends Frame implements WindowListener{
-	public D_WindowListener() {
+@SuppressWarnings("serial")
+public class D_ExitInterface extends Frame implements WindowListener{
+	public D_ExitInterface() {
 		addWindowListener(this);
 		
 		setSize(300, 400);
@@ -13,7 +14,7 @@ public class D_WindowListener extends Frame implements WindowListener{
 	}
 	
 	public static void main(String[] args) {
-		new D_WindowListener();
+		new D_ExitInterface();
 	}
 	
 	@Override

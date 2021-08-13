@@ -2,6 +2,7 @@ package G_Time;
 
 import java.util.Calendar;
 
+@SuppressWarnings("deprecation")
 public class E_Quiz100DayAfter {
 	public static void main(String[] args) {
 		Calendar day = Calendar.getInstance();

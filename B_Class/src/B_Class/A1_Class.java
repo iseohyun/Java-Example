@@ -1,11 +1,13 @@
 package B_Class;
+
 class Class0 {
 }
 
+@SuppressWarnings("unused")
 public class A1_Class {
 	static class Class1 {
 	}
-	
+
 	public static void main(String[] args) {
 		Class0 c0;
 		

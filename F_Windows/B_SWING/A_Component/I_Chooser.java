@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 public class I_Chooser extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
 	JButton FileOpen = new JButton("Open");
 	JButton FileSave = new JButton("Save");
 	JButton spoid = new JButton("Color Change");
@@ -41,7 +42,6 @@ public class I_Chooser extends JFrame implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		if(e.getSource().equals(FileOpen)){
 			file.showOpenDialog(this);
 			view.setText("Open : " + file.getSelectedFile() + "\n" + view.getText());

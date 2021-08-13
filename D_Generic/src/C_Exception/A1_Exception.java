@@ -1,17 +1,14 @@
 package C_Exception;
 
-import java.io.IOException;
-
 public class A1_Exception {
 	public static void main(String[] args) {
-		byte[] list = {'a', 'b', 'c'};
+		int[] list = new int[3];
+		
 		try {
-			System.out.write(list);
-		} catch (IOException e) {
-			System.out.println("하나요!");
-		} catch (Exception e) {
-			System.out.println("둘이요!");
+			for(int i = 0; i < 4; i++)
+				list[i] = i;
+		}catch(Exception e) {
+			System.out.println("에러가 발생하였습니다.");
 		}
-		System.out.println("셋이요!");
 	}
 }

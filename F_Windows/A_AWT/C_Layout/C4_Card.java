@@ -7,18 +7,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class C4_Card extends Frame implements ActionListener{
-	Button b1, b2, b3, b4, b5;
-	CardLayout card;
+	private static final long serialVersionUID = 1L;
+	Button b1 = new Button("1번 버튼");
+	Button b2 = new Button("2번 버튼");
+	Button b3 = new Button("3번 버튼");
+	Button b4 = new Button("4번 버튼");
+	Button b5 = new Button("5번 버튼");
+
+	CardLayout card = new CardLayout();
 	
 	public C4_Card() {
-		card = new CardLayout(); 
-		setLayout(card);
-		b1 = new Button("1번 버튼");
-		b2 = new Button("2번 버튼");
-		b3 = new Button("3번 버튼");
-		b4 = new Button("4번 버튼");
-		b5 = new Button("5번 버튼");
-		
 		add(b1);
 		add(b2);
 		add(b3);
@@ -30,6 +28,7 @@ public class C4_Card extends Frame implements ActionListener{
 		b3.addActionListener(this);
 		b4.addActionListener(this);
 		b5.addActionListener(this);
+		
 		addWindowListener(new WindowExit(this));
 		
 		setSize(300, 400);
@@ -42,7 +41,6 @@ public class C4_Card extends Frame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		card.next(this);
 	}
 }

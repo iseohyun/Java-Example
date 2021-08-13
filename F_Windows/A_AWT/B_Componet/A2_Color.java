@@ -6,13 +6,13 @@ import java.awt.Frame;
 import java.awt.Label;
 
 class LabelTest02 extends Frame{
-	private Label lab1, lab2, lab3;
+	private static final long serialVersionUID = 1L;
+	Label lab1 = new Label("첫번째 라벨");
+	Label lab2 = new Label("두번째 라벨");
+	Label lab3 = new Label("세번째 라벨");
 	
 	LabelTest02(){
 		setLayout(new FlowLayout());
-		lab1 = new Label("첫번째 라벨");
-		lab2 = new Label("두번째 라벨");
-		lab3 = new Label("세번째 라벨");
 		
 		add(lab1);
 		add(lab2);

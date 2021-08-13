@@ -1,46 +1,37 @@
 package X_Example;
 
-import java.awt.Button;
 import java.awt.Checkbox;
 import java.awt.CheckboxGroup;
 import java.awt.Color;
 import java.awt.Frame;
 import java.awt.GridLayout;
+import java.awt.Label;
 import java.awt.Panel;
-import java.awt.TextArea;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class A_TrafficLight extends Frame implements ItemListener{
-	private Panel p1, p2, p3;
-	private Checkbox rdoThree, rdoFour;
-	private CheckboxGroup g1;
-	private Checkbox chkRed, chkYellow, chkLeft, chkGreen;
-	private Button btnRed, btnYellow, btnLeft, btnGreen;
-	private TextArea ta;
-	private boolean flag = true;
+	private static final long serialVersionUID = 1L;
+	Panel p1 = new Panel();
+	Panel p2 = new Panel();
+	Panel p3 = new Panel();	
+	Checkbox chkRed = new Checkbox("»¡°­");
+	Checkbox chkYellow = new Checkbox("³ë¶û");
+	Checkbox chkLeft = new Checkbox("ÁÂÈ¸Àü");
+	Checkbox chkGreen = new Checkbox("ÃÊ·Ï");
+	
+	CheckboxGroup g1 = new CheckboxGroup();
+	Checkbox rdoThree = new Checkbox("3µî½Ä", g1, false);
+	Checkbox rdoFour = new Checkbox("4µî½Ä", g1, true);
+	
+	Label Red = new Label("»¡°­");
+	Label Yellow = new Label("³ë¶û");
+	Label Left = new Label("");
+	Label Green = new Label("ÃÊ·Ï");
 	
 	public A_TrafficLight() {
-		p1 = new Panel();
-		p2 = new Panel();
-		p3 = new Panel();
-		
-		chkRed = new Checkbox("»¡°­");
-		chkYellow = new Checkbox("³ë¶û");
-		chkLeft = new Checkbox("ÁÂÈ¸Àü");
-		chkGreen = new Checkbox("ÃÊ·Ï");
-		
-		g1 = new CheckboxGroup();
-		rdoThree = new Checkbox("3µî½Ä", g1, false);
-		rdoFour = new Checkbox("4µî½Ä", g1, true);
-		
-		btnRed = new Button("»¡°­");
-		btnYellow = new Button("³ë¶û");
-		btnLeft = new Button("");
-		btnGreen = new Button("ÃÊ·Ï");
-		
 		p1.add(rdoThree);
 		p1.add(rdoFour);
 		
@@ -50,10 +41,12 @@ public class A_TrafficLight extends Frame implements ItemListener{
 		p2.add(chkYellow);
 
 		p3.setLayout(new GridLayout(1,4));
-		p3.add(btnRed);
-		p3.add(btnGreen);
-		p3.add(btnLeft);
-		p3.add(btnYellow);
+		Red.setBackground(Color.LIGHT_GRAY);
+		Left.setBackground(Color.LIGHT_GRAY);
+		p3.add(Red);
+		p3.add(Green);
+		p3.add(Left);
+		p3.add(Yellow);
 		
 		add("North", p1);
 		add("West", p2);
@@ -69,40 +62,41 @@ public class A_TrafficLight extends Frame implements ItemListener{
 		
 		addWindowListener(new WindowExit(this));
 		
-		setSize(300,400);
+		pack();
 		setVisible(true);
 	}
 	
 	void rdoThree() {
 		if(rdoThree.getState()) {
-			btnLeft.setEnabled(true);
+			Left.setEnabled(true);
 		}else {
 		}
 	}
+	
 	@Override
 	public void itemStateChanged(ItemEvent e) {
 		if(chkRed.getState()) {
-			btnRed.setBackground(Color.RED);
+			Red.setBackground(Color.RED);
 		}else {
-			btnRed.setBackground(null);
+			Red.setBackground(Color.LIGHT_GRAY);
 		}
 		if(chkYellow.getState()) {
-			btnYellow.setBackground(Color.YELLOW);
+			Yellow.setBackground(Color.YELLOW);
 		}else {
-			btnYellow.setBackground(null);
+			Yellow.setBackground(null);
 		}
 		if(chkGreen.getState()) {
-			btnGreen.setBackground(Color.GREEN);
+			Green.setBackground(Color.GREEN);
 		}else {
-			btnGreen.setBackground(null);
+			Green.setBackground(null);
 		}
 		if(chkLeft.getState() && rdoFour.getState()) {
-			btnLeft.setLabel("<-");
-			btnLeft.setBackground(Color.PINK);
+			Left.setText("<-");
+			Left.setBackground(Color.PINK);
 		}else {
 			rdoThree();
-			btnLeft.setLabel("");
-			btnLeft.setBackground(null);
+			Left.setText("");
+			Left.setBackground(Color.LIGHT_GRAY);
 		}
 	}
 	public static void main(String[] args) {

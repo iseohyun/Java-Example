@@ -7,8 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class A2_Alignment extends JFrame{
+	private static final long serialVersionUID = 1L;
 	JPanel pn = new JPanel();
 	JButton[] bt = new JButton[10];
+	
 	A2_Alignment() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		

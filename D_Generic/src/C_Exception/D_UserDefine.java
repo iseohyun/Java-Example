@@ -1,5 +1,6 @@
 package C_Exception;
 
+@SuppressWarnings("serial")
 class MyException extends RuntimeException{
 	MyException(String errMsg){
 		super(errMsg);

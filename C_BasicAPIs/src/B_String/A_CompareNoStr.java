@@ -2,16 +2,16 @@ package B_String;
 
 public class A_CompareNoStr {
 	public static void main(String[] args) {
-		char char1[] = {'j','a','v','a','c','o','d','e'};
-		char char2[] = {'j','a','v','a','C','o','d','e'};
-		char char3[] = {'j','a','v','a','c','o','d','e'};
+		char[] char1 = {'j','a','v','a','c','o','d','e'};
+		char[] char2 = {'j','a','v','a','C','o','d','e'};
+		char[] char3 = {'j','a','v','a','c','o','d','e'};
 		int ret;
 
-		System.out.print("char1 : " + char1 + ", ");
+		System.out.print("char1 : ");
 		System.out.println(char1);
-		System.out.print("char2 : " + char2 + ", ");
+		System.out.print("char2 : ");
 		System.out.println(char2);
-		System.out.print("char3 : " + char3 + ", ");
+		System.out.print("char3 : ");
 		System.out.println(char3);
 		
 		System.out.println("<<char1, char2 ºñ±³>>");

@@ -9,28 +9,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class I_Menu extends Frame implements ActionListener{
-	private MenuBar bar;
-	private Menu menu1, menu2, menu3, sub1_2;
-	private MenuItem sub1_1, sub1_3;
-	private MenuItem sub1_2_1, sub1_2_2;
-	private MenuItem sub2_1, sub2_2;
-	private MenuItem help;
-	private TextArea ta;
-	
+	private static final long serialVersionUID = 1L;
+	MenuBar bar = new MenuBar();
+	TextArea ta = new TextArea();
+	Menu menu1 = new Menu("파일");
+	Menu menu2 = new Menu("편집");
+	Menu menu3 = new Menu("도움말");
+	MenuItem sub1_1 = new MenuItem("열기");
+	Menu sub1_2 = new Menu("추가");
+	MenuItem sub1_2_1 = new MenuItem("자바수업");
+	MenuItem sub1_2_2 = new MenuItem("C수업");
+	MenuItem sub1_3 = new MenuItem("종료");
+	MenuItem sub2_1 = new MenuItem("지우기");
+	MenuItem sub2_2 = new MenuItem("숨기기");
+	MenuItem help = new MenuItem("도움말");
+
 	public I_Menu() {
-		bar = new MenuBar();
-		ta = new TextArea();
-		menu1 = new Menu("파일");
-		menu2 = new Menu("편집");
-		menu3 = new Menu("도움말");
-		sub1_1 = new MenuItem("열기");
-		sub1_2 = new Menu("추가");
-		sub1_2_1 = new MenuItem("자바수업");
-		sub1_2_2 = new MenuItem("C수업");
-		sub1_3 = new MenuItem("종료");
-		sub2_1 = new MenuItem("지우기");
-		sub2_2 = new MenuItem("숨기기");
-		help = new MenuItem("도움말");
+		setMenuBar(bar);
+		add("Center", ta);
 		
 		bar.add(menu1);
 		bar.add(menu2);
@@ -45,9 +41,6 @@ public class I_Menu extends Frame implements ActionListener{
 		menu2.add(sub2_2);
 		menu3.add(help);
 
-		setMenuBar(bar);
-		add("Center", ta);
- 
 		sub1_1.addActionListener(this);
 		sub1_2_1.addActionListener(this);
 		sub1_2_2.addActionListener(this);
@@ -60,6 +53,7 @@ public class I_Menu extends Frame implements ActionListener{
 		setSize(300, 400);
 		setVisible(true);
     }
+	
 	public static void main(String[] args) {
 		new I_Menu();
 	}

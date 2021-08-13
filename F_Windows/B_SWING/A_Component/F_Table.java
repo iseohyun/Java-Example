@@ -17,6 +17,7 @@ import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 
 public class F_Table extends JFrame implements ActionListener {
+	private static final long serialVersionUID = 1L;
 	JPanel p = new JPanel();
 	JPanel pBtn = new JPanel();
 	JScrollPane pTb;
@@ -93,7 +94,6 @@ public class F_Table extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		if(e.getSource().equals(btnAdd)) {
 			String[] rcd = {"", ""};
 			rcd[0] = inputMovie.getText();

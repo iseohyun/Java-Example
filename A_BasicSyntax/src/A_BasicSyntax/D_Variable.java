@@ -1,5 +1,6 @@
 package A_BasicSyntax;
 
+@SuppressWarnings("unused")
 public class D_Variable {
 	public static void main(String[] args) {
 		int a;

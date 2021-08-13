@@ -2,10 +2,14 @@ package A_Basic;
 
 import java.awt.Frame;
 
-public class A_Create {
+@SuppressWarnings("serial")
+public class A_Create extends Frame{
+	A_Create(){
+		setSize(300, 400);
+		setVisible(true);
+	}
+	
 	public static void main(String[] args) {
-		Frame f = new Frame();
-		f.setSize(300, 400);
-		f.setVisible(true);
+		new A_Create();		
 	}
 }

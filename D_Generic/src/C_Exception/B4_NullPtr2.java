@@ -1,6 +1,9 @@
 package C_Exception;
 
+@SuppressWarnings("unused")
 public class B4_NullPtr2 {
+	
+	@SuppressWarnings("null")
 	public static void main(String[] str) {
 		String ptr = null;
 		try {

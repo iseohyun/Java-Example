@@ -18,6 +18,7 @@ import javax.swing.event.ChangeListener;
 
 
 public class D_SliderProgress extends JFrame implements ChangeListener, ActionListener{
+	private static final long serialVersionUID = 1L;
 	JPanel pBtn = new JPanel();
 	JProgressBar prog = new JProgressBar(0, 20);
 	JTextField txtProg = new JTextField(3);
@@ -36,7 +37,7 @@ public class D_SliderProgress extends JFrame implements ChangeListener, ActionLi
 		setLayout(Grid);
 		
 		c.ipadx = 10;		c.ipady = 10;
-		c.fill = c.BOTH;
+		c.fill = GridBagConstraints.BOTH;
 		c.gridx = 0;		c.gridy = 0;
 		Grid.setConstraints(txtProg, c);
 		add(txtProg);

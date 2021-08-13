@@ -2,8 +2,8 @@ package D_Boxing;
 
 public class B_Unboxing {
 	public static void main(String[] args) {
-        Integer num1 = new Integer(7);
-        Integer num2 = new Integer(3);
+        Integer num1 = 7;
+        Integer num2 = 3;
 
         int int1 = num1.intValue();
         int int2 = num2.intValue();

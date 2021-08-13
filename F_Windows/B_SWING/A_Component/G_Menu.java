@@ -11,6 +11,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JTextArea;
 
 public class G_Menu extends JFrame implements ActionListener{
+	private static final long serialVersionUID = 1L;
 	JMenuBar bar = new JMenuBar();
 	String[][] strMenu = {
 			{"File", "New", "Open File", "Save", "Print"},

@@ -7,15 +7,13 @@ public class A_Sqrt {
 
 		double r = 3;
 		double h = 10;
-
-		// π›¡ˆ∏ß¿Ã r¿Ã∞Ì, ≥Ù¿Ã∞° h¿Œ ø¯±‚µ’¿«...
-		double s; // s = ∞—≥–¿Ã
-		double v; // v = ∫Œ««
 		
-		// s = 2(r^2)PI + 2rhPI
-		s = 2* Math.sqrt(r) * Math.PI + 2 * r * h * Math.PI;
+		// ∞—≥–¿Ã : s = 2(r^2)PI + 2rhPI
+		double s = 2* Math.sqrt(r) * Math.PI + 2 * r * h * Math.PI;
 		
-		// v = 2(r^2)hPI
-		v = 2* Math.sqrt(r) * h * Math.PI;
+		// π›¡ˆ∏ß : v = 2(r^2)hPI
+		double v = 2* Math.sqrt(r) * h * Math.PI;
+		
+		System.out.println("∞—≥–¿Ã : " + s + ", ∫Œ«« : " + v);
 	}
 }

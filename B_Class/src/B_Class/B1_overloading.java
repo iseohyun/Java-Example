@@ -1,5 +1,6 @@
 package B_Class;
 
+@SuppressWarnings("unused")
 public class B1_overloading {
 	static class Class1 {
 		Class1()		{ System.out.println("전달사항 없음");	}

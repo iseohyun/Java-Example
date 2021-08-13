@@ -1,5 +1,6 @@
 package C_Interface;
 
+@SuppressWarnings("unused")
 public class C_Functions {
 	interface Inter1{
 		public default int sum(int x, int y) { return x+y; }

@@ -1,5 +1,6 @@
 package D_Extends;
 
+@SuppressWarnings("unused")
 public class X_AccessCtrl {
 	public String who = "Me"; 
 	public void printPublic() {

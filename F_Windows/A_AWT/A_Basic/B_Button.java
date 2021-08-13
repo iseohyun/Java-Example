@@ -1,15 +1,12 @@
 package A_Basic;
 
 import java.awt.Button;
-import java.awt.FlowLayout;
 import java.awt.Frame;
 
+@SuppressWarnings("serial")
 public class B_Button extends Frame{
-	private Button b;
+	Button b = new Button("마침");
 	B_Button(){
-		b = new Button("마침");
-
-		setLayout(new FlowLayout());
 		add(b);
 		
 		setSize(300, 400);

@@ -1,5 +1,6 @@
 package B_Class;
 
+@SuppressWarnings("static-access")
 public class C_Static4Method {
 	static class Class1 {
 	    // instance Method

@@ -1,6 +1,5 @@
 package A_Layout;
 
-import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
@@ -9,9 +8,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class A2_GridBag extends JFrame{
+	private static final long serialVersionUID = 1L;
 	final int N_BUTTONS = 5;
 	JPanel pn = new JPanel();
 	JButton[] bt = new JButton[N_BUTTONS];
+	
 	A2_GridBag() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		

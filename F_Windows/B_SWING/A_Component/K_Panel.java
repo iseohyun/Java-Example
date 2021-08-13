@@ -12,6 +12,7 @@ import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
 
 public class K_Panel extends JFrame{
+	private static final long serialVersionUID = 1L;
 	JPanel p = new JPanel();
 	JTabbedPane pTab = new JTabbedPane();
 	JRootPane pRoot = new JRootPane();

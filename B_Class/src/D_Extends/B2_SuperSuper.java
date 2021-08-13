@@ -1,5 +1,6 @@
 package D_Extends;
 
+@SuppressWarnings("unused")
 public class B2_SuperSuper{
 	static class Super1 {
 		Super1() {

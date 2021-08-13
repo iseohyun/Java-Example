@@ -17,8 +17,9 @@ class WindowExit extends WindowAdapter{
 	}
 }
 
-public class E_WindowAdapter extends Frame{
-	public E_WindowAdapter() {
+@SuppressWarnings("serial")
+public class D2_Exit extends Frame{
+	public D2_Exit() {
 		addWindowListener(new WindowExit(this));
 		
 		setSize(300, 400);
@@ -26,6 +27,6 @@ public class E_WindowAdapter extends Frame{
 	}
 	
 	public static void main(String[] args) {
-		new E_WindowAdapter();
+		new D2_Exit();
 	}
 }
