@@ -1,4 +1,4 @@
-package A_Layout;
+package B_Layout;
 
 import java.awt.FlowLayout;
 
@@ -6,8 +6,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class A2_Alignment extends JFrame{
-	private static final long serialVersionUID = 1L;
 	JPanel pn = new JPanel();
 	JButton[] bt = new JButton[10];
 	

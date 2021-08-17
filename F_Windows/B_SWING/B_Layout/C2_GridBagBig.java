@@ -1,4 +1,4 @@
-package A_Layout;
+package B_Layout;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -7,13 +7,13 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class A2_GridBag extends JFrame{
-	private static final long serialVersionUID = 1L;
+@SuppressWarnings("serial")
+public class C2_GridBagBig extends JFrame{
 	final int N_BUTTONS = 5;
 	JPanel pn = new JPanel();
 	JButton[] bt = new JButton[N_BUTTONS];
 	
-	A2_GridBag() {
+	C2_GridBagBig() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 		GridBagConstraints[] gbc = new GridBagConstraints[N_BUTTONS];
@@ -23,17 +23,37 @@ public class A2_GridBag extends JFrame{
 		for(int i = 0; i < N_BUTTONS; i++) {
 			bt[i] = new JButton("Button" + i);
 			gbc[i] = new GridBagConstraints();
-			gbc[i].gridx = i;
-			gbc[i].gridy = i;
-			pn.add(bt[i], gbc[i]);
 		}
 		setContentPane(pn);
+
+		gbc[0].gridx = 0;
+		gbc[0].gridy = 1;
+		pn.add(bt[0], gbc[0]);
 		
+		gbc[1].gridx = 0;
+		gbc[1].gridy = 2;
+		pn.add(bt[1], gbc[1]);
+		
+		gbc[2].gridx = 1;
+		gbc[2].gridy = 0;
+		pn.add(bt[2], gbc[2]);
+		
+		gbc[3].gridx = 2;
+		gbc[3].gridy = 0;
+		pn.add(bt[3], gbc[3]);
+		
+		gbc[4].gridx = 1;
+		gbc[4].gridy = 1;
+		gbc[4].gridwidth = 2;
+		gbc[4].gridheight = 2;
+		gbc[4].fill = GridBagConstraints.BOTH;
+		
+		pn.add(bt[4], gbc[4]);
 		setSize(400, 300);
 		setVisible(true);
 	}
 	
 	public static void main(String[] args) {
-		new A2_GridBag();
+		new C2_GridBagBig();
 	}
 }

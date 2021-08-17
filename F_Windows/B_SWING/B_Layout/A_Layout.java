@@ -1,11 +1,11 @@
-package A_Layout;
+package B_Layout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class A_Layout extends JFrame{
-	private static final long serialVersionUID = 1L;
 	final int BUTTON_ = 10;
 	JPanel pn = new JPanel();
 	JButton[] bt = new JButton[10];

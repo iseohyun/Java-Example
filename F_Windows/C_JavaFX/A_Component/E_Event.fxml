@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="A_Component.E_EventCtrl">
+   <children>
+      <Button layoutX="317.0" layoutY="14.0" mnemonicParsing="false" onAction="#up" text="Up" />
+      <Button layoutX="581.0" layoutY="229.0" mnemonicParsing="false" onAction="#right" text="Right" />
+      <Button layoutX="309.0" layoutY="444.0" mnemonicParsing="false" onAction="#down" text="Down" />
+      <Button layoutX="14.0" layoutY="229.0" mnemonicParsing="false" onAction="#left" text="Left" />
+      <Circle fx:id="myCircle" fill="DODGERBLUE" layoutX="333.0" layoutY="240.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

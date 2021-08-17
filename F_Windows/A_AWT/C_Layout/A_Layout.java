@@ -6,8 +6,8 @@ import java.awt.Frame;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+@SuppressWarnings("serial")
 public class A_Layout extends Frame{
-	private static final long serialVersionUID = 1L;
 	Button b1 = new Button("1번 버튼");
 	Button b2 = new Button("2번 버튼");
 	Button b3 = new Button("3번 버튼");

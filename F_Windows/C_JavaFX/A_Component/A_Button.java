@@ -1,4 +1,5 @@
 package A_Component;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,7 +12,17 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
  
 public class A_Button extends Application implements EventHandler<ActionEvent> {
- 
+	// 라이브러리 추가 방법
+	// Properties > Java Build Path > Libraries
+	// Modulepath > (활성화) Add External JARs.. > *.jar파일 추가
+
+	// Arguments 추가 방법
+	// Run/Debug Setting > 리스트 창에서 해당 class 더블클릭
+	// Arguments > VM arguments에 추가
+	// --module-path "설치한 폴더" --add-modules=javafx.controls,javafx.fxml
+	// 예를들어 :
+	// --module-path "C:\Program Files\Java\javafx-sdk-16" --add-modules=javafx.controls,javafx.fxml
+
     Button button1;
     Button button2;
     Label label1;
@@ -38,7 +49,7 @@ public class A_Button extends Application implements EventHandler<ActionEvent> {
         hbox.getChildren().add(label1);
         hbox.getChildren().add(button1);
         hbox.getChildren().add(button2);
- 
+        
         primaryStage.setScene(new Scene(hbox, 500, 300));
         primaryStage.show();
     }

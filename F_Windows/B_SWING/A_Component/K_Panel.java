@@ -4,7 +4,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRootPane;
 import javax.swing.JScrollPane;
@@ -17,9 +16,7 @@ public class K_Panel extends JFrame{
 	JTabbedPane pTab = new JTabbedPane();
 	JRootPane pRoot = new JRootPane();
 	JInternalFrame pInter = new JInternalFrame();
-	JSplitPane pSplit = new JSplitPane();
-	JOptionPane	pOpt = new JOptionPane();
-	
+	JSplitPane pSplit = new JSplitPane();	
 	
 	public K_Panel() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -34,9 +31,6 @@ public class K_Panel extends JFrame{
 
 		pTab.addTab("내부 프레임", pInter);
 		pInter.add(new JLabel(icon));
-
-		pTab.addTab("옵션 패널", pOpt);
-		pOpt.add(new JLabel(icon));
 		
 		JSplitPane p1 = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
 		JSplitPane p2 = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
