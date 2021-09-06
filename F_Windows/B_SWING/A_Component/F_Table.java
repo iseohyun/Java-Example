@@ -16,8 +16,8 @@ import javax.swing.ListSelectionModel;
 import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 
+@SuppressWarnings("serial")
 public class F_Table extends JFrame implements ActionListener {
-	private static final long serialVersionUID = 1L;
 	JPanel p = new JPanel();
 	JPanel pBtn = new JPanel();
 	JScrollPane pTb;

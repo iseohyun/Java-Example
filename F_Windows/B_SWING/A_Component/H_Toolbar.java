@@ -8,8 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
 
+@SuppressWarnings("serial")
 public class H_Toolbar extends JFrame{
-	private static final long serialVersionUID = 1L;
 	JToolBar toolbar = new JToolBar();
 	JButton btnGo = new JButton("GO");
 	JTextField search = new JTextField();

@@ -16,9 +16,8 @@ import javax.swing.JTextField;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-
+@SuppressWarnings("serial")
 public class D_SliderProgress extends JFrame implements ChangeListener, ActionListener{
-	private static final long serialVersionUID = 1L;
 	JPanel pBtn = new JPanel();
 	JProgressBar prog = new JProgressBar(0, 20);
 	JTextField txtProg = new JTextField(3);
@@ -26,7 +25,6 @@ public class D_SliderProgress extends JFrame implements ChangeListener, ActionLi
 	JTextField txtSlider = new JTextField(3);
 	JButton plus = new JButton("+");
 	JButton minus = new JButton("-");
-	
 	
 	D_SliderProgress() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);

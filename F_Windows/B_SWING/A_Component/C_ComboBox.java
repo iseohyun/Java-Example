@@ -13,8 +13,8 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+@SuppressWarnings("serial")
 public class C_ComboBox extends JFrame implements ActionListener, ListSelectionListener {
-	private static final long serialVersionUID = 1L;
 	String rainbow[] = {"»¡°­", "ÁÖÈ²", "³ë¶û", "ÃÊ·Ï", "ÆÄ¶û", "³²»ö", "º¸¶ó"};
 	JComboBox<String> CbColor = new JComboBox<>(rainbow);
 	JList<String> ColList = new JList<>(rainbow);

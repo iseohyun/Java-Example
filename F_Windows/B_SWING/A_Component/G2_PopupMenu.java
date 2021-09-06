@@ -13,8 +13,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
 
+@SuppressWarnings("serial")
 public class G2_PopupMenu extends JFrame implements ActionListener, MouseListener{
-	private static final long serialVersionUID = 1L;
 	JMenuBar bar = new JMenuBar();
 	JPopupMenu popup = new JPopupMenu();
 	String[][] strMenu = {

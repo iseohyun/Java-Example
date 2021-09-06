@@ -13,8 +13,8 @@ import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
+@SuppressWarnings("serial")
 public class B_Button extends JFrame implements ActionListener{
-	private static final long serialVersionUID = 1L;
 	JRadioButton rdoFemale = new JRadioButton("여성");
 	JRadioButton rdoMale = new JRadioButton("남성");
 	ButtonGroup Sex = new ButtonGroup();

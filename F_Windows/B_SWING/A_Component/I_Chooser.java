@@ -11,8 +11,8 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
+@SuppressWarnings("serial")
 public class I_Chooser extends JFrame implements ActionListener{
-	private static final long serialVersionUID = 1L;
 	JButton FileOpen = new JButton("Open");
 	JButton FileSave = new JButton("Save");
 	JButton spoid = new JButton("Color Change");

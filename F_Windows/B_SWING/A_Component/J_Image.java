@@ -6,8 +6,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+@SuppressWarnings("serial")
 public class J_Image extends JFrame{
-	private static final long serialVersionUID = 1L;
 	
 	J_Image() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);

@@ -9,8 +9,8 @@ import javax.swing.JTree;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
 
+@SuppressWarnings("serial")
 public class E_Tree extends JFrame implements TreeSelectionListener{
-	private static final long serialVersionUID = 1L;
 	JPanel pn = new JPanel();
 	JTree tr = new JTree();
 	JTextField  path = new JTextField();

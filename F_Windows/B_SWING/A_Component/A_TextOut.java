@@ -20,8 +20,8 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
+@SuppressWarnings("serial")
 public class A_TextOut extends JFrame{
-	private static final long serialVersionUID = 1L;
 	JPanel pTextField = new JPanel();
 	JPanel pPlainText = new JPanel(); 
 	JPanel pStyledText = new JPanel();

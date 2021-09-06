@@ -6,8 +6,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLayeredPane;
 
+@SuppressWarnings("serial")
 public class K2_LayerPanel extends JFrame{
-	private static final long serialVersionUID = 1L;
 	public K2_LayerPanel() {
 		JLayeredPane jp = getLayeredPane();
 		
