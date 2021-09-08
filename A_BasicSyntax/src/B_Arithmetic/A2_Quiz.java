@@ -15,6 +15,6 @@ public class A2_Quiz {
 
 		// Quiz3 : 증감연산자(++,--)를 사용해서 r3을 6을 출력해보자
 		
-		System.out.println("r3 =" + r3);
+		System.out.println("r3 = " + r3);
 	}
 }
