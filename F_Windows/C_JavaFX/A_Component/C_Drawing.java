@@ -14,6 +14,15 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * @author Seohyun Jung
+ * 
+ * 		이미지를 출력하기 위해서는 아래 폴더에 해당 파일이 존재해야합니다.
+ * 
+ *			$(Project_Dir)\bin\cat.jpg
+ */
+
 public class C_Drawing extends Application{
 	@Override
 	public void start(Stage primaryStage) {

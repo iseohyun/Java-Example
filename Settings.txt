@@ -1,0 +1,26 @@
+강의자료 코드 다운로드 :
+https://github.com/iseohyun/Java-Example
+
+초기 세팅 방법 : (강의노트: "환경설정.pptx" -> 3-2 환경설치 : Java -> 1.환경설정 참고)
+Window -> Preferences -> Run/Debug -> Launching -> Launch the selected resource or active editor. If not launchable:
+(변경) Launch the associated project
+
+JavaFX최신버전 다운로드 :
+https://gluonhq.com/products/javafx/
+
+JavaFX설정
+Properties(Alt+Enter) -> Run/Debug Setting -> Edit...
+Arguments->VM arguments: (아래문장, 경로에 유의하세요.)
+
+--module-path "\javafx-sdk-16" --add-modules=javafx.controls,javafx.fxml
+
+* User Library추가
+Window -> Preferences ...
+java -> Build Path -> User Libraries ...
+New... "JavaFX"
+"JavaFX"선택 -> Add External JARS...
+(자신이 설치한 폴더)\javafx-sdk-16\lib...
+.jar만 선택(복수선택가능, .zip은 선택하면 안됨)
+
+Build -> Configure Build path...
+libraries -> Add labrary -> User Library -> JavaFX선택 -> Finish
