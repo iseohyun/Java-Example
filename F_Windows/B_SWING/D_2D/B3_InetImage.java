@@ -9,10 +9,10 @@ import java.net.URL;
 import javax.swing.JFrame;
 
 @SuppressWarnings("serial")
-public class B3_InetImage extends JFrame{
+public class B3_InetImage extends JFrame {
 	Image img;
 	Toolkit tkit;
-	
+
 	B3_InetImage() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
@@ -27,11 +27,11 @@ public class B3_InetImage extends JFrame{
 		}
 		tkit.prepareImage(img, -1, -1, this);
 	}
-	
+
 	public void paint(Graphics g) {
 		g.drawImage(img, 0, 0, this);
 	}
-	
+
 	public static void main(String[] args) {
 		new B3_InetImage();
 	}

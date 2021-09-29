@@ -6,8 +6,8 @@ public class OuterAcc {
 		oc.who = "X_me";
 		oc.printPublic();
 		oc.PrintProt();
-		
-		OuterClassEx ocx = new OuterClassEx(); 
+
+		OuterClassEx ocx = new OuterClassEx();
 		ocx.acx.who = "another me";
 		ocx.acx.printPublic();
 	}

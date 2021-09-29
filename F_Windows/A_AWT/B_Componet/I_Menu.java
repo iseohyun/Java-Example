@@ -8,7 +8,7 @@ import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class I_Menu extends Frame implements ActionListener{
+public class I_Menu extends Frame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	MenuBar bar = new MenuBar();
 	TextArea ta = new TextArea();
@@ -27,7 +27,7 @@ public class I_Menu extends Frame implements ActionListener{
 	public I_Menu() {
 		setMenuBar(bar);
 		add("Center", ta);
-		
+
 		bar.add(menu1);
 		bar.add(menu2);
 		bar.add(menu3);
@@ -49,36 +49,36 @@ public class I_Menu extends Frame implements ActionListener{
 		sub2_2.addActionListener(this);
 		help.addActionListener(this);
 		addWindowListener(new WindowExit(this));
-		
+
 		setSize(300, 400);
 		setVisible(true);
-    }
-	
+	}
+
 	public static void main(String[] args) {
 		new I_Menu();
 	}
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource().equals(sub1_1)) {
+		if (e.getSource().equals(sub1_1)) {
 			ta.setText("파일 열기\n" + ta.getText());
-		}else if(e.getSource().equals(sub1_2_1)) {
+		} else if (e.getSource().equals(sub1_2_1)) {
 			ta.setText("자바 수업\n" + ta.getText());
-		}else if(e.getSource().equals(sub1_2_2)) {
+		} else if (e.getSource().equals(sub1_2_2)) {
 			ta.setText("C 수업\n" + ta.getText());
-		}else if(e.getSource().equals(sub1_3)) {
+		} else if (e.getSource().equals(sub1_3)) {
 			dispose();
-		}else if(e.getSource().equals(sub2_1)) {
+		} else if (e.getSource().equals(sub2_1)) {
 			ta.setText("");
-		}else if(e.getSource().equals(sub2_2)) {
-			if(sub2_2.getLabel().equals("숨기기")) {
+		} else if (e.getSource().equals(sub2_2)) {
+			if (sub2_2.getLabel().equals("숨기기")) {
 				ta.setVisible(false);
 				sub2_2.setLabel("보이기");
-			}else {
+			} else {
 				ta.setVisible(true);
 				sub2_2.setLabel("숨기기");
 			}
-		}else if(e.getSource().equals(help)) {
+		} else if (e.getSource().equals(help)) {
 			ta.setText("** 메뉴 예제 **\n" + ta.getText());
 		}
 	}

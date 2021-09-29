@@ -1,24 +1,24 @@
 package A_Object;
 
 public class C_Equals {
-	public static void main(String [] args) {
+	public static void main(String[] args) {
 		Animal cat01 = new Animal("감자");
 		Animal cat02 = new Animal("감자");
-		
+
 		System.out.println(cat01.equals(cat02));
 		cat01.info();
 		cat02.info();
-		
+
 		System.out.println();
 		cat01 = cat02;
 		System.out.println(cat02.equals(cat01));
 		cat01.info();
 		cat02.info();
-		
+
 		cat02.name = "수박";
 		cat01.info();
 		cat02.info();
-		
+
 		cat01.name = "당근";
 		cat01.info();
 		cat02.info();

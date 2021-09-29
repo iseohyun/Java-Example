@@ -19,23 +19,23 @@ public class D4_Lambda {
 				new Fruit("Cherry", "Red"));
 		
 		List<Fruit> apple = extractFruitList(origin, fruit -> "Apple".equals(fruit.getName()));
-		List<Fruit> red = extractFruitList(origin, fruit -> "Red".equals(fruit.getColor()));		
-		
+		List<Fruit> red = extractFruitList(origin, fruit -> "Red".equals(fruit.getColor()));
+
 		// 3 : print
 		System.out.println("Apple : ");
-		for(Fruit fruit : apple) {
+		for (Fruit fruit : apple) {
 			System.out.println("\t" + fruit.getName() + "/" + fruit.getColor());
 		}
 		System.out.println("Red : ");
-		for(Fruit fruit : red) {
+		for (Fruit fruit : red) {
 			System.out.println("\t" + fruit.getName() + "/" + fruit.getColor());
 		}
 	}
-	
-	static List<Fruit> extractFruitList(List<Fruit> fruits, Predicate<Fruit> predicate){
+
+	static List<Fruit> extractFruitList(List<Fruit> fruits, Predicate<Fruit> predicate) {
 		List<Fruit> resultList = new ArrayList<>();
-		for(Fruit fruit : fruits){
-			if(predicate.test(fruit)){
+		for (Fruit fruit : fruits) {
+			if (predicate.test(fruit)) {
 				resultList.add(fruit);
 			}
 		}

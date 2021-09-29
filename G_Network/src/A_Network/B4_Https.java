@@ -16,14 +16,14 @@ public class B4_Https {
 		OutputStream FileOut = new FileOutputStream(file);
 		InputStreamReader WebData = new InputStreamReader(url.openStream(), "UTF-8");
 		BufferedReader html = new BufferedReader(WebData);
-		
+
 		String line;
-		while((line=html.readLine()) != null) {
+		while ((line = html.readLine()) != null) {
 			byte[] binary = line.getBytes();
 			FileOut.write(binary);
 			System.out.println(line);
 		}
-		
+
 		FileOut.close();
 		html.close();
 	}

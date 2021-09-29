@@ -1,7 +1,7 @@
 package C_Thread;
 
 public class A_Thread {
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		ThreadWithClass thread1 = new ThreadWithClass();
 		Thread thread2 = new Thread(new ThreadWithRunnable());
 		thread1.start();
@@ -33,5 +33,6 @@ class ThreadWithRunnable implements Runnable {
 			}
 		}
 	}
+
 	static int val = 0;
 }

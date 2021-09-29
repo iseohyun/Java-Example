@@ -17,7 +17,7 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 @SuppressWarnings("serial")
-public class D_SliderProgress extends JFrame implements ChangeListener, ActionListener{
+public class D_SliderProgress extends JFrame implements ChangeListener, ActionListener {
 	JPanel pBtn = new JPanel();
 	JProgressBar prog = new JProgressBar(0, 20);
 	JTextField txtProg = new JTextField(3);
@@ -25,46 +25,52 @@ public class D_SliderProgress extends JFrame implements ChangeListener, ActionLi
 	JTextField txtSlider = new JTextField(3);
 	JButton plus = new JButton("+");
 	JButton minus = new JButton("-");
-	
+
 	D_SliderProgress() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
-		
+
 		GridBagConstraints c = new GridBagConstraints();
 		GridBagLayout Grid = new GridBagLayout();
 		setLayout(Grid);
-		
-		c.ipadx = 10;		c.ipady = 10;
+
+		c.ipadx = 10;
+		c.ipady = 10;
 		c.fill = GridBagConstraints.BOTH;
-		c.gridx = 0;		c.gridy = 0;
+		c.gridx = 0;
+		c.gridy = 0;
 		Grid.setConstraints(txtProg, c);
 		add(txtProg);
-		
+
 		txtProg.setEnabled(false);
 		txtProg.setBackground(getBackground());
 		txtProg.setHorizontalAlignment(JTextField.RIGHT);
 		txtProg.setDisabledTextColor(Color.black);
 		txtProg.setText(Integer.toString(prog.getValue()));
-		
-		c.gridx = 1;		c.gridy = 0;
+
+		c.gridx = 1;
+		c.gridy = 0;
 		Grid.setConstraints(prog, c);
 		add(prog);
 		prog.setStringPainted(false);
 
-		c.gridx = 0;		c.gridy = 1;
+		c.gridx = 0;
+		c.gridy = 1;
 		Grid.setConstraints(txtSlider, c);
 		add(txtSlider);
 		txtSlider.setEditable(false);
 		txtSlider.setHorizontalAlignment(JTextField.RIGHT);
 		txtSlider.setDisabledTextColor(Color.black);
 		txtSlider.setText(Integer.toString(slider.getValue()));
-		
-		c.gridx = 1;		c.gridy = 1;
+
+		c.gridx = 1;
+		c.gridy = 1;
 		Grid.setConstraints(slider, c);
 		add(slider);
 		slider.addChangeListener(this);
-		
-		c.gridx = 0;		c.gridy = 2;
+
+		c.gridx = 0;
+		c.gridy = 2;
 		c.gridwidth = 2;
 		Grid.setConstraints(pBtn, c);
 		add(pBtn);
@@ -73,17 +79,17 @@ public class D_SliderProgress extends JFrame implements ChangeListener, ActionLi
 		pBtn.add(plus);
 		plus.addActionListener(this);
 		minus.addActionListener(this);
-		
+
 		pack();
 	}
-	
+
 	public static void main(String[] args) {
 		new D_SliderProgress();
 	}
 
 	@Override
 	public void stateChanged(ChangeEvent e) {
-		if(e.getSource().equals(slider)) {
+		if (e.getSource().equals(slider)) {
 			txtSlider.setText(Integer.toString(slider.getValue()));
 			txtProg.setText(Integer.toString(prog.getValue()));
 		}
@@ -91,12 +97,12 @@ public class D_SliderProgress extends JFrame implements ChangeListener, ActionLi
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource().equals(plus)){
-			prog.setValue(prog.getValue()+1);
-			slider.setValue(slider.getValue()+1);
-		}else {
-			prog.setValue(prog.getValue()-1);
-			slider.setValue(slider.getValue()-1);
+		if (e.getSource().equals(plus)) {
+			prog.setValue(prog.getValue() + 1);
+			slider.setValue(slider.getValue() + 1);
+		} else {
+			prog.setValue(prog.getValue() - 1);
+			slider.setValue(slider.getValue() - 1);
 		}
 		txtProg.setText(Integer.toString(prog.getValue()));
 		txtSlider.setText(Integer.toString(slider.getValue()));

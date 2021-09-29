@@ -10,12 +10,12 @@ public class G2_ReverseExam {
 		tm.put(10, "십");
 		tm.put(40, "사십");
 		tm.put(20, "이십");
-		
+
 		System.out.println("맵에 저장된 키들의 집합 : " + tm.keySet());
 		for (Integer key : tm.keySet()) {
 			System.out.println(String.format("키 : %s, 값 : %s", key, tm.get(key)));
 		}
-		
+
 		tm.remove(40);
 		System.out.println("맵에 저장된 키들의 집합 : " + tm.keySet());
 		Iterator<Integer> keys = tm.keySet().iterator();
@@ -23,7 +23,7 @@ public class G2_ReverseExam {
 			Integer key = keys.next();
 			System.out.println(String.format("키 : %s, 값 : %s", key, tm.get(key)));
 		}
-				
+
 		tm.replace(20, "twenty");
 		System.out.println("맵에 저장된 키들의 집합 : " + tm.keySet());
 		for (Integer key : tm.keySet()) {

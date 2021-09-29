@@ -1,7 +1,7 @@
 package D_Extends;
 
 @SuppressWarnings("unused")
-public class B2_SuperSuper{
+public class B2_SuperSuper {
 	static class Super1 {
 		Super1() {
 			System.out.println("Super 1 : init");
@@ -9,14 +9,14 @@ public class B2_SuperSuper{
 	}
 
 	static class Super2 extends Super1 {
-		Super2(){
-		super();
+		Super2() {
+			super();
 			System.out.println("Super 2 : init");
 		}
 	}
 
 	static class Super3 extends Super2 {
-		Super3(){
+		Super3() {
 			super();
 			System.out.println("Super 3 : init");
 		}

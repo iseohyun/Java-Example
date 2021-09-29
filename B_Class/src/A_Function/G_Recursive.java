@@ -6,10 +6,11 @@ public class G_Recursive {
 		sum = recursiveSum(100);
 		System.out.printf("Sum : " + sum);
 	}
+
 	static int recursiveSum(int n) {
-	    if (n == 1) {
-	        return 1;
-	    }
-	    return n + recursiveSum(n - 1);
+		if (n == 1) {
+			return 1;
+		}
+		return n + recursiveSum(n - 1);
 	}
 }

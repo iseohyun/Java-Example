@@ -14,11 +14,11 @@ public class H_Login extends Application {
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();
-		}catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}

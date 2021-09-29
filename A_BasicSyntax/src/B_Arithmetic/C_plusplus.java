@@ -1,5 +1,12 @@
 package B_Arithmetic;
 
+/**
+ * 
+ * @author Seohyun Jung
+ *
+ *	전위 연산과 후위연산을 이해하기 위한 예제 입니다.
+ */
+
 public class C_plusplus {
 	public static void main(String[] args) {
 		int a = 3;

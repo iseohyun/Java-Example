@@ -24,29 +24,29 @@ public class D3_Init {
 				return "Apple".equals(fruit.getName());
 			}
 		});
-		
+
 		List<Fruit> red = extractFruitList(origin, new Predicate<Fruit>() {
 			@Override
 			public boolean test(Fruit fruit) {
 				return "Red".equals(fruit.getColor());
 			}
-		});		
-		
+		});
+
 		// 3 : print
 		System.out.println("Apple : ");
-		for(Fruit fruit : apple) {
+		for (Fruit fruit : apple) {
 			System.out.println("\t" + fruit.getName() + "/" + fruit.getColor());
 		}
 		System.out.println("Red : ");
-		for(Fruit fruit : red) {
+		for (Fruit fruit : red) {
 			System.out.println("\t" + fruit.getName() + "/" + fruit.getColor());
 		}
 	}
-	
-	static List<Fruit> extractFruitList(List<Fruit> fruits, Predicate<Fruit> predicate){
+
+	static List<Fruit> extractFruitList(List<Fruit> fruits, Predicate<Fruit> predicate) {
 		List<Fruit> resultList = new ArrayList<>();
-		for(Fruit fruit : fruits){
-			if(predicate.test(fruit)){
+		for (Fruit fruit : fruits) {
+			if (predicate.test(fruit)) {
 				resultList.add(fruit);
 			}
 		}

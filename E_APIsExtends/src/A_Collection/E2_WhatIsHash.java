@@ -6,21 +6,25 @@ import java.util.Iterator;
 class Animal {
 	String species;
 	String habitat;
+
 	Animal(String species, String habitat) {
 		this.species = species;
 		this.habitat = habitat;
 	}
+
 	public int hashCode() {
 		return (species + habitat).hashCode();
 	}
+
 	public boolean equals(Object obj) {
-		if(obj instanceof Animal) {
-			Animal temp = (Animal)obj;
+		if (obj instanceof Animal) {
+			Animal temp = (Animal) obj;
 			return species.equals(temp.species) && habitat.equals(temp.habitat);
 		} else {
 			return false;
 		}
 	}
+
 	public void show() {
 		System.out.println(species + " / " + habitat);
 	}
@@ -36,7 +40,7 @@ public class E2_WhatIsHash {
 		hs.add(new Animal("°­¾ÆÁö", "À°Áö"));
 
 		Iterator<Animal> iter = hs.iterator();
-		while(iter.hasNext()) {
+		while (iter.hasNext()) {
 			iter.next().show();
 		}
 	}

@@ -3,7 +3,7 @@ package G_Time;
 import java.util.Calendar;
 
 public class A_Time {
-	public static void main(String [] args) {
+	public static void main(String[] args) {
 		Calendar time = Calendar.getInstance();
 		System.out.println(time.getTime());
 		time.add(Calendar.MONTH, 1);

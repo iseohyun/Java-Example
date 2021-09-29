@@ -19,28 +19,28 @@ public class D2_Combine {
 				new Fruit("Cherry", "Red"));
 		List<Fruit> apple = new ArrayList<>();
 		List<Fruit> red = new ArrayList<>();
-		
+
 		// 2: Code
 		Predicate<Fruit> pred = (fruit) -> "Apple".equals(fruit.getName());
 		apple = extractFruitList(origin, pred);
 		pred = (fruit) -> "Red".equals(fruit.getColor());
 		red = extractFruitList(origin, pred);
-		
+
 		// 3: print
 		System.out.println("Apple : ");
-		for(Fruit fruit : apple) {
+		for (Fruit fruit : apple) {
 			System.out.println("\t" + fruit.getName() + "/" + fruit.getColor());
 		}
 		System.out.println("Red : ");
-		for(Fruit fruit : red) {
+		for (Fruit fruit : red) {
 			System.out.println("\t" + fruit.getName() + "/" + fruit.getColor());
 		}
 	}
-	
-	static List<Fruit> extractFruitList(List<Fruit> fruits, Predicate<Fruit> predicate){
+
+	static List<Fruit> extractFruitList(List<Fruit> fruits, Predicate<Fruit> predicate) {
 		List<Fruit> resultList = new ArrayList<>();
-		for(Fruit fruit : fruits){
-			if(predicate.test(fruit)){
+		for (Fruit fruit : fruits) {
+			if (predicate.test(fruit)) {
 				resultList.add(fruit);
 			}
 		}

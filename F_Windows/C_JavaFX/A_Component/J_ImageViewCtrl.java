@@ -12,7 +12,7 @@ public class J_ImageViewCtrl {
 	Button ChangeImgBtn;
 
 	Image myImage = new Image(getClass().getResourceAsStream("dog.jpg"));
-	
+
 	public void displayImage() {
 
 		myImageView.setImage(myImage);

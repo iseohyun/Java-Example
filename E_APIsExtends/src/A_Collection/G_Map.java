@@ -14,7 +14,7 @@ public class G_Map {
 		for (String key : hm.keySet()) {
 			System.out.println(String.format("키 : %s, 값 : %s", key, hm.get(key)));
 		}
-		
+
 		hm.remove("사십");
 		System.out.println("맵에 저장된 키들의 집합 : " + hm.keySet());
 		Iterator<String> keys = hm.keySet().iterator();
@@ -22,7 +22,7 @@ public class G_Map {
 			String key = keys.next();
 			System.out.println(String.format("키 : %s, 값 : %s", key, hm.get(key)));
 		}
-		
+
 		hm.replace("이십", 200);
 		System.out.println("맵에 저장된 키들의 집합 : " + hm.keySet());
 		for (String key : hm.keySet()) {

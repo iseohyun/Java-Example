@@ -1,13 +1,15 @@
 package A_Generic;
+
 public class A_SimpleExam {
-	static class A{
+	static class A {
 		String color;
+
 		A(String init) {
 			color = init;
 		}
 	}
 
-	static class B<T>{
+	static class B<T> {
 		void show(T t) {
 			System.out.println(((A) t).color);
 		}

@@ -21,18 +21,18 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
 @SuppressWarnings("serial")
-public class A_TextOut extends JFrame{
+public class A_TextOut extends JFrame {
 	JPanel pTextField = new JPanel();
-	JPanel pPlainText = new JPanel(); 
+	JPanel pPlainText = new JPanel();
 	JPanel pStyledText = new JPanel();
-	
+
 	JLabel labelText;
 	JLabel labelPassWord;
 	JLabel labelFormatted;
 	JTextField TextField = new JTextField();
 	JPasswordField PassWord = new JPasswordField();
 	JFormattedTextField FormaedText;
-	JTextArea TextArea = new JTextArea(20,20);
+	JTextArea TextArea = new JTextArea(20, 20);
 	JTextPane TextPane01;
 	final String MsgTxtArea = "JTextArea는 기본적으로 텍스트를 출력하기 위한 도구 입니다."
 			+ "폰트를 지정할 수는 있지만, 하나의 JTextArea에 있는 모든 문자는 하나의 설정만 따릅니다.";
@@ -51,26 +51,26 @@ public class A_TextOut extends JFrame{
 		GridBagLayout GridBag = new GridBagLayout();
 		GridBagConstraints c = new GridBagConstraints();
 		setLayout(GridBag);
-		
-		c.gridx= 0;
-		c.gridy= 0;
+
+		c.gridx = 0;
+		c.gridy = 0;
 		GridBag.setConstraints(pTextField, c);
 		add(pTextField);
-		
-		c.gridx= 1;
-		c.gridy= 0;
+
+		c.gridx = 1;
+		c.gridy = 0;
 		c.gridheight = 2;
 		GridBag.setConstraints(pStyledText, c);
 		add(pStyledText);
-		
-		c.gridx= 0;
-		c.gridy= 1;
+
+		c.gridx = 0;
+		c.gridy = 1;
 		GridBag.setConstraints(pPlainText, c);
 		add(pPlainText);
-		
+
 		// 좌상단
 		pTextField.setLayout(new GridLayout(3, 2));
-		
+
 		labelText = new JLabel("Plain Text : ");
 		pTextField.add(labelText);
 		TextField.setText("이름");
@@ -86,31 +86,31 @@ public class A_TextOut extends JFrame{
 		FormaedText.setText("2020.12.31");
 		FormaedText.revalidate();
 		pTextField.add(FormaedText);
-		
+
 		// 좌하단
 		pPlainText.add(TextArea);
 		JScrollPane scroll = new JScrollPane(TextArea);
 		pPlainText.add(scroll);
-		
+
 		TextArea.setText(MsgTxtArea);
 		TextArea.setLineWrap(true);
 		TextArea.setSelectedTextColor(Color.yellow);
 		TextArea.setSelectionColor(Color.black);
-		TextArea.setFont(new Font("궁서",Font.PLAIN, 12));
-		
+		TextArea.setFont(new Font("궁서", Font.PLAIN, 12));
+
 		// 우측
 		pStyledText.setLayout(new BorderLayout());
 		TextPane01 = new JTextPane();
-		
+
 		pStyledText.add(TextPane01);
 		pStyledText.setPreferredSize(new Dimension(300, 400));
-		
+
 		TextPane01.setContentType("text/html");
 		TextPane01.setText(html);
 
 		pack();
 	}
-	
+
 	public static void main(String[] args) {
 		new A_TextOut();
 	}

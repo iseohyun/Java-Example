@@ -7,7 +7,7 @@ import java.io.OutputStream;
 public class B_MakeJavaFile {
 	public static void main(String[] args) {
 		try {
-			String [] test = {
+			String[] test = {
 					"package B_FileIO;\n",
 					"import java.io.*;\n",
 					"public class C_Quiz {\n",
@@ -25,11 +25,11 @@ public class B_MakeJavaFile {
 					"\t}\n",
 					"}",
 			};
-			
+
 			File file = new File("src\\B_FileIO\\C_Quiz.java");
 			OutputStream stream = new FileOutputStream(file);
-			
-			for(String str : test) {
+
+			for (String str : test) {
 				byte[] binary = str.getBytes();
 				stream.write(binary);
 			}

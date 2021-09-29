@@ -6,9 +6,9 @@ public class C_Concat {
 		System.out.println("Origin : " + str);
 
 		System.out.println(str.concat("Class"));
-		
+
 		System.out.println("After concat() : " + str);
-		
+
 		System.out.println("to".concat("get").concat("her"));
-	}	
+	}
 }

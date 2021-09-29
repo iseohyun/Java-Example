@@ -3,54 +3,56 @@ package A_Generic;
 import java.util.ArrayList;
 
 class Duck extends LandAnimal {
-	Duck(){
+	Duck() {
 		voice = "꽥!";
 	}
 }
-class AnimalListQz<T> {
-    ArrayList<T> al = new ArrayList<T>();
-    void add(T animal) {
-    	al.add(animal);
-    }
 
-    boolean remove(T animal) {
-    	return al.remove(animal);
-    }
-    
-    T get(int index) {
-    	return al.get(index);
-    }
-    
-    int size() {
-    	return al.size();
-    }
+class AnimalListQz<T> {
+	ArrayList<T> al = new ArrayList<T>();
+
+	void add(T animal) {
+		al.add(animal);
+	}
+
+	boolean remove(T animal) {
+		return al.remove(animal);
+	}
+
+	T get(int index) {
+		return al.get(index);
+	}
+
+	int size() {
+		return al.size();
+	}
 }
 
 public class D_Quiz {
-    public static void main(String[] args) {
-        AnimalListQz<LandAnimal> al = new AnimalListQz<LandAnimal>(); // new AnimalList<>(); or new AnimalList();
+	public static void main(String[] args) {
+		AnimalListQz<LandAnimal> al = new AnimalListQz<LandAnimal>(); // new AnimalList<>(); or new AnimalList();
 
-        al.add(new LandAnimal());
-        al.add(new Cat());
-        al.add(new Dog());
+		al.add(new LandAnimal());
+		al.add(new Cat());
+		al.add(new Dog());
 
-        for (int i = 0; i < al.size(); i++) {
-        	al.get(i).repeat = i + 1;
-            al.get(i).crying();
-        }
-        
-        System.out.println("--------------------");
+		for (int i = 0; i < al.size(); i++) {
+			al.get(i).repeat = i + 1;
+			al.get(i).crying();
+		}
 
-        // Quiz. 아래 코드가 동작하여, 다음과 같은 출력이 가능하도록 제네릭을 수정하세요.(overloading)
-        //--------------------
-        //악!
-        //꽥!꽥!꽥!
-        //냥!냥!
-        //멍!멍!멍!
+		System.out.println("--------------------");
+
+		// Quiz. 아래 코드가 동작하여, 다음과 같은 출력이 가능하도록 제네릭을 수정하세요.(overloading)
+		// --------------------
+		// 악!
+		// 꽥!꽥!꽥!
+		// 냥!냥!
+		// 멍!멍!멍!
 //        al.add(new Duck(), 1);
-        al.get(1).repeat = 3;
-        for (int i = 0; i < al.size(); i++) {
-            al.get(i).crying();
-        }
-    }
+		al.get(1).repeat = 3;
+		for (int i = 0; i < al.size(); i++) {
+			al.get(i).crying();
+		}
+	}
 }

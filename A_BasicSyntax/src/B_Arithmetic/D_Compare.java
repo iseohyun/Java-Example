@@ -7,7 +7,7 @@ public class D_Compare {
 		System.out.println("1 : " + (a < b));
 		System.out.println("2 : " + (a > b));
 		System.out.println("3 : " + !(a > b));
-		System.out.println("4 : " + ((a < b)&&(a > b)));
-		System.out.println("5 : " + ((a < b)||(a > b)));
+		System.out.println("4 : " + ((a < b) && (a > b)));
+		System.out.println("5 : " + ((a < b) || (a > b)));
 	}
 }

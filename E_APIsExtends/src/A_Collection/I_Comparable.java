@@ -1,26 +1,29 @@
 package A_Collection;
-class A implements Comparable<A>{
+
+class A implements Comparable<A> {
 	int idx;
 	String name;
 
-	A(int idx, String name){
+	A(int idx, String name) {
 		this.idx = idx;
 		this.name = name;
 	}
-	
+
 	void show() {
 		System.out.println(idx + ":" + name);
 	}
+
 	public int compareTo(A o) {
-		if(o.idx == idx) {
+		if (o.idx == idx) {
 			System.out.println("같음");
 			return 1;
-		}else{
+		} else {
 			System.out.println("다름");
 			return 0;
 		}
-	} 
+	}
 }
+
 public class I_Comparable {
 	public static void main(String[] args) {
 		A cus01 = new A(1, "정서현");

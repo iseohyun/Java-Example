@@ -11,7 +11,7 @@ public class A_Stream {
 		list.add(2);
 		list.add(3);
 		list.add(1);
-		
+
 		Stream<Integer> stream = list.stream();
 		stream.forEach(System.out::println);
 	}

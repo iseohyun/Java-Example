@@ -25,27 +25,27 @@ public class F_Table extends JFrame implements ActionListener {
 	DefaultTableModel model;
 	JButton btnAdd = new JButton("추가");
 	JButton btnDel = new JButton("삭제");
-	final static String[] header = {"영화", "장르"};
+	final static String[] header = { "영화", "장르" };
 	JTextField txtMovie = new JTextField(header[0]);
 	JTextField txtInfo = new JTextField(header[1]);
 	JTextField inputMovie = new JTextField();
 	JTextField inputInfo = new JTextField();
-	
+
 	F_Table() {
 		// 전체 설정
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
-		
+
 		// 테이블 페널
 		add("Center", p);
 		add("South", pBtn);
-		
+
 		// 테이블 설정
 		DefaultTableModel col = new DefaultTableModel(header, 0);
 		tb = new JTable(col);
 		tb.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 		pTb = new JScrollPane(tb);
-		
+
 		model = (DefaultTableModel) tb.getModel();
 		String[][] record = {
 				{"극한직업", "코미디"},
@@ -61,11 +61,11 @@ public class F_Table extends JFrame implements ActionListener {
 				{"인셉션", "드라마"},
 				{"범죄도시", "엑션"},
 		};
-		for(String[] rcd : record) {
+		for (String[] rcd : record) {
 			model.addRow(rcd);
 		}
 		p.add(pTb);
-		
+
 		// 버튼 및 텍스트
 		pBtn.setLayout(new GridLayout(3, 2));
 		txtMovie.setEnabled(false);
@@ -80,30 +80,30 @@ public class F_Table extends JFrame implements ActionListener {
 		btnAdd.addActionListener(this);
 		pBtn.add(btnDel);
 		btnDel.addActionListener(this);
-		
-		setSize(getPreferredSize());		
+
+		setSize(getPreferredSize());
 	}
-	
+
 	Border defaultMargin() {
 		return BorderFactory.createEmptyBorder(10, 10, 10, 10);
 	}
-	
+
 	public static void main(String[] args) {
 		new F_Table();
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource().equals(btnAdd)) {
-			String[] rcd = {"", ""};
+		if (e.getSource().equals(btnAdd)) {
+			String[] rcd = { "", "" };
 			rcd[0] = inputMovie.getText();
 			rcd[1] = inputInfo.getText();
 			model.addRow(rcd);
-		}else {
-			if(tb.getSelectedRow() != -1) {
+		} else {
+			if (tb.getSelectedRow() != -1) {
 				model.removeRow(tb.getSelectedRow());
-			}else {
-				model.removeRow(tb.getRowCount()-1);
+			} else {
+				model.removeRow(tb.getRowCount() - 1);
 			}
 		}
 	}

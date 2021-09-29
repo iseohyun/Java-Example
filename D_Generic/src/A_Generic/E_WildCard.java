@@ -1,37 +1,38 @@
 package A_Generic;
 
-class W1{
-	void view(){
+class W1 {
+	void view() {
 		System.out.println("view1");
 	}
 }
 
-class W2 extends W1{
-	void view(){
+class W2 extends W1 {
+	void view() {
 		System.out.println("view2");
 	}
 }
 
-class W3 extends W2{
-	void view(){
+class W3 extends W2 {
+	void view() {
 		System.out.println("view3");
 	}
 }
 
-class G<T extends W1>{
+class G<T extends W1> {
 	T t;
-	G(T t){
+
+	G(T t) {
 		this.t = t;
 	}
-	
+
 	static void show(G<?> g) {
 		g.t.view();
 	}
-	
+
 	static void showSu(G<? super W2> g) {
 		g.t.view();
 	}
-	
+
 	static void showEx(G<? extends W2> g) {
 		g.t.view();
 	}

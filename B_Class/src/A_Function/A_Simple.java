@@ -11,7 +11,7 @@ public class A_Simple {
 	static void func1() {
 		System.out.println("호출 되었습니다.");
 	}
-	
+
 	static void func2() {
 		System.out.println("두번 째 함수입니다.");
 	}

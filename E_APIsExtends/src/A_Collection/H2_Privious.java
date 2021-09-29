@@ -14,7 +14,7 @@ public class H2_Privious {
 		while (iter.hasNext()) {
 			System.out.print(iter.next() + " ");
 		}
-		
+
 		System.out.println();
 		while (iter.hasPrevious()) {
 			System.out.print(iter.previous() + " ");

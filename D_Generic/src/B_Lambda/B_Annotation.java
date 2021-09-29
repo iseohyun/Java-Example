@@ -11,14 +11,14 @@ interface Sum {
 }
 
 public class B_Annotation {
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		Sub Num01 = (x, y) -> x - y;
-        System.out.println(Num01.sub(3, 4));
-        
-        Sum Num02 = (x, y) -> x + y;
-        System.out.println(Num02.sum(3, 4));
-        
-        Sub Num03 = (x, y) -> x + y;
-        System.out.println(Num03.sub(3, 4));
+		System.out.println(Num01.sub(3, 4));
+
+		Sum Num02 = (x, y) -> x + y;
+		System.out.println(Num02.sum(3, 4));
+
+		Sub Num03 = (x, y) -> x + y;
+		System.out.println(Num03.sub(3, 4));
 	}
 }

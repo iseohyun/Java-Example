@@ -2,8 +2,9 @@ package D_Extends;
 
 public class G_InnerClass {
 	public static void main(String[] strs) {
-		class Inner{
+		class Inner {
 			static int a = 0;
+
 			public void innerPrint() {
 				System.out.println("Inner Print :" + (a++));
 			}

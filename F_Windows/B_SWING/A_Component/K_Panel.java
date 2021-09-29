@@ -11,18 +11,18 @@ import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
 
 @SuppressWarnings("serial")
-public class K_Panel extends JFrame{
+public class K_Panel extends JFrame {
 	JPanel p = new JPanel();
 	JTabbedPane pTab = new JTabbedPane();
 	JRootPane pRoot = new JRootPane();
 	JInternalFrame pInter = new JInternalFrame();
-	JSplitPane pSplit = new JSplitPane();	
-	
+	JSplitPane pSplit = new JSplitPane();
+
 	public K_Panel() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		add(pTab);
 		ImageIcon icon = new ImageIcon("cat.jpg");
-		
+
 		pTab.addTab("일반 패널", p);
 		p.add(new JLabel(icon));
 
@@ -31,7 +31,7 @@ public class K_Panel extends JFrame{
 
 		pTab.addTab("내부 프레임", pInter);
 		pInter.add(new JLabel(icon));
-		
+
 		JSplitPane p1 = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
 		JSplitPane p2 = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
 		p1.setRightComponent(new JLabel(icon));
@@ -41,10 +41,11 @@ public class K_Panel extends JFrame{
 		p2.setBottomComponent(new JLabel(icon));
 		p2.setDividerLocation(100);
 		pTab.addTab("스플릿 패널", p1);
-		
+
 		setVisible(true);
 		setSize(300, 400);
 	}
+
 	public static void main(String[] args) {
 		new K_Panel();
 	}

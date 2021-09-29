@@ -21,17 +21,17 @@ public class A_Mouse extends JFrame implements KeyListener, MouseListener {
 	Robot r;
 	Point xy;
 	boolean OK = false;
-	
-	A_Mouse(){
+
+	A_Mouse() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new FlowLayout());
 		add(TextOut);
 		add(Pw);
-		
+
 		Pw.addKeyListener(this);
 		Pw.addKeyListener(this);
 		addMouseListener(this);
-		
+
 		try {
 			r = new Robot();
 			r.mouseMove(Pw.getLocation().x, Pw.getLocation().y);
@@ -42,8 +42,8 @@ public class A_Mouse extends JFrame implements KeyListener, MouseListener {
 		setVisible(true);
 		setSize(200, 200);
 	}
-	
-	public static void main(String [] args) {
+
+	public static void main(String[] args) {
 		new A_Mouse();
 	}
 
@@ -57,12 +57,12 @@ public class A_Mouse extends JFrame implements KeyListener, MouseListener {
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		if(e.getKeyChar() == '\n') {
-			if(strPw.toUpperCase().compareTo(String.valueOf(Pw.getPassword()).toUpperCase()) == 0) {
-				System.out.println("성공"	);
+		if (e.getKeyChar() == '\n') {
+			if (strPw.toUpperCase().compareTo(String.valueOf(Pw.getPassword()).toUpperCase()) == 0) {
+				System.out.println("성공");
 				OK = true;
-			}else {
-				System.out.println("실패"	);
+			} else {
+				System.out.println("실패");
 			}
 		}
 	}
@@ -86,8 +86,8 @@ public class A_Mouse extends JFrame implements KeyListener, MouseListener {
 	@Override
 	public void mouseExited(MouseEvent e) {
 		System.out.println("마우스 도망감");
-		if(!OK) {
-			r.mouseMove(getWidth()/2, getHeight()/2);
+		if (!OK) {
+			r.mouseMove(getWidth() / 2, getHeight() / 2);
 		}
 	}
 }

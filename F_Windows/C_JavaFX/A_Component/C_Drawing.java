@@ -18,18 +18,18 @@ import javafx.stage.Stage;
  * 
  * @author Seohyun Jung
  * 
- * 		이미지를 출력하기 위해서는 아래 폴더에 해당 파일이 존재해야합니다.
+ *         이미지를 출력하기 위해서는 아래 폴더에 해당 파일이 존재해야합니다.
  * 
- *			$(Project_Dir)\bin\cat.jpg
+ *         $(Project_Dir)\bin\cat.jpg
  */
 
-public class C_Drawing extends Application{
+public class C_Drawing extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		Group root = new Group();
-		Scene scene = new Scene(root,  600, 600, Color.LIGHTSKYBLUE);
+		Scene scene = new Scene(root, 600, 600, Color.LIGHTSKYBLUE);
 		Stage stage = new Stage();
-		
+
 		Text text = new Text();
 		Line line = new Line();
 
@@ -37,7 +37,7 @@ public class C_Drawing extends Application{
 		text.setX(50);
 		text.setY(50);
 		text.setFont(Font.font("Verdana", 40));
-		
+
 		line.setStartX(100);
 		line.setStartY(100);
 		line.setEndX(200);
@@ -46,7 +46,7 @@ public class C_Drawing extends Application{
 		line.setStrokeWidth(8);
 		line.setOpacity(0.5);
 		line.setRotate(15);
-		
+
 		Rectangle rect = new Rectangle();
 		rect.setX(100);
 		rect.setY(200);
@@ -55,15 +55,11 @@ public class C_Drawing extends Application{
 		rect.setStroke(Color.AQUA);
 		rect.setStrokeWidth(3);
 		rect.setFill(Color.BEIGE);
-		
+
 		Polygon triangle = new Polygon();
-		triangle.getPoints().setAll(
-				100., 300.,
-				100., 400.,
-				200., 350.
-				);
+		triangle.getPoints().setAll(100., 300., 100., 400., 200., 350.);
 		triangle.setFill(Color.BISQUE);
-	
+
 		Circle circ = new Circle();
 		circ.setCenterX(350);
 		circ.setCenterY(150);
@@ -71,22 +67,21 @@ public class C_Drawing extends Application{
 		circ.setFill(Color.LIGHTSKYBLUE);
 		circ.setStroke(Color.FIREBRICK);
 		circ.setStrokeWidth(7);
-		
+
 		Image img = new Image("cat.jpg");
-		ImageView imgView = new ImageView(img); 
+		ImageView imgView = new ImageView(img);
 		imgView.setX(100);
 		imgView.setY(150);
 		imgView.setScaleX(0.5);
 		imgView.setScaleY(0.5);
-		
+
 		root.getChildren().add(text);
 		root.getChildren().add(line);
 		root.getChildren().add(rect);
 		root.getChildren().add(triangle);
 		root.getChildren().add(circ);
 		root.getChildren().add(imgView);
-		
-		
+
 		stage.setScene(scene);
 		stage.show();
 	}

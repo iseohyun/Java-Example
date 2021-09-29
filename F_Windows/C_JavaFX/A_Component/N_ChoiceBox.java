@@ -8,8 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class N_ChoiceBox extends Application{
-	
+public class N_ChoiceBox extends Application {
+
 	@Override
 	public void start(Stage primaryScene) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("N_ChoiceBox.fxml"));
@@ -17,7 +17,7 @@ public class N_ChoiceBox extends Application{
 		primaryScene.setScene(scene);
 		primaryScene.show();
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}

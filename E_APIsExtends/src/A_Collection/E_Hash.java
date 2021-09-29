@@ -9,26 +9,26 @@ public class E_Hash {
 		HashSet<String> hs02 = new HashSet<String>();
 		hs01.add("»´±Êµø");
 		hs01.add("¿Ãº¯Ω≈");
-		System.out.println("¿”≤©¡§ √ﬂ∞° : " + ((hs01.add("¿”≤©¡§"))?"√ﬂ∞°µ ":"√ﬂ∞°æ»µ "));
-		System.out.println("¿”≤©¡§ √ﬂ∞° : " + ((hs01.add("¿”≤©¡§"))?"√ﬂ∞°µ ":"√ﬂ∞°æ»µ "));
-		
+		System.out.println("¿”≤©¡§ √ﬂ∞° : " + ((hs01.add("¿”≤©¡§")) ? "√ﬂ∞°µ " : "√ﬂ∞°æ»µ "));
+		System.out.println("¿”≤©¡§ √ﬂ∞° : " + ((hs01.add("¿”≤©¡§")) ? "√ﬂ∞°µ " : "√ﬂ∞°æ»µ "));
+
 		System.out.print("Hash 01 : ");
 		for (String e : hs01) {
 			System.out.print(e + " ");
 		}
-		
+
 		hs02.add("¿Ãº∫∞Ë");
 		hs02.add("»´±Êµø");
 		hs02.add("¿Ãº¯Ω≈");
 		hs02.add("¿Â∫∏∞Ì");
-		
+
 		System.out.println();
 		System.out.print("Hash 02 : ");
 		Iterator<String> iter02 = hs02.iterator();
 		while (iter02.hasNext()) {
 			System.out.print(iter02.next() + " ");
 		}
-		
+
 		hs02.addAll(hs01);
 		iter02 = hs02.iterator();
 		System.out.println();
@@ -36,7 +36,7 @@ public class E_Hash {
 		while (iter02.hasNext()) {
 			System.out.print(iter02.next() + " ");
 		}
-		
+
 		System.out.println();
 		System.out.println("Hash02.size: " + hs02.size());
 	}

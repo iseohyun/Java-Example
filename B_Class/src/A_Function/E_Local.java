@@ -8,9 +8,8 @@ public class E_Local {
 		func1();
 		func1();
 	}
-	
-	static void func1()
-	{
+
+	static void func1() {
 		int val = 1;
 		val++;
 		System.out.println("로컬 변수 : " + val);

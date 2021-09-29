@@ -10,20 +10,19 @@ public class K_HowOldCtrl {
 	TextField input;
 	@FXML
 	Label greeting;
-	
+
 	int age;
-	
+
 	public void submit(ActionEvent event) {
 		try {
 			age = Integer.parseInt(input.getText());
-			if(age > 18) {
+			if (age > 18) {
 				greeting.setText("성인입니다.");
-			}else {
+			} else {
 				greeting.setText("아동입니다.");
 			}
-		}catch(NumberFormatException e) {
+		} catch (NumberFormatException e) {
 			greeting.setText("숫자가 아님!");
 		}
 	}
-
 }

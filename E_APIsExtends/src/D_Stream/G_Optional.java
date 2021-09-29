@@ -8,17 +8,17 @@ public class G_Optional {
 		String str = "Java", strNull = null;
 		Optional<String> opt = Optional.ofNullable(str);
 		System.out.println(opt.get());
-		
+
 		opt = Optional.ofNullable(strNull);
 		try {
 			System.out.println(opt.get());
-		}catch(NoSuchElementException e) {
+		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		System.out.println("=====");
 		try {
 			opt = Optional.of(strNull);
-		}catch(NullPointerException e) {
+		} catch (NullPointerException e) {
 			e.printStackTrace();
 		}
 	}

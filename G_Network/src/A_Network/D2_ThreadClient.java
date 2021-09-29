@@ -15,7 +15,7 @@ public class D2_ThreadClient {
 		Socket socket = null;
 		try {
 			socket = new Socket();
-			 
+
 			socket.connect(new InetSocketAddress(InetAddress.getLocalHost(), 4040));
 			InputStream IS = socket.getInputStream();
 			byte[] bt = new byte[10];
@@ -23,21 +23,21 @@ public class D2_ThreadClient {
 			String buf = new String(bt, 0, size, "UTF-8");
 			num = Integer.parseInt(buf);
 			System.out.println("Client " + num);
-			
-			while(true) {
+
+			while (true) {
 				System.out.print("> ");
 				String message = input.nextLine();
 				byte[] as = message.getBytes("UTF-8");
 				OutputStream StrmOut = socket.getOutputStream();
 				StrmOut.write(as);
 			}
-		}catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		try {
 			socket.close();
 			input.close();
-		} catch(IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}

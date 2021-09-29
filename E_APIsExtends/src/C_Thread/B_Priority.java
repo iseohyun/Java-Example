@@ -8,7 +8,7 @@ public class B_Priority {
 		thread1.setPriority(10);
 
 		System.out.println(thread1.getPriority());
-		System.out.println(thread2.getPriority());		
+		System.out.println(thread2.getPriority());
 
 		thread1.start();
 		thread2.start();

@@ -10,11 +10,11 @@ public class B3_DiffTypes {
 	static void func1(int input) {
 		System.out.println("출력 : " + input);
 	}
-	
+
 	static void func2(float input) {
 		System.out.println("출력 : " + input);
 	}
-	
+
 	static void func3(String input) {
 		System.out.println("출력 : " + input);
 	}
