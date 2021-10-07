@@ -11,19 +11,27 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+/**
+ * 
+ * 강의 출처 : https://www.youtube.com/watch?v=9XJicRt_FaI&t=9259s
+ * @author Seohyun Jung
+ *
+ *   - 라이브러리 추가 
+ *         방법 Properties > Java Build Path > Libraries Modulepath >
+ *         (활성화) Add External JARs.. > *.jar파일 추가
+ * 
+ *         Arguments 추가 방법 Run/Debug Setting > 리스트 창에서 해당 class 더블클릭 Arguments >
+ *         VM arguments에 아래 내용 추가 
+ *         --module-path "설치한 폴더" --add-modules=javafx.controls,javafx.fxml
+ *         예를들어 : --module-path "C:\Program Files\Java\javafx-sdk-16" --add-modules=javafx.controls,javafx.fxml
+ * 
+ * 	 - JavaFX Plugin 설치
+ * 		   help -> Eclipse Marketplace...
+ * 		   JavaFx 검색 : e(fx)clipse ... 설치
+ * 
+ */
+
 public class A_Button extends Application implements EventHandler<ActionEvent> {
-	// 라이브러리 추가 방법
-	// Properties > Java Build Path > Libraries
-	// Modulepath > (활성화) Add External JARs.. > *.jar파일 추가
-
-	// Arguments 추가 방법
-	// Run/Debug Setting > 리스트 창에서 해당 class 더블클릭
-	// Arguments > VM arguments에 추가
-	// --module-path "설치한 폴더" --add-modules=javafx.controls,javafx.fxml
-	// 예를들어 :
-	// --module-path "C:\Program Files\Java\javafx-sdk-16"
-	// --add-modules=javafx.controls,javafx.fxml
-
 	Button button1;
 	Button button2;
 	Label label1;
