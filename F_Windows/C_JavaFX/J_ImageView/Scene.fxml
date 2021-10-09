@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="J_ImageView.Controllar">
+   <children>
+      <Button fx:id="ChangeImgBtn" layoutX="274.0" layoutY="319.0" mnemonicParsing="false" onAction="#displayImage" text="그림 바꾸기" />
+      <ImageView fx:id="myImageView" fitHeight="291.0" fitWidth="572.0" layoutX="14.0" layoutY="14.0" onMousePressed="#displayImage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../cat.jpg" />
+         </image>
+         <effect>
+            <DisplacementMap>
+               <mapData>
+                  <FloatMap />
+               </mapData>
+               <input>
+                  <DropShadow />
+               </input>
+            </DisplacementMap>
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

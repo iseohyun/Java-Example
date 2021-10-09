@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="116.0" prefWidth="508.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Z_Music.Controllar">
+   <children>
+      <Label fx:id="name" alignment="CENTER" prefHeight="50.0" prefWidth="508.0" text="곡 이름" textAlignment="CENTER" textFill="LIME">
+         <font>
+            <Font size="39.0" />
+         </font></Label>
+      <Button layoutY="65.0" mnemonicParsing="false" onAction="#play" prefHeight="50.0" prefWidth="50.0" text="▶" />
+      <Button layoutX="50.0" layoutY="65.0" mnemonicParsing="false" onAction="#pause" prefHeight="50.0" prefWidth="50.0" text="||" />
+      <Button layoutX="100.0" layoutY="65.0" mnemonicParsing="false" onAction="#reset" prefHeight="50.0" prefWidth="50.0" text="■" />
+      <Button layoutX="150.0" layoutY="65.0" mnemonicParsing="false" onAction="#previous" prefHeight="50.0" prefWidth="50.0" text="&lt;&lt;" />
+      <Button layoutX="200.0" layoutY="65.0" mnemonicParsing="false" onAction="#next" prefHeight="50.0" prefWidth="50.0" text="&gt;&gt;" />
+      <ComboBox fx:id="speed" layoutX="250.0" layoutY="65.0" prefHeight="50.0" prefWidth="115.0" promptText="재생속도" />
+      <Slider fx:id="volumn" layoutX="363.0" layoutY="65.0" max="100.0" prefHeight="50.0" prefWidth="145.0" value="50.0" />
+      <ProgressBar fx:id="time" layoutY="49.0" prefHeight="13.0" prefWidth="508.0" progress="0.0" />
+   </children>
+</AnchorPane>
