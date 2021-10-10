@@ -17,7 +17,7 @@ public class D3_Quiz {
 			System.out.println();
 		}
 		
-		// Quiz 1: 코드를 삽입하여 각 열의 데이터를 이동시키시오. 
+		// 실습과제 : 코드를 삽입하여 각 열의 데이터를 이동시키시오. 
 		// 1열 -> 2열 -> 3열 -> 1열
 		
 		System.out.println("변경 후 :");

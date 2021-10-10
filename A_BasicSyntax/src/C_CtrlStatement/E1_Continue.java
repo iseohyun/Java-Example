@@ -1,5 +1,11 @@
 package C_CtrlStatement;
 
+/**
+ * 
+ * coutinue문을 만나면, 반복문의 이후 처리내용을 무시하고, 조건문을 수행합니다.
+ *
+ */
+
 public class E1_Continue {
 	public static void main(String[] args) {
 		int i = 1;
@@ -12,6 +18,7 @@ public class E1_Continue {
 				break;
 			}
 		}
-		// TODO : continue구문을 주석 처리하고, 동작을 비교하세요.
 	}
 }
+
+// 실습과제 : continue구문을 주석 처리하고, 동작을 비교하세요.

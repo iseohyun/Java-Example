@@ -2,8 +2,6 @@ package A_BasicSyntax;
 
 /**
  * 
- * @author Seohyun Jung
- *
  *	println은 자바에서 가장 많이 쓰는 출력포멧입니다.
  *	그 외에 print, printf가 있습니다.
  * 
@@ -22,3 +20,5 @@ public class C_Print {
 		System.out.println("나의 꿈은 최고의 프로그래머가 되는 것입니다.");
 	}
 }
+
+// 실습과제 : 내 소개를 해봅시다.

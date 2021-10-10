@@ -8,13 +8,13 @@ public class E_Typecast {
 		System.out.println(d1);
 		System.out.println(d2);
 
-		int n =10;
-		//n = 9876543210; // Out of range
+		int n = 10;
 
-		System.out.println(n/3);
-		System.out.println((float)n/3);
-		System.out.println(n/3.0);
-		
-		// TODO : 14 ~ 16줄의 차이점을 말해봅시다.
+		System.out.println(n / 3);
+		System.out.println((float) n / 3);
+		System.out.println(n / 3.0);
 	}
 }
+
+// 실습과제 1: n을 10 대신 9876543210L를 저장하고, 에러가 나지 않도록 수정하십시오.
+// 실습과제 2: n을 10 대신 9876543210를 저장하고, 실행해봅니다.

@@ -2,8 +2,6 @@ package A_BasicSyntax;
 
 /**
  * 
- * @author Seohyun Jung
- *
  *	주석 : 주석은 컴퓨터가 처리하지 않는 것을 의미합니다.
  *	주석은 동료 프로그래머, 그리고 미래의 나와 소통하기 위한 아주 중요한 요소입니다.
  *
@@ -22,3 +20,13 @@ public class B_Comment {
 		System.out.println("Hello World 6");
 	}
 }
+
+// 실습과제 : 주석만 지워봅시다. 아래와 같이 출력되도록 수정해 봅시다.
+//
+//	Hello World 1
+//	Hello World 2
+//	Hello World 3
+//	Hello World 4
+//	Hello World 5
+//	Hello World 6
+//

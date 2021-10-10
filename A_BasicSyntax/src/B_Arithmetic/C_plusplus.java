@@ -1,15 +1,17 @@
 package B_Arithmetic;
 
+import A_BasicSyntax.Input;
+
 /**
- * 
- * @author Seohyun Jung
  *
  *	전위 연산과 후위연산을 이해하기 위한 예제 입니다.
+ *
  */
 
 public class C_plusplus {
 	public static void main(String[] args) {
-		int a = 3;
+		int a = Input.getInt();
+		
 		System.out.println("1 : " + a++);
 		System.out.println("* : " + a);
 		System.out.println("2 : " + a++);

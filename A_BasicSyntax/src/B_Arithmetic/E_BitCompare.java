@@ -2,18 +2,15 @@ package B_Arithmetic;
 
 public class E_BitCompare {
 	public static void main(String[] args) {
-		int a = 8, b = -8;
+		int a = 0xF0, b = 0xAA;
 
-		System.out.println("~ 연산 : "+ ~a);
-
-		System.out.println("<< 연산 : "+ (a << 2));
-		System.out.println(">> 연산 : "+ (b >> 2));
-
-		System.out.println(">>> 연산 : "+ (a >>> 2));
-		System.out.println(">>> 연산 : "+ (b >>> 2));
-
-		System.out.println(Integer.toHexString(b).toUpperCase());
-		System.out.println(Integer.toHexString(b>>2).toUpperCase());
-		System.out.println(Integer.toHexString(b>>>2).toUpperCase());
+		System.out.println("a = " + a + "[" + Integer.toBinaryString(a) + "]");
+		System.out.println("b = " + b + "[" + Integer.toBinaryString(b) + "]");
+		System.out.println("a AND b = 0x" + Integer.toHexString(a & b).toUpperCase() + "(" + (a & b) + ")");
+		System.out.println("a OR b = 0x" + Integer.toHexString(a | b).toUpperCase() + "(" + (a | b) + ")");
+		System.out.println("a XOR b = 0x" + Integer.toHexString(a ^ b).toUpperCase() + "(" + (a ^ b) + ")");
+		System.out.println("!a = 0x" + Integer.toHexString(~a).toUpperCase() + "(" + (~a) + ")");
 	}
 }
+
+// 실습과제 : AND의 결과가 "0x0", OR의 결과는 "0xFF"가 출력되도록 a를 수정해보십시오.

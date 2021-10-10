@@ -4,8 +4,6 @@ import java.io.IOException;
 
 /**
  * 
- * @author Seohyun Jung
- *
  *	문자 a를 입력해 보고, 숫자 1을 입력해 봅니다. 어떻게 다른지 비교해봅시다.
  *	11을 입력해보고, 1을 입력한 것과 비교해 봅니다.
  *
@@ -21,3 +19,6 @@ public class G_Scanf {
 		System.out.println("문자로 인식시켜서 출력 : " + (char)i);
 	}
 }
+
+// 실습과제 1: a를 입력하면 b가 출력되도록 수정해 보세요.
+// 실습과제 2: a을 입력하면 A가 출력되도록 수정해보세요.

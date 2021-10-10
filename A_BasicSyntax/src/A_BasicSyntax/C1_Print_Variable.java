@@ -2,9 +2,7 @@ package A_BasicSyntax;
 
 /**
  * 
- * @author Seohyun Jung
- *
- *	C와 D의 중간과정입니다.
+ *	C와 D의 중간과정입니다. (생략가능)
  *
  */
 
@@ -17,3 +15,5 @@ public class C1_Print_Variable {
 		System.out.println("나" + "의 꿈은 " + "최고의 프로그래머" + "가 되는 것입니다.");
 	}
 }
+
+//실습과제 : "나"를 "친구"로 바꾸어봅니다.
