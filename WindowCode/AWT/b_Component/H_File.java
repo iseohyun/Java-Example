@@ -9,14 +9,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.OutputStream;
+
+import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class H_File extends Frame implements ActionListener {
 	Button btnOpen = new Button("파일 열기");
-	Button btnSave = new Button("파일 저장");
+	Button btnSave = new Button("다른 이름으로 저장");
 	FileDialog fopen = new FileDialog(this, "파일 열기", FileDialog.LOAD);
-	FileDialog fsave = new FileDialog(this, "파일 저장", FileDialog.SAVE);
+	FileDialog fsave = new FileDialog(this, "다른 이름으로 저장", FileDialog.SAVE);
 	TextArea ta = new TextArea("내용", 33, 80);
 
 	public H_File() {
@@ -43,7 +47,7 @@ public class H_File extends Frame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(btnOpen)) {
 			fopen.setVisible(true);
-			System.out.println(fopen.getDirectory());
+			System.out.print("열린파일 : " + fopen.getDirectory());
 			System.out.println(fopen.getFile());
 			try {
 				File file = new File(fopen.getDirectory() + fopen.getFile());
@@ -59,6 +63,19 @@ public class H_File extends Frame implements ActionListener {
 			}
 		} else {
 			fsave.setVisible(true);
+			File file = new File(fsave.getDirectory()+fsave.getFile());
+			OutputStream stream;
+			try {
+				stream = new FileOutputStream(file);
+				stream.write(ta.getText().getBytes());
+				stream.close();
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
 		}
 	}
 }
+// 실습과제 : FileDialog클래스를 만드시오.
+//		FileDialog는 2가지 메소드를 갖습니다.
+//		1. open()은 open 다이얼로그를 호출하고, 내용을 연결된 출력상자로 출력합니다.
+//		2. save()는 save 다이얼로그를 호출하고, 연결된 출력상자의 내용을 저장합니다.

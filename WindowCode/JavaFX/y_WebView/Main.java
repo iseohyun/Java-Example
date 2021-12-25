@@ -9,12 +9,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * 
- * @author Seohyun Jung
- *	
  *	모듈 추가 : javafx.web
  *
- *	--module-path "C:\Program Files\Java\javafx-sdk-16" --add-modules=javafx.controls,javafx.fxml,javafx.web
+ *	--add-modules=javafx.controls,javafx.fxml,javafx.web
  *
  */
 
@@ -22,7 +19,6 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-
 		Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);

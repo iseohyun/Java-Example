@@ -12,7 +12,7 @@
 	minHeight="-Infinity" minWidth="-Infinity" prefHeight="116.0"
 	prefWidth="508.0" style="-fx-background-color: black;"
 	xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="Z_Music.Controllar">
+	fx:controller="z_Music.Controllar">
 	<children>
 		<Label fx:id="name" alignment="CENTER" prefHeight="50.0"
 			prefWidth="508.0" text="곡 이름" textAlignment="CENTER" textFill="LIME">

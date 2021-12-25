@@ -9,8 +9,6 @@ import javafx.stage.Stage;
 
 /**
  * 
- * @author Seohyun Jung
- * 
  *	키보드에 특정 키를 누르면, 화면을 종료할 수 있습니다. 코드를 보고 해석해보세요.
  * 
  */

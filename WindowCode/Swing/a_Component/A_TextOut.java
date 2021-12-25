@@ -20,6 +20,14 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
+/**
+ * 
+ * 코드 실행 모습
+ * 
+ * https://example-code.tistory.com/15
+ *
+ */
+
 @SuppressWarnings("serial")
 public class A_TextOut extends JFrame {
 	JPanel pTextField = new JPanel();

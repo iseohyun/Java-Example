@@ -33,3 +33,5 @@ public class A2_Alignment extends JFrame {
 		new A2_Alignment();
 	}
 }
+
+// 실습과제 : 왼쪽 정렬을 시도해 봅니다.

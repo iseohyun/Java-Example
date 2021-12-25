@@ -8,7 +8,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
 	minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0"
 	prefWidth="636.0" xmlns="http://javafx.com/javafx/16"
-	xmlns:fx="http://javafx.com/fxml/1" fx:controller="G_Scene.Controllar">
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="g_Scene.Controllar">
 	<children>
 		<Label layoutX="56.0" layoutY="55.0" text="Scene 1">
 			<font>

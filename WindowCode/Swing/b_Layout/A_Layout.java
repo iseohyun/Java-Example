@@ -27,3 +27,5 @@ public class A_Layout extends JFrame {
 		new A_Layout();
 	}
 }
+
+// 실습과제 : 프로그램의 크기를 변화시켜 봅니다. 버튼의 배열을 관찰해 봅니다.

@@ -20,8 +20,8 @@ package a_BasicSyntax;
 
 public class A_HelloWorld {
 	public static void main(String[] args) {
-		System.out.println("Hello World");
+		System.out.println("Hello World!");
 	}
 }
 
-// 실습과제 : 모든 내용을 삭제하고, "I am seohyun(본인이름)"을 출력해 보세요.
+// 실습과제 : 모든 내용을 삭제하고, "Hello Class!"를 출력해 보세요.

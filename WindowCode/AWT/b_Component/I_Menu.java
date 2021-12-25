@@ -8,6 +8,8 @@ import java.awt.TextArea;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import a_Basic.WindowExit;
+
 @SuppressWarnings("serial")
 public class I_Menu extends Frame implements ActionListener {
 	MenuBar bar = new MenuBar();
@@ -83,3 +85,9 @@ public class I_Menu extends Frame implements ActionListener {
 		}
 	}
 }
+
+// 실습과제 : 파일 열기를 클릭하면, 파일 열기 다이얼로그가 열리도록 수정하시오.
+//		열기 다이얼로그로 파일을 열면, 아래 텍스트 상자에 텍스트가 보여질 수 있도록 수정하시오.
+// 실습과제 : 파일에 저장 메뉴를 추가하고, 저장메뉴 아래 절단선을 추가하여 추가와 경계선을 만드시오.
+//		저장메뉴는 저장 다이얼로그가 열리고, 보여지는 텍스트가 저장되는 기능입니다.
+// 실습과제 : 도움말이 클릭되면, 도움말이 열리는 기능을 추가해 봅니다.

@@ -8,7 +8,7 @@
 	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
 	prefHeight="400.0" prefWidth="600.0"
 	xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="I_Logout.Controllar">
+	fx:controller="i_Logout.Controllar">
 	<children>
 		<Button fx:id="LogoutBtn" layoutX="260.0" layoutY="183.0"
 			mnemonicParsing="false" onAction="#logout" text="Logout">

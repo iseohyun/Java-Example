@@ -8,6 +8,8 @@ import java.awt.event.KeyListener;
 import java.awt.event.TextEvent;
 import java.awt.event.TextListener;
 
+import a_Basic.WindowExit;
+
 @SuppressWarnings("serial")
 public class F_TextArea extends Frame implements TextListener, KeyListener {
 	TextField tf = new TextField();
@@ -58,3 +60,6 @@ public class F_TextArea extends Frame implements TextListener, KeyListener {
 	public void textValueChanged(TextEvent e) {
 	}
 }
+
+// 실습과제 : 현재는 키보드를 누르면 바로 업로드 되도록 되어 있습니다.
+//		엔터를 누를 때 한꺼번에 업데이트 되도록 기능을 수정해 봅니다.

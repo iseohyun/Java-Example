@@ -5,7 +5,7 @@ package x_Media;
  * javafx.media모듈이 추가 됩니다.
  * 기존 모듈 불러오기에 추가해주세요.
  * 
- * --module-path "C:\Program Files\Java\javafx-sdk-16" --add-modules=javafx.controls,javafx.fxml,javafx.media
+ * --add-modules=javafx.controls,javafx.fxml,javafx.media
  * 
  */
 
@@ -20,7 +20,6 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-
 		Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);

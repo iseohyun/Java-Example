@@ -7,6 +7,8 @@ import java.awt.Frame;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
+import a_Basic.WindowExit;
+
 @SuppressWarnings("serial")
 public class C_CheckBox extends Frame implements ItemListener {
 	Checkbox c1 = new Checkbox("딸기");
@@ -51,3 +53,7 @@ public class C_CheckBox extends Frame implements ItemListener {
 		}
 	}
 }
+
+// 실습과제 : 새로운 체크박스를 추가합니다. 추가한 체크박스는 "귤"입니다.
+// 실습과제 : 새로운 라디오 박스를 추가합니다. 추가한 라디오 박스는 "중성"입니다.
+// 실습과제 : 새로운 라디오 박스 그룹을 추가합니다. 추가한 그룹은 "가위", "바위", "보"를 갖습니다.

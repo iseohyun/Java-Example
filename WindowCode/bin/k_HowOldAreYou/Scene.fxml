@@ -10,7 +10,7 @@
 	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
 	prefWidth="347.0" xmlns="http://javafx.com/javafx/16"
 	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="K_HowOldAreYou.Controllar">
+	fx:controller="k_HowOldAreYou.Controllar">
 	<children>
 		<Label fx:id="greeting" layoutX="84.0" layoutY="44.0"
 			text="안녕하세요">

@@ -13,11 +13,9 @@ import javafx.stage.WindowEvent;
 
 /**
  * 
- * @author Seohyun Jung
- *	
  *	모듈 추가 : javafx.media
  *
- *	--module-path "C:\Program Files\Java\javafx-sdk-16" --add-modules=javafx.controls,javafx.fxml,javafx.media
+ *	--add-modules=javafx.controls,javafx.fxml,javafx.media
  *
  */
 
@@ -25,7 +23,6 @@ import javafx.stage.WindowEvent;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-
 		Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);

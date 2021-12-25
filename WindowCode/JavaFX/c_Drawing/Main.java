@@ -16,8 +16,6 @@ import javafx.stage.Stage;
 
 /**
  * 
- * @author Seohyun Jung
- * 
  *         이미지를 출력하기 위해서는 아래 폴더에 해당 파일이 존재해야합니다.
  * 
  *         $(Project_Dir)\bin\cat.jpg

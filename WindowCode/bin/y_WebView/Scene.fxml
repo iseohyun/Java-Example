@@ -9,7 +9,7 @@
 	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
 	prefWidth="600.0" xmlns="http://javafx.com/javafx/16"
 	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="Y_WebView.Controllar">
+	fx:controller="y_WebView.Controllar">
 	<children>
 		<WebView fx:id="myWebView" layoutY="51.0" prefHeight="349.0"
 			prefWidth="600.0" />

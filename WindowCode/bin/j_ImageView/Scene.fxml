@@ -12,7 +12,7 @@
 	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
 	prefWidth="600.0" xmlns="http://javafx.com/javafx/16"
 	xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="J_ImageView.Controllar">
+	fx:controller="j_ImageView.Controllar">
 	<children>
 		<Button fx:id="ChangeImgBtn" layoutX="274.0" layoutY="319.0"
 			mnemonicParsing="false" onAction="#displayImage" text="그림 바꾸기" />

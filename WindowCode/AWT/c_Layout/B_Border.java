@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Frame;
 
+import a_Basic.WindowExit;
+
 @SuppressWarnings("serial")
 public class B_Border extends Frame {
 	Button b1 = new Button("1¹ø ¹öÆ°");

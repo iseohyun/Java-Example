@@ -3,8 +3,8 @@ package c_Layout;
 import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.Frame;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+
+import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class A_Layout extends Frame {
@@ -34,15 +34,4 @@ public class A_Layout extends Frame {
 	}
 }
 
-class WindowExit extends WindowAdapter {
-	private Frame f;
-
-	WindowExit(Frame f) {
-		this.f = f;
-	}
-
-	@Override
-	public void windowClosing(WindowEvent e) {
-		f.dispose();
-	}
-}
+// 실습 과제 : 버튼을 추가해 봅니다.

@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class C_GridBag extends JFrame {
-	final int N_BUTTONS = 5;
+	final int N_BUTTONS = 10;
 	JPanel pn = new JPanel();
 	JButton[] bt = new JButton[N_BUTTONS];
 
@@ -21,15 +21,15 @@ public class C_GridBag extends JFrame {
 
 		pn.setLayout(gbl);
 		for (int i = 0; i < N_BUTTONS; i++) {
-			bt[i] = new JButton("Button" + i);
+			bt[i] = new JButton(Integer.toString(i));
 			gbc[i] = new GridBagConstraints();
-			gbc[i].gridx = i;
-			gbc[i].gridy = i;
+			gbc[i].gridx = (i*2+(i/5))%5;
+			gbc[i].gridy = i%5;
 			pn.add(bt[i], gbc[i]);
 		}
 		setContentPane(pn);
 
-		setSize(400, 300);
+		pack();
 		setVisible(true);
 	}
 
@@ -37,3 +37,6 @@ public class C_GridBag extends JFrame {
 		new C_GridBag();
 	}
 }
+
+// 실습과제 : 버튼으로 하트를 만들어 봅니다.
+// 실습과제 : 버튼이 눌렸을 때, 이벤트를 추가해 봅니다.
