@@ -27,5 +27,10 @@ public class B_Equal {
 		res1 = res1 % a; // 대입연산자1
 		res2 %= a; // 대입연산자2
 		System.out.println("3 : " + res1 + " / " + res2);
+		
+		res1 = res2 = 10;
+		res1 = res1 << a; // 대입연산자1
+		res2 <<= a; // 대입연산자2
+		System.out.println("3 : " + res1 + " / " + res2);
 	}
 }

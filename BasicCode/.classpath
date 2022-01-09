@@ -3,9 +3,8 @@
 	<classpathentry kind="src" path="Basic"/>
 	<classpathentry kind="src" path="Class"/>
 	<classpathentry kind="src" path="UML"/>
-	<classpathentry kind="src" path="APIs"/>
-	<classpathentry kind="src" path="Librarys"/>
 	<classpathentry kind="src" path="Generic"/>
+	<classpathentry kind="src" path="Librarys"/>
 	<classpathentry kind="src" path="tools"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16">
 		<attributes>

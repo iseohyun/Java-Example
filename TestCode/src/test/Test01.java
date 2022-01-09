@@ -21,7 +21,7 @@ public class Test01 {
 //
 // 따라하기 2-1 : 메서드를 추가합니다.
 //			> 메서드 타입 String getName();
-//			> 호출이 되면, Name을 반환하는 기능니다.
+//			> 호출이 되면, Name을 반환하는 기능합니다.
 // 중간 확인하기 : main함수에서 my.getName()을 출력해 봅니다.
 
 
@@ -118,7 +118,7 @@ public class Test01 {
 
 /////////////////////////// super2
 //
-// 따라하기 10-1 : allNewAvatar 클래스의 action()의 내용을 
+// 따라하기 12-1 : allNewAvatar 클래스의 action()의 내용을 
 //				super.action()으로 바꾸어봅니다.
 //
 // 확인해보기	

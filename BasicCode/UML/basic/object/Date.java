@@ -1,5 +1,6 @@
 package basic.object;
 
+@SuppressWarnings("unused")
 public class Date {
 	private int year;
 	private int month;
