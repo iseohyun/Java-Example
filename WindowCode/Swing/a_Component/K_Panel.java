@@ -21,7 +21,7 @@ public class K_Panel extends JFrame {
 	public K_Panel() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		add(pTab);
-		ImageIcon icon = new ImageIcon("cat.jpg");
+		ImageIcon icon = new ImageIcon("source/cat.jpg");
 
 		pTab.addTab("일반 패널", p);
 		p.add(new JLabel(icon));

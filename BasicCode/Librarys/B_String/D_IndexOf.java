@@ -1,4 +1,4 @@
-package B_String;
+package b_String;
 
 public class D_IndexOf {
 	public static void main(String[] args) {

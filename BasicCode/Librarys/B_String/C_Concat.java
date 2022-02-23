@@ -1,4 +1,4 @@
-package B_String;
+package b_String;
 
 public class C_Concat {
 	public static void main(String[] args) {

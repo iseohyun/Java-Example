@@ -20,7 +20,6 @@ public class A2_MouseDraw extends Frame {
 		setVisible(true);
 
 		Graphics g = getGraphics();
-		System.out.println(g);
 
 		g.setColor(Color.red);
 

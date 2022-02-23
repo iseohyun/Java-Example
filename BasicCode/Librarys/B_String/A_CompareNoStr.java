@@ -1,4 +1,4 @@
-package B_String;
+package b_String;
 
 public class A_CompareNoStr {
 	public static void main(String[] args) {

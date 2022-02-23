@@ -66,7 +66,9 @@ public class Main extends Application {
 		circ.setStroke(Color.FIREBRICK);
 		circ.setStrokeWidth(7);
 
-		Image img = new Image("cat.jpg");
+		Image img = new Image("https://dimg.donga.com/ugc/CDB/WEEKLY/Article/5b/b3/22/85/5bb32285000ed2738de6.jpg");
+
+		
 		ImageView imgView = new ImageView(img);
 		imgView.setX(100);
 		imgView.setY(150);

@@ -11,7 +11,7 @@ import a_Basic.WindowExit;
 @SuppressWarnings("serial")
 public class B4_SetClip extends Frame {
 	Image img;
-	final String IMAGE_NAME = "cat.jpg";
+	final String IMAGE_NAME = "source/cat.jpg";
 
 	Graphics2D g2;
 
@@ -23,6 +23,7 @@ public class B4_SetClip extends Frame {
 
 		try {
 			String path = getClass().getResource("").getPath();
+			System.out.println(path);
 			path = path.substring(0, path.indexOf("bin")).concat(IMAGE_NAME);
 			System.out.println(path);
 			img = getToolkit().getImage(path);

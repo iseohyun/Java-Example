@@ -1,4 +1,4 @@
-package B_String;
+package b_String;
 
 public class E_Buffer {
 	public static void main(String[] args) {

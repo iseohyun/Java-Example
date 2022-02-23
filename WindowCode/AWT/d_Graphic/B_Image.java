@@ -14,7 +14,7 @@ import a_Basic.WindowExit;
 @SuppressWarnings("serial")
 public class B_Image extends Frame {
 	BufferedImage img;
-	final String IMAGE_NAME = "cat.jpg";
+	final String IMAGE_NAME = "source/cat.jpg";
 	Toolkit tkit = getToolkit();
 
 	public B_Image() {
