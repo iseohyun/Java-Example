@@ -1,4 +1,4 @@
-package a_start;
+package a_HowToStart;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

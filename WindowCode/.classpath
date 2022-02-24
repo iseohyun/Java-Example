@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="AWT"/>
 	<classpathentry kind="src" path="Swing"/>
 	<classpathentry kind="src" path="JavaFX"/>
+	<classpathentry kind="src" path="Training"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16">
 		<attributes>
 			<attribute name="module" value="true"/>
