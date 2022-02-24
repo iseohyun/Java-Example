@@ -2,12 +2,12 @@ package c_Control;
 
 import tools.Input;
 
-public class A3_ElseIF {
-	public static void main(String[] args){
+public class B3_ElseIF {
+	public static void main(String[] args) {
 		int a = Input.getInt();
-		if( a == 1 ) {
+		if (a == 1) {
 			System.out.println("하나 입니다!");
-		} else if ( a == 2 ){
+		} else if (a == 2) {
 			System.out.println("둘 입니다!");
 		} else {
 			System.out.println("알 수 없습니다.");

@@ -1,4 +1,4 @@
-package i_Thread;
+package g_Thread;
 
 public class B_Priority {
 	public static void main(String[] args) {

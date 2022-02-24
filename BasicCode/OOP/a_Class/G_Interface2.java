@@ -23,7 +23,8 @@ public class G_Interface2 {
 	}
 
 	public static void main(String[] args) {
-		Inter1 i1 = new Inter1(){};
+		Inter1 i1 = new Inter1() {
+		};
 		i1.default1();
 	}
 }

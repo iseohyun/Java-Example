@@ -6,9 +6,11 @@ class W1 {
 	}
 }
 
-class W2 extends W1 {}
+class W2 extends W1 {
+}
 
-class W3 extends W2 {}
+class W3 extends W2 {
+}
 
 class G<T extends W1> {
 	T t;

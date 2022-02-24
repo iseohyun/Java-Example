@@ -1,4 +1,4 @@
-package a_BasicType;
+package c_Control;
 
 import java.util.Scanner;
 
@@ -11,16 +11,17 @@ import java.util.Scanner;
  *  
  */
 
-public class G2_Scan_String {
+public class A2_Scan_String {
 	private static Scanner scan;
-	public static void main(String[] args){
+
+	public static void main(String[] args) {
 		String str;
 		scan = new Scanner(System.in);
 		System.out.print("입력해 주세요 : ");
 		str = scan.next();
 		System.out.println("입력한 단어 : " + str);
-		System.out.println("숫자로 변환 x 2 : " + Integer.parseInt(str)*2);
-		System.out.println("소수로 변환 ÷ 2 : " + Double.parseDouble(str)/2);
+		System.out.println("숫자로 변환 x 2 : " + Integer.parseInt(str) * 2);
+		System.out.println("소수로 변환 ÷ 2 : " + Double.parseDouble(str) / 2);
 	}
 }
 

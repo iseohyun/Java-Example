@@ -4,7 +4,7 @@ public class A_Simple {
 	static void func1() {
 		System.out.println("함수가 호출 되었습니다.");
 	}
-	
+
 	public static void main(String[] args) {
 		func1();
 	}

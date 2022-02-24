@@ -14,12 +14,12 @@ public class F2_Float2 {
 		int option = 1;
 		final int repeat = 16;
 
-		switch(option) {
+		switch (option) {
 		case 0:
-			printFloats((float)Math.pow(0.5,149), 2, 32, 0);
+			printFloats((float) Math.pow(0.5, 149), 2, 32, 0);
 			break;
 		case 1:
-			//	지수부 
+			// 지수부
 			printFloats(1, 2, repeat, 0);
 			break;
 		case 2:
@@ -27,7 +27,7 @@ public class F2_Float2 {
 			printFloats(1, 0.5, repeat, 0);
 			break;
 		case 3:
-			//	소수부 변경 예시 + 증가
+			// 소수부 변경 예시 + 증가
 			printFloats(1, 2, repeat, 1);
 			break;
 		case 4:
@@ -39,17 +39,17 @@ public class F2_Float2 {
 			break;
 		}
 	}
-	
+
 	static void printFloats(float num, double scope, int repeat, float base) {
-		
+
 		for (int i = 0; i < repeat; i++) {
-			if((base+num)-(int)(base+num) > 0)
-				if((base+num)<0.000001)
+			if ((base + num) - (int) (base + num) > 0)
+				if ((base + num) < 0.000001)
 					System.out.printf("[%2d] " + (base + num) + " \t = ", i);
 				else
 					System.out.printf("[%2d] %8f \t = ", i, base + num);
 			else
-				System.out.printf("[%2d] %8d \t = ", i, (int)(base + num));
+				System.out.printf("[%2d] %8d \t = ", i, (int) (base + num));
 			printBits(Float.floatToIntBits(base + num));
 			num *= scope;
 		}

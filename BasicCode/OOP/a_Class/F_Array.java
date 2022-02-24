@@ -9,7 +9,7 @@ public class F_Array {
 
 	public static void main(String[] args) {
 		Class1[] arr1 = new Class1[5];
-		
+
 		for (int i = 0; i < arr1.length; i++) {
 			arr1[i] = new Class1();
 			arr1[i].ch = (char) ('A' + i);

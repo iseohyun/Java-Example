@@ -26,7 +26,7 @@ public class C_Return {
 	public static void main(String[] args) {
 		int ret = 0;
 		int input = Input.getInt();
-		
+
 		ret = func1(input);
 		System.out.println("출력 : " + ret); // 리턴 출력
 	}

@@ -8,17 +8,17 @@ public class B_MakeJavaFile {
 	public static void main(String[] args) {
 		try {
 			String[] test = {
-					"package B_FileIO;\n",
+					"package h_FileIO;\n",
 					"import java.io.*;\n",
 					"public class C_Quiz {\n",
 					"\tpublic static void main(String[] args) {\n",
-					"try {\n",
-					"\t\tString str = \"Run E_IOStream > B_FileIO > B_MakeJavaFile\";\n",
-					"\t\tFile file = new File(\"src\\\\B_FileIO\\\\C_Quiz.java\");\n",
-					"\t\tOutputStream stream = new FileOutputStream(file);\n",
-					"\t\tbyte[] binary = str.getBytes();\n",
-					"\t\tstream.write(binary);\n",
-					"\t\tstream.close();\n",
+					"\t\ttry {\n",
+					"\t\t\tString str = \"Run E_IOStream > B_FileIO > B_MakeJavaFile\";\n",
+					"\t\t\tFile file = new File(\"Librarys\\\\h_FileIO\\\\C_Quiz.java\");\n",
+					"\t\t\tOutputStream stream = new FileOutputStream(file);\n",
+					"\t\t\tbyte[] binary = str.getBytes();\n",
+					"\t\t\tstream.write(binary);\n",
+					"\t\t\tstream.close();\n",
 					"\t\t} catch (Throwable e) {\n",
 					"\t\t\te.printStackTrace();\n",
 					"\t\t}\n",
@@ -26,7 +26,7 @@ public class B_MakeJavaFile {
 					"}",
 			};
 
-			File file = new File("src\\B_FileIO\\C_Quiz.java");
+			File file = new File("Librarys\\h_FileIO\\C_Quiz.java");
 			OutputStream stream = new FileOutputStream(file);
 
 			for (String str : test) {

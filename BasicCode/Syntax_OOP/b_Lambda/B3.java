@@ -10,7 +10,7 @@ public class B3 {
 	static void func(int x, int y) {
 		System.out.println("A_" + (x + y));
 	}
-	
+
 	public static void main(String[] args) {
 		A a = B3::func;
 		a.print(777, 222);

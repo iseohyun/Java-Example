@@ -18,13 +18,13 @@ public class G_Recursive {
 		int input = Input.getInt();
 		sum = recursiveSum(input);
 		System.out.println("누계 : " + sum);
-		
+
 		int gcd = gcd(input, 36);
 		System.out.println("최대공약수 : " + gcd);
-		
+
 		int factorial = factorial(input);
 		System.out.println("팩토리얼 : " + factorial);
-		
+
 		int fibonacci = fibonacci(input);
 		System.out.println("피보나치 : " + fibonacci);
 	}

@@ -24,10 +24,8 @@ public class G_Interface3 {
 			@Override
 			public void abstract1() {
 				System.out.println("Abstract!");
-				
 			}
 		};
-		
 		i1.abstract1();
 	}
 }

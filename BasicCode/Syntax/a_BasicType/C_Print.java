@@ -16,7 +16,7 @@ public class C_Print {
 		// println
 		System.out.println("출력 1.");
 		System.out.println("출력 2.");
-		
+
 		// print
 		System.out.print("출력 3.");
 		System.out.print("출력 4.");

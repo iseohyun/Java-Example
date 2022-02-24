@@ -2,7 +2,7 @@ package a_BasicType;
 
 public class D4_char {
 	public static void main(String[] args) {
-		char data1 = 'c'; 
+		char data1 = 'c';
 		System.out.println("Character: " + data1);
 
 		String data2 = "text";

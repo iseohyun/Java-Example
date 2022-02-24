@@ -15,7 +15,7 @@ public class B_Array {
 		grade[2] = 83;
 		grade[3] = 71;
 
-		for(int i=0; i < 4; i++) {
+		for (int i = 0; i < 4; i++) {
 			grade[i] += 10;
 			System.out.println(grade[i]);
 		}

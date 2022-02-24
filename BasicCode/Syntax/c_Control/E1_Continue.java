@@ -9,12 +9,12 @@ package c_Control;
 public class E1_Continue {
 	public static void main(String[] args) {
 		int i = 1;
-		while(i++ < 9999) {
+		while (i++ < 9999) {
 			System.out.println(i + ">");
-			if(i == 5) {
+			if (i == 5) {
 				continue;
 			}
-			if(i % 5 == 0) {
+			if (i % 5 == 0) {
 				break;
 			}
 		}

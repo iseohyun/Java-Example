@@ -1,4 +1,4 @@
-package i_Thread;
+package g_Thread;
 
 public class A_Thread {
 	public static void main(String[] args) {

@@ -18,6 +18,7 @@ public class C_Initialize {
 		Class1() {
 			System.out.println("생성자 호출");
 		}
+
 		Class1(int i) {
 			System.out.println("숫자 : " + i);
 		}
@@ -28,10 +29,10 @@ public class C_Initialize {
 	}
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("클래스를 선언합니다.");
 		Class1 c0;
-		
+
 		System.out.println("클래스를 선언하고 인스턴스를 생성합니다..");
 		Class1 c1 = new Class1();
 		Class1 c2 = new Class1(1);

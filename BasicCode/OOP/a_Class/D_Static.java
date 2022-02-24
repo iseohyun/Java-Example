@@ -12,13 +12,16 @@ public class D_Static {
 	static class Class1 {
 		static int seq = 1;
 		int id;
-		Class1() { id = seq++; }
+
+		Class1() {
+			id = seq++;
+		}
 	}
 
 	public static void main(String[] args) {
 		Class1 a1 = new Class1();
 		System.out.println("id : " + a1.id);
-		
+
 		Class1 a2 = new Class1();
 		System.out.println("id : " + a2.id);
 

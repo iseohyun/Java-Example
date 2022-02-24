@@ -6,11 +6,11 @@ package c_Control;
  * 	(조건)?참 인경우 수행할 내용:거짓인 경우 수행할 내용
  *
  */
-public class B_3states {
+public class B4_3states {
 	public static void main(String[] args) {
 		int a = 8, b = -8, max;
-		
-		max = (a>b)?a:b; 
+
+		max = (a > b) ? a : b;
 		System.out.println("큰수 : " + max);
 	}
 }

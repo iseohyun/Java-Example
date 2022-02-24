@@ -4,13 +4,13 @@ public class D2_int {
 	public static void main(String[] args) {
 		byte size1 = 100;
 		System.out.println("Byte: " + size1);
-		
+
 		short size2 = 10000;
 		System.out.println("Short: " + size2);
-		
+
 		int size4 = 1000000;
 		System.out.println("Integer: " + size4);
-		
+
 		long size8 = 100000000;
 		System.out.println("Long: " + size8);
 	}

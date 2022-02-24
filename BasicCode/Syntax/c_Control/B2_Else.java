@@ -2,10 +2,10 @@ package c_Control;
 
 import tools.Input;
 
-public class A2_Else {
-	public static void main(String[] args){
+public class B2_Else {
+	public static void main(String[] args) {
 		int a = Input.getInt();
-		if( a > 5 ) {
+		if (a > 5) {
 			System.out.println("좋아요.");
 		} else {
 			System.out.println("싫어요.");

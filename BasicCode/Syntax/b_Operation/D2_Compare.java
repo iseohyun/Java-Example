@@ -1,17 +1,23 @@
 package b_Operation;
 
-import tools.Input;
-
 public class D2_Compare {
 	public static void main(String[] args) {
-		int num1 = Input.getInt();
+		int num1 = -100;
 
-		System.out.println("~ 연산 : " + ~num1);
+		System.out.println("연산없음\t[" + toBin(num1) + "] " + num1);
+		System.out.println("~ 연산 \t[" + toBin(~num1) + "] " + ~num1);
+		System.out.println("<< 연산\t[" + toBin(num1 << 2) + "]" + (num1 << 2));
+		System.out.println(">> 연산\t[" + toBin(num1 >> 2) + "] " + (num1 >> 2));
+		System.out.println(">>> 연산\t[" + toBin(num1 >>> 2) + "] " + (num1 >>> 2));
+	}
 
-		System.out.println("<< 연산 : " + (num1 << 2));
-		System.out.println("연산없음\t[" + Integer.toHexString(num1).toUpperCase()+"] "+(num1 >> 2));
-		System.out.println(">> 연산\t[" + Integer.toHexString(num1 >> 2).toUpperCase()+"] "+(num1 >> 2));
-		System.out.println(">>> 연산\t[" + Integer.toHexString(num1 >>> 2).toUpperCase()+"] "+(num1 >>> 2));
+	static String toBin(int num) {
+		String str = "";
+		for (int i = 0; i < 32; i++) {
+			str = ((num % 2 == 0) ? "0" : "1") + str;
+			num >>= 1;
+		}
+		return str;
 	}
 }
 

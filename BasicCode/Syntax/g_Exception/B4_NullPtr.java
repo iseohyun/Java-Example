@@ -9,6 +9,7 @@ public class B4_NullPtr {
 			if (b)
 				System.out.println("String");
 		} catch (Exception e) {
+			System.out.println("오류가 발견되었습니다.");
 			e.printStackTrace();
 		}
 	}

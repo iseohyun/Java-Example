@@ -1,7 +1,7 @@
 package d_Math;
 
 public class Quiz {
-	public static void main(String [] args) {
+	public static void main(String[] args) {
 		double b = 4;
 		double c = 6;
 		double h;
@@ -12,18 +12,18 @@ public class Quiz {
 		// 각 A는 변 b와 c사이에 있는 각이라고 할 때,
 		// 각A, 변b, 변c를 이용하여, 높이h(선분 BC에서 점A까지의 거리)를 구하는 함수를 만드시오.
 		h = getH(b, c, degree);
-		
+
 		System.out.println("높이 : " + h);
 	}
-	
+
 	static double getH(double b, double c, double degree) {
-		// radian = Math.sin(40.0/180.0 * Math.PI); 		// (40도= 40/180PI이다.)
+		// radian = Math.sin(40.0/180.0 * Math.PI); // (40도= 40/180PI이다.)
 		// 코사인 법칙 a^2 = b^2 + c^2 + bccosA
 		// S = 1/2*sinA*bc = 1/2 ah
 
 		double ret = 0;
 		// TODO : insert your code here...
-		
+
 		return ret;
 	}
 }

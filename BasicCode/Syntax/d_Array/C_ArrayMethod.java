@@ -26,13 +26,13 @@ public class C_ArrayMethod {
 		System.out.println("[Arr1]");
 		for (int e : arr1)
 			System.out.print(e + " ");
-		
+
 		// 배열을 복사 할 수 있습니다.
 		System.arraycopy(arr1, 0, arr2, 0, arr1.length);
 		System.out.println("\n[Arr2]");
 		for (int e : arr2)
 			System.out.print(e + " ");
-		
+
 		// 배열을 복제 할 수 있습니다.
 		arr3 = (int[]) arr1.clone();
 		System.out.println("\n[Arr3]");

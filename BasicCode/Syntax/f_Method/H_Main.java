@@ -12,7 +12,7 @@ package f_Method;
 
 public class H_Main {
 	public static void main(String[] args) {
-		for(String arg : args)
+		for (String arg : args)
 			System.out.println(arg);
 	}
 }

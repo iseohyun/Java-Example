@@ -3,10 +3,10 @@ package a_Class;
 class Class1 {
 	int field1;
 	int field2;
-	
+
 	void method1() {
 	}
-	
+
 	void method2() {
 		System.out.println("메서드 호출하기");
 	}
@@ -17,10 +17,10 @@ public class A_Class {
 		Class1 c1;
 		c1 = new Class1();
 
-		//필드 제어
-		c1.field1 = 33;	
+		// 필드 제어
+		c1.field1 = 33;
 		System.out.println("필드에서 받아온 값 : " + c1.field1);
-		
+
 		c1.method2();
 	}
 }

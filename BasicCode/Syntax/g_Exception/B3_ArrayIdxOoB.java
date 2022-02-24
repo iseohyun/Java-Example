@@ -6,8 +6,8 @@ public class B3_ArrayIdxOoB {
 		try {
 			array1[4] = 1;
 		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("오류가 발견되었습니다.");
 			e.printStackTrace();
-			System.out.println("처리 되었습니다.");
 		}
 	}
 }

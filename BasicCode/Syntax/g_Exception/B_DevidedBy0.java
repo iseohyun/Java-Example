@@ -5,7 +5,8 @@ public class B_DevidedBy0 {
 		try {
 			System.out.println(5 / 0);
 		} catch (ArithmeticException e) {
-			System.out.println("발생한 예외 정보 : " + e.getMessage());
+			System.out.println("오류가 발견되었습니다.");
+			System.out.println(e.getMessage());
 		}
 	}
 }

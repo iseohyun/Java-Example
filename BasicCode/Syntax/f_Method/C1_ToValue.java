@@ -16,13 +16,13 @@ public class C1_ToValue {
 
 		int ret, input;
 		input = Input.getInt();
-		
+
 		System.out.println("1. 입력 : " + input);
-		
-		// 기존 방법		
+
+		// 기존 방법
 		ret = func1(input);
 		System.out.println("2. 기존 방법 출력 : " + ret);
-		
+
 		// 저장할 필요가 없다면?
 		System.out.println("3. 바로 출력 : " + func1(input));
 

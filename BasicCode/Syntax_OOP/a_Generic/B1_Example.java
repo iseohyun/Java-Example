@@ -2,19 +2,27 @@ package a_Generic;
 
 import java.util.ArrayList;
 
-class Human{
+class Human {
 	static int id = 1;
 	int my;
-	Human() {my = id++;}
+
+	Human() {
+		my = id++;
+	}
+
 	String name = "nobody";
 }
 
-class Man extends Human{
-	Man() { name = "Adam"; }
+class Man extends Human {
+	Man() {
+		name = "Adam";
+	}
 }
 
-class Woman extends Human{
-	Woman() { name = "Hawa"; }
+class Woman extends Human {
+	Woman() {
+		name = "Hawa";
+	}
 }
 
 class Group<T> {

@@ -1,7 +1,5 @@
 package b_Operation;
 
-import tools.Input;
-
 /**
  *
  * And, OR, XOR, NOT은 컴퓨터 연산에 있어서 가장 중요한 연산입니다.
@@ -19,13 +17,13 @@ import tools.Input;
  */
 public class D_Compare {
 	public static void main(String[] args) {
-		int a = Input.getInt();
+		int num = 7;
 
-		System.out.println("1 : " + (a < 5));
-		System.out.println("2 : " + (a > 5));
-		System.out.println("3 : " + !(a > 5));
-		System.out.println("4 : " + ((a < 5) && (a > 5)));
-		System.out.println("5 : " + ((a < 5) || (a > 5)));
+		System.out.println("1 : " + (num < 5));
+		System.out.println("2 : " + (num > 5));
+		System.out.println("3 : " + !(num > 5));
+		System.out.println("4 : " + ((num < 5) && (num > 5)));
+		System.out.println("5 : " + ((num < 5) || (num > 5)));
 	}
 }
 

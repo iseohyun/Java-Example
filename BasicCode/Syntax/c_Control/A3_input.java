@@ -1,8 +1,8 @@
-package a_BasicType;
+package c_Control;
 
 import tools.Input;
 
-public class G3_input {
+public class A3_input {
 	public static void main(String[] args) {
 		int num = Input.getInt();
 		System.out.println("입력한 숫자 : " + num);

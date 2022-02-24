@@ -12,15 +12,15 @@ package a_BasicType;
 public class B_Comment {
 	public static void main(String[] args) {
 		System.out.println("Hello World 1");
-		
+
 		// 한줄 주석
 //		System.out.println("Hello World 2");
-		
+
 		/*
-		  구간 주석 만들기
-		*/
+		 * 구간 주석 만들기
+		 */
 		System.out.println("Hello World 3");
-		/*System.out.println("Hello World 4");*/
+		/* System.out.println("Hello World 4"); */
 	}
 }
 

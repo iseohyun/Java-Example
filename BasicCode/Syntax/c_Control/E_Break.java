@@ -9,9 +9,9 @@ package c_Control;
 public class E_Break {
 	public static void main(String[] args) {
 		int i = 1;
-		while(i++ < 9999) {
+		while (i++ < 9999) {
 			System.out.println(i + ">");
-			if(i == 10) {
+			if (i == 10) {
 				break;
 			}
 		}

@@ -1,4 +1,4 @@
-package a_BasicType;
+package c_Control;
 
 import java.io.IOException;
 
@@ -9,14 +9,14 @@ import java.io.IOException;
  *
  */
 
-public class G_Scanf {
+public class A_Scanf {
 	public static void main(String[] args) throws IOException {
 		int i;
-		
+
 		System.out.print("문자를 입력해 주세요 : ");
 		i = System.in.read();
 		System.out.println("저장된 정보는 : " + i);
-		System.out.println("문자로 인식시켜서 출력 : " + (char)i);
+		System.out.println("문자로 인식시켜서 출력 : " + (char) i);
 	}
 }
 

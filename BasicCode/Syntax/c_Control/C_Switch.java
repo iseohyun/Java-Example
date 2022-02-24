@@ -22,17 +22,17 @@ public class C_Switch {
 	public static void main(String[] args) {
 		int a = Input.getInt();
 
-		switch(a){
-			case 1:
-				System.out.println("하나");
-				break;
-			case 2:
-				System.out.println("둘");
-			case 3:
-				System.out.println("셋");
-				break;
-			default:
-				System.out.println("잘못된 입력입니다.");
+		switch (a) {
+		case 1:
+			System.out.println("하나");
+			break;
+		case 2:
+			System.out.println("둘");
+		case 3:
+			System.out.println("셋");
+			break;
+		default:
+			System.out.println("잘못된 입력입니다.");
 		}
 	}
 }

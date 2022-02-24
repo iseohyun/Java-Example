@@ -18,7 +18,7 @@ import tools.Input;
  *
  */
 
-public class A_If {
+public class B_If {
 	public static void main(String[] args) {
 		int i = Input.getInt();
 		System.out.println("입력한 숫자는 " + i + "입니다.");

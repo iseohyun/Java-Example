@@ -10,7 +10,7 @@ public class B_Reference {
 	static void func() {
 		System.out.println("A");
 	}
-	
+
 	public static void main(String[] args) {
 		A a = B_Reference::func;
 		a.print();

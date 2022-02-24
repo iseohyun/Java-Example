@@ -15,8 +15,9 @@ public class E2_Static {
 		func1();
 		func1();
 	}
-	
+
 	static int val = 1;
+
 	static void func1() {
 		val++;
 		System.out.println("전역 변수 : " + val);
