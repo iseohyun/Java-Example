@@ -51,7 +51,7 @@ enum FontEffect {
 	BOLD, ITALIC, SUPERSCRIPT, SUBSCRIPT, STRIKETHROUGH
 }
 
-@SuppressWarnings({ "unchecked", "rawtypes", "unused" })
+@SuppressWarnings({ "unchecked", "rawtypes" })
 final class FontData {
 	private static final WeakHashMap<FontData, WeakReference<FontData>> flyweightData = new WeakHashMap<FontData, WeakReference<FontData>>();
 	private final int pointSize;

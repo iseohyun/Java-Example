@@ -8,6 +8,7 @@ import javax.crypto.Cipher;
  * 분석결과를 쓰시오.
  * 
  */
+@SuppressWarnings("unused")
 public class T07Q05_Security {
 	public String encriString(String usr) throws UnsupportedEncodingException {
 		String CyperMsg = null;

@@ -13,6 +13,7 @@ package Quiz;
  * 어떤 다이어그램을 구현한 것인가? Class diagram
  */
 
+@SuppressWarnings("unused")
 public class T01Q10_class {
 	public class User {
 		private int age;

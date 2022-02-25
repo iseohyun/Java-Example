@@ -16,6 +16,8 @@ class B extends A {
 		super.print();
 	}
 }
+
+@SuppressWarnings("unused")
 public class Y20T02Q13_Super {	
 	public static void main(String[] args) {
 		B obj = new B(10);

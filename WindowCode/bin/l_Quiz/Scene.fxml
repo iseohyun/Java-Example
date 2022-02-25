@@ -7,37 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-	prefWidth="400.0" xmlns="http://javafx.com/javafx/16"
-	xmlns:fx="http://javafx.com/fxml/1" fx:controller="l_Quiz.Controllar">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="l_Quiz.Controllar">
 	<children>
-		<TextArea editable="false" layoutX="25.0" layoutY="23.0"
-			prefHeight="120.0" prefWidth="350.0"
-			text="문제1.&#10;10만원 상당의 제품을 8만원에 판매한다고 하여, 새벽부터 줄서서 기다린 후에 겨우 제품을 구할 수 있었어요. 막상 제품을 구입해보니, 포장지만 8만원이었어요. &#10;다음 중 올바른 행동은?"
-			wrapText="true">
+		<TextArea editable="false" layoutX="25.0" layoutY="23.0" prefHeight="120.0" prefWidth="350.0" text="문제1.&#10;다음 중 틀린 문장은?" wrapText="true">
 			<font>
 				<Font name="Arial" size="14.0" />
 			</font>
 		</TextArea>
-		<RadioButton fx:id="choice1" layoutX="25.0"
-			layoutY="160.0" mnemonicParsing="false"
-			text="아직 줄을 서서 기다리는 사람에게 가서 7만원에 되판다.">
+		<RadioButton fx:id="choice1" layoutX="25.0" layoutY="160.0" mnemonicParsing="false" text="다형성은 작은 것에 큰 것을 적용하는 기술이다.">
 			<toggleGroup>
 				<ToggleGroup fx:id="choice" />
 			</toggleGroup>
 		</RadioButton>
-		<RadioButton fx:id="choice2" layoutX="25.0"
-			layoutY="200.0" mnemonicParsing="false"
-			text="잘못된 상품이 팔리고 있다고 사람들에게 알린다." toggleGroup="$choice" />
-		<RadioButton fx:id="choice3" layoutX="25.0"
-			layoutY="240.0" mnemonicParsing="false"
-			text="제품 판매자에게 항의해서, 환불 받을 방법을 찾는다." toggleGroup="$choice" />
-		<RadioButton fx:id="choice4" layoutX="25.0"
-			layoutY="280.0" mnemonicParsing="false" text="판매자를 찾아가 죽인다."
-			toggleGroup="$choice" />
-		<Button layoutX="152.0" layoutY="319.0" mnemonicParsing="false"
-			onAction="#submit" text="제출하기">
+		<RadioButton fx:id="choice2" layoutX="25.0" layoutY="200.0" mnemonicParsing="false" text="자식 객체는 언제나 부모 객체보다 크다." toggleGroup="$choice" />
+		<RadioButton fx:id="choice3" layoutX="25.0" layoutY="240.0" mnemonicParsing="false" text="클래스는 변수와 상수로 구성되어 있다." toggleGroup="$choice" />
+		<RadioButton fx:id="choice4" layoutX="25.0" layoutY="280.0" mnemonicParsing="false" text="상속을 통해서 복잡한 객체를 좀 더 단순하게 표현 할 수 있다." toggleGroup="$choice" />
+		<Button layoutX="152.0" layoutY="319.0" mnemonicParsing="false" onAction="#submit" text="제출하기">
 			<font>
 				<Font size="18.0" />
 			</font>

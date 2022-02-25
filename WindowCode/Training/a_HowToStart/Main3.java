@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class main3 extends Application implements EventHandler<ActionEvent>{
+public class Main3 extends Application implements EventHandler<ActionEvent>{
 	Button btn1 = new Button("¹öÆ°");
 	
 	public static void main(String[] args) {

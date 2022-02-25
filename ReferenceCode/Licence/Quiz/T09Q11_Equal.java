@@ -4,6 +4,7 @@ package Quiz;
  * 분석결과를 쓰시오.
  * 
  */
+@SuppressWarnings("unused")
 class User {
 	private String id;
 	private String name;

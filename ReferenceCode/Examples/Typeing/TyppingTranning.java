@@ -22,6 +22,7 @@ public class TyppingTranning {
 		"child"		,"students"	,
 	};
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] arg) throws IOException{
 		
 		int letter = 0; 	// 누적 글자 수
