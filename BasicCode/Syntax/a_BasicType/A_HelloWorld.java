@@ -19,9 +19,9 @@ package a_BasicType;
  */
 
 public class A_HelloWorld {
-	public static void main(String[] args) {
-		System.out.println("Hello World!");
-	}
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
 }
 
 // 실습과제 : 모든 내용을 삭제하고, "Hello Class!"를 출력해 보세요.
