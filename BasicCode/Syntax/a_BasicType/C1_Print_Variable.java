@@ -3,9 +3,9 @@ package a_BasicType;
 public class C1_Print_Variable {
 	public static void main(String[] args) {
 		int num = 3;
-		System.out.println("Ãâ·ÂÇÏ±â : " + num);
+		System.out.println("ì¶œë ¥í•˜ê¸° : " + num);
 	}
 }
 
-// ½Ç½À°úÁ¦ : 4¸¦ Ãâ·ÂÇØº¾½Ã´Ù.
-// ½Ç½À°úÁ¦ : -10À» Ãâ·ÂÇØº¾½Ã´Ù.
+// ì‹¤ìŠµê³¼ì œ : 4ë¥¼ ì¶œë ¥í•´ë´…ì‹œë‹¤.
+// ì‹¤ìŠµê³¼ì œ : -10ì„ ì¶œë ¥í•´ë´…ì‹œë‹¤.

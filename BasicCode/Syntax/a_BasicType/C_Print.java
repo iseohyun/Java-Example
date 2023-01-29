@@ -2,25 +2,25 @@ package a_BasicType;
 
 /**
  * 
- *	printlnÀº ÀÚ¹Ù¿¡¼­ °¡Àå ¸¹ÀÌ ¾²´Â Ãâ·ÂÆ÷¸äÀÔ´Ï´Ù.
- *	±× ¿Ü¿¡ print, printf°¡ ÀÖ½À´Ï´Ù.
+ *	printlnì€ ìë°”ì—ì„œ ê°€ì¥ ë§ì´ ì“°ëŠ” ì¶œë ¥í¬ë©§ì…ë‹ˆë‹¤.
+ *	ê·¸ ì™¸ì— print, printfê°€ ìˆìŠµë‹ˆë‹¤.
  * 
- *	print´Â Ãâ·Â ÈÄ¿¡ ÁÙ¹Ù²Ş(line:ln)À» ÇÏÁö ¾Ê½À´Ï´Ù.
- *	printf´Â f(Format)¿¡ ¸ÂÃß¾î¼­ Ãâ·ÂÇÕ´Ï´Ù.
- *	±»ÀÌ ¿Ü¿ì½Ç ÇÊ¿ä´Â ¾ø°í, printlnÀ» print·Î ¹Ù²Ù¾úÀ» ¶§, ¾î¶»°Ô º¯È­ÇÏ´ÂÁö °üÂûÇØ º¸°í ³Ñ¾î°¡½Ê½Ã¿À.
+ *	printëŠ” ì¶œë ¥ í›„ì— ì¤„ë°”ê¿ˆ(line:ln)ì„ í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
+ *	printfëŠ” f(Format)ì— ë§ì¶”ì–´ì„œ ì¶œë ¥í•©ë‹ˆë‹¤.
+ *	êµ³ì´ ì™¸ìš°ì‹¤ í•„ìš”ëŠ” ì—†ê³ , printlnì„ printë¡œ ë°”ê¾¸ì—ˆì„ ë•Œ, ì–´ë–»ê²Œ ë³€í™”í•˜ëŠ”ì§€ ê´€ì°°í•´ ë³´ê³  ë„˜ì–´ê°€ì‹­ì‹œì˜¤.
  *
  */
 
 public class C_Print {
 	public static void main(String[] args) {
 		// println
-		System.out.println("Ãâ·Â 1.");
-		System.out.println("Ãâ·Â 2.");
+		System.out.println("ì¶œë ¥ 1.");
+		System.out.println("ì¶œë ¥ 2.");
 
 		// print
-		System.out.print("Ãâ·Â 3.");
-		System.out.print("Ãâ·Â 4.");
+		System.out.print("ì¶œë ¥ 3.");
+		System.out.print("ì¶œë ¥ 4.");
 	}
 }
 
-// ½Ç½À°úÁ¦ : ³» ¼Ò°³¸¦ ÇØº¾½Ã´Ù.
+// ì‹¤ìŠµê³¼ì œ : ë‚´ ì†Œê°œë¥¼ í•´ë´…ì‹œë‹¤.
