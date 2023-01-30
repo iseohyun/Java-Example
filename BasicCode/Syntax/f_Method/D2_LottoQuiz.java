@@ -4,58 +4,58 @@ import java.util.Random;
 
 /**
  * 
- * ÀÌ¹Ì ·ÎÅä¸¦ ¸¸µå´Â ÇÔ¼ö°¡ ¸¸µé¾îÁ® ÀÖ½À´Ï´Ù.
- * ´Ü, ÇÑ¹øÃâ·ÂÇÏ±â À§ÇØ¼­´Â 3°³ÀÇ ÇÔ¼ö¸¦ ¼ø¼­´ë·Î È£Ãâ ÇØ¾ßÇÕ´Ï´Ù.
- * Áï 5°³ÀÇ ·ÎÅä¸¦ Ãâ·ÂÇÏ±â À§ÇØ¼­´Â ÃÑ 15¹ø È£ÃâÀÌ ÀÌ·ç¾îÁ®¾ß ÇÕ´Ï´Ù.
+ * ì´ë¯¸ ë¡œí† ë¥¼ ë§Œë“œëŠ” í•¨ìˆ˜ê°€ ë§Œë“¤ì–´ì ¸ ìžˆìŠµë‹ˆë‹¤.
+ * ë‹¨, í•œë²ˆì¶œë ¥í•˜ê¸° ìœ„í•´ì„œëŠ” 3ê°œì˜ í•¨ìˆ˜ë¥¼ ìˆœì„œëŒ€ë¡œ í˜¸ì¶œ í•´ì•¼í•©ë‹ˆë‹¤.
+ * ì¦‰ 5ê°œì˜ ë¡œí† ë¥¼ ì¶œë ¥í•˜ê¸° ìœ„í•´ì„œëŠ” ì´ 15ë²ˆ í˜¸ì¶œì´ ì´ë£¨ì–´ì ¸ì•¼ í•©ë‹ˆë‹¤.
  * 
- * 1. 3°³¸¦ ÇÑ¹ø¿¡ È£Ãâ ÇÒ ¼ö ÀÖ´Â ÇÔ¼ö¸¦ ¸¸µé¾î º¸¼¼¿ä.
- * 2. ÇØ´ç ÇÔ¼ö¸¦ 5¹ø È£ÃâÇØº¸¼¼¿ä.
+ * 1. 3ê°œë¥¼ í•œë²ˆì— í˜¸ì¶œ í•  ìˆ˜ ìžˆëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ ë³´ì„¸ìš”.
+ * 2. í•´ë‹¹ í•¨ìˆ˜ë¥¼ 5ë²ˆ í˜¸ì¶œí•´ë³´ì„¸ìš”.
  * 
  */
 
 public class D2_LottoQuiz {
-	static int[] lotto = new int[6];
+  static int[] lotto = new int[6];
 
-	public static void main(String[] args) {
-		genLotto(); // ·Î¶Ç ¹øÈ£¸¦ »ý¼ºÇÑ´Ù.
-		sort(); // ³·Àº ¹øÈ£ºÎÅÍ Á¤·ÄÇÑ´Ù.
-		printLotto(); // ·Î¶Ç ¹øÈ£¸¦ ÇÁ¸°ÅÍÇÑ´Ù.
-	}
+  public static void main(String[] args) {
+    genLotto(); // ë¡œë˜ ë²ˆí˜¸ë¥¼ ìƒì„±í•œë‹¤.
+    sort(); // ë‚®ì€ ë²ˆí˜¸ë¶€í„° ì •ë ¬í•œë‹¤.
+    printLotto(); // ë¡œë˜ ë²ˆí˜¸ë¥¼ í”„ë¦°í„°í•œë‹¤.
+  }
 
-	// ½Ç½À°úÁ¦ . ·Î¶Ç ¹øÈ£¸¦ »ý¼ºÇØ¼­, ¼ø¼­´ë·Î Á¤·Ä ÇÑ ÈÄ, ÇÁ¸°ÅÍÇÏ´Â ÇÔ¼ö¸¦ »ý¼ºÇÑ´Ù.
-	// ½Ç½À°úÁ¦ 2. ÇØ´ç ÇÔ¼ö¸¦ 5¹ø Ãâ·ÂÇÑ´Ù.
+  // ì‹¤ìŠµê³¼ì œ . ë¡œë˜ ë²ˆí˜¸ë¥¼ ìƒì„±í•´ì„œ, ìˆœì„œëŒ€ë¡œ ì •ë ¬ í•œ í›„, í”„ë¦°í„°í•˜ëŠ” í•¨ìˆ˜ë¥¼ ìƒì„±í•œë‹¤.
+  // ì‹¤ìŠµê³¼ì œ 2. í•´ë‹¹ í•¨ìˆ˜ë¥¼ 5ë²ˆ ì¶œë ¥í•œë‹¤.
 
-	static void genLotto() {
-		Random rand = new Random();
+  static void genLotto() {
+    Random rand = new Random();
 
-		lotto[0] = rand.nextInt(45) + 1;
-		for (int i = 1; i < 6; i++) {
-			lotto[i] = rand.nextInt(45) + 1;
-			for (int j = 0; j < i; j++) {
-				if (lotto[i] == lotto[j]) {
-					i--;
-					break;
-				}
-			}
-		}
-	}
+    lotto[0] = rand.nextInt(45) + 1;
+    for (int i = 1; i < 6; i++) {
+      lotto[i] = rand.nextInt(45) + 1;
+      for (int j = 0; j < i; j++) {
+        if (lotto[i] == lotto[j]) {
+          i--;
+          break;
+        }
+      }
+    }
+  }
 
-	static void sort() {
-		for (int i = 0; i < 6; i++) {
-			for (int j = i; j < 6; j++) {
-				if (lotto[i] > lotto[j]) {
-					lotto[i] ^= lotto[j];
-					lotto[j] ^= lotto[i];
-					lotto[i] ^= lotto[j];
-				}
-			}
-		}
-	}
+  static void sort() {
+    for (int i = 0; i < 6; i++) {
+      for (int j = i; j < 6; j++) {
+        if (lotto[i] > lotto[j]) {
+          lotto[i] ^= lotto[j];
+          lotto[j] ^= lotto[i];
+          lotto[i] ^= lotto[j];
+        }
+      }
+    }
+  }
 
-	static void printLotto() {
-		for (int i = 0; i < 6; i++) {
-			System.out.print(lotto[i] + " ");
-		}
-		System.out.println();
-	}
+  static void printLotto() {
+    for (int i = 0; i < 6; i++) {
+      System.out.print(lotto[i] + " ");
+    }
+    System.out.println();
+  }
 }

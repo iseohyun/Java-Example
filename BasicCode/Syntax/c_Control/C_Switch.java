@@ -4,44 +4,44 @@ import tools.Input;
 
 /**
  * 
- * switch¹®¹ý :
- * 	switch(Á¶°ÇÀÌ µÉ º¯¼ö) {
- * 		case ¼ýÀÚ:
- * 			¹Ùµð;
- * 			break; (°æ¿ì¿¡ µû¶ó »ý·«°¡´É)
- * 		case ¼ýÀÚ:
+ * switchë¬¸ë²• :
+ * 	switch(ì¡°ê±´ì´ ë  ë³€ìˆ˜) {
+ * 		case ìˆ«ìž:
+ * 			ë°”ë””;
+ * 			break; (ê²½ìš°ì— ë”°ë¼ ìƒëžµê°€ëŠ¥)
+ * 		case ìˆ«ìž:
  *        ...
- *        ... (¿øÇÏ´Â ¸¸Å­ case Ãß°¡)
+ *        ... (ì›í•˜ëŠ” ë§Œí¼ case ì¶”ê°€)
  *      default:
  *  }
  *
- *	switch¹®Àº if¹®°ú ³»ºÎÀûÀ¸·Î 100% °°Àº µ¿ÀÛÀ» ¼öÇàÇÕ´Ï´Ù. °¡µ¶¼ºÀ» ÁÁ°Ô ÇÏ±â À§ÇØ¼­ »ç¿ëÇÏ´Â ¹®¹ýÀÔ´Ï´Ù.
+ *	switchë¬¸ì€ ifë¬¸ê³¼ ë‚´ë¶€ì ìœ¼ë¡œ 100% ê°™ì€ ë™ìž‘ì„ ìˆ˜í–‰í•©ë‹ˆë‹¤. ê°€ë…ì„±ì„ ì¢‹ê²Œ í•˜ê¸° ìœ„í•´ì„œ ì‚¬ìš©í•˜ëŠ” ë¬¸ë²•ìž…ë‹ˆë‹¤.
  *
  */
 public class C_Switch {
-	public static void main(String[] args) {
-		int a = Input.getInt();
+  public static void main(String[] args) {
+    int a = Input.getInt();
 
-		switch (a) {
-		case 1:
-			System.out.println("ÇÏ³ª");
-			break;
-		case 2:
-			System.out.println("µÑ");
-		case 3:
-			System.out.println("¼Â");
-			break;
-		default:
-			System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.");
-		}
-	}
+    switch (a) {
+    case 1:
+      System.out.println("í•˜ë‚˜");
+      break;
+    case 2:
+      System.out.println("ë‘˜");
+    case 3:
+      System.out.println("ì…‹");
+      break;
+    default:
+      System.out.println("ìž˜ëª»ëœ ìž…ë ¥ìž…ë‹ˆë‹¤.");
+    }
+  }
 }
 
-// ½Ç½À°úÁ¦ 1: 1, 2, 3, 4¸¦ °¢°¢ ÀÔ·ÂÇØº¾´Ï´Ù.
-// ½Ç½À°úÁ¦ 2: 1À» ÀÔ·ÂÇßÀ» ¶§, "ÇÏ¾Æ¾Æ³ª"°¡ Ãâ·ÂµÇµµ·Ï ¼öÁ¤ÇØ º¾´Ï´Ù.
-// ½Ç½À°úÁ¦ 3: 2¸¦ ÀÔ·ÂÇßÀ» ¶§, "µÑ"ÀÌ Ãâ·ÂµÇµµ·Ï ÄÚµå¸¦ ¼öÁ¤ÇØ º¾´Ï´Ù.
-// ½Ç½À°úÁ¦ 4: 4¸¦ ÀÔ·ÂÇßÀ» ¶§, "³Ý"ÀÌ Ãâ·ÂµÇµµ·Ï ÄÚµå¸¦ ¼öÁ¤ÇØ º¾´Ï´Ù.
-// ½Ç½À°úÁ¦ 5(Áß³­µµ): À§ ÄÚµå¿Í ¶È°°ÀÌ µ¿ÀÛÇÏ´Â ÄÚµå¸¦ if¿Í elseif¸¦ ÀÌ¿ëÇÏ¿© ÀÛ¼ºÇØº¾´Ï´Ù.
-// ½Ç½À°úÁ¦ 6(°í³­µµ): °¢ ¹®ÀÚ°¡ 16Áø¼ö·Î Ãâ·ÂµÇµµ·Ï º¯°æÇØ º¾´Ï´Ù. 
-// 		0~9±îÁö ÀÔ·ÂÇÏ¸é 0~9°¡ Ãâ·ÂµÇ°í, A=10, B=11, C=12, D=13, E=14, F=15°¡ Ãâ·ÂµÇµµ·Ï switch¹®À» ±¸¼ºÇÏ¼¼¿ä.
-//		char a = Input.getChar(); // ¹®ÀÚ¸¦ ÀÔ·Â¹Þ½À´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ 1: 1, 2, 3, 4ë¥¼ ê°ê° ìž…ë ¥í•´ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 2: 1ì„ ìž…ë ¥í–ˆì„ ë•Œ, "í•˜ì•„ì•„ë‚˜"ê°€ ì¶œë ¥ë˜ë„ë¡ ìˆ˜ì •í•´ ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 3: 2ë¥¼ ìž…ë ¥í–ˆì„ ë•Œ, "ë‘˜"ì´ ì¶œë ¥ë˜ë„ë¡ ì½”ë“œë¥¼ ìˆ˜ì •í•´ ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 4: 4ë¥¼ ìž…ë ¥í–ˆì„ ë•Œ, "ë„·"ì´ ì¶œë ¥ë˜ë„ë¡ ì½”ë“œë¥¼ ìˆ˜ì •í•´ ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 5(ì¤‘ë‚œë„): ìœ„ ì½”ë“œì™€ ë˜‘ê°™ì´ ë™ìž‘í•˜ëŠ” ì½”ë“œë¥¼ ifì™€ elseifë¥¼ ì´ìš©í•˜ì—¬ ìž‘ì„±í•´ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 6(ê³ ë‚œë„): ê° ë¬¸ìžê°€ 16ì§„ìˆ˜ë¡œ ì¶œë ¥ë˜ë„ë¡ ë³€ê²½í•´ ë´…ë‹ˆë‹¤. 
+// 		0~9ê¹Œì§€ ìž…ë ¥í•˜ë©´ 0~9ê°€ ì¶œë ¥ë˜ê³ , A=10, B=11, C=12, D=13, E=14, F=15ê°€ ì¶œë ¥ë˜ë„ë¡ switchë¬¸ì„ êµ¬ì„±í•˜ì„¸ìš”.
+//		char a = Input.getChar(); // ë¬¸ìžë¥¼ ìž…ë ¥ë°›ìŠµë‹ˆë‹¤.

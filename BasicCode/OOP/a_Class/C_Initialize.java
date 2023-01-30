@@ -2,43 +2,43 @@ package a_Class;
 
 /**
  * 
- * »ý¼ºÀÚ :
- * 	Å¬·¡½º°¡ »ý¼ºµÉ ¶§, ½ÇÇàµÇ´Â ÄÚµåÀÔ´Ï´Ù. ÄÚµù ¹®¹ýÀº class¸í°ú µ¿ÀÏÇÑ ÇÔ¼öÀÔ´Ï´Ù.
- * ¿¹¸¦µé¾î class1ÀÇ »ý¼ºÀÚ´Â class1()ÀÔ´Ï´Ù.
+ * ìƒì„±ìž :
+ * 	í´ëž˜ìŠ¤ê°€ ìƒì„±ë  ë•Œ, ì‹¤í–‰ë˜ëŠ” ì½”ë“œìž…ë‹ˆë‹¤. ì½”ë”© ë¬¸ë²•ì€ classëª…ê³¼ ë™ì¼í•œ í•¨ìˆ˜ìž…ë‹ˆë‹¤.
+ * ì˜ˆë¥¼ë“¤ì–´ class1ì˜ ìƒì„±ìžëŠ” class1()ìž…ë‹ˆë‹¤.
  * 
- * Å¬·¡½º¸¦ ÀÛ¼ºÇÏ´Â °ÍÀº ¼³°èµµ¿Í °°½À´Ï´Ù. Áï, ¼³°èµµ¸¦ ÀÛ¼ºÇØµµ ½ÇÁ¦·Î »ý¼ºµÈ °ÍÀº ¾Æ¹«°Íµµ ¾ø´Ù´Â ¶æÀÔ´Ï´Ù.
- * ¼±¾ðÀ» ÇÑ´Ù´Â ÀÇ¹Ì´Â ÄÄÇ»ÅÍ¿¡°Ô »ç¿ëÇÒ ¼ö µµ ÀÖ´Ù´Â °ÍÀ» ¾Ë·ÁÁÖ´Â ÇàÀ§ÀÔ´Ï´Ù. ¿ª½Ã ¾Æ¹«·± Çàµ¿µµ ÇÏÁö ¾Ê½À´Ï´Ù.
- * ¸Þ¸ð¸®¿¡ ¿Ã¶ó°¡´Â ¼ø°£, ½ÇÁ¦·Î Á¸ÀçÇÏ´Â ¹«¾ùÀÎ°¡°¡ µË´Ï´Ù. ¿ì¸®´Â ÀÌ·¸°Ô »ý¼ºµÈ ¹«¾ùÀÎ°¡¸¦ ÀÎ½ºÅÏ½º¶ó°í ºÎ¸¨´Ï´Ù.
+ * í´ëž˜ìŠ¤ë¥¼ ìž‘ì„±í•˜ëŠ” ê²ƒì€ ì„¤ê³„ë„ì™€ ê°™ìŠµë‹ˆë‹¤. ì¦‰, ì„¤ê³„ë„ë¥¼ ìž‘ì„±í•´ë„ ì‹¤ì œë¡œ ìƒì„±ëœ ê²ƒì€ ì•„ë¬´ê²ƒë„ ì—†ë‹¤ëŠ” ëœ»ìž…ë‹ˆë‹¤.
+ * ì„ ì–¸ì„ í•œë‹¤ëŠ” ì˜ë¯¸ëŠ” ì»´í“¨í„°ì—ê²Œ ì‚¬ìš©í•  ìˆ˜ ë„ ìžˆë‹¤ëŠ” ê²ƒì„ ì•Œë ¤ì£¼ëŠ” í–‰ìœ„ìž…ë‹ˆë‹¤. ì—­ì‹œ ì•„ë¬´ëŸ° í–‰ë™ë„ í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
+ * ë©”ëª¨ë¦¬ì— ì˜¬ë¼ê°€ëŠ” ìˆœê°„, ì‹¤ì œë¡œ ì¡´ìž¬í•˜ëŠ” ë¬´ì—‡ì¸ê°€ê°€ ë©ë‹ˆë‹¤. ìš°ë¦¬ëŠ” ì´ë ‡ê²Œ ìƒì„±ëœ ë¬´ì—‡ì¸ê°€ë¥¼ ì¸ìŠ¤í„´ìŠ¤ë¼ê³  ë¶€ë¦…ë‹ˆë‹¤.
  *
  */
 
 @SuppressWarnings("unused")
 public class C_Initialize {
-	static class Class1 {
-		Class1() {
-			System.out.println("»ý¼ºÀÚ È£Ãâ");
-		}
+  static class Class1 {
+    Class1() {
+      System.out.println("ìƒì„±ìž í˜¸ì¶œ");
+    }
 
-		Class1(int i) {
-			System.out.println("¼ýÀÚ : " + i);
-		}
+    Class1(int i) {
+      System.out.println("ìˆ«ìž : " + i);
+    }
 
-		Class1(char c) {
-			System.out.println("¹®ÀÚ : " + c);
-		}
-	}
+    Class1(char c) {
+      System.out.println("ë¬¸ìž : " + c);
+    }
+  }
 
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 
-		System.out.println("Å¬·¡½º¸¦ ¼±¾ðÇÕ´Ï´Ù.");
-		Class1 c0;
+    System.out.println("í´ëž˜ìŠ¤ë¥¼ ì„ ì–¸í•©ë‹ˆë‹¤.");
+    Class1 c0;
 
-		System.out.println("Å¬·¡½º¸¦ ¼±¾ðÇÏ°í ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÕ´Ï´Ù..");
-		Class1 c1 = new Class1();
-		Class1 c2 = new Class1(1);
-		Class1 c3 = new Class1('a');
-	}
+    System.out.println("í´ëž˜ìŠ¤ë¥¼ ì„ ì–¸í•˜ê³  ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•©ë‹ˆë‹¤..");
+    Class1 c1 = new Class1();
+    Class1 c2 = new Class1(1);
+    Class1 c3 = new Class1('a');
+  }
 }
 
-// ½Ç½À°úÁ¦ : class2¸¦ »ý¼ºÇÏ°í, »ý¼ºÀÚ¸¦ »ý¼ºÇÕ´Ï´Ù. »ý¼ºÀÚ´Â "È£ÃâµÇ¾ú½À´Ï´Ù"¸¦ Ãâ·ÂÇÕ´Ï´Ù.
-// ½Ç½À°úÁ¦ : ¹®ÀÚ¿­À» ÀÔ·Â¹Þ¾Æ Ãâ·ÂÇÏ´Â »ý¼ºÀÚ¸¦ Ãß°¡ÇÕ´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : class2ë¥¼ ìƒì„±í•˜ê³ , ìƒì„±ìžë¥¼ ìƒì„±í•©ë‹ˆë‹¤. ìƒì„±ìžëŠ” "í˜¸ì¶œë˜ì—ˆìŠµë‹ˆë‹¤"ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ : ë¬¸ìžì—´ì„ ìž…ë ¥ë°›ì•„ ì¶œë ¥í•˜ëŠ” ìƒì„±ìžë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.

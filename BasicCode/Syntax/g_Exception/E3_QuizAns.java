@@ -3,26 +3,26 @@ package g_Exception;
 import javax.swing.JOptionPane;
 
 public class E3_QuizAns {
-	public static void main(String[] args) {
-		int num = getNum();
+  public static void main(String[] args) {
+    int num = getNum();
 
-		System.out.println(num);
-	}
+    System.out.println(num);
+  }
 
-	static int getNum() {
-		// Quiz 1. ¼ıÀÚ°¡ ÀÔ·ÂµÇÁö ¾ÊÀ¸¸é, ¼ıÀÚ°¡ ÀÔ·ÂµÉ ¶§±îÁö, ÀÔ·Â¹ŞÀ¸¼¼¿ä.
-		int num = 0;
-		while (num == 0) {
-			String input = JOptionPane.showInputDialog("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
-			try {
-				num = Integer.parseInt(input);
-				if (num == 0) {
-					break;
-				}
-			} catch (NumberFormatException e) {
-			} catch (Exception e) {
-			}
-		}
-		return num;
-	}
+  static int getNum() {
+    // Quiz 1. ìˆ«ìê°€ ì…ë ¥ë˜ì§€ ì•Šìœ¼ë©´, ìˆ«ìê°€ ì…ë ¥ë  ë•Œê¹Œì§€, ì…ë ¥ë°›ìœ¼ì„¸ìš”.
+    int num = 0;
+    while (num == 0) {
+      String input = JOptionPane.showInputDialog("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+      try {
+        num = Integer.parseInt(input);
+        if (num == 0) {
+          break;
+        }
+      } catch (NumberFormatException e) {
+      } catch (Exception e) {
+      }
+    }
+    return num;
+  }
 }

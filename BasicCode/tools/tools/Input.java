@@ -3,44 +3,44 @@ package tools;
 import javax.swing.JOptionPane;
 
 public interface Input {
-	static int getInt() {
-		int num = 0;
-		String msg = "¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.";
-		boolean isInt = false;
-		while (!isInt) {
-			String input = JOptionPane.showInputDialog(msg);
-			try {
-				num = Integer.parseInt(input);
-				isInt = true;
-			} catch (NumberFormatException e) {
-				msg = "\"" + input + "\"Àº ¼ıÀÚ°¡ ¾Æ´Õ´Ï´Ù. ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.";
-			}
-		}
-		return num;
-	}
+  static int getInt() {
+    int num = 0;
+    String msg = "ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.";
+    boolean isInt = false;
+    while (!isInt) {
+      String input = JOptionPane.showInputDialog(msg);
+      try {
+        num = Integer.parseInt(input);
+        isInt = true;
+      } catch (NumberFormatException e) {
+        msg = "\"" + input + "\"ì€ ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤. ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.";
+      }
+    }
+    return num;
+  }
 
-	static String getString() {
-		return JOptionPane.showInputDialog("¹®ÀÚ¿­À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
-	}
+  static String getString() {
+    return JOptionPane.showInputDialog("ë¬¸ìì—´ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
+  }
 
-	static char getChar() {
-		String Char = JOptionPane.showInputDialog("¹®ÀÚ¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä. ¿©·¯¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¸é Ã¹ ¹®ÀÚ¸¸ ÀÔ·ÂÀÌ µË´Ï´Ù.");
-		return Char.charAt(0);
-	}
+  static char getChar() {
+    String Char = JOptionPane.showInputDialog("ë¬¸ìë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”. ì—¬ëŸ¬ë¬¸ìë¥¼ ì…ë ¥í•˜ë©´ ì²« ë¬¸ìë§Œ ì…ë ¥ì´ ë©ë‹ˆë‹¤.");
+    return Char.charAt(0);
+  }
 
-	static double getDouble() {
-		double num = 0;
-		String msg = "¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(¼Ò¼ö°¡´É)";
-		boolean isDouble = false;
-		while (!isDouble) {
-			String input = JOptionPane.showInputDialog(msg);
-			try {
-				num = Double.parseDouble(input);
-				isDouble = true;
-			} catch (NumberFormatException e) {
-				msg = "\"" + input + "\"Àº ¼ıÀÚ°¡ ¾Æ´Õ´Ï´Ù. ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.";
-			}
-		}
-		return num;
-	}
+  static double getDouble() {
+    double num = 0;
+    String msg = "ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.(ì†Œìˆ˜ê°€ëŠ¥)";
+    boolean isDouble = false;
+    while (!isDouble) {
+      String input = JOptionPane.showInputDialog(msg);
+      try {
+        num = Double.parseDouble(input);
+        isDouble = true;
+      } catch (NumberFormatException e) {
+        msg = "\"" + input + "\"ì€ ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤. ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.";
+      }
+    }
+    return num;
+  }
 }

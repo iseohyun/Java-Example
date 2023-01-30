@@ -1,20 +1,20 @@
 package d_Array;
 
 public class C2_Quiz {
-	public static void main(String[] agrs) {
-		int[] Arr = new int[20];
-		Arr[0] = 1;
-		Arr[1] = 1;
-		Arr[2] = Arr[0] + Arr[1];
-		Arr[3] = Arr[1] + Arr[2];
-		// ÇÇº¸³ªÄ¡ ¼ö¿­Àº ¾ÕÀ» µÎ ¼ö¸¦ ÇÕÇÑ ¼ö¿­ÀÌ´Ù.
-		for (int i = 0; i < Arr.length; i++) {
-			if (i > 3) {
-				// ½Ç½À°úÁ¦(°í³­µµ) : ÀûÀıÇÑ ÄÚµå¸¦ »ğÀÔÇÏ¿©, ÇÇº¸³ªÄ¡ ¼ö¿­ÀÌ Ãâ·ÂµÇµµ·Ï ÇÏ½Ã¿À.
+  public static void main(String[] agrs) {
+    int[] Arr = new int[20];
+    Arr[0] = 1;
+    Arr[1] = 1;
+    Arr[2] = Arr[0] + Arr[1];
+    Arr[3] = Arr[1] + Arr[2];
+    // í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ì€ ì•ì„ ë‘ ìˆ˜ë¥¼ í•©í•œ ìˆ˜ì—´ì´ë‹¤.
+    for (int i = 0; i < Arr.length; i++) {
+      if (i > 3) {
+        // ì‹¤ìŠµê³¼ì œ(ê³ ë‚œë„) : ì ì ˆí•œ ì½”ë“œë¥¼ ì‚½ì…í•˜ì—¬, í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ì´ ì¶œë ¥ë˜ë„ë¡ í•˜ì‹œì˜¤.
 
-			}
-			// ¿¹ : Arr[19] = 6765ÀÌ´Ù.
-			System.out.println(i + "¹øÂ° ¼ö¿­ : " + Arr[i]);
-		}
-	}
+      }
+      // ì˜ˆ : Arr[19] = 6765ì´ë‹¤.
+      System.out.println(i + "ë²ˆì§¸ ìˆ˜ì—´ : " + Arr[i]);
+    }
+  }
 }

@@ -2,23 +2,23 @@ package c_Control;
 
 /**
  * 
- * coutinue¹®À» ¸¸³ª¸é, ¹İº¹¹®ÀÇ ÀÌÈÄ Ã³¸®³»¿ëÀ» ¹«½ÃÇÏ°í, Á¶°Ç¹®À» ¼öÇàÇÕ´Ï´Ù.
+ * coutinueë¬¸ì„ ë§Œë‚˜ë©´, ë°˜ë³µë¬¸ì˜ ì´í›„ ì²˜ë¦¬ë‚´ìš©ì„ ë¬´ì‹œí•˜ê³ , ì¡°ê±´ë¬¸ì„ ìˆ˜í–‰í•©ë‹ˆë‹¤.
  *
  */
 
 public class E1_Continue {
-	public static void main(String[] args) {
-		int i = 1;
-		while (i++ < 9999) {
-			System.out.println(i + ">");
-			if (i == 5) {
-				continue;
-			}
-			if (i % 5 == 0) {
-				break;
-			}
-		}
-	}
+  public static void main(String[] args) {
+    int i = 1;
+    while (i++ < 9999) {
+      System.out.println(i + ">");
+      if (i == 5) {
+        continue;
+      }
+      if (i % 5 == 0) {
+        break;
+      }
+    }
+  }
 }
 
-// ½Ç½À°úÁ¦ : continue±¸¹®À» ÁÖ¼® Ã³¸®ÇÏ°í, µ¿ÀÛÀ» ºñ±³ÇÏ¼¼¿ä.
+// ì‹¤ìŠµê³¼ì œ : continueêµ¬ë¬¸ì„ ì£¼ì„ ì²˜ë¦¬í•˜ê³ , ë™ì‘ì„ ë¹„êµí•˜ì„¸ìš”.

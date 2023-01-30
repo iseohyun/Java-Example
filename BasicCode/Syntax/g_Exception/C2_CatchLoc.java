@@ -1,15 +1,15 @@
 package g_Exception;
 
 public class C2_CatchLoc {
-	public static void main(String[] args) {
-		try {
-			handlingException();
-		} catch (Exception e) {
-			System.out.println("π¸¿Œ¿ª √£æ∆∂Û!");
-		}
-	}
+  public static void main(String[] args) {
+    try {
+      handlingException();
+    } catch (Exception e) {
+      System.out.println("Î≤îÏù∏ÏùÑ Ï∞æÏïÑÎùº!");
+    }
+  }
 
-	static void handlingException() throws Exception {
-		throw new Exception();
-	}
+  static void handlingException() throws Exception {
+    throw new Exception();
+  }
 }

@@ -2,21 +2,21 @@ package a_Class;
 
 /**
  * 
- * ¸Ş¼Òµå¸¦ »ç¿ëÇÏ±â À§ÇØ¼­´Â ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÏ°í, Á¡(.)¿¬»êÀÚ¸¦ ÅëÇØ¼­ È£Ãâ ÇÒ ¼ö ÀÖ½À´Ï´Ù.
- * ´Ü, staticÀ¸·Î ¼±¾ğµÈ ¸Ş¼­µå(class method)´Â Ç×»ó ¸Ş¸ğ¸®¿¡ »óÁÖÇÏ´Â ¸Ş¼­µåÀÌ¹Ç·Î,
- * ÀÎ½ºÅÏ½º¸¦ ±»ÀÌ ¼±¾ğÇÏÁö ¾Ê´õ¶óµµ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ * ë©”ì†Œë“œë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œëŠ” ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê³ , ì (.)ì—°ì‚°ìë¥¼ í†µí•´ì„œ í˜¸ì¶œ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+ * ë‹¨, staticìœ¼ë¡œ ì„ ì–¸ëœ ë©”ì„œë“œ(class method)ëŠ” í•­ìƒ ë©”ëª¨ë¦¬ì— ìƒì£¼í•˜ëŠ” ë©”ì„œë“œì´ë¯€ë¡œ,
+ * ì¸ìŠ¤í„´ìŠ¤ë¥¼ êµ³ì´ ì„ ì–¸í•˜ì§€ ì•Šë”ë¼ë„ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
  *
  */
 
 public class D2_Static {
-	static class Class1 {
-		static void print(int i) {
-			System.out.println("Ãâ·Â : " + i);
-		}
-	}
+  static class Class1 {
+    static void print(int i) {
+      System.out.println("ì¶œë ¥ : " + i);
+    }
+  }
 
-	public static void main(String[] args) {
-		Class1.print(50);
-		Class1.print(100);
-	}
+  public static void main(String[] args) {
+    Class1.print(50);
+    Class1.print(100);
+  }
 }

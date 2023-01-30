@@ -1,20 +1,20 @@
 package a_BasicType;
 
 public class E_Typecast {
-	public static void main(String[] args) {
-		double d1 = 10;
-		double d2 = 10 + 3.14;
+  public static void main(String[] args) {
+    double d1 = 10;
+    double d2 = 10 + 3.14;
 
-		System.out.println(d1);
-		System.out.println(d2);
+    System.out.println(d1);
+    System.out.println(d2);
 
-		int n = 10;
+    int n = 10;
 
-		System.out.println(n / 3);
-		System.out.println((float) n / 3);
-		System.out.println(n / 3.0);
-	}
+    System.out.println(n / 3);
+    System.out.println((float) n / 3);
+    System.out.println(n / 3.0);
+  }
 }
 
-// ½Ç½À°úÁ¦ 1: nÀ» 10 ´ë½Å 9876543210L¸¦ ÀúÀåÇÏ°í, ¿¡·¯°¡ ³ªÁö ¾Êµµ·Ï ¼öÁ¤ÇÏ½Ê½Ã¿À.
-// ½Ç½À°úÁ¦ 2: nÀ» 10 ´ë½Å 9876543210¸¦ ÀúÀåÇÏ°í, ½ÇÇàÇØº¾´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ 1: nì„ 10 ëŒ€ì‹  9876543210Lë¥¼ ì €ì¥í•˜ê³ , ì—ëŸ¬ê°€ ë‚˜ì§€ ì•Šë„ë¡ ìˆ˜ì •í•˜ì‹­ì‹œì˜¤.
+// ì‹¤ìŠµê³¼ì œ 2: nì„ 10 ëŒ€ì‹  9876543210ë¥¼ ì €ì¥í•˜ê³ , ì‹¤í–‰í•´ë´…ë‹ˆë‹¤.

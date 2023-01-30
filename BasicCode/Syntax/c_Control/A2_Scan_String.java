@@ -4,26 +4,26 @@ import java.util.Scanner;
 
 /**
  * 
- *	¹®ÀÚ¿­À» ÀÔ·Â¹Ş´Â ¿¹Á¦ÀÔ´Ï´Ù.
- *	¼ıÀÚµµ ¾Ë°íº¸¸é ¹®ÀÚ¿­ÀÔ´Ï´Ù.
- *	¸¸¾à ¼ıÀÚ°¡ ¾Æ´Ï°í ¹®ÀÚ¿­ÀÌ ÀÔ·ÂµÇ¸é, ½Ã½ºÅÛÀº ¿¡·¯°¡ ³³´Ï´Ù.
- *  ¿¡·¯¸¦ ¹æ¾îÇÏ´Â ¹æ¹ıÀº ÀÌÈÄ¿¡ ³ª¿É´Ï´Ù. (exception)
+ *	ë¬¸ìì—´ì„ ì…ë ¥ë°›ëŠ” ì˜ˆì œì…ë‹ˆë‹¤.
+ *	ìˆ«ìë„ ì•Œê³ ë³´ë©´ ë¬¸ìì—´ì…ë‹ˆë‹¤.
+ *	ë§Œì•½ ìˆ«ìê°€ ì•„ë‹ˆê³  ë¬¸ìì—´ì´ ì…ë ¥ë˜ë©´, ì‹œìŠ¤í…œì€ ì—ëŸ¬ê°€ ë‚©ë‹ˆë‹¤.
+ *  ì—ëŸ¬ë¥¼ ë°©ì–´í•˜ëŠ” ë°©ë²•ì€ ì´í›„ì— ë‚˜ì˜µë‹ˆë‹¤. (exception)
  *  
  */
 
 public class A2_Scan_String {
-	private static Scanner scan;
+  private static Scanner scan;
 
-	public static void main(String[] args) {
-		String str;
-		scan = new Scanner(System.in);
-		System.out.print("ÀÔ·ÂÇØ ÁÖ¼¼¿ä : ");
-		str = scan.next();
-		System.out.println("ÀÔ·ÂÇÑ ´Ü¾î : " + str);
-		System.out.println("¼ıÀÚ·Î º¯È¯ x 2 : " + Integer.parseInt(str) * 2);
-		System.out.println("¼Ò¼ö·Î º¯È¯ ¡À 2 : " + Double.parseDouble(str) / 2);
-	}
+  public static void main(String[] args) {
+    String str;
+    scan = new Scanner(System.in);
+    System.out.print("ì…ë ¥í•´ ì£¼ì„¸ìš” : ");
+    str = scan.next();
+    System.out.println("ì…ë ¥í•œ ë‹¨ì–´ : " + str);
+    System.out.println("ìˆ«ìë¡œ ë³€í™˜ x 2 : " + Integer.parseInt(str) * 2);
+    System.out.println("ì†Œìˆ˜ë¡œ ë³€í™˜ Ã· 2 : " + Double.parseDouble(str) / 2);
+  }
 }
 
-// ½Ç½À°úÁ¦ 1: ¹®ÀÚ¸¦ ÀÔ·ÂÇØ º¾´Ï´Ù.
-// ½Ç½À°úÁ¦ 2: ¼ıÀÚ¸¦ ÀÔ·ÂÇØ º¾´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ 1: ë¬¸ìë¥¼ ì…ë ¥í•´ ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 2: ìˆ«ìë¥¼ ì…ë ¥í•´ ë´…ë‹ˆë‹¤.

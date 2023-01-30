@@ -1,26 +1,26 @@
 package b_Operation;
 
 public class D2_Compare {
-	public static void main(String[] args) {
-		int num1 = -100;
+  public static void main(String[] args) {
+    int num1 = -100;
 
-		System.out.println("¿¬»ê¾øÀ½\t[" + toBin(num1) + "] " + num1);
-		System.out.println("~ ¿¬»ê \t[" + toBin(~num1) + "] " + ~num1);
-		System.out.println("<< ¿¬»ê\t[" + toBin(num1 << 2) + "]" + (num1 << 2));
-		System.out.println(">> ¿¬»ê\t[" + toBin(num1 >> 2) + "] " + (num1 >> 2));
-		System.out.println(">>> ¿¬»ê\t[" + toBin(num1 >>> 2) + "] " + (num1 >>> 2));
-	}
+    System.out.println("ì—°ì‚°ì—†ìŒ  [" + toBin(num1) + "] " + num1);
+    System.out.println("~ ì—°ì‚°    [" + toBin(~num1) + "] " + ~num1);
+    System.out.println("<< ì—°ì‚°   [" + toBin(num1 << 2) + "]" + (num1 << 2));
+    System.out.println(">> ì—°ì‚°   [" + toBin(num1 >> 2) + "] " + (num1 >> 2));
+    System.out.println(">>> ì—°ì‚°  [" + toBin(num1 >>> 2) + "] " + (num1 >>> 2));
+  }
 
-	static String toBin(int num) {
-		String str = "";
-		for (int i = 0; i < 32; i++) {
-			str = ((num % 2 == 0) ? "0" : "1") + str;
-			num >>= 1;
-		}
-		return str;
-	}
+  static String toBin(int num) {
+    String str = "";
+    for (int i = 0; i < 32; i++) {
+      str = ((num % 2 == 0) ? "0" : "1") + str;
+      num >>= 1;
+    }
+    return str;
+  }
 }
 
-// ½Ç½À°úÁ¦ : ¾ç¼ö(¿¹:8)¸¦ ÀÔ·ÂÇØº¾´Ï´Ù.
-// ½Ç½À°úÁ¦ : À½¼ö(¿¹:-8)¸¦ ÀÔ·ÂÇØº¾´Ï´Ù.
-// ½Ç½À°úÁ¦ : shift¿¬»ê <<2°¡ x4¿Í µ¿ÀÏÇÑ È¿°ú°¡ ³ªÅ¸³ª´Â °ÍÀº ¿ì¿¬ÀÏ±î¿ä? x8ÀÌ µÉ ¼ö ÀÖµµ·Ï ÄÚµå¸¦ ¼öÁ¤ÇØº¾´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : ì–‘ìˆ˜(ì˜ˆ:8)ë¥¼ ì…ë ¥í•´ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ : ìŒìˆ˜(ì˜ˆ:-8)ë¥¼ ì…ë ¥í•´ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ : shiftì—°ì‚° <<2ê°€ x4ì™€ ë™ì¼í•œ íš¨ê³¼ê°€ ë‚˜íƒ€ë‚˜ëŠ” ê²ƒì€ ìš°ì—°ì¼ê¹Œìš”? x8ì´ ë  ìˆ˜ ìˆë„ë¡ ì½”ë“œë¥¼ ìˆ˜ì •í•´ë´…ë‹ˆë‹¤.

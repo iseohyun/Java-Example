@@ -1,70 +1,70 @@
 package a_BasicType;
 
 /**
- *	½ÉÈ­ÇĞ½À :
- * 	
- *		¼Ò¼ö´Â "ºÎÈ£ + Áö¼ö + ¼Ò¼ö"·Î ÀÌ·ç¾îÁ® ÀÖ½À´Ï´Ù.
- *		Ãâ·ÂÀ» ÇÑ µÚ¿¡ ºĞ¼®ÇØº¾´Ï´Ù.
+ * ì‹¬í™”í•™ìŠµ :
+ * 
+ * ì†Œìˆ˜ëŠ” "ë¶€í˜¸ + ì§€ìˆ˜ + ì†Œìˆ˜"ë¡œ ì´ë£¨ì–´ì ¸ ìˆìŠµë‹ˆë‹¤.
+ * ì¶œë ¥ì„ í•œ ë’¤ì— ë¶„ì„í•´ë´…ë‹ˆë‹¤.
  *
- *		¿É¼ÇÀ» 0~5·Î º¯°æÇØº¸¸é¼­ ½Ç½ÀÇØº¾´Ï´Ù.
+ * ì˜µì…˜ì„ 0~5ë¡œ ë³€ê²½í•´ë³´ë©´ì„œ ì‹¤ìŠµí•´ë´…ë‹ˆë‹¤.
  */
 
 public class F2_Float2 {
-	public static void main(String[] args) {
-		int option = 1;
-		final int repeat = 16;
+  public static void main(String[] args) {
+    int option = 5;
+    final int repeat = 16;
 
-		switch (option) {
-		case 0:
-			printFloats((float) Math.pow(0.5, 149), 2, 32, 0);
-			break;
-		case 1:
-			// Áö¼öºÎ
-			printFloats(1, 2, repeat, 0);
-			break;
-		case 2:
-			// °¨¼ÒÇÏ´Â ¿¹½Ã
-			printFloats(1, 0.5, repeat, 0);
-			break;
-		case 3:
-			// ¼Ò¼öºÎ º¯°æ ¿¹½Ã + Áõ°¡
-			printFloats(1, 2, repeat, 1);
-			break;
-		case 4:
-			// ¼Ò¼öºÎ º¯°æ ¿¹½Ã + °¨¼Ò
-			printFloats(1, 0.5, repeat, 1);
-			break;
-		case 5:
-			printFloats(-1, 0.5, repeat, 1);
-			break;
-		}
-	}
+    switch (option) {
+      case 0:
+        printFloats((float) Math.pow(0.5, 149), 2, 32, 0);
+        break;
+      case 1:
+        // ì§€ìˆ˜ë¶€
+        printFloats(1, 2, repeat, 0);
+        break;
+      case 2:
+        // ê°ì†Œí•˜ëŠ” ì˜ˆì‹œ
+        printFloats(1, 0.5, repeat, 0);
+        break;
+      case 3:
+        // ì†Œìˆ˜ë¶€ ë³€ê²½ ì˜ˆì‹œ + ì¦ê°€
+        printFloats(1, 2, repeat, 1);
+        break;
+      case 4:
+        // ì†Œìˆ˜ë¶€ ë³€ê²½ ì˜ˆì‹œ + ê°ì†Œ
+        printFloats(1, 0.5, repeat, 1);
+        break;
+      case 5:
+        printFloats(-1, 0.5, repeat, 1);
+        break;
+    }
+  }
 
-	static void printFloats(float num, double scope, int repeat, float base) {
+  static void printFloats(float num, double power, int repeat, float offset) {
 
-		for (int i = 0; i < repeat; i++) {
-			if ((base + num) - (int) (base + num) > 0)
-				if ((base + num) < 0.000001)
-					System.out.printf("[%2d] " + (base + num) + " \t = ", i);
-				else
-					System.out.printf("[%2d] %8f \t = ", i, base + num);
-			else
-				System.out.printf("[%2d] %8d \t = ", i, (int) (base + num));
-			printBits(Float.floatToIntBits(base + num));
-			num *= scope;
-		}
-	}
+    for (int i = 0; i < repeat; i++) {
+      if ((offset + num) - (int) (offset + num) > 0)
+        if ((offset + num) < 0.000001)
+          System.out.printf("[%2d] " + (offset + num) + " \t = ", i);
+        else
+          System.out.printf("[%2d] %8f \t = ", i, offset + num);
+      else
+        System.out.printf("[%2d] %8d \t = ", i, (int) (offset + num));
+      printBits(Float.floatToIntBits(offset + num));
+      num *= power;
+    }
+  }
 
-	static void printBits(int num) {
-		for (int i = 31; i >= 0; i--) {
-			System.out.print(((num >> i) % 2 == 0) ? 0 : 1);
-			if (i % 4 == 0)
-				System.out.print(" ");
-			if (i == 31)
-				System.out.print("[");
-			if (i == 23)
-				System.out.print("]");
-		}
-		System.out.println();
-	}
+  static void printBits(int num) {
+    for (int i = 31; i >= 0; i--) {
+      System.out.print(((num >> i) % 2 == 0) ? 0 : 1);
+      if (i % 4 == 0)
+        System.out.print(" ");
+      if (i == 31)
+        System.out.print("[");
+      if (i == 23)
+        System.out.print("]");
+    }
+    System.out.println();
+  }
 }

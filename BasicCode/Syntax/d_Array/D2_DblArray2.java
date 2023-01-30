@@ -1,24 +1,24 @@
 package d_Array;
 
 public class D2_DblArray2 {
-	public static void main(String[] args) {
-		int[][] arr = {
-			{100, 200},
-			{300, 400, 500, 600},
-			{700, 800, 900},
-			{1000}
-		};
+  public static void main(String[] args) {
+    int[][] arr = {
+      {100, 200},
+      {300, 400, 500, 600},
+      {700, 800, 900},
+      {1000}
+    };
 
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = 0; j < arr[i].length; j++) {
-				System.out.print(arr[i][j] + " ");
-			}
-			System.out.println();
-		}
-	}
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = 0; j < arr[i].length; j++) {
+        System.out.print(arr[i][j] + " ");
+      }
+      System.out.println();
+    }
+  }
 }
 
-//½Ç½À°úÁ¦ : »çÄ¢¿¬»êÀ» »ç¿ëÇÏ¿© ¾Æ·¡¿Í °°ÀÌ Ãâ·ÂµÇµµ·Ï º¯°æÇØº¸¼¼¿ä.
+//ì‹¤ìŠµê³¼ì œ : ì‚¬ì¹™ì—°ì‚°ì„ ì‚¬ìš©í•˜ì—¬ ì•„ëž˜ì™€ ê°™ì´ ì¶œë ¥ë˜ë„ë¡ ë³€ê²½í•´ë³´ì„¸ìš”.
 //1 4 
 //9 16 25 36 
 //49 64 81 

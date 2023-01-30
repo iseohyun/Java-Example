@@ -1,36 +1,36 @@
 package a_Class;
 
 class Class1 {
-	int field1;
-	int field2;
+  int field1;
+  int field2;
 
-	void method1() {
-	}
+  void method1() {
+  }
 
-	void method2() {
-		System.out.println("¸Ş¼­µå È£ÃâÇÏ±â");
-	}
+  void method2() {
+    System.out.println("ë©”ì„œë“œ í˜¸ì¶œí•˜ê¸°");
+  }
 }
 
 public class A_Class {
-	public static void main(String[] args) {
-		Class1 c1;
-		c1 = new Class1();
+  public static void main(String[] args) {
+    Class1 c1;
+    c1 = new Class1();
 
-		// ÇÊµå Á¦¾î
-		c1.field1 = 33;
-		System.out.println("ÇÊµå¿¡¼­ ¹Ş¾Æ¿Â °ª : " + c1.field1);
+    // í•„ë“œ ì œì–´
+    c1.field1 = 33;
+    System.out.println("í•„ë“œì—ì„œ ë°›ì•„ì˜¨ ê°’ : " + c1.field1);
 
-		c1.method2();
-	}
+    c1.method2();
+  }
 }
 
-// ½Ç½À°úÁ¦ 1 : Sum(int a, int b)¸¦ ¸¸µé°í, a + b¸¦ ¸®ÅÏÇÏ´Â ÇÔ¼ö¸¦ ¸¸µé¾îº¸¼¼¿ä.
-// ½Ç½À°úÁ¦ 2 : »õ·Î¿î Å¬·¡½º(Friend)¸¦ ¸¸µé°í, String nameÀ» ÇÊµå·Î °®µµ·Ï ÇÕ´Ï´Ù.
-//	setName(String newName)Àº name¿¡ ÀÌ¸§À» ÀúÀåÇÏ´Â ¸Ş¼­µåÀÔ´Ï´Ù.
-//	getName() Àº ÇöÀç ÀÌ¸§À» ¹İÈ¯ÇÏ´Â ¸Ş¼­µåÀÔ´Ï´Ù.
-// ½Ç½À°úÁ¦ 3 : »õ·Î¿î Å¬·¡½º(Car)¸¦ ¸¸µé°í, int speed¸¦ ÇÊµå·Î °®µµ·Ï ÇÕ´Ï´Ù.
-//	addSpeed(int accel)Àº speed°¡ accel¸¸Å­ Áõ°¡ÇÏ´Â ¸Ş¼­µåÀÔ´Ï´Ù.
-//	stop() Àº ÇöÀç speed¸¦ 0À¸·Î ¸¸µå´Â ¸Ş¼­µå ÀÔ´Ï´Ù.
-// ½Ç½À°úÁ¦ 4 : »õ·Î¿î Å¬·¡½º(Account)¸¦ ¸¸µé°í, int balance(ÀÜ±İ)¸¦ ¸¸µë´Ï´Ù.
-//	deposit(ÀÔ±İ), withdraw(Ãâ±İ) ¸Ş¼­µå¸¦ ¸¸µì´Ï´Ù. ´Ü, ÀÜ±İÀº 0 ¹Ì¸¸À¸·Î ³»·Á°¥ ¼ö ¾ø½À´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ 1 : Sum(int a, int b)ë¥¼ ë§Œë“¤ê³ , a + bë¥¼ ë¦¬í„´í•˜ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ë³´ì„¸ìš”.
+// ì‹¤ìŠµê³¼ì œ 2 : ìƒˆë¡œìš´ í´ë˜ìŠ¤(Friend)ë¥¼ ë§Œë“¤ê³ , String nameì„ í•„ë“œë¡œ ê°–ë„ë¡ í•©ë‹ˆë‹¤.
+//	setName(String newName)ì€ nameì— ì´ë¦„ì„ ì €ì¥í•˜ëŠ” ë©”ì„œë“œì…ë‹ˆë‹¤.
+//	getName() ì€ í˜„ì¬ ì´ë¦„ì„ ë°˜í™˜í•˜ëŠ” ë©”ì„œë“œì…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 3 : ìƒˆë¡œìš´ í´ë˜ìŠ¤(Car)ë¥¼ ë§Œë“¤ê³ , int speedë¥¼ í•„ë“œë¡œ ê°–ë„ë¡ í•©ë‹ˆë‹¤.
+//	addSpeed(int accel)ì€ speedê°€ accelë§Œí¼ ì¦ê°€í•˜ëŠ” ë©”ì„œë“œì…ë‹ˆë‹¤.
+//	stop() ì€ í˜„ì¬ speedë¥¼ 0ìœ¼ë¡œ ë§Œë“œëŠ” ë©”ì„œë“œ ì…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 4 : ìƒˆë¡œìš´ í´ë˜ìŠ¤(Account)ë¥¼ ë§Œë“¤ê³ , int balance(ì”ê¸ˆ)ë¥¼ ë§Œë“¬ë‹ˆë‹¤.
+//	deposit(ì…ê¸ˆ), withdraw(ì¶œê¸ˆ) ë©”ì„œë“œë¥¼ ë§Œë“­ë‹ˆë‹¤. ë‹¨, ì”ê¸ˆì€ 0 ë¯¸ë§Œìœ¼ë¡œ ë‚´ë ¤ê°ˆ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.

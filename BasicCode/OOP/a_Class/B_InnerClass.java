@@ -1,22 +1,22 @@
 package a_Class;
 
 class ClassA {
-	class ClassB {
-		class ClassC {
-		}
+  class ClassB {
+    class ClassC {
+    }
 
-		ClassC c = new ClassC();
-	}
+    ClassC c = new ClassC();
+  }
 
-	ClassB b = new ClassB();
+  ClassB b = new ClassB();
 }
 
 public class B_InnerClass {
-	public static void main(String[] args) {
-		ClassA a = new ClassA();
-		System.out.println(a.b.c);
-	}
+  public static void main(String[] args) {
+    ClassA a = new ClassA();
+    System.out.println(a.b.c);
+  }
 }
 
-// ½Ç½À°úÁ¦ 1: B_InnerClass ¾È¿¡µµ Å¬·¡½º X¸¦ »ı¼ºÇÏ°í È£ÃâÇØ º¾´Ï´Ù.
-// ½Ç½À°úÁ¦ 2: class X¾È¿¡ Y¸¦ »ı¼ºÇÏ°í È£ÃâÇØº¾´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ 1: B_InnerClass ì•ˆì—ë„ í´ë˜ìŠ¤ Xë¥¼ ìƒì„±í•˜ê³  í˜¸ì¶œí•´ ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 2: class Xì•ˆì— Yë¥¼ ìƒì„±í•˜ê³  í˜¸ì¶œí•´ë´…ë‹ˆë‹¤.

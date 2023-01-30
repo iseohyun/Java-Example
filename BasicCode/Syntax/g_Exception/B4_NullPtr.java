@@ -2,15 +2,15 @@ package g_Exception;
 
 @SuppressWarnings("null")
 public class B4_NullPtr {
-	public static void main(String[] str) {
-		String ptr = null;
-		try {
-			boolean b = ptr.equals("String") ? true : false;
-			if (b)
-				System.out.println("String");
-		} catch (Exception e) {
-			System.out.println("¿À·ù°¡ ¹ß°ßµÇ¾ú½À´Ï´Ù.");
-			e.printStackTrace();
-		}
-	}
+  public static void main(String[] str) {
+    String ptr = null;
+    try {
+      boolean b = ptr.equals("String") ? true : false;
+      if (b)
+        System.out.println("String");
+    } catch (Exception e) {
+      System.out.println("ì˜¤ë¥˜ê°€ ë°œê²¬ë˜ì—ˆìŠµë‹ˆë‹¤.");
+      e.printStackTrace();
+    }
+  }
 }

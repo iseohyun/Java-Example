@@ -1,28 +1,28 @@
 package a_Class;
 
 public class F_Array {
-	static class Class1 {
-		static int seq = 1;
-		int id = seq++;
-		char ch = 'a';
-	}
+  static class Class1 {
+    static int seq = 1;
+    int id = seq++;
+    char ch = 'a';
+  }
 
-	public static void main(String[] args) {
-		Class1[] arr1 = new Class1[5];
+  public static void main(String[] args) {
+    Class1[] arr1 = new Class1[5];
 
-		for (int i = 0; i < arr1.length; i++) {
-			arr1[i] = new Class1();
-			arr1[i].ch = (char) ('A' + i);
-		}
+    for (int i = 0; i < arr1.length; i++) {
+      arr1[i] = new Class1();
+      arr1[i].ch = (char) ('A' + i);
+    }
 
-//		for (Class1 arr : arr1) {	// ¡Ø ÁÖÀÇ : ÀÌ¿Í °°Àº ¹æ¹ýÀº µ¿ÀÛÇÏÁö ¾Ê½À´Ï´Ù.
-//			arr = new Class1();
-//		}
+    // for (Class1 arr : arr1) { // â€» ì£¼ì˜ : ì´ì™€ ê°™ì€ ë°©ë²•ì€ ë™ìž‘í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
+    // arr = new Class1();
+    // }
 
-		for (Class1 arr : arr1) {
-			System.out.println("[ " + arr.id + " ] " + arr.ch);
-		}
-	}
+    for (Class1 arr : arr1) {
+      System.out.println("[ " + arr.id + " ] " + arr.ch);
+    }
+  }
 }
 
-// ½Ç½À °úÁ¦ : 5°³¸¦ 10°³·Î º¯°æÇØ º¾´Ï´Ù.
+// ì‹¤ìŠµ ê³¼ì œ : 5ê°œë¥¼ 10ê°œë¡œ ë³€ê²½í•´ ë´…ë‹ˆë‹¤.

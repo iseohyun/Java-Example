@@ -1,15 +1,15 @@
 package g_Exception;
 
 public class E3_Quiz {
-	public static void main(String[] args) {
-		int num = getNum();
+  public static void main(String[] args) {
+    int num = getNum();
 
-		System.out.println(num);
-	}
+    System.out.println(num);
+  }
 
-	static int getNum() {
-		// Quiz 1. ¼ıÀÚ°¡ ÀÔ·ÂµÇÁö ¾ÊÀ¸¸é, ¼ıÀÚ°¡ ÀÔ·ÂµÉ ¶§±îÁö, ÀÔ·Â ¹ŞÀ¸¼¼¿ä.
-		int num = 0;
-		return num;
-	}
+  static int getNum() {
+    // Quiz 1. ìˆ«ìê°€ ì…ë ¥ë˜ì§€ ì•Šìœ¼ë©´, ìˆ«ìê°€ ì…ë ¥ë  ë•Œê¹Œì§€, ì…ë ¥ ë°›ìœ¼ì„¸ìš”.
+    int num = 0;
+    return num;
+  }
 }

@@ -4,74 +4,74 @@ import tools.Input;
 
 /**
  * 
- * Àç±ÍÇÔ¼ö´Â ½º½º·Î¸¦ È£ÃâÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù.
- * Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇÏ´Â ÀÌÀ¯´Â °æ¿ì¿¡ µû¶ó¼­ ÄÚµå±æÀÌ¸¦ È¹±âÀûÀ¸·Î ÁÙ¿©ÁÖ±â ¶§¹®¿¡ »ç¿ëµË´Ï´Ù.
+ * ì¬ê·€í•¨ìˆ˜ëŠ” ìŠ¤ìŠ¤ë¡œë¥¼ í˜¸ì¶œí•˜ëŠ” í•¨ìˆ˜ì…ë‹ˆë‹¤.
+ * ì¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ëŠ” ì´ìœ ëŠ” ê²½ìš°ì— ë”°ë¼ì„œ ì½”ë“œê¸¸ì´ë¥¼ íšê¸°ì ìœ¼ë¡œ ì¤„ì—¬ì£¼ê¸° ë•Œë¬¸ì— ì‚¬ìš©ë©ë‹ˆë‹¤.
  *  
- * ¸¹Àº ±³Àç¿¡¼­ ³ª¿À´Â °í³­ÀÌµµ ÇÔ¼öÀÔ´Ï´Ù. 
- * ¼³°è°¡ ¾î·Á¿î Á¡µµ ÀÖÁö¸¸, ¸Ş¸ğ¸® °ü¸®°¡ ¾î·Æ±â ¶§¹®¿¡ ±âÇÇÇÏ´Â °æÇâÀÌ ÀÖ½À´Ï´Ù.  
+ * ë§ì€ êµì¬ì—ì„œ ë‚˜ì˜¤ëŠ” ê³ ë‚œì´ë„ í•¨ìˆ˜ì…ë‹ˆë‹¤. 
+ * ì„¤ê³„ê°€ ì–´ë ¤ìš´ ì ë„ ìˆì§€ë§Œ, ë©”ëª¨ë¦¬ ê´€ë¦¬ê°€ ì–´ë µê¸° ë•Œë¬¸ì— ê¸°í”¼í•˜ëŠ” ê²½í–¥ì´ ìˆìŠµë‹ˆë‹¤.  
  *
  */
 
 public class G_Recursive {
-	public static void main(String[] args) {
-		int sum;
-		int input = Input.getInt();
-		sum = recursiveSum(input);
-		System.out.println("´©°è : " + sum);
+  public static void main(String[] args) {
+    int sum;
+    int input = Input.getInt();
+    sum = recursiveSum(input);
+    System.out.println("ëˆ„ê³„ : " + sum);
 
-		int gcd = gcd(input, 36);
-		System.out.println("ÃÖ´ë°ø¾à¼ö : " + gcd);
+    int gcd = gcd(input, 36);
+    System.out.println("ìµœëŒ€ê³µì•½ìˆ˜ : " + gcd);
 
-		int factorial = factorial(input);
-		System.out.println("ÆÑÅä¸®¾ó : " + factorial);
+    int factorial = factorial(input);
+    System.out.println("íŒ©í† ë¦¬ì–¼ : " + factorial);
 
-		int fibonacci = fibonacci(input);
-		System.out.println("ÇÇº¸³ªÄ¡ : " + fibonacci);
-	}
+    int fibonacci = fibonacci(input);
+    System.out.println("í”¼ë³´ë‚˜ì¹˜ : " + fibonacci);
+  }
 
-	static int recursiveSum(int n) {
-		if (n == 1) {
-			return 1;
-		}
-		return n + recursiveSum(n - 1);
-	}
+  static int recursiveSum(int n) {
+    if (n == 1) {
+      return 1;
+    }
+    return n + recursiveSum(n - 1);
+  }
 
-	static int gcd(int p, int q) {
-		// ½Ç½À°úÁ¦(°í³­µµ) : ÃÖ´ë°ø¾à¼öÇÔ¼ö¸¦ ±¸ÇØº¾´Ï´Ù.
-		return p;
-	}
+  static int gcd(int p, int q) {
+    // ì‹¤ìŠµê³¼ì œ(ê³ ë‚œë„) : ìµœëŒ€ê³µì•½ìˆ˜í•¨ìˆ˜ë¥¼ êµ¬í•´ë´…ë‹ˆë‹¤.
+    return p;
+  }
 
-	static int fibonacci(int n) {
-		// ½Ç½À°úÁ¦(°í³­µµ) : n¹øÂ° ÇÇº¸³ªÄ¡ ¼ö¿­À» ±¸ÇØº¾´Ï´Ù.
-		return n;
-	}
+  static int fibonacci(int n) {
+    // ì‹¤ìŠµê³¼ì œ(ê³ ë‚œë„) : në²ˆì§¸ í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´ì„ êµ¬í•´ë´…ë‹ˆë‹¤.
+    return n;
+  }
 
-	static int factorial(int n) {
-		// ½Ç½À°úÁ¦(°í³­µµ) : ÆÑÅä¸®¾óÇÔ¼ö¸¦ ±¸ÇöÇØº¾´Ï´Ù.
-		return n;
-	}
+  static int factorial(int n) {
+    // ì‹¤ìŠµê³¼ì œ(ê³ ë‚œë„) : íŒ©í† ë¦¬ì–¼í•¨ìˆ˜ë¥¼ êµ¬í˜„í•´ë´…ë‹ˆë‹¤.
+    return n;
+  }
 }
 
-/* ÈùÆ® : ¾Æ·¡ ÇÔ¼öµéÁß¿¡ ÀûÀıÇÏ°Ô ¼öÁ¤ÇÒ ¼ö ÀÖ½À´Ï´Ù.
-	static int ?????(int n) {
-		if (n == 1)
-			return 1;
-		else
-			return n * ?????(n - 1);
-	}
+/* íŒíŠ¸ : ì•„ë˜ í•¨ìˆ˜ë“¤ì¤‘ì— ì ì ˆí•˜ê²Œ ìˆ˜ì •í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+  static int ?????(int n) {
+    if (n == 1)
+      return 1;
+    else
+      return n * ?????(n - 1);
+  }
 
-	static int ?????(int p, int q) {
-		if (q == 0)
-			return p;
-		else
-			return ?????(q, p % q);
+  static int ?????(int p, int q) {
+    if (q == 0)
+      return p;
+    else
+      return ?????(q, p % q);
 
-	}
+  }
 
-	static int ?????(int n) {
-		if (n < 2)
-			return n;
-		else
-			return ?????(n - 1) + ?????(n - 2);
-	}	
+  static int ?????(int n) {
+    if (n < 2)
+      return n;
+    else
+      return ?????(n - 1) + ?????(n - 2);
+  }	
 */

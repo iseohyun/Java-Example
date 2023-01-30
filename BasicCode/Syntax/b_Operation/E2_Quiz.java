@@ -1,22 +1,22 @@
 package b_Operation;
 
 public class E2_Quiz {
-	public static void main(String[] args) {
-		int a = 64, r = 0;
+  public static void main(String[] args) {
+    int a = 64, r = 0;
 
-		// ½Ç½À°úÁ¦ 1: shift(<<, >>)¿¬»êÀ» ÅëÇØ¼­, 8À» Ãâ·ÂÇÏ¼¼¿ä.
-		// r = a >> ?;
-		r = a >> 3;
+    // ì‹¤ìŠµê³¼ì œ 1: shift(<<, >>)ì—°ì‚°ì„ í†µí•´ì„œ, 8ì„ ì¶œë ¥í•˜ì„¸ìš”.
+    // r = a >> ?;
+    r = a >> 3;
 
-		System.out.println("1. ¿¬»ê °á°ú : " + r);
+    System.out.println("1. ì—°ì‚° ê²°ê³¼ : " + r);
 
-		// ½Ç½À°úÁ¦ 2: shift(<<, >>)¿¬»êÀ» ÅëÇØ¼­, 256À» Ãâ·ÂÇÏ¼¼¿ä.
-		// r = a << ?;
-		System.out.println("2. ¿¬»ê °á°ú : " + r);
+    // ì‹¤ìŠµê³¼ì œ 2: shift(<<, >>)ì—°ì‚°ì„ í†µí•´ì„œ, 256ì„ ì¶œë ¥í•˜ì„¸ìš”.
+    // r = a << ?;
+    System.out.println("2. ì—°ì‚° ê²°ê³¼ : " + r);
 
-		r = 0x000FFFAA;
-		// ½Ç½À°úÁ¦ 3: 0->1, 1->0À¸·Î ¹Ù²Ù¾î¼­ Ãâ·ÂÇÏ¼¼¿ä. (Á¤´ä : FFF00055)
-		// r = ?;
-		System.out.println("3. ¿¬»ê °á°ú : " + Integer.toHexString(r).toUpperCase());
-	}
+    r = 0x000FFFAA;
+    // ì‹¤ìŠµê³¼ì œ 3: 0->1, 1->0ìœ¼ë¡œ ë°”ê¾¸ì–´ì„œ ì¶œë ¥í•˜ì„¸ìš”. (ì •ë‹µ : FFF00055)
+    // r = ?;
+    System.out.println("3. ì—°ì‚° ê²°ê³¼ : " + Integer.toHexString(r).toUpperCase());
+  }
 }

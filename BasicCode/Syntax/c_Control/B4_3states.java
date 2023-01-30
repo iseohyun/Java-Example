@@ -2,17 +2,17 @@ package c_Control;
 
 /**
  * 
- * 3Ç× ¿¬»êÀÚ ¹®¹ý :
- * 	(Á¶°Ç)?Âü ÀÎ°æ¿ì ¼öÇàÇÒ ³»¿ë:°ÅÁþÀÎ °æ¿ì ¼öÇàÇÒ ³»¿ë
+ * 3í•­ ì—°ì‚°ìž ë¬¸ë²• :
+ * 	(ì¡°ê±´)?ì°¸ ì¸ê²½ìš° ìˆ˜í–‰í•  ë‚´ìš©:ê±°ì§“ì¸ ê²½ìš° ìˆ˜í–‰í•  ë‚´ìš©
  *
  */
 public class B4_3states {
-	public static void main(String[] args) {
-		int a = 8, b = -8, max;
+  public static void main(String[] args) {
+    int a = 8, b = -8, max;
 
-		max = (a > b) ? a : b;
-		System.out.println("Å«¼ö : " + max);
-	}
+    max = (a > b) ? a : b;
+    System.out.println("í°ìˆ˜ : " + max);
+  }
 }
 
-// ½Ç½À°úÁ¦ : ÀÛÀº ¼ö¸¦ Ãâ·ÂÇÏµµ·Ï ¼öÁ¤ÇØ º¸¼¼¿ä.
+// ì‹¤ìŠµê³¼ì œ : ìž‘ì€ ìˆ˜ë¥¼ ì¶œë ¥í•˜ë„ë¡ ìˆ˜ì •í•´ ë³´ì„¸ìš”.

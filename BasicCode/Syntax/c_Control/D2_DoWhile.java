@@ -2,27 +2,27 @@ package c_Control;
 
 /**
  * 
- * do ~ while ¹®¹ý:
+ * do ~ while ë¬¸ë²•:
  * 		do{
- * 			¹Ùµð;
- *      }while(Á¶°Ç, °ÅÁþÀÌ µÉ¶§±îÁö ¹Ýº¹);
+ * 			ë°”ë””;
+ *      }while(ì¡°ê±´, ê±°ì§“ì´ ë ë•Œê¹Œì§€ ë°˜ë³µ);
  *
- *	while°ú do~whileÀÇ Â÷ÀÌÁ¡Àº ÃÖ¼Ò 1¹ø ¼öÇàÇÏ´À³ÄÀÇ Â÷ÀÌÀÔ´Ï´Ù.
+ *	whileê³¼ do~whileì˜ ì°¨ì´ì ì€ ìµœì†Œ 1ë²ˆ ìˆ˜í–‰í•˜ëŠëƒì˜ ì°¨ì´ìž…ë‹ˆë‹¤.
  *
  */
 
 public class D2_DoWhile {
-	public static void main(String[] args) {
-		int i = 5;
+  public static void main(String[] args) {
+    int i = 5;
 
-		do {
-			System.out.println("do while: " + i);
-		} while (--i > 0);
-	}
+    do {
+      System.out.println("do while: " + i);
+    } while (--i > 0);
+  }
 }
 
-//½Ç½À°úÁ¦ 1: 7¹ø ½ÇÇàµÇµµ·Ï i¸¦ ¼öÁ¤ÇÏ¼¼¿ä.
-//½Ç½À°úÁ¦ 2: 0¹ø ½ÇÇàµÇµµ·Ï i¸¦ ¼öÁ¤ÇÒ ¼ö ÀÖ³ª¿ä?
-//½Ç½À°úÁ¦ 3: Áõ°¡ÇÏ¸é¼­ Ãâ·ÂµÇµµ·Ï ¼öÁ¤ÇÏ¼¼¿ä.
-//½Ç½À°úÁ¦ 4: 2ºÎÅÍ ½ÃÀÛÇØ¼­ 20±îÁö Â¦¼ö¸¸ Ãâ·ÂµÇµµ·Ï ¼öÁ¤ÇÏ¼¼¿ä.
-//½Ç½À°úÁ¦ 5(°í³­µµ): 1ºÎÅÍ 100±îÁö 7ÀÇ ¹è¼ö¸¸ Ãâ·ÂµÇµµ·Ï ¼öÁ¤ÇØº¸¼¼¿ä.
+//ì‹¤ìŠµê³¼ì œ 1: 7ë²ˆ ì‹¤í–‰ë˜ë„ë¡ ië¥¼ ìˆ˜ì •í•˜ì„¸ìš”.
+//ì‹¤ìŠµê³¼ì œ 2: 0ë²ˆ ì‹¤í–‰ë˜ë„ë¡ ië¥¼ ìˆ˜ì •í•  ìˆ˜ ìžˆë‚˜ìš”?
+//ì‹¤ìŠµê³¼ì œ 3: ì¦ê°€í•˜ë©´ì„œ ì¶œë ¥ë˜ë„ë¡ ìˆ˜ì •í•˜ì„¸ìš”.
+//ì‹¤ìŠµê³¼ì œ 4: 2ë¶€í„° ì‹œìž‘í•´ì„œ 20ê¹Œì§€ ì§ìˆ˜ë§Œ ì¶œë ¥ë˜ë„ë¡ ìˆ˜ì •í•˜ì„¸ìš”.
+//ì‹¤ìŠµê³¼ì œ 5(ê³ ë‚œë„): 1ë¶€í„° 100ê¹Œì§€ 7ì˜ ë°°ìˆ˜ë§Œ ì¶œë ¥ë˜ë„ë¡ ìˆ˜ì •í•´ë³´ì„¸ìš”.

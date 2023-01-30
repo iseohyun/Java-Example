@@ -2,24 +2,24 @@ package d_Array;
 
 /**
  * 
- * ¹è¿­Àº ¼±¾ğ½Ã :
- * 		Å¸ÀÔ[] º¯¼ö¸í = new Å¸ÀÔ[°¹¼ö];
+ * ë°°ì—´ì€ ì„ ì–¸ì‹œ :
+ * 		íƒ€ì…[] ë³€ìˆ˜ëª… = new íƒ€ì…[ê°¯ìˆ˜];
  *
  */
 public class B_Array {
-	public static void main(String[] agrs) {
-		int[] grade = new int[4];
+  public static void main(String[] agrs) {
+    int[] grade = new int[4];
 
-		grade[0] = 87;
-		grade[1] = 92;
-		grade[2] = 83;
-		grade[3] = 71;
+    grade[0] = 87;
+    grade[1] = 92;
+    grade[2] = 83;
+    grade[3] = 71;
 
-		for (int i = 0; i < 4; i++) {
-			grade[i] += 10;
-			System.out.println(grade[i]);
-		}
-	}
+    for (int i = 0; i < 4; i++) {
+      grade[i] += 10;
+      System.out.println(grade[i]);
+    }
+  }
 }
 
-//½Ç½À°úÁ¦ 1: 15Á¡¾¿ ¿Ã·ÁÁÖ±â·Î ÇÏ¿´½À´Ï´Ù. ¸¸¾à 100Á¡ÀÌ ³ÑÀ¸¸é 100Á¡À¸·Î Ãâ·ÂÇØÁÖ¼¼¿ä. (if¹®À» »ç¿ëÇÏ¼¼¿ä) 
+//ì‹¤ìŠµê³¼ì œ 1: 15ì ì”© ì˜¬ë ¤ì£¼ê¸°ë¡œ í•˜ì˜€ìŠµë‹ˆë‹¤. ë§Œì•½ 100ì ì´ ë„˜ìœ¼ë©´ 100ì ìœ¼ë¡œ ì¶œë ¥í•´ì£¼ì„¸ìš”. (ifë¬¸ì„ ì‚¬ìš©í•˜ì„¸ìš”) 

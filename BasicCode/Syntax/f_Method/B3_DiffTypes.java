@@ -1,32 +1,32 @@
 package f_Method;
 
 public class B3_DiffTypes {
-	public static void main(String[] args) {
-		func1(1);
-		func2(1.1f);
-		func3("String");
-	}
+  public static void main(String[] args) {
+    func1(1);
+    func2(1.1f);
+    func3("String");
+  }
 
-	static void func1(int input) {
-		System.out.println("Ãâ·Â : " + input);
-	}
+  static void func1(int input) {
+    System.out.println("ì¶œë ¥ : " + input);
+  }
 
-	static void func2(float input) {
-		System.out.println("Ãâ·Â : " + input);
-	}
+  static void func2(float input) {
+    System.out.println("ì¶œë ¥ : " + input);
+  }
 
-	static void func3(String input) {
-		System.out.println("Ãâ·Â : " + input);
-	}
+  static void func3(String input) {
+    System.out.println("ì¶œë ¥ : " + input);
+  }
 }
 
-// ½Ç½À°úÁ¦ : ¹®ÀÚ(char) 1°³¸¦ ÀÔ·Â¹Ş´Â ÇÔ¼ö¸¦ ¸¸µé¾îº¾´Ï´Ù.
-//		¿¹¸¦µé¾î newFunc('x');°¡ È£ÃâÀÌ µÇ¸é,
-//		"Ãâ·Â : x"°¡ Ãâ·ÁµÇµµ·Ï ÇÕ´Ï´Ù.
-// ½Ç½À°úÁ¦ 2: ¸¸¾à ´ë¹®ÀÚ°¡ ÀÔ·ÂµÇ¸é ¼Ò¹®ÀÚ·Î ¹Ù²Ù´Â ±â´ÉÀ» Ãß°¡ÇØº¾´Ï´Ù.
-//		¿¹¸¦µé¾î newFunc('a');°¡ È£ÃâÀÌ µÇ¸é,
-//		"Ãâ·Â : A"°¡ Ãâ·ÁµÇµµ·Ï ÇÕ´Ï´Ù.
-// ½Ç½À°úÁ¦ 3: ÀÎÀÚ¸¦ 4°³ ¹Ş´Â ÇÔ¼ö¸¦ ¸¸µé¾îº¾´Ï´Ù. ÀÎÀÚ´Â char a, int x, char b, int yÀÔ´Ï´Ù.
-//		ÇÔ¼ö´Â a°¡ x¹ø, b°¡ y¹øÀÌ Ãâ·ÂµË´Ï´Ù.
-// ¿¹¸¦µé¾î, newFunc3('A', 3, 'B', 5);°¡ È£ÃâÀÌ µÇ¸é, ¾Æ·¡¿Í °°ÀÌ Ãâ·ÂµË´Ï´Ù.
-// Ãâ·Â : AAABBBBB
+// ì‹¤ìŠµê³¼ì œ : ë¬¸ì(char) 1ê°œë¥¼ ì…ë ¥ë°›ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ë´…ë‹ˆë‹¤.
+//		ì˜ˆë¥¼ë“¤ì–´ newFunc('x');ê°€ í˜¸ì¶œì´ ë˜ë©´,
+//		"ì¶œë ¥ : x"ê°€ ì¶œë ¤ë˜ë„ë¡ í•©ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 2: ë§Œì•½ ëŒ€ë¬¸ìê°€ ì…ë ¥ë˜ë©´ ì†Œë¬¸ìë¡œ ë°”ê¾¸ëŠ” ê¸°ëŠ¥ì„ ì¶”ê°€í•´ë´…ë‹ˆë‹¤.
+//		ì˜ˆë¥¼ë“¤ì–´ newFunc('a');ê°€ í˜¸ì¶œì´ ë˜ë©´,
+//		"ì¶œë ¥ : A"ê°€ ì¶œë ¤ë˜ë„ë¡ í•©ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 3: ì¸ìë¥¼ 4ê°œ ë°›ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ë´…ë‹ˆë‹¤. ì¸ìëŠ” char a, int x, char b, int yì…ë‹ˆë‹¤.
+//		í•¨ìˆ˜ëŠ” aê°€ xë²ˆ, bê°€ yë²ˆì´ ì¶œë ¥ë©ë‹ˆë‹¤.
+// ì˜ˆë¥¼ë“¤ì–´, newFunc3('A', 3, 'B', 5);ê°€ í˜¸ì¶œì´ ë˜ë©´, ì•„ë˜ì™€ ê°™ì´ ì¶œë ¥ë©ë‹ˆë‹¤.
+// ì¶œë ¥ : AAABBBBB

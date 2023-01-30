@@ -1,31 +1,31 @@
 package d_Array;
 
 public class D3_Quiz {
-	public static void main(String[] args) {
-		// int i = 0, j = 0;
-		int[][] arr = {
-				{ 88, 66, 44, 22, 0 }, // 1 ¿­
-				{ 15, 24, 33, 42, 51 }, // 2 ¿­
-				{ 11, 33, 55, 77, 99 } // 3 ¿­
-		};
+  public static void main(String[] args) {
+    // int i = 0, j = 0;
+    int[][] arr = {
+        { 88, 66, 44, 22, 0 }, // 1 ì—´
+        { 15, 24, 33, 42, 51 }, // 2 ì—´
+        { 11, 33, 55, 77, 99 } // 3 ì—´
+    };
 
-		System.out.println("º¯°æ Àü :");
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = 0; j < arr[i].length; j++) {
-				System.out.print("[" + arr[i][j] + "]");
-			}
-			System.out.println();
-		}
+    System.out.println("ë³€ê²½ ì „ :");
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = 0; j < arr[i].length; j++) {
+        System.out.print("[" + arr[i][j] + "]");
+      }
+      System.out.println();
+    }
 
-		// ½Ç½À°úÁ¦ : ÄÚµå¸¦ »ðÀÔÇÏ¿© °¢ ¿­ÀÇ µ¥ÀÌÅÍ¸¦ ÀÌµ¿½ÃÅ°½Ã¿À.
-		// 1¿­ -> 2¿­ -> 3¿­ -> 1¿­
+    // ì‹¤ìŠµê³¼ì œ : ì½”ë“œë¥¼ ì‚½ìž…í•˜ì—¬ ê° ì—´ì˜ ë°ì´í„°ë¥¼ ì´ë™ì‹œí‚¤ì‹œì˜¤.
+    // 1ì—´ -> 2ì—´ -> 3ì—´ -> 1ì—´
 
-		System.out.println("º¯°æ ÈÄ :");
-		for (int i = 0; i < arr.length; i++) {
-			for (int j = 0; j < arr[i].length; j++) {
-				System.out.print("[" + arr[i][j] + "]");
-			}
-			System.out.println();
-		}
-	}
+    System.out.println("ë³€ê²½ í›„ :");
+    for (int i = 0; i < arr.length; i++) {
+      for (int j = 0; j < arr[i].length; j++) {
+        System.out.print("[" + arr[i][j] + "]");
+      }
+      System.out.println();
+    }
+  }
 }

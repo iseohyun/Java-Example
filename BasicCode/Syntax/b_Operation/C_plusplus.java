@@ -2,32 +2,32 @@ package b_Operation;
 
 /**
  *
- *	ÀüÀ§ ¿¬»ê°ú ÈÄÀ§¿¬»êÀ» ÀÌÇØÇÏ±â À§ÇÑ ¿¹Á¦ ÀÔ´Ï´Ù.
+ *	ì „ìœ„ ì—°ì‚°ê³¼ í›„ìœ„ì—°ì‚°ì„ ì´í•´í•˜ê¸° ìœ„í•œ ì˜ˆì œ ì…ë‹ˆë‹¤.
  *
  */
 
 public class C_plusplus {
-	public static void main(String[] args) {
-		int num = 100;
+  public static void main(String[] args) {
+    int num = 100;
 
-		System.out.println("1 : " + num++);
-		System.out.println("* : " + num);
-		System.out.println("2 : " + num++);
-		System.out.println("* : " + num);
-		System.out.println("3 : " + num++);
-		System.out.println("* : " + num);
+    System.out.println("1 : " + num++);
+    System.out.println("* : " + num);
+    System.out.println("2 : " + num++);
+    System.out.println("* : " + num);
+    System.out.println("3 : " + num++);
+    System.out.println("* : " + num);
 
-		System.out.println("4 : " + ++num);
-		System.out.println("* : " + num);
-		System.out.println("5 : " + ++num);
-		System.out.println("* : " + num);
-		System.out.println("6 : " + ++num);
-		System.out.println("* : " + num);
+    System.out.println("4 : " + ++num);
+    System.out.println("* : " + num);
+    System.out.println("5 : " + ++num);
+    System.out.println("* : " + num);
+    System.out.println("6 : " + ++num);
+    System.out.println("* : " + num);
 
-		System.out.println("7 : " + --num);
-		System.out.println("8 : " + --num);
-		System.out.println("9 : " + --num);
-		System.out.println("0 : " + num--);
-		System.out.println("1 : " + num--);
-	}
+    System.out.println("7 : " + --num);
+    System.out.println("8 : " + --num);
+    System.out.println("9 : " + --num);
+    System.out.println("0 : " + num--);
+    System.out.println("1 : " + num--);
+  }
 }

@@ -2,24 +2,24 @@ package f_Method;
 
 /**
  * 
- * E_Local°ú ¶È°°Àº ¿¹Á¦Áö¸¸ °á°ú°¡ ´Ù¸¨´Ï´Ù.
- * valÀÌ ÇÔ¼ö ¹Ù±ù¿¡ ÀÖ±â ¶§¹®¿¡ ÇÔ¼öÀÇ »ı¾Ö¿Í »ó°ü¾øÀÌ, Ç×»ó »ì¾Æ ÀÖ´Â º¯¼öÀÌ±â ¶§¹®¿¡, º¯°æ»çÇ×ÀÌ À¯ÁöµÇ´Â °ÍÀ» È®ÀÎ ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ * E_Localê³¼ ë˜‘ê°™ì€ ì˜ˆì œì§€ë§Œ ê²°ê³¼ê°€ ë‹¤ë¦…ë‹ˆë‹¤.
+ * valì´ í•¨ìˆ˜ ë°”ê¹¥ì— ìˆê¸° ë•Œë¬¸ì— í•¨ìˆ˜ì˜ ìƒì• ì™€ ìƒê´€ì—†ì´, í•­ìƒ ì‚´ì•„ ìˆëŠ” ë³€ìˆ˜ì´ê¸° ë•Œë¬¸ì—, ë³€ê²½ì‚¬í•­ì´ ìœ ì§€ë˜ëŠ” ê²ƒì„ í™•ì¸ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
  *
  */
 
 public class E2_Static {
-	public static void main(String[] args) {
-		func1();
-		func1();
-		func1();
-		func1();
-		func1();
-	}
+  public static void main(String[] args) {
+    func1();
+    func1();
+    func1();
+    func1();
+    func1();
+  }
 
-	static int val = 1;
+  static int val = 1;
 
-	static void func1() {
-		val++;
-		System.out.println("Àü¿ª º¯¼ö : " + val);
-	}
+  static void func1() {
+    val++;
+    System.out.println("ì „ì—­ ë³€ìˆ˜ : " + val);
+  }
 }

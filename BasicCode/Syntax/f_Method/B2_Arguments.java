@@ -2,33 +2,33 @@ package f_Method;
 
 /**
  * 
- * ÇÔ¼ö¿¡ ¿©·¯°³ÀÇ ÀÎÀÚ¸¦ Àü´Ş ÇÒ ¼ö ÀÖ½À´Ï´Ù.
- * Áß¿äÇÑ °ÍÀº Àü´ŞÀÎÀÚ ¸íÀÌ ¾Æ´Õ´Ï´Ù. Àü´ŞÇÏ´Â ¼ø¼­¿¡ ¸ÂÃç¼­ ´ëÀÔÀÌ µË´Ï´Ù.
+ * í•¨ìˆ˜ì— ì—¬ëŸ¬ê°œì˜ ì¸ìë¥¼ ì „ë‹¬ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+ * ì¤‘ìš”í•œ ê²ƒì€ ì „ë‹¬ì¸ì ëª…ì´ ì•„ë‹™ë‹ˆë‹¤. ì „ë‹¬í•˜ëŠ” ìˆœì„œì— ë§ì¶°ì„œ ëŒ€ì…ì´ ë©ë‹ˆë‹¤.
  *
  */
 
 public class B2_Arguments {
-	public static void main(String[] args) {
-		func1(1);
-		func3(1, 2, 3);
-		func2(1, 2);
-	}
+  public static void main(String[] args) {
+    func1(1);
+    func3(1, 2, 3);
+    func2(1, 2);
+  }
 
-	static void func1(int input) {
-		System.out.println("Ãâ·Â : " + input);
-	}
+  static void func1(int input) {
+    System.out.println("ì¶œë ¥ : " + input);
+  }
 
-	static void func2(int input, int input2) {
-		System.out.println("Ãâ·Â : " + input + input2);
-	}
+  static void func2(int input, int input2) {
+    System.out.println("ì¶œë ¥ : " + input + input2);
+  }
 
-	static void func3(int input, int input2, int input3) {
-		System.out.println("Ãâ·Â : " + input + input2 + input3);
-	}
+  static void func3(int input, int input2, int input3) {
+    System.out.println("ì¶œë ¥ : " + input + input2 + input3);
+  }
 }
 
-// ½Ç½À°úÁ¦ : ÀÎÀÚ¸¦ 4°³ ¹Ş´Â ÇÔ¼ö¸¦ ¸¸µé¾î º¾´Ï´Ù. ÇÔ¼öÀÇ ±â´ÉÀº 4°³ÀÇ ÀÎÀÚ¸¦ ¸ğµÎ ´õÇØ¼­ Ãâ·ÂÇÏ´Â °ÍÀÔ´Ï´Ù.
-// ½Ç½À°úÁ¦ 2: ÀÎÀÚ¸¦ 4°³ ¹Ş´Â ÇÔ¼ö¸¦ ¸¸µé¾îº¾´Ï´Ù. ÀÎÀÚ´Â int a, int x, int b, int yÀÔ´Ï´Ù.
-// 		ÇÔ¼ö´Â 4°³ Áß¿¡ °¡Àå Å« ¼ö¸¦ Ãâ·ÂÇÕ´Ï´Ù. ¿¹¸¦µé¾î :
-//		newFunc(1, 2, 3, 4)´Â "Ãâ·Â : 4"¸¦ Ãâ·ÂÇÕ´Ï´Ù.
-//		newFunc(4, 5, 5, 4)´Â "Ãâ·Â : 5"¸¦ Ãâ·ÂÇÕ´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : ì¸ìë¥¼ 4ê°œ ë°›ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ ë´…ë‹ˆë‹¤. í•¨ìˆ˜ì˜ ê¸°ëŠ¥ì€ 4ê°œì˜ ì¸ìë¥¼ ëª¨ë‘ ë”í•´ì„œ ì¶œë ¥í•˜ëŠ” ê²ƒì…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ 2: ì¸ìë¥¼ 4ê°œ ë°›ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ë´…ë‹ˆë‹¤. ì¸ìëŠ” int a, int x, int b, int yì…ë‹ˆë‹¤.
+// 		í•¨ìˆ˜ëŠ” 4ê°œ ì¤‘ì— ê°€ì¥ í° ìˆ˜ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤. ì˜ˆë¥¼ë“¤ì–´ :
+//		newFunc(1, 2, 3, 4)ëŠ” "ì¶œë ¥ : 4"ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.
+//		newFunc(4, 5, 5, 4)ëŠ” "ì¶œë ¥ : 5"ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.

@@ -2,29 +2,29 @@ package e_Enum;
 
 /**
  * 
- * ¿­°ÅÃ¼¿¡ ¼ıÀÚ¸¦ ÁöÁ¤ÇØÁÙ ¼ö ÀÖ½À´Ï´Ù. ´ÜÁ¡Àº, ÇÏ³ª¸¸ Æ¯º°ÇÏ°Ô ÁöÁ¤ ÇÒ ¼ö´Â ¾ø°í, ¸ğµÎ ÁöÁ¤ÇÏ´ø°¡, ¸ğµÎ ÁöÁ¤ÇÏÁö ¾Ê¾Æ¾ß ÇÕ´Ï´Ù.
+ * ì—´ê±°ì²´ì— ìˆ«ìë¥¼ ì§€ì •í•´ì¤„ ìˆ˜ ìˆìŠµë‹ˆë‹¤. ë‹¨ì ì€, í•˜ë‚˜ë§Œ íŠ¹ë³„í•˜ê²Œ ì§€ì • í•  ìˆ˜ëŠ” ì—†ê³ , ëª¨ë‘ ì§€ì •í•˜ë˜ê°€, ëª¨ë‘ ì§€ì •í•˜ì§€ ì•Šì•„ì•¼ í•©ë‹ˆë‹¤.
  *
  */
 
 public class C_Numbering {
-	enum RainbowNo {
-		RED(3), ORANGE(10), YELLOW(21), GREEN(5), BLUE(1), INDIGO(-1), VIOLET(-11);
+  enum RainbowNo {
+    RED(3), ORANGE(10), YELLOW(21), GREEN(5), BLUE(1), INDIGO(-1), VIOLET(-11);
 
-		private final int value;
+    private final int value;
 
-		RainbowNo(int value) {
-			this.value = value;
-		}
+    RainbowNo(int value) {
+      this.value = value;
+    }
 
-		public int getValue() {
-			return value;
-		}
-	}
+    public int getValue() {
+      return value;
+    }
+  }
 
-	public static void main(String[] args) {
-		RainbowNo[] arr = RainbowNo.values();
-		for (RainbowNo rb : arr) {
-			System.out.println(rb + "\torder : " + rb.ordinal() + "\tvalue : " + rb.getValue());
-		}
-	}
+  public static void main(String[] args) {
+    RainbowNo[] arr = RainbowNo.values();
+    for (RainbowNo rb : arr) {
+      System.out.println(rb + "\torder : " + rb.ordinal() + "\tvalue : " + rb.getValue());
+    }
+  }
 }

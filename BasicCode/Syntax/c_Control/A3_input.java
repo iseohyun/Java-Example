@@ -3,10 +3,10 @@ package c_Control;
 import tools.Input;
 
 public class A3_input {
-	public static void main(String[] args) {
-		int num = Input.getInt();
-		System.out.println("ÀÔ·ÂÇÑ ¼ıÀÚ : " + num);
-	}
+  public static void main(String[] args) {
+    int num = Input.getInt();
+    System.out.println("ì…ë ¥í•œ ìˆ«ì : " + num);
+  }
 }
 
-// ½Ç½À°úÁ¦ : ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¸é, ÀÔ·ÂÇÑ ¼ıÀÚº¸´Ù 1 ´õ Å« ¼ö°¡ Ãâ·ÂµÇµµ·Ï ¼öÁ¤ÇØ º¸¼¼¿ä.
+// ì‹¤ìŠµê³¼ì œ : ìˆ«ìë¥¼ ì…ë ¥í•˜ë©´, ì…ë ¥í•œ ìˆ«ìë³´ë‹¤ 1 ë” í° ìˆ˜ê°€ ì¶œë ¥ë˜ë„ë¡ ìˆ˜ì •í•´ ë³´ì„¸ìš”.

@@ -2,30 +2,30 @@ package f_Method;
 
 /**
  * 
- * ÀÎÀÚÀÇ °¹¼öµµ Áß¿äÇÏÁö¸¸ ÀÎÀÚÀÇ Å¸ÀÔ, ±×¸®°í ¼ø¼­±îÁö ÇÔ¼ö¸¦ ±¸ºĞÇÏ´Â ±âÁØÀÌ µË´Ï´Ù.
- * ¾Æ·¡ È£ÃâµÈ 3°³ÀÇ printfÇÔ¼ö´Â ¸ğµÎ ´Ù¸¥ 3°³ÀÇ ÇÔ¼öÀÔ´Ï´Ù.
+ * ì¸ìì˜ ê°¯ìˆ˜ë„ ì¤‘ìš”í•˜ì§€ë§Œ ì¸ìì˜ íƒ€ì…, ê·¸ë¦¬ê³  ìˆœì„œê¹Œì§€ í•¨ìˆ˜ë¥¼ êµ¬ë¶„í•˜ëŠ” ê¸°ì¤€ì´ ë©ë‹ˆë‹¤.
+ * ì•„ë˜ í˜¸ì¶œëœ 3ê°œì˜ printfí•¨ìˆ˜ëŠ” ëª¨ë‘ ë‹¤ë¥¸ 3ê°œì˜ í•¨ìˆ˜ì…ë‹ˆë‹¤.
  *
  */
 
 public class F2_Orders {
-	public static void main(String[] args) {
-		int i = 1;
-		float f = 2.1f;
+  public static void main(String[] args) {
+    int i = 1;
+    float f = 2.1f;
 
-		printf(i, i);
-		printf(i, f);
-		printf(f, i);
-	}
+    printf(i, i);
+    printf(i, f);
+    printf(f, i);
+  }
 
-	static void printf(int input, int input2) {
-		System.out.println("Int :" + input + " , Int2 :" + input2);
-	}
+  static void printf(int input, int input2) {
+    System.out.println("Int: " + input + " , Int2: " + input2);
+  }
 
-	static void printf(int input, float input2) {
-		System.out.println("Int :" + input + " , Float :" + input2);
-	}
+  static void printf(int input, float input2) {
+    System.out.println("Int: " + input + " , Float: " + input2);
+  }
 
-	static void printf(float input, int input2) {
-		System.out.println("Float :" + input + " , Int :" + input2);
-	}
+  static void printf(float input, int input2) {
+    System.out.println("Float: " + input + " , Int: " + input2);
+  }
 }

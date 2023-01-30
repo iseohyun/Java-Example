@@ -1,10 +1,10 @@
 package a_BasicType;
 
-public class D3_double {
+public class D2_double {
 	public static void main(String[] args) {
-		// Á¤¼ö¿Í ¼Ò¼ö´Â ÀúÀå¹æ½ÄÀÇ Â÷ÀÌ°¡ ÀÖ½À´Ï´Ù.
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 
-		float f = 5.5f; // f°¡ ¾øÀ¸¸é, double·Î ÀÎ½ÄÇÕ´Ï´Ù.
+		float f = 5.5f; // fï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, doubleï¿½ï¿½ ï¿½Î½ï¿½ï¿½Õ´Ï´ï¿½.
 		System.out.println("Float: " + f);
 
 		double d = 6.5;
@@ -12,4 +12,4 @@ public class D3_double {
 	}
 }
 
-// ½Ç½À°úÁ¦ 1: °ÅÁþ(false)¸¦ Ãâ·ÂÇØº¾´Ï´Ù. 
+// ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ 1: ï¿½ï¿½ï¿½ï¿½(false)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Øºï¿½ï¿½Ï´ï¿½. 

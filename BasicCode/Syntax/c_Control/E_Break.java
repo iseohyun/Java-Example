@@ -2,20 +2,20 @@ package c_Control;
 
 /**
  * 
- * break¹®À» ¸¸³ª¸é ¹İº¹¹®ÀÌ ¼öÇàÁß¿¡ ¹«Á¶°Ç Áß´ÜÇÕ´Ï´Ù.
+ * breakë¬¸ì„ ë§Œë‚˜ë©´ ë°˜ë³µë¬¸ì´ ìˆ˜í–‰ì¤‘ì— ë¬´ì¡°ê±´ ì¤‘ë‹¨í•©ë‹ˆë‹¤.
  *
  */
 
 public class E_Break {
-	public static void main(String[] args) {
-		int i = 1;
-		while (i++ < 9999) {
-			System.out.println(i + ">");
-			if (i == 10) {
-				break;
-			}
-		}
-	}
+  public static void main(String[] args) {
+    int i = 1;
+    while (i++ < 9999) {
+      System.out.println(i + ">");
+      if (i == 10) {
+        break;
+      }
+    }
+  }
 }
 
-//½Ç½À°úÁ¦ : 15¹ø Ãâ·ÂÇÏ°í, Á¾·áÇÏµµ·Ï ¼öÁ¤ÇØ º¸¼¼¿ä.
+//ì‹¤ìŠµê³¼ì œ : 15ë²ˆ ì¶œë ¥í•˜ê³ , ì¢…ë£Œí•˜ë„ë¡ ìˆ˜ì •í•´ ë³´ì„¸ìš”.

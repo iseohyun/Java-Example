@@ -2,19 +2,19 @@ package e_Enum;
 
 /**
  * 
- * ¹è¿­°ú ¸¶Âù°¡Áö·Î ¿­°ÅÃ¼µµ for¹®À» »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ * ë°°ì—´ê³¼ ë§ˆì°¬ê°€ì§€ë¡œ ì—´ê±°ì²´ë„ forë¬¸ì„ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
  *
  */
 
 public class B_Loop {
-	enum Rainbow {
-		RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
-	}
+  enum Rainbow {
+    RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
+  }
 
-	public static void main(String[] args) {
-		Rainbow[] arr = Rainbow.values();
-		for (Rainbow rb : arr) {
-			System.out.println(rb);
-		}
-	}
+  public static void main(String[] args) {
+    Rainbow[] arr = Rainbow.values();
+    for (Rainbow rb : arr) {
+      System.out.println(rb);
+    }
+  }
 }

@@ -2,36 +2,36 @@ package e_Enum;
 
 /**
  * 
- * enum(¿­°ÅÃ¼ ¹®¹ı)
+ * enum(ì—´ê±°ì²´ ë¬¸ë²•)
  * 
- * 		enum ¿­°ÅÃ¼¸í { ÀÌ¸§1, ÀÌ¸§2, ÀÌ¸§3 ... }
+ * 		enum ì—´ê±°ì²´ëª… { ì´ë¦„1, ì´ë¦„2, ì´ë¦„3 ... }
  * 
- * 	¿­°ÅÃ¼´Â ÄÚµåÀÇ °¡µ¶¼ºÀ» ³ôÀÌ±â À§ÇØ »ç¿ëµÇ´Â ¹®¹ıÀÔ´Ï´Ù.
- * ÄÚµå¿¡ "1¹ø»öÀ» Ãâ·ÂÇÕ´Ï´Ù." ¶ó°í ÇÏ´Â °Íº¸´Ù. "»¡°£»öÀ» Ãâ·ÂÇÕ´Ï´Ù."·Î ÀÛ¼ºÇÏ¸é, ÄÚµå¸¦ À¯Áö º¸¼öÇÏ´Âµ¥ ÈÎ¾À À¯¸®ÇÕ´Ï´Ù.
+ * 	ì—´ê±°ì²´ëŠ” ì½”ë“œì˜ ê°€ë…ì„±ì„ ë†’ì´ê¸° ìœ„í•´ ì‚¬ìš©ë˜ëŠ” ë¬¸ë²•ì…ë‹ˆë‹¤.
+ * ì½”ë“œì— "1ë²ˆìƒ‰ì„ ì¶œë ¥í•©ë‹ˆë‹¤." ë¼ê³  í•˜ëŠ” ê²ƒë³´ë‹¤. "ë¹¨ê°„ìƒ‰ì„ ì¶œë ¥í•©ë‹ˆë‹¤."ë¡œ ì‘ì„±í•˜ë©´, ì½”ë“œë¥¼ ìœ ì§€ ë³´ìˆ˜í•˜ëŠ”ë° í›¨ì”¬ ìœ ë¦¬í•©ë‹ˆë‹¤.
  *
- *	¿­°ÅÃ¼ ¼±¾ğ°ú »ç¿ë(.)Àº ¾Ï±âÇØ¾ßÇÏ°ÚÁö¸¸, ¼¼ºÎÇÔ¼ö(valueOf, ordinal µî) ¸ğµÎ ¿Ü¿ï ÇÊ¿ä´Â ¾ø½À´Ï´Ù.
- *	ÀÌ·± ±â´ÉÀÌ ÀÖ´Ù´Â °Í¸¸ ¾Ë°í ÀÖ´Ù°¡ ÇÊ¿äÇÒ ¶§, Ã£¾Æ¼­ ¾²¸é µË´Ï´Ù.
+ *	ì—´ê±°ì²´ ì„ ì–¸ê³¼ ì‚¬ìš©(.)ì€ ì•”ê¸°í•´ì•¼í•˜ê² ì§€ë§Œ, ì„¸ë¶€í•¨ìˆ˜(valueOf, ordinal ë“±) ëª¨ë‘ ì™¸ìš¸ í•„ìš”ëŠ” ì—†ìŠµë‹ˆë‹¤.
+ *	ì´ëŸ° ê¸°ëŠ¥ì´ ìˆë‹¤ëŠ” ê²ƒë§Œ ì•Œê³  ìˆë‹¤ê°€ í•„ìš”í•  ë•Œ, ì°¾ì•„ì„œ ì“°ë©´ ë©ë‹ˆë‹¤.
  *
  */
 
 public class A_Enum {
-	enum Rainbow {
-		RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
-	}
+  enum Rainbow {
+    RED, ORANGE, YELLOW, GREEN, BLUE, INDIGO, VIOLET
+  }
 
-	public static void main(String[] args) {
-		System.out.println(Rainbow.GREEN);
-		System.out.println("==========");
+  public static void main(String[] args) {
+    System.out.println(Rainbow.GREEN);
+    System.out.println("==========");
 
-		Rainbow red = Rainbow.valueOf("RED");
-		System.out.println(red);
-		System.out.println("==========");
+    Rainbow red = Rainbow.valueOf("RED");
+    System.out.println(red);
+    System.out.println("==========");
 
-		int idx = Rainbow.YELLOW.ordinal();
-		System.out.println(idx);
-		System.out.println("==========");
+    int idx = Rainbow.YELLOW.ordinal();
+    System.out.println(idx);
+    System.out.println("==========");
 
-		String str = Rainbow.VIOLET.name();
-		System.out.println(str);
-	}
+    String str = Rainbow.VIOLET.name();
+    System.out.println(str);
+  }
 }

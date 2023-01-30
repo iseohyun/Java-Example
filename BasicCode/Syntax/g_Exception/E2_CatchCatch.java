@@ -3,23 +3,23 @@ package g_Exception;
 import javax.swing.JOptionPane;
 
 public class E2_CatchCatch {
-	public static void main(String[] args) {
-		int num = 0;
-		String input = JOptionPane.showInputDialog("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
-		try {
-			num = Integer.parseInt(input);
-		} catch (NumberFormatException e) {
-			input = JOptionPane.showInputDialog("¼ıÀÚ¾Æ´Ô. ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
-			// ¿©±â¼­µµ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏÁö ¾Ê´Â´Ù¸é?
-			try {
-				num = Integer.parseInt(input);
-			} catch (NumberFormatException e2) {
-				input = JOptionPane.showInputDialog("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä. Á¦¹ß");
-				// ¿©±â¼­µµ ¶Ç ¼ıÀÚ¸¦ ÀÔ·ÂÇÏÁö ¾Ê´Â´Ù¸é?
-				num = Integer.parseInt(input);
-			}
-		} catch (Exception e) {
-		}
-		System.out.println(num);
-	}
+  public static void main(String[] args) {
+    int num = 0;
+    String input = JOptionPane.showInputDialog("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+    try {
+      num = Integer.parseInt(input);
+    } catch (NumberFormatException e) {
+      input = JOptionPane.showInputDialog("ìˆ«ìì•„ë‹˜. ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
+      // ì—¬ê¸°ì„œë„ ìˆ«ìë¥¼ ì…ë ¥í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´?
+      try {
+        num = Integer.parseInt(input);
+      } catch (NumberFormatException e2) {
+        input = JOptionPane.showInputDialog("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”. ì œë°œ");
+        // ì—¬ê¸°ì„œë„ ë˜ ìˆ«ìë¥¼ ì…ë ¥í•˜ì§€ ì•ŠëŠ”ë‹¤ë©´?
+        num = Integer.parseInt(input);
+      }
+    } catch (Exception e) {
+    }
+    System.out.println(num);
+  }
 }

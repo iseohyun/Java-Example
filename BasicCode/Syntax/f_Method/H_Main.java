@@ -2,17 +2,17 @@ package f_Method;
 
 /**
  * 
- * mainµµ ÇÔ¼öÀÔ´Ï´Ù.
- * mainÇÔ¼ö¿¡ ÀÎÀÚ¸¦ Àü´ÞÇÒ ¼ö ÀÖ´Â ¹æ¹ýÀÌ ¾ø±â ¶§¹®¿¡ ÅøÀÇ µµ¿òÀ» ¹Þ¾Æ¾ß ÇÕ´Ï´Ù.
+ * mainë„ í•¨ìˆ˜ìž…ë‹ˆë‹¤.
+ * mainí•¨ìˆ˜ì— ì¸ìžë¥¼ ì „ë‹¬í•  ìˆ˜ ìžˆëŠ” ë°©ë²•ì´ ì—†ê¸° ë•Œë¬¸ì— íˆ´ì˜ ë„ì›€ì„ ë°›ì•„ì•¼ í•©ë‹ˆë‹¤.
  * 
- * (ÃÖ¼Ò 1¹ø ½ÇÇàÇÏ¸é H_mainÀÌ »ý¼ºµÇ¾î ÀÖ½À´Ï´Ù.)
- * H_main.java¿¡¼­ ¿ìÅ¬¸¯ => Properties => Run/Debug Setting => H_main => ArgumentsÅÇ => Program Arguments
+ * (ìµœì†Œ 1ë²ˆ ì‹¤í–‰í•˜ë©´ H_mainì´ ìƒì„±ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.)
+ * H_main.javaì—ì„œ ìš°í´ë¦­ => Properties => Run/Debug Setting => H_main => Argumentsíƒ­ => Program Arguments
  *
  */
 
 public class H_Main {
-	public static void main(String[] args) {
-		for (String arg : args)
-			System.out.println(arg);
-	}
+  public static void main(String[] args) {
+    for (String arg : args)
+      System.out.println(arg);
+  }
 }
