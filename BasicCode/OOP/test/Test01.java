@@ -1,124 +1,124 @@
 package test;
 
 public class Test01 {
-	public static void main(String[] args) {
-		// TODO : ¿©±â¿¡ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä.
-	}
+  public static void main(String[] args) {
+    // TODO : ì—¬ê¸°ì— ì½”ë“œë¥¼ ìž…ë ¥í•˜ì„¸ìš”.
+  }
 }
 
-/////////////////////////// º¯¼ö Ãß°¡ÇÏ±â
+/////////////////////////// ë³€ìˆ˜ ì¶”ê°€í•˜ê¸°
 //
-// µû¶óÇÏ±â 1-1 : Avatar Å¬·¡½º¸¦ ¸¸µì´Ï´Ù.
-// µû¶óÇÏ±â 1-2 : ÇÊµå¸¦ Ãß°¡ÇÕ´Ï´Ù.
-//			> ÇÊµåÅ¸ÀÔ : String, ÇÊµå¸í : name, ÃÊ±â °ª = "Tim"
-// µû¶óÇÏ±â 1-3 : mainÇÔ¼ö¿¡ ÀÎ½ºÅÏ½º¸¦ ¸¸µé¾î º¾´Ï´Ù.
-//			> ÀÎ½ºÅÏ½º ¸íÀº my·Î ÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 1-1 : Avatar í´ëž˜ìŠ¤ë¥¼ ë§Œë“­ë‹ˆë‹¤.
+// ë”°ë¼í•˜ê¸° 1-2 : í•„ë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
+//			> í•„ë“œíƒ€ìž… : String, í•„ë“œëª… : name, ì´ˆê¸° ê°’ = "Tim"
+// ë”°ë¼í•˜ê¸° 1-3 : mainí•¨ìˆ˜ì— ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“¤ì–´ ë´…ë‹ˆë‹¤.
+//			> ì¸ìŠ¤í„´ìŠ¤ ëª…ì€ myë¡œ í•©ë‹ˆë‹¤.
 //
-// Áß°£ È®ÀÎÇÏ±â : my¿¡ nameÀ» Ãâ·ÂÇØ º¾´Ï´Ù. ("Tim"ÀÌ Ãâ·ÂµÇ¾î¾ß ÇÕ´Ï´Ù.)
+// ì¤‘ê°„ í™•ì¸í•˜ê¸° : myì— nameì„ ì¶œë ¥í•´ ë´…ë‹ˆë‹¤. ("Tim"ì´ ì¶œë ¥ë˜ì–´ì•¼ í•©ë‹ˆë‹¤.)
 
 
-/////////////////////////// ÇÔ¼ö Ãß°¡ÇÏ±â
+/////////////////////////// í•¨ìˆ˜ ì¶”ê°€í•˜ê¸°
 //
-// µû¶óÇÏ±â 2-1 : ¸Þ¼­µå¸¦ Ãß°¡ÇÕ´Ï´Ù.
-//			> ¸Þ¼­µå Å¸ÀÔ String getName();
-//			> È£ÃâÀÌ µÇ¸é, NameÀ» ¹ÝÈ¯ÇÏ´Â ±â´ÉÇÕ´Ï´Ù.
-// Áß°£ È®ÀÎÇÏ±â : mainÇÔ¼ö¿¡¼­ my.getName()À» Ãâ·ÂÇØ º¾´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 2-1 : ë©”ì„œë“œë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
+//			> ë©”ì„œë“œ íƒ€ìž… String getName();
+//			> í˜¸ì¶œì´ ë˜ë©´, Nameì„ ë°˜í™˜í•˜ëŠ” ê¸°ëŠ¥í•©ë‹ˆë‹¤.
+// ì¤‘ê°„ í™•ì¸í•˜ê¸° : mainí•¨ìˆ˜ì—ì„œ my.getName()ì„ ì¶œë ¥í•´ ë´…ë‹ˆë‹¤.
 
 
-/////////////////////////// »ý¼ºÀÚ ¸¸µé±â
+/////////////////////////// ìƒì„±ìž ë§Œë“¤ê¸°
 //
-// µû¶óÇÏ±â 3-1 : Avatar(String newName)»ý¼ºÀÚ¸¦ ¸¸µì´Ï´Ù.
-//			newNameÀ» name¿¡ ÀúÀåÇÏ´Â ±â´ÉÀ» ÇÕ´Ï´Ù.
-// µû¶óÇÏ±â 3-2 : new Avatar("Jack");À¸·Î »õ·Î¿î ÀÎ½ºÅÏ½º(jack)¸¦ ¸¸µì´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 3-1 : Avatar(String newName)ìƒì„±ìžë¥¼ ë§Œë“­ë‹ˆë‹¤.
+//			newNameì„ nameì— ì €ìž¥í•˜ëŠ” ê¸°ëŠ¥ì„ í•©ë‹ˆë‹¤.
+// ë”°ë¼í•˜ê¸° 3-2 : new Avatar("Jack");ìœ¼ë¡œ ìƒˆë¡œìš´ ì¸ìŠ¤í„´ìŠ¤(jack)ë¥¼ ë§Œë“­ë‹ˆë‹¤.
 //
-// Áß°£ È®ÀÎÇÏ±â : jack.nameÀ» Ãâ·ÂÇØ º¾´Ï´Ù. ("Tim"ÀÌ Ãâ·ÂµÇ¾î¾ß ÇÕ´Ï´Ù.)
+// ì¤‘ê°„ í™•ì¸í•˜ê¸° : jack.nameì„ ì¶œë ¥í•´ ë´…ë‹ˆë‹¤. ("Tim"ì´ ì¶œë ¥ë˜ì–´ì•¼ í•©ë‹ˆë‹¤.)
 
 
-/////////////////////////// »ý¼ºÀÚ ¸¸µé±â2 - this()
+/////////////////////////// ìƒì„±ìž ë§Œë“¤ê¸°2 - this()
 //
-// µû¶óÇÏ±â 4-1 : Avatar()»ý¼ºÀÚ¸¦ ¸¸µì´Ï´Ù.
-//			this("torr");À» È£ÃâÇÏ´Â ±â´ÉÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 4-1 : Avatar()ìƒì„±ìžë¥¼ ë§Œë“­ë‹ˆë‹¤.
+//			this("torr");ì„ í˜¸ì¶œí•˜ëŠ” ê¸°ëŠ¥í•©ë‹ˆë‹¤.
 //
-//Áß°£ È®ÀÎÇÏ±â : my.nameÀ» Ãâ·ÂÇØ º¾´Ï´Ù. ("torr"ÀÌ Ãâ·ÂµÇ¾î¾ß ÇÕ´Ï´Ù.)
+//ì¤‘ê°„ í™•ì¸í•˜ê¸° : my.nameì„ ì¶œë ¥í•´ ë´…ë‹ˆë‹¤. ("torr"ì´ ì¶œë ¥ë˜ì–´ì•¼ í•©ë‹ˆë‹¤.)
 
 
-/////////////////////////// This Å°¿öµå »ç¿ëÇÏ±â
+/////////////////////////// This í‚¤ì›Œë“œ ì‚¬ìš©í•˜ê¸°
 //
-// µû¶óÇÏ±â 5-1 : void setName(String name)¸¦ »ý¼ºÇÕ´Ï´Ù.
-//			Å¬·¡½ºÀÇ name¿¡ ÀúÀåÇÕ´Ï´Ù.
-// µû¶óÇÏ±â 5-2 : my.setName()ÇÔ¼ö¸¦ ÀÌ¿ëÇÏ¿© nameÀ» "Jun"À¸·Î º¯°æÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 5-1 : void setName(String name)ë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
+//			í´ëž˜ìŠ¤ì˜ nameì— ì €ìž¥í•©ë‹ˆë‹¤.
+// ë”°ë¼í•˜ê¸° 5-2 : my.setName()í•¨ìˆ˜ë¥¼ ì´ìš©í•˜ì—¬ nameì„ "Jun"ìœ¼ë¡œ ë³€ê²½í•©ë‹ˆë‹¤.
 //
-// Áß°£ È®ÀÎÇÏ±â : my.nameÀ» Ãâ·ÂÇØ º¾´Ï´Ù. ("Jun"ÀÌ Ãâ·ÂµÇ¾î¾ß ÇÕ´Ï´Ù.)
+// ì¤‘ê°„ í™•ì¸í•˜ê¸° : my.nameì„ ì¶œë ¥í•´ ë´…ë‹ˆë‹¤. ("Jun"ì´ ì¶œë ¥ë˜ì–´ì•¼ í•©ë‹ˆë‹¤.)
 
 
-/////////////////////////// Á¢±ÙÁ¦¾îÀÚ1 - private
+/////////////////////////// ì ‘ê·¼ì œì–´ìž1 - private
 //
-// µû¶óÇÏ±â 6-1 : nameÀÇ Á¢±ÙÁ¦¾îÀÚ¸¦ private·Î ¼³Á¤ÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 6-1 : nameì˜ ì ‘ê·¼ì œì–´ìžë¥¼ privateë¡œ ì„¤ì •í•©ë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 6-2 : my.nameÀ» Ãâ·ÂÇØº¾´Ï´Ù. (¿¡·¯°¡ ³ª¸é Á¤»óÀÔ´Ï´Ù.)
+// ë”°ë¼í•˜ê¸° 6-2 : my.nameì„ ì¶œë ¥í•´ë´…ë‹ˆë‹¤. (ì—ëŸ¬ê°€ ë‚˜ë©´ ì •ìƒìž…ë‹ˆë‹¤.)
 //
-// Áß°£ È®ÀÎÇÏ±â : my.getName();À» Ãâ·ÂÇØ º¾´Ï´Ù. ("Jun"ÀÌ Ãâ·ÂµÇ¾î¾ß ÇÕ´Ï´Ù.)
+// ì¤‘ê°„ í™•ì¸í•˜ê¸° : my.getName();ì„ ì¶œë ¥í•´ ë´…ë‹ˆë‹¤. ("Jun"ì´ ì¶œë ¥ë˜ì–´ì•¼ í•©ë‹ˆë‹¤.)
 
 
-/////////////////////////// »ó¼Ó
-// °³¿ä - ³» ¾ÆÆÄÅ¸¸¦ ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+/////////////////////////// ìƒì†
+// ê°œìš” - ë‚´ ì•„íŒŒíƒ€ë¥¼ ì—…ê·¸ë ˆì´ë“œ í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 7-1 : newAvatarÅ¬·¡½º¸¦ ¸¸µé°í, Avatar¸¦ »ó¼Ó¹Þ½À´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 7-1 : newAvatarí´ëž˜ìŠ¤ë¥¼ ë§Œë“¤ê³ , Avatarë¥¼ ìƒì†ë°›ìŠµë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 7-2 : String skillÀ» »ý¼ºÇÏ°í, "not yet"À» ÀúÀåÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 7-2 : String skillì„ ìƒì„±í•˜ê³ , "not yet"ì„ ì €ìž¥í•©ë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 7-3 : newAvatarÅ¬·¡½ºÀÇ ÀÎ½ºÅÏ½º newMy¸¦ ¸¸µì´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 7-3 : newAvatarí´ëž˜ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ newMyë¥¼ ë§Œë“­ë‹ˆë‹¤.
 //
-// Áß°£ È®ÀÎÇÏ±â : my.getName();À» Ãâ·ÂÇØ º¾´Ï´Ù. ("torr"ÀÌ Ãâ·ÂµÇ¾î¾ß ÇÕ´Ï´Ù.)
+// ì¤‘ê°„ í™•ì¸í•˜ê¸° : my.getName();ì„ ì¶œë ¥í•´ ë´…ë‹ˆë‹¤. ("torr"ì´ ì¶œë ¥ë˜ì–´ì•¼ í•©ë‹ˆë‹¤.)
 
 
-/////////////////////////// Á¢±ÙÁ¦¾îÀÚ2 - protected
-// °³¿ä - ¾÷±×·¹ÀÌµå ÇÏ¸é ³ª ÀÌ¸§ µÚ¿¡(v2)¶ó´Â ±ÛÀÚ°¡ ºÙ½À´Ï´Ù. 
+/////////////////////////// ì ‘ê·¼ì œì–´ìž2 - protected
+// ê°œìš” - ì—…ê·¸ë ˆì´ë“œ í•˜ë©´ ë‚˜ ì´ë¦„ ë’¤ì—(v2)ë¼ëŠ” ê¸€ìžê°€ ë¶™ìŠµë‹ˆë‹¤. 
 //
-// µû¶óÇÏ±â 8-1 : newAvatarÅ¬·¡½ºÀÇ »ý¼ºÀÚ¸¦ ¸¸µì´Ï´Ù.
-//			¾Æ·¡¿Í °°Àº ±â´ÉÀ» ÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 8-1 : newAvatarí´ëž˜ìŠ¤ì˜ ìƒì„±ìžë¥¼ ë§Œë“­ë‹ˆë‹¤.
+//			ì•„ëž˜ì™€ ê°™ì€ ê¸°ëŠ¥ì„ í•©ë‹ˆë‹¤.
 //			name += "(v2)";
-//			> ¿¡·¯°¡ ³ª¾ß Á¤»óÀÔ´Ï´Ù.
-//			nameÀÇ Á¢±ÙÁ¦¾îÀÚ¸¦ private¿¡¼­ protected·Î º¯°æÇÕ´Ï´Ù.
+//			> ì—ëŸ¬ê°€ ë‚˜ì•¼ ì •ìƒìž…ë‹ˆë‹¤.
+//			nameì˜ ì ‘ê·¼ì œì–´ìžë¥¼ privateì—ì„œ protectedë¡œ ë³€ê²½í•©ë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 8-2 : nameÀÇ Á¢±ÙÁ¦¾îÀÚ¸¦ private·Î º¯°æÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 8-2 : nameì˜ ì ‘ê·¼ì œì–´ìžë¥¼ privateë¡œ ë³€ê²½í•©ë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 8-3 : setName°ú getNameÀ» ÀÌ¿ëÇÏ¿© µ¿ÀÏÇÑ ±â´ÉÀ» ÇÏ´Â ÇÔ¼ö¸¦ ¸¸µì´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 8-3 : setNameê³¼ getNameì„ ì´ìš©í•˜ì—¬ ë™ì¼í•œ ê¸°ëŠ¥ì„ í•˜ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“­ë‹ˆë‹¤.
 
 
 /////////////////////////// super()
 // 
-// µû¶óÇÏ±â 9-1 : newAvatar(String name)»ý¼ºÀÚ¸¦ »ý¼ºÇÕ´Ï´Ù.
-//			super()¸¦ ÀÌ¿ëÇÏ¿© name¿¡ ÀúÀå ÇÒ ¼ö ÀÖµµ·Ï ÇÕ´Ï´Ù.
-//			nameµÚ¿¡ "(v2)"°¡ ºÙµµ·Ï ÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 9-1 : newAvatar(String name)ìƒì„±ìžë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
+//			super()ë¥¼ ì´ìš©í•˜ì—¬ nameì— ì €ìž¥ í•  ìˆ˜ ìžˆë„ë¡ í•©ë‹ˆë‹¤.
+//			nameë’¤ì— "(v2)"ê°€ ë¶™ë„ë¡ í•©ë‹ˆë‹¤.
 
 
 /////////////////////////// super
 //
-// µû¶óÇÏ±â 10-1 : allNewAvatar Å¬·¡½º¸¦ »ý¼ºÇÏ°í, newAvatarÅ¬·¡½º¸¦ »ó¼Ó¹Þ½À´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 10-1 : allNewAvatar í´ëž˜ìŠ¤ë¥¼ ìƒì„±í•˜ê³ , newAvatarí´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ìŠµë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 10-2 : String skill="heal";ÇÊµå¸¦ »ý¼ºÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 10-2 : String skill="heal";í•„ë“œë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 10-2 : action¸Þ¼­µå´Â skillÀ» ¹ÝÈ¯ÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 10-2 : actionë©”ì„œë“œëŠ” skillì„ ë°˜í™˜í•©ë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 10-3 : action2¸Þ¼­µå´Â super.skillÀ» ¹ÝÈ¯ÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 10-3 : action2ë©”ì„œë“œëŠ” super.skillì„ ë°˜í™˜í•©ë‹ˆë‹¤.
 
 /////////////////////////// overriding
 //
-// µû¶óÇÏ±â 11-1 : newAvatar¿¡ action¸Þ¼­µå¸¦ ¸¸µì´Ï´Ù.
-// 				skillÀ» ¹ÝÈ¯ÇÕ´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 11-1 : newAvatarì— actionë©”ì„œë“œë¥¼ ë§Œë“­ë‹ˆë‹¤.
+// 				skillì„ ë°˜í™˜í•©ë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 11-2 : mainÇÔ¼ö¿¡ 2°³ÀÇ ÀÎ½ºÅÏ½º¸¦ ¸¸µì´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 11-2 : mainí•¨ìˆ˜ì— 2ê°œì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“­ë‹ˆë‹¤.
 //				newAvatar newMy
 //				allNewAvatar allMy
-//				newMy.action°ú allMy.actionÀ» ºñ±³ÇØº¾´Ï´Ù.
+//				newMy.actionê³¼ allMy.actionì„ ë¹„êµí•´ë´…ë‹ˆë‹¤.
 //
-// µû¶óÇÏ±â 11-3 : newAvatar newMy = new newAvatar();¿¡¼­ 
-//				ÀÎ½ºÅÏ½º¸¦ allMyAvatar·Î º¯°æÇØº¾´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 11-3 : newAvatar newMy = new newAvatar();ì—ì„œ 
+//				ì¸ìŠ¤í„´ìŠ¤ë¥¼ allMyAvatarë¡œ ë³€ê²½í•´ë´…ë‹ˆë‹¤.
 
 /////////////////////////// super2
 //
-// µû¶óÇÏ±â 12-1 : allNewAvatar Å¬·¡½ºÀÇ action()ÀÇ ³»¿ëÀ» 
-//				super.action()À¸·Î ¹Ù²Ù¾îº¾´Ï´Ù.
+// ë”°ë¼í•˜ê¸° 12-1 : allNewAvatar í´ëž˜ìŠ¤ì˜ action()ì˜ ë‚´ìš©ì„ 
+//				super.action()ìœ¼ë¡œ ë°”ê¾¸ì–´ë´…ë‹ˆë‹¤.
 //
-// È®ÀÎÇØº¸±â	
+// í™•ì¸í•´ë³´ê¸°	

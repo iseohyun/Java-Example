@@ -2,34 +2,34 @@ package b_Extends;
 
 /**
  * 
- * ÀÎÅÍÆäÀÌ½º È°¿ë
+ * ì¸í„°í˜ì´ìŠ¤ í™œìš©
  * 
- * ¼­·Î ´Ù¸¥ °´Ã¼°¡ ÀÖ´ÙÇÏ´õ¶óµµ, µ¿ÀÏ ÇÑ ±â´ÉÀ» °¡Áö°í ÀÖ´Ù¸é, ÇÏ³ªÀÇ Interface¸¸ »ı¼ºÇÏ¿© µÑ ´Ù Çîµé¸µ ÇÒ ¼ö ÀÖ´Ù.
+ * ì„œë¡œ ë‹¤ë¥¸ ê°ì²´ê°€ ìˆë‹¤í•˜ë”ë¼ë„, ë™ì¼ í•œ ê¸°ëŠ¥ì„ ê°€ì§€ê³  ìˆë‹¤ë©´, í•˜ë‚˜ì˜ Interfaceë§Œ ìƒì„±í•˜ì—¬ ë‘˜ ë‹¤ í—¨ë“¤ë§ í•  ìˆ˜ ìˆë‹¤.
  *
  */
 
 public class F2_Usage {
-	interface Inter1 {
-		public abstract void print();
-	}
+  interface Inter1 {
+    public abstract void print();
+  }
 
-	static class Class1 implements Inter1 {
-		public void print() {
-			System.out.println("Class 1");
-		}
-	}
+  static class Class1 implements Inter1 {
+    public void print() {
+      System.out.println("Class 1");
+    }
+  }
 
-	static class Class2 implements Inter1 {
-		public void print() {
-			System.out.println("Class 2");
-		}
-	}
+  static class Class2 implements Inter1 {
+    public void print() {
+      System.out.println("Class 2");
+    }
+  }
 
-	public static void main(String[] args) {
-		Inter1 i1 = new Class1();
-		i1.print();
+  public static void main(String[] args) {
+    Inter1 i1 = new Class1();
+    i1.print();
 
-		i1 = new Class2();
-		i1.print();
-	}
+    i1 = new Class2();
+    i1.print();
+  }
 }

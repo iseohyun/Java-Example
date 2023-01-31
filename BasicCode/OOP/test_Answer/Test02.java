@@ -1,69 +1,69 @@
 package test_Answer;
 
 class Dog extends Animal implements runable {
-	Dog(String name, String voice) {
-		super(name);
-		setVoice(voice);
-	}
+  Dog(String name, String voice) {
+    super(name);
+    setVoice(voice);
+  }
 
-	@Override
-	public void stop() {
-		System.out.println(getName() + "ÀÌ Á¤ÁöÇÕ´Ï´Ù.");
-	}
+  @Override
+  public void stop() {
+    System.out.println(getName() + "ì´ ì •ì§€í•©ë‹ˆë‹¤.");
+  }
 
-	public void crying() {
-		System.out.println(getName() + "ÀÌ " + getVoice() + "ÇÏ°í Â¢½À´Ï´Ù.");
-	}
+  public void crying() {
+    System.out.println(getName() + "ì´ " + getVoice() + "í•˜ê³  ì§–ìŠµë‹ˆë‹¤.");
+  }
 }
 
 class Birds extends Animal implements flyable, runable {
-	protected Birds(String name, String voice) {
-		super(name);
-		setVoice(voice);
-	}
+  protected Birds(String name, String voice) {
+    super(name);
+    setVoice(voice);
+  }
 
-	@Override
-	public void stop() {
-		System.out.println(getName() + "ÀÌ Á¤ÁöÇÕ´Ï´Ù.");
-	}
+  @Override
+  public void stop() {
+    System.out.println(getName() + "ì´ ì •ì§€í•©ë‹ˆë‹¤.");
+  }
 }
 
 interface flyable {
-	default void flying(String name) {
-		System.out.println(name + "ÀÌ ³¯¾Æ°©´Ï´Ù.");
-	}
+  default void flying(String name) {
+    System.out.println(name + "ì´ ë‚ ì•„ê°‘ë‹ˆë‹¤.");
+  }
 
-	default void landing(String name) {
-		System.out.println(name + "ÀÌ ÂøÁöÇÕ´Ï´Ù.");
-	}
+  default void landing(String name) {
+    System.out.println(name + "ì´ ì°©ì§€í•©ë‹ˆë‹¤.");
+  }
 }
 
 interface runable {
-	default void running(String name) {
-		System.out.println(name + "ÀÌ ´Ş¸³´Ï´Ù.");
-	}
+  default void running(String name) {
+    System.out.println(name + "ì´ ë‹¬ë¦½ë‹ˆë‹¤.");
+  }
 
-	abstract void stop();
+  abstract void stop();
 
-	static void sprint(String name) {
-		System.out.println(name + "ÀÌ Àü·ÂÁúÁÖ¸¦ ÇÕ´Ï´Ù.");
-	}
+  static void sprint(String name) {
+    System.out.println(name + "ì´ ì „ë ¥ì§ˆì£¼ë¥¼ í•©ë‹ˆë‹¤.");
+  }
 }
 
 public class Test02 {
-	public static void main(String[] args) {
-		// TODO : ¿©±â¿¡ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä.
-		Dog booldog = new Dog("ºÒµ¶", "ÄÈÄÈ");
-		booldog.crying();
-		booldog.running(booldog.getName());
-		booldog.stop();
+  public static void main(String[] args) {
+    // TODO : ì—¬ê¸°ì— ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”.
+    Dog booldog = new Dog("ë¶ˆë…", "ì»¹ì»¹");
+    booldog.crying();
+    booldog.running(booldog.getName());
+    booldog.stop();
 
-		Birds chicken = new Birds("´ß", "²¿³¢¿À");
-		chicken.flying(chicken.getName());
-		chicken.landing(chicken.getName());
-		chicken.running(chicken.getName());
-		chicken.stop();
+    Birds chicken = new Birds("ë‹­", "ê¼¬ë¼ì˜¤");
+    chicken.flying(chicken.getName());
+    chicken.landing(chicken.getName());
+    chicken.running(chicken.getName());
+    chicken.stop();
 
-		runable.sprint("Ç¥¹ü");
-	}
+    runable.sprint("í‘œë²”");
+  }
 }

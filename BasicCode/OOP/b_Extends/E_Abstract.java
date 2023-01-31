@@ -2,35 +2,35 @@ package b_Extends;
 
 /**
  * 
- * Ãß»óÅ¬·¡½º´Â Ãß»ó ¸Þ¼­µå¸¦ °¡Áú ¼ö ÀÖ½À´Ï´Ù. ¶ÇÇÑ ÀÎ½ºÅÏ½º¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.
+ * ì¶”ìƒí´ëž˜ìŠ¤ëŠ” ì¶”ìƒ ë©”ì„œë“œë¥¼ ê°€ì§ˆ ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ë˜í•œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
  * 
- * Ãß»óÅ¬·¡½º¸¦ »ç¿ëÇÏ´Â ¸ñÀûÀº ±¸Á¶¸¦ Àâ±â À§ÇØ¼­ ÀÔ´Ï´Ù. (ÁÖ¸ñÀû) °èÃþ±¸Á¶·Î ÀÛ¼ºÇÏ°íÀÚ ÇÒ ¶§, Á÷Á¢ ÀÎ½ºÅÏ½º¸¦ ÀÛ¼ºÇÒ ÇÊ¿ä´Â ¾øÁö¸¸,
- * ÇÏÀ§ Å¬·¡½ºµéÀÌ ÀÏÁ¤ÇÑ ¸Þ¼­µå¸¦ »ç¿ëÇÏµµ·Ï °­Á¦ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ * ì¶”ìƒí´ëž˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ëŠ” ëª©ì ì€ êµ¬ì¡°ë¥¼ ìž¡ê¸° ìœ„í•´ì„œ ìž…ë‹ˆë‹¤. (ì£¼ëª©ì ) ê³„ì¸µêµ¬ì¡°ë¡œ ìž‘ì„±í•˜ê³ ìž í•  ë•Œ, ì§ì ‘ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìž‘ì„±í•  í•„ìš”ëŠ” ì—†ì§€ë§Œ,
+ * í•˜ìœ„ í´ëž˜ìŠ¤ë“¤ì´ ì¼ì •í•œ ë©”ì„œë“œë¥¼ ì‚¬ìš©í•˜ë„ë¡ ê°•ì œí•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
  *
  */
 
 public class E_Abstract {
-	// Ãß»óÅ¬·¡½º
-	static abstract class Abs1 {
-		abstract void print();
-	}
+  // ì¶”ìƒí´ëž˜ìŠ¤
+  static abstract class Abs1 {
+    abstract void print();
+  }
 
-	static class Class1 extends Abs1 {
-		void print() {
-			System.out.println("Class 1");
-		}
-	}
+  static class Class1 extends Abs1 {
+    void print() {
+      System.out.println("Class 1");
+    }
+  }
 
-	public static void main(String[] args) {
-		// Abs1 ab = new Abs1(); // Ãß»ó Å¬·¡½º´Â ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÒ ¼ö ¾øÀ½.
-		Class1 c1 = new Class1();
+  public static void main(String[] args) {
+    // Abs1 ab = new Abs1(); // ì¶”ìƒ í´ëž˜ìŠ¤ëŠ” ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•  ìˆ˜ ì—†ìŒ.
+    Class1 c1 = new Class1();
 
-		c1.print();
-	}
+    c1.print();
+  }
 }
 
-// ½Ç½À°úÁ¦ 1 : Ãß»ó Å¬·¡½º¿¡, Ãß»ó ÇÊµå¸¦ »ý¼ºÇÒ ¼ö ÀÖ³ª¿ä?
-// ½Ç½À°úÁ¦ 2 : Ãß»ó Å¬·¡½º¿¡, ÀÏ¹Ý ¸Þ¼­µå¸¦ »ý¼º ÇÒ ¼ö ÀÖ³ª¿ä?
-// ½Ç½À°úÁ¦ 3 : Ãß»ó ¸Þ¼­µå¿¡, ¹Ùµð¸¦ ÀÛ¼ºÇÒ ¼ö ÀÖ³ª¿ä?
-// ½Ç½À°úÁ¦ 4 : ÀÏ¹Ý Å¬·¡½º¿¡, Ãß»ó ¸Þ¼­µå¸¦ ÀÛ¼º ÇÒ ¼ö ÀÖ³ª¿ä?
-// ½Ç½À°úÁ¦ 5 : static ¸Þ¼­µå¸¦ ¸¸µé°í »ç¿ëÇÒ ¼ö ÀÖ³ª¿ä?
+// ì‹¤ìŠµê³¼ì œ 1 : ì¶”ìƒ í´ëž˜ìŠ¤ì—, ì¶”ìƒ í•„ë“œë¥¼ ìƒì„±í•  ìˆ˜ ìžˆë‚˜ìš”?
+// ì‹¤ìŠµê³¼ì œ 2 : ì¶”ìƒ í´ëž˜ìŠ¤ì—, ì¼ë°˜ ë©”ì„œë“œë¥¼ ìƒì„± í•  ìˆ˜ ìžˆë‚˜ìš”?
+// ì‹¤ìŠµê³¼ì œ 3 : ì¶”ìƒ ë©”ì„œë“œì—, ë°”ë””ë¥¼ ìž‘ì„±í•  ìˆ˜ ìžˆë‚˜ìš”?
+// ì‹¤ìŠµê³¼ì œ 4 : ì¼ë°˜ í´ëž˜ìŠ¤ì—, ì¶”ìƒ ë©”ì„œë“œë¥¼ ìž‘ì„± í•  ìˆ˜ ìžˆë‚˜ìš”?
+// ì‹¤ìŠµê³¼ì œ 5 : static ë©”ì„œë“œë¥¼ ë§Œë“¤ê³  ì‚¬ìš©í•  ìˆ˜ ìžˆë‚˜ìš”?

@@ -1,63 +1,63 @@
 package test_Answer;
 
 class Avatar {
-	private String name;
+  private String name;
 
-	Avatar() {
-		this("torr");
-	}
+  Avatar() {
+    this("torr");
+  }
 
-	Avatar(String name) {
-		this.name = name;
-	}
+  Avatar(String name) {
+    this.name = name;
+  }
 
-	void setName(String name) {
-		this.name = name;
-	}
+  void setName(String name) {
+    this.name = name;
+  }
 
-	String getName() {
-		return name;
-	}
+  String getName() {
+    return name;
+  }
 }
 
 class newAvatar extends Avatar {
-	protected String skill = "not yet";
+  protected String skill = "not yet";
 
-	newAvatar() {
-		setName(getName() + "(v2)");
-	}
+  newAvatar() {
+    setName(getName() + "(v2)");
+  }
 
-	newAvatar(String name) {
-		super(name + "(v2)");
-	}
+  newAvatar(String name) {
+    super(name + "(v2)");
+  }
 
-	String action() {
-		return skill;
-	}
+  String action() {
+    return skill;
+  }
 }
 
 class allNewAvatar extends newAvatar {
-	// String skill = "heal";
-	String action() {
-		return skill;
-	}
+  // String skill = "heal";
+  String action() {
+    return skill;
+  }
 
-	String action2() {
-		return super.skill;
-	}
+  String action2() {
+    return super.skill;
+  }
 }
 
 public class Test01 {
-	public static void main(String[] args) {
-		// TODO : ¿©±â¿¡ ÄÚµå¸¦ ÀÔ·ÂÇÏ¼¼¿ä.
-		allNewAvatar allMy = new allNewAvatar();
-		newAvatar newMy = new newAvatar();
+  public static void main(String[] args) {
+    // TODO : ì—¬ê¸°ì— ì½”ë“œë¥¼ ì…ë ¥í•˜ì„¸ìš”.
+    allNewAvatar allMy = new allNewAvatar();
+    newAvatar newMy = new newAvatar();
 
-		allMy.skill = "1234567";
-		newMy.skill = "aa";
+    allMy.skill = "1234567";
+    newMy.skill = "aa";
 
-		System.out.println(allMy.action());
-		System.out.println(newMy.action());
+    System.out.println(allMy.action());
+    System.out.println(newMy.action());
 
-	}
+  }
 }

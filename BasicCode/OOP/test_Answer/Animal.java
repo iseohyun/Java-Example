@@ -1,26 +1,26 @@
 package test_Answer;
 
 public class Animal {
-	private String name;
-	private String voice = "È£¿¡¿¨";
+  private String name;
+  private String voice = "í˜¸ì—ì—¥";
 
-	protected Animal(String name) {
-		this.name = name;
-	}
+  protected Animal(String name) {
+    this.name = name;
+  }
 
-	protected void setVoice(String voice) {
-		this.voice = voice;
-	}
+  protected void setVoice(String voice) {
+    this.voice = voice;
+  }
 
-	protected String getVoice() {
-		return voice;
-	}
+  protected String getVoice() {
+    return voice;
+  }
 
-	public void crying() {
-		System.out.println(name + "ÀÌ " + voice + "ÇÏ°í ¿ó´Ï´Ù.");
-	}
+  public void crying() {
+    System.out.println(name + "ì´ " + voice + "í•˜ê³  ì›ë‹ˆë‹¤.");
+  }
 
-	public String getName() {
-		return name;
-	}
+  public String getName() {
+    return name;
+  }
 }

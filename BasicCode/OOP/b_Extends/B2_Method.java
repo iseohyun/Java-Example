@@ -2,37 +2,37 @@ package b_Extends;
 
 /**
  * 
- * ±âº»ÀûÀÎ Override±ÔÄ¢Àº º»ÀÎÀÌ ¼ÒÀ¯ÇÑ method¸¦ È£ÃâÇÑ´Ù´Â °ÍÀÔ´Ï´Ù.
+ * ê¸°ë³¸ì ì¸ Overrideê·œì¹™ì€ ë³¸ì¸ì´ ì†Œìœ í•œ methodë¥¼ í˜¸ì¶œí•œë‹¤ëŠ” ê²ƒì…ë‹ˆë‹¤.
  * 
- * ÀÚ½ÄÅ¸ÀÔ(±â´ÉÀÌ ´õ ¸¹Àº, ´õ Å«..)À¸·Î ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇßÀ» ¶§, ºÎ¸ğÅ¸ÀÔ(±â´ÉÀ» ¸î °³ ¾È¾²´Â)À¸·Î È£ÃâÀÌ °¡´ÉÇÏÁö¸¸, ºÎ¸ğÅ¸ÀÔ(±â´ÉÀÌ
- * ´õ ÀûÀº, ´õ ÀÛÀº..)À¸·Î ÀÎ½ºÅÏ½º¸¦ »ı¼ºÇÏ°í, ÀÚ½ÄÅ¸ÀÔ(¾ø´Â ±â´ÉÀ» ¾µ¼ö´Â ¾ø´Â)À¸·Î´Â È£ÃâÀÌ ºÒ°¡´É ÇÕ´Ï´Ù.
+ * ìì‹íƒ€ì…(ê¸°ëŠ¥ì´ ë” ë§ì€, ë” í°..)ìœ¼ë¡œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í–ˆì„ ë•Œ, ë¶€ëª¨íƒ€ì…(ê¸°ëŠ¥ì„ ëª‡ ê°œ ì•ˆì“°ëŠ”)ìœ¼ë¡œ í˜¸ì¶œì´ ê°€ëŠ¥í•˜ì§€ë§Œ, ë¶€ëª¨íƒ€ì…(ê¸°ëŠ¥ì´
+ * ë” ì ì€, ë” ì‘ì€..)ìœ¼ë¡œ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±í•˜ê³ , ìì‹íƒ€ì…(ì—†ëŠ” ê¸°ëŠ¥ì„ ì“¸ìˆ˜ëŠ” ì—†ëŠ”)ìœ¼ë¡œëŠ” í˜¸ì¶œì´ ë¶ˆê°€ëŠ¥ í•©ë‹ˆë‹¤.
  *
- * ÁÖÀÇÇÒ Á¡Àº º»ÀÎÀÇ ±âÁØÀº È£Ãâ Å¸ÀÔÀÌ ¾Æ´Ï°í, ÀÎ½ºÅÏ½º(new)ÀÇ Å¸ÀÔÀÌ µË´Ï´Ù.
+ * ì£¼ì˜í•  ì ì€ ë³¸ì¸ì˜ ê¸°ì¤€ì€ í˜¸ì¶œ íƒ€ì…ì´ ì•„ë‹ˆê³ , ì¸ìŠ¤í„´ìŠ¤(new)ì˜ íƒ€ì…ì´ ë©ë‹ˆë‹¤.
  */
 
 public class B2_Method {
-	static class Parent {
-		void display() {
-			System.out.println("Class Top");
-		}
-	}
+  static class Parent {
+    void display() {
+      System.out.println("Class Top");
+    }
+  }
 
-	static class Child extends Parent {
-		void display() {
-			System.out.println("Class 2");
-		}
-	}
+  static class Child extends Parent {
+    void display() {
+      System.out.println("Class 2");
+    }
+  }
 
-	public static void main(String[] args) {
-		Parent pa = new Parent();
-		pa.display();
+  public static void main(String[] args) {
+    Parent pa = new Parent();
+    pa.display();
 
-		Child ch = new Child();
-		ch.display();
+    Child ch = new Child();
+    ch.display();
 
-		Parent pc = new Child(); // ÁÖÀÇ
-		pc.display();
+    Parent pc = new Child(); // ì£¼ì˜
+    pc.display();
 
-		// Child cp = new Parent(); // È£ÃâÀÌ ¾ÈµÊ
-	}
+    // Child cp = new Parent(); // í˜¸ì¶œì´ ì•ˆë¨
+  }
 }

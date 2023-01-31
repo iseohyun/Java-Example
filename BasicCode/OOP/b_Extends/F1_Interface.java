@@ -1,6 +1,6 @@
 package b_Extends;
 
-public class F_Interface {
+public class F1_Interface {
 	interface Inter1 {
 		public abstract void print();
 	}
