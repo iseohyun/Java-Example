@@ -1,31 +1,31 @@
 package b_String;
 
 public class A2_Compare {
-	public static void main(String[] args) {
-		String str1 = new String("JavaCode");
-		String str2 = new String("javacode");
-		String str3 = new String("javaCodec");
+  public static void main(String[] args) {
+    String str1 = new String("JavaCode");
+    String str2 = new String("javacode");
+    String str3 = new String("javaCodec");
 
-		// ¹®ÀÚ¸¦ Ãâ·ÂÇÏ±â À§ÇÑ ¿©·¯°¡Áö ¹æ¹ı
-		System.out.println("str1 : " + str1);
-		System.out.println("str2 : " + str2);
-		System.out.println("str3 : " + str3);
+    // ë¬¸ìë¥¼ ì¶œë ¥í•˜ê¸° ìœ„í•œ ì—¬ëŸ¬ê°€ì§€ ë°©ë²•
+    System.out.println("str1 : " + str1);
+    System.out.println("str2 : " + str2);
+    System.out.println("str3 : " + str3);
 
-		System.out.println("<< str1 °ú str2 ºñ±³ >>");
-		printCompResault(str1.compareTo(str2));
-		System.out.println("<< str1 °ú str2 ºñ±³(´ë¼Ò¹®ÀÚ ¹«½Ã) >>");
-		printCompResault(str1.compareToIgnoreCase(str2));
-		System.out.println("<< str1 °ú str3 ºñ±³ >>");
-		printCompResault(str1.compareTo(str3));
-	}
+    System.out.println("<< str1 ê³¼ str2 ë¹„êµ >>");
+    printCompResault(str1.compareTo(str2));
+    System.out.println("<< str1 ê³¼ str2 ë¹„êµ(ëŒ€ì†Œë¬¸ì ë¬´ì‹œ) >>");
+    printCompResault(str1.compareToIgnoreCase(str2));
+    System.out.println("<< str1 ê³¼ str3 ë¹„êµ >>");
+    printCompResault(str1.compareTo(str3));
+  }
 
-	public static void printCompResault(int ret) {
-		if (ret > 0) {
-			System.out.println("String ÇÔ¼ö °á°ú : ºÒÀÏÄ¡(»çÀü ¼ø)");
-		} else if (ret < 0) {
-			System.out.println("String ÇÔ¼ö °á°ú : ºÒÀÏÄ¡(»çÀü ¿ª¼ø)");
-		} else {
-			System.out.println("String ÇÔ¼ö °á°ú : ÀÏÄ¡");
-		}
-	}
+  public static void printCompResault(int ret) {
+    if (ret > 0) {
+      System.out.println("String í•¨ìˆ˜ ê²°ê³¼ : ë¶ˆì¼ì¹˜(ì‚¬ì „ ìˆœ)");
+    } else if (ret < 0) {
+      System.out.println("String í•¨ìˆ˜ ê²°ê³¼ : ë¶ˆì¼ì¹˜(ì‚¬ì „ ì—­ìˆœ)");
+    } else {
+      System.out.println("String í•¨ìˆ˜ ê²°ê³¼ : ì¼ì¹˜");
+    }
+  }
 }
