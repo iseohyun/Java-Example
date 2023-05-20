@@ -8,28 +8,28 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class B_Border extends Frame {
-	Button b1 = new Button("1¹ø ¹öÆ°");
-	Button b2 = new Button("2¹ø ¹öÆ°");
-	Button b3 = new Button("3¹ø ¹öÆ°");
-	Button b4 = new Button("4¹ø ¹öÆ°");
-	Button b5 = new Button("5¹ø ¹öÆ°");
+  Button b1 = new Button("1ë²ˆ ë²„íŠ¼");
+  Button b2 = new Button("2ë²ˆ ë²„íŠ¼");
+  Button b3 = new Button("3ë²ˆ ë²„íŠ¼");
+  Button b4 = new Button("4ë²ˆ ë²„íŠ¼");
+  Button b5 = new Button("5ë²ˆ ë²„íŠ¼");
 
-	public B_Border() {
-		setLayout(new BorderLayout());
+  public B_Border() {
+    setLayout(new BorderLayout());
 
-		add("North", b1);
-		add("South", b2);
-		add("East", b3);
-		add("West", b4);
-		add("Center", b5);
+    add("North", b1);
+    add("South", b2);
+    add("East", b3);
+    add("West", b4);
+    add("Center", b5);
 
-		addWindowListener(new WindowExit(this));
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] agrs) {
-		new B_Border();
-	}
+  public static void main(String[] agrs) {
+    new B_Border();
+  }
 }

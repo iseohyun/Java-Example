@@ -14,61 +14,61 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 class DialogTest extends Dialog implements ActionListener {
-	public DialogTest(Frame arg0, String msg) {
-		super(arg0, "¸Ş½ÃÁö ´ëÈ­»óÀÚ", true);
-		setLayout(new FlowLayout());
-		
-		Label lab = new Label(msg);
-		Button b = new Button("Á¾·á");
+  public DialogTest(Frame arg0, String msg) {
+    super(arg0, "ë©”ì‹œì§€ ëŒ€í™”ìƒì", true);
+    setLayout(new FlowLayout());
+    
+    Label lab = new Label(msg);
+    Button b = new Button("ì¢…ë£Œ");
 
-		add(lab);
-		add(b);
+    add(lab);
+    add(b);
 
-		setBackground(Color.GRAY);
+    setBackground(Color.GRAY);
 
-		b.addActionListener(this);
+    b.addActionListener(this);
 
-		setSize(200, 300);
-		setVisible(true);
-	}
+    setSize(200, 300);
+    setVisible(true);
+  }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		dispose();
-	}
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    dispose();
+  }
 }
 
 @SuppressWarnings("serial")
 public class G_Dialog extends Frame implements ActionListener {
-	Button b1 = new Button("´ÙÀÌ¾ó·Î±× ¿­±â");
-	TextField message = new TextField("¿©±â¿¡ ¸Ş½ÃÁö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+  Button b1 = new Button("ë‹¤ì´ì–¼ë¡œê·¸ ì—´ê¸°");
+  TextField message = new TextField("ì—¬ê¸°ì— ë©”ì‹œì§€ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 
-	public G_Dialog() {
-		setLayout(new FlowLayout());
+  public G_Dialog() {
+    setLayout(new FlowLayout());
 
-		add(message);
-		add(b1);
+    add(message);
+    add(b1);
 
-		b1.addActionListener(this);
+    b1.addActionListener(this);
 
-		addWindowListener(new WindowExit(this));
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new G_Dialog();
-	}
+  public static void main(String[] args) {
+    new G_Dialog();
+  }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		new DialogTest(this, message.getText());
-	}
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    new DialogTest(this, message.getText());
+  }
 }
 
-// ½Ç½À°úÁ¦ : ´ÙÀÌ¾ó·Î±×¸¦ ÇÏ³ª ´õ ¶ç¿öº¸¼¼¿ä.
-// ½Ç½À°úÁ¦ : red¶ó°í ÀÔ·ÂÇÏ¸é, ¹è°æÀÌ »¡°£»öÀÎ ´ÙÀÌ¾ó·Î±×°¡ »ı¼ºµÇµµ·Ï ¸¸µé¾îº¸¼¼¿ä.
-// ½Ç½À°úÁ¦ : ´ÙÀÌ¾ó·Î±×°¡ ¿­¸®¸é(È£ÃâµÇ¸é) ¸Ş½ÃÁö ¿·¿¡ (1)ÀÌ¶õ ¼ıÀÚ°¡ Ãâ·ÂµÇµµ·Ï ÇÏ¼¼¿ä. (¿¹: "¿©±â¿¡ ¸Ş½ÃÁö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(1)")
-//			¸¸¾à µÎ¹øÂ° È£ÃâµÇ¸é (2)¶ó´Â ¼ıÀÚ°¡ Ãâ·ÂµÇµµ·Ï ÇÏ¼¼¿ä. (¿¹: "¿©±â¿¡ ¸Ş½ÃÁö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(2)")
-//			È£ÃâµÉ ¶§¸¶´Ù ¼ıÀÚ´Â Áõ°¡ÇÕ´Ï´Ù. (¿¹: "¿©±â¿¡ ¸Ş½ÃÁö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(3)")
+// ì‹¤ìŠµê³¼ì œ : ë‹¤ì´ì–¼ë¡œê·¸ë¥¼ í•˜ë‚˜ ë” ë„ì›Œë³´ì„¸ìš”.
+// ì‹¤ìŠµê³¼ì œ : redë¼ê³  ì…ë ¥í•˜ë©´, ë°°ê²½ì´ ë¹¨ê°„ìƒ‰ì¸ ë‹¤ì´ì–¼ë¡œê·¸ê°€ ìƒì„±ë˜ë„ë¡ ë§Œë“¤ì–´ë³´ì„¸ìš”.
+// ì‹¤ìŠµê³¼ì œ : ë‹¤ì´ì–¼ë¡œê·¸ê°€ ì—´ë¦¬ë©´(í˜¸ì¶œë˜ë©´) ë©”ì‹œì§€ ì˜†ì— (1)ì´ë€ ìˆ«ìê°€ ì¶œë ¥ë˜ë„ë¡ í•˜ì„¸ìš”. (ì˜ˆ: "ì—¬ê¸°ì— ë©”ì‹œì§€ë¥¼ ì…ë ¥í•˜ì„¸ìš”.(1)")
+//			ë§Œì•½ ë‘ë²ˆì§¸ í˜¸ì¶œë˜ë©´ (2)ë¼ëŠ” ìˆ«ìê°€ ì¶œë ¥ë˜ë„ë¡ í•˜ì„¸ìš”. (ì˜ˆ: "ì—¬ê¸°ì— ë©”ì‹œì§€ë¥¼ ì…ë ¥í•˜ì„¸ìš”.(2)")
+//			í˜¸ì¶œë  ë•Œë§ˆë‹¤ ìˆ«ìëŠ” ì¦ê°€í•©ë‹ˆë‹¤. (ì˜ˆ: "ì—¬ê¸°ì— ë©”ì‹œì§€ë¥¼ ì…ë ¥í•˜ì„¸ìš”.(3)")

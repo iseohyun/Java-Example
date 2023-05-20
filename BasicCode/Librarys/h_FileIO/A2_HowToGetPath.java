@@ -1,15 +1,15 @@
 package h_FileIO;
 
 public class A2_HowToGetPath {
-	public static void main(String[] args) {
-		// ÀÎ½ºÅÏ½º »ı¼º
-		A2_HowToGetPath me = new A2_HowToGetPath();
+    public static void main(String[] args) {
+        // ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
+        A2_HowToGetPath me = new A2_HowToGetPath();
 
-		// ´ç¿¬ÇÏ°ÚÁö¸¸, getClass()ÇÔ¼ö´Â ÀÎ½ºÅÏ½º°¡ ¾øÀ» ¶§, È£Ãâ ÇÒ ¼ö ¾ø´Ù.
-		String path = me.getClass().getResource("").getPath();
-		System.out.println(path);
+        // ë‹¹ì—°í•˜ê² ì§€ë§Œ, getClass()í•¨ìˆ˜ëŠ” ì¸ìŠ¤í„´ìŠ¤ê°€ ì—†ì„ ë•Œ, í˜¸ì¶œ í•  ìˆ˜ ì—†ë‹¤.
+        String path = me.getClass().getResource("").getPath();
+        System.out.println(path);
 
-		path = path.substring(0, path.indexOf("bin"));
-		System.out.println(path);
-	}
+        path = path.substring(0, path.indexOf("bin"));
+        System.out.println(path);
+    }
 }

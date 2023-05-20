@@ -10,15 +10,15 @@ package b_Operation;
  * 
  */
 public class D1_Compare {
-  public static void main(String[] args) {
-    int num = 7;
+    public static void main(String[] args) {
+        int num = 7;
 
-    System.out.println("1 : " + (num < 5));
-    System.out.println("2 : " + (num > 5));
-    System.out.println("3 : " + !(num > 5));
-    System.out.println("4 : " + ((num < 5) && (num > 5)));
-    System.out.println("5 : " + ((num < 5) || (num > 5)));
-  }
+        System.out.println("1 : " + (num < 5)); // false
+        System.out.println("2 : " + (num > 5)); // true
+        System.out.println("3 : " + !(num > 5)); // false
+        System.out.println("4 : " + ((num < 5) && (num > 5))); // false (and) true = false
+        System.out.println("5 : " + ((num < 5) || (num > 5))); // false (or) true = true
+    }
 }
 
 // 실습과제 : 5를 입력하고, 결과를 해석해봅니다. [1, 2만 확인합니다.]

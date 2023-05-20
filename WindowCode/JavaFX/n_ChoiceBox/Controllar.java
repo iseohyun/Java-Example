@@ -15,7 +15,7 @@ public class Controllar implements Initializable {
 	@FXML
 	private ChoiceBox<String> myChoice;
 
-	private String[] food = { "ÇÇÀÚ", "½º½Ã", "¶ó¸é" };
+	private String[] food = { "í”¼ì", "ìŠ¤ì‹œ", "ë¼ë©´" };
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

@@ -15,118 +15,118 @@ import javax.swing.event.ListSelectionListener;
 
 @SuppressWarnings("serial")
 public class C_ComboBox extends JFrame implements ActionListener, ListSelectionListener {
-	String rainbow[] = { "ª°∞≠", "¡÷»≤", "≥Î∂˚", "√ ∑œ", "∆ƒ∂˚", "≥≤ªˆ", "∫∏∂Û" };
-	JComboBox<String> CbColor = new JComboBox<>(rainbow);
-	JList<String> ColList = new JList<>(rainbow);
-	JList<String> MulSelect = new JList<>(rainbow);
-	int LastSel = 10;
+  String rainbow[] = { "Îπ®Í∞ï", "Ï£ºÌô©", "ÎÖ∏Îûë", "Ï¥àÎ°ù", "ÌååÎûë", "ÎÇ®ÏÉâ", "Î≥¥Îùº" };
+  JComboBox<String> CbColor = new JComboBox<>(rainbow);
+  JList<String> ColList = new JList<>(rainbow);
+  JList<String> MulSelect = new JList<>(rainbow);
+  int LastSel = 10;
 
-	C_ComboBox() {
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(true);
+  C_ComboBox() {
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setVisible(true);
 
-		GridBagConstraints c = new GridBagConstraints();
-		GridBagLayout grid = new GridBagLayout();
-		setLayout(grid);
+    GridBagConstraints c = new GridBagConstraints();
+    GridBagLayout grid = new GridBagLayout();
+    setLayout(grid);
 
-		c.ipadx = 10;
-		c.ipady = 10;
-		JLabel txtComb = new JLabel("ƒﬁ∫∏ π⁄Ω∫");
-		c.gridx = 0;
-		c.gridy = 0;
-		grid.setConstraints(txtComb, c);
-		add(txtComb);
+    c.ipadx = 10;
+    c.ipady = 10;
+    JLabel txtComb = new JLabel("ÏΩ§Î≥¥ Î∞ïÏä§");
+    c.gridx = 0;
+    c.gridy = 0;
+    grid.setConstraints(txtComb, c);
+    add(txtComb);
 
-		c.gridx = 0;
-		c.gridy = 1;
-		grid.setConstraints(CbColor, c);
-		add(CbColor);
+    c.gridx = 0;
+    c.gridy = 1;
+    grid.setConstraints(CbColor, c);
+    add(CbColor);
 
-		JLabel txtList = new JLabel("∏ÆΩ∫∆Æ");
-		c.gridx = 1;
-		c.gridy = 0;
-		grid.setConstraints(txtList, c);
-		add(txtList);
+    JLabel txtList = new JLabel("Î¶¨Ïä§Ìä∏");
+    c.gridx = 1;
+    c.gridy = 0;
+    grid.setConstraints(txtList, c);
+    add(txtList);
 
-		c.gridx = 1;
-		c.gridy = 1;
-		grid.setConstraints(ColList, c);
-		add(ColList);
+    c.gridx = 1;
+    c.gridy = 1;
+    grid.setConstraints(ColList, c);
+    add(ColList);
 
-		JLabel txtMulti = new JLabel("∏÷∆º√º≈©");
-		c.gridx = 2;
-		c.gridy = 0;
-		grid.setConstraints(txtMulti, c);
-		add(txtMulti);
+    JLabel txtMulti = new JLabel("Î©ÄÌã∞Ï≤¥ÌÅ¨");
+    c.gridx = 2;
+    c.gridy = 0;
+    grid.setConstraints(txtMulti, c);
+    add(txtMulti);
 
-		c.gridx = 2;
-		c.gridy = 1;
-		grid.setConstraints(MulSelect, c);
-		add(MulSelect);
-		MulSelect.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+    c.gridx = 2;
+    c.gridy = 1;
+    grid.setConstraints(MulSelect, c);
+    add(MulSelect);
+    MulSelect.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-		CbColor.addActionListener(this);
-		ColList.addListSelectionListener(this);
+    CbColor.addActionListener(this);
+    ColList.addListSelectionListener(this);
 
-		pack();
-	}
+    pack();
+  }
 
-	public static void main(String[] args) {
-		new C_ComboBox();
-	}
+  public static void main(String[] args) {
+    new C_ComboBox();
+  }
 
-	@Override
-	public void valueChanged(ListSelectionEvent e) {
-		if (LastSel == ColList.getSelectedIndex())
-			return;
-		if (e.getSource().equals(ColList)) {
-			LastSel = ColList.getSelectedIndex();
-			CbColor.setSelectedIndex(LastSel);
-			int i, len;
-			len = MulSelect.getSelectedIndices().length;
-			int[] sel = MulSelect.getSelectedIndices();
-			for (i = 0; i < len; i++) {
-				if (sel[i] == LastSel) {
-					// delete
+  @Override
+  public void valueChanged(ListSelectionEvent e) {
+    if (LastSel == ColList.getSelectedIndex())
+      return;
+    if (e.getSource().equals(ColList)) {
+      LastSel = ColList.getSelectedIndex();
+      CbColor.setSelectedIndex(LastSel);
+      int i, len;
+      len = MulSelect.getSelectedIndices().length;
+      int[] sel = MulSelect.getSelectedIndices();
+      for (i = 0; i < len; i++) {
+        if (sel[i] == LastSel) {
+          // delete
 
-					switch (len) {
-					case 1:
-						MulSelect.setSelectedIndices(new int[0]);
-						break;
-					case 2:
-						int[] sel2 = new int[1];
-						if (i == 0)
-							sel2[0] = sel[1];
-						else
-							sel2[0] = sel[0];
-						MulSelect.setSelectedIndices(sel2);
-						break;
-					default:
-						int[] sel3 = new int[len - 1];
-						for (int j = 0; j < len - 1; j++) {
-							if (j >= i)
-								sel3[j] = sel[j + 1];
-							else
-								sel3[j] = sel[j];
-						}
-						MulSelect.setSelectedIndices(sel3);
-					}
-					return;
-				}
-			}
+          switch (len) {
+            case 1:
+              MulSelect.setSelectedIndices(new int[0]);
+              break;
+            case 2:
+              int[] sel2 = new int[1];
+              if (i == 0)
+                sel2[0] = sel[1];
+              else
+                sel2[0] = sel[0];
+              MulSelect.setSelectedIndices(sel2);
+              break;
+            default:
+              int[] sel3 = new int[len - 1];
+              for (int j = 0; j < len - 1; j++) {
+                if (j >= i)
+                  sel3[j] = sel[j + 1];
+                else
+                  sel3[j] = sel[j];
+              }
+              MulSelect.setSelectedIndices(sel3);
+          }
+          return;
+        }
+      }
 
-			// add
-			int[] sel2 = new int[len + 1];
-			for (int j = 0; j < len; j++)
-				sel2[j] = sel[j];
+      // add
+      int[] sel2 = new int[len + 1];
+      for (int j = 0; j < len; j++)
+        sel2[j] = sel[j];
 
-			sel2[len] = LastSel;
-			MulSelect.setSelectedIndices(sel2);
-		}
-	}
+      sel2[len] = LastSel;
+      MulSelect.setSelectedIndices(sel2);
+    }
+  }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		ColList.setSelectedIndex(CbColor.getSelectedIndex());
-	}
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    ColList.setSelectedIndex(CbColor.getSelectedIndex());
+  }
 }

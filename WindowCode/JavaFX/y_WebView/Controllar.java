@@ -72,9 +72,8 @@ public class Controllar implements Initializable {
 			history.go(-1);
 			address.setText(entries.get(history.getCurrentIndex()).getUrl());
 		} catch (Exception e) {
-			System.out.println("Ã¹ ÆäÀÌÁö ÀÔ´Ï´Ù : " + (history.getCurrentIndex() + 1));
+			System.out.println("ì²« í˜ì´ì§€ ì…ë‹ˆë‹¤ : " + (history.getCurrentIndex() + 1));
 		}
-
 	}
 
 	public void forward() {
@@ -84,7 +83,7 @@ public class Controllar implements Initializable {
 			history.go(1);
 			address.setText(entries.get(history.getCurrentIndex()).getUrl());
 		} catch (Exception e) {
-			System.out.println("¸¶Áö¸· ÆäÀÌÁö ÀÔ´Ï´Ù : " + (history.getCurrentIndex() + 1));
+			System.out.println("ë§ˆì§€ë§‰ í˜ì´ì§€ ì…ë‹ˆë‹¤ : " + (history.getCurrentIndex() + 1));
 		}
 	}
 

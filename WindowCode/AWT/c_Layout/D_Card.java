@@ -10,43 +10,43 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class D_Card extends Frame implements ActionListener {
-	Button b1 = new Button("1¹ø ¹öÆ°");
-	Button b2 = new Button("2¹ø ¹öÆ°");
-	Button b3 = new Button("3¹ø ¹öÆ°");
-	Button b4 = new Button("4¹ø ¹öÆ°");
-	Button b5 = new Button("5¹ø ¹öÆ°");
+  Button b1 = new Button("1ë²ˆ ë²„íŠ¼");
+  Button b2 = new Button("2ë²ˆ ë²„íŠ¼");
+  Button b3 = new Button("3ë²ˆ ë²„íŠ¼");
+  Button b4 = new Button("4ë²ˆ ë²„íŠ¼");
+  Button b5 = new Button("5ë²ˆ ë²„íŠ¼");
 
-	CardLayout card = new CardLayout();
+  CardLayout card = new CardLayout();
 
-	public D_Card() {
-		setLayout(card);
-		
-		add(b1);
-		add(b2);
-		add(b3);
-		add(b4);
-		add(b5);
+  public D_Card() {
+    setLayout(card);
+    
+    add(b1);
+    add(b2);
+    add(b3);
+    add(b4);
+    add(b5);
 
-		b1.addActionListener(this);
-		b2.addActionListener(this);
-		b3.addActionListener(this);
-		b4.addActionListener(this);
-		b5.addActionListener(this);
+    b1.addActionListener(this);
+    b2.addActionListener(this);
+    b3.addActionListener(this);
+    b4.addActionListener(this);
+    b5.addActionListener(this);
 
-		addWindowListener(new WindowExit(this));
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new D_Card();
-	}
+  public static void main(String[] args) {
+    new D_Card();
+  }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		card.next(this);
-	}
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    card.next(this);
+  }
 }
 
-// ½Ç½À°úÁ¦ : ¹öÆ°À» Ãß°¡ÇØ º¾´Ï´Ù. ("6¹ø ¹öÆ°")
+// ì‹¤ìŠµê³¼ì œ : ë²„íŠ¼ì„ ì¶”ê°€í•´ ë´…ë‹ˆë‹¤. ("6ë²ˆ ë²„íŠ¼")

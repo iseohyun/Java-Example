@@ -12,54 +12,54 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class F_TextArea extends Frame implements TextListener, KeyListener {
-	TextField tf = new TextField();
-	TextArea ta = new TextArea();
+  TextField tf = new TextField();
+  TextArea ta = new TextArea();
 
-	public F_TextArea() {
-		ta.getScrollbarVisibility();
-		add("Center", ta);
-		add("South", tf);
+  public F_TextArea() {
+    ta.getScrollbarVisibility();
+    add("Center", ta);
+    add("South", tf);
 
-		tf.addTextListener(this);
-		tf.addKeyListener(this);
+    tf.addTextListener(this);
+    tf.addKeyListener(this);
 
-		addWindowListener(new WindowExit(this));
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new F_TextArea();
-	}
+  public static void main(String[] args) {
+    new F_TextArea();
+  }
 
-	@Override
-	public void keyPressed(KeyEvent e) {
-		switch (e.getKeyChar()) {
-		case KeyEvent.VK_BACK_SPACE:
-			tf.setText("");
-			break;
-		case KeyEvent.VK_ENTER:
-			tf.setText("");
-			ta.setText(ta.getText() + "\n");
-			break;
-		default:
-			ta.setText(ta.getText() + e.getKeyChar());
-		}
-	}
+  @Override
+  public void keyPressed(KeyEvent e) {
+    switch (e.getKeyChar()) {
+    case KeyEvent.VK_BACK_SPACE:
+      tf.setText("");
+      break;
+    case KeyEvent.VK_ENTER:
+      tf.setText("");
+      ta.setText(ta.getText() + "\n");
+      break;
+    default:
+      ta.setText(ta.getText() + e.getKeyChar());
+    }
+  }
 
-	@Override
-	public void keyTyped(KeyEvent e) {
-	}
+  @Override
+  public void keyTyped(KeyEvent e) {
+  }
 
-	@Override
-	public void keyReleased(KeyEvent e) {
-	}
+  @Override
+  public void keyReleased(KeyEvent e) {
+  }
 
-	@Override
-	public void textValueChanged(TextEvent e) {
-	}
+  @Override
+  public void textValueChanged(TextEvent e) {
+  }
 }
 
-// ½Ç½À°úÁ¦ : ÇöÀç´Â Å°º¸µå¸¦ ´©¸£¸é ¹Ù·Î ¾÷·Îµå µÇµµ·Ï µÇ¾î ÀÖ½À´Ï´Ù.
-//		¿£ÅÍ¸¦ ´©¸¦ ¶§ ÇÑ²¨¹ø¿¡ ¾÷µ¥ÀÌÆ® µÇµµ·Ï ±â´ÉÀ» ¼öÁ¤ÇØ º¾´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : í˜„ì¬ëŠ” í‚¤ë³´ë“œë¥¼ ëˆ„ë¥´ë©´ ë°”ë¡œ ì—…ë¡œë“œ ë˜ë„ë¡ ë˜ì–´ ìˆìŠµë‹ˆë‹¤.
+//		ì—”í„°ë¥¼ ëˆ„ë¥¼ ë•Œ í•œêº¼ë²ˆì— ì—…ë°ì´íŠ¸ ë˜ë„ë¡ ê¸°ëŠ¥ì„ ìˆ˜ì •í•´ ë´…ë‹ˆë‹¤.

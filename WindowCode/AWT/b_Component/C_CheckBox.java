@@ -11,49 +11,49 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class C_CheckBox extends Frame implements ItemListener {
-	Checkbox c1 = new Checkbox("µş±â");
-	Checkbox c2 = new Checkbox("»ç°ú");
-	Checkbox c3 = new Checkbox("¹è");
-	CheckboxGroup g1 = new CheckboxGroup();
-	Checkbox r1 = new Checkbox("³²¼º", g1, true);
-	Checkbox r2 = new Checkbox("¿©¼º", g1, false);
+  Checkbox c1 = new Checkbox("ë”¸ê¸°");
+  Checkbox c2 = new Checkbox("ì‚¬ê³¼");
+  Checkbox c3 = new Checkbox("ë°°");
+  CheckboxGroup g1 = new CheckboxGroup();
+  Checkbox r1 = new Checkbox("ë‚¨ì„±", g1, true);
+  Checkbox r2 = new Checkbox("ì—¬ì„±", g1, false);
 
-	public C_CheckBox() {
-		setLayout(new FlowLayout());
+  public C_CheckBox() {
+    setLayout(new FlowLayout());
 
-		add(c1);
-		add(c2);
-		add(c3);
-		add(r1);
-		add(r2);
+    add(c1);
+    add(c2);
+    add(c3);
+    add(r1);
+    add(r2);
 
-		c1.addItemListener(this);
-		c2.addItemListener(this);
-		c3.addItemListener(this);
-		r1.addItemListener(this);
-		r2.addItemListener(this);
+    c1.addItemListener(this);
+    c2.addItemListener(this);
+    c3.addItemListener(this);
+    r1.addItemListener(this);
+    r2.addItemListener(this);
 
-		addWindowListener(new WindowExit(this));
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new C_CheckBox();
-	}
+  public static void main(String[] args) {
+    new C_CheckBox();
+  }
 
-	@Override
-	public void itemStateChanged(ItemEvent e) {
-		Checkbox cb = (Checkbox) e.getSource();
-		if (cb.getState()) {
-			System.out.println(e.getItem() + "ÀÌ(°¡) ¼±ÅÃµÊ");
-		} else {
-			System.out.println(e.getItem() + "ÀÌ(°¡) ÇØÁ¦µÊ");
-		}
-	}
+  @Override
+  public void itemStateChanged(ItemEvent e) {
+    Checkbox cb = (Checkbox) e.getSource();
+    if (cb.getState()) {
+      System.out.println(e.getItem() + "ì´(ê°€) ì„ íƒë¨");
+    } else {
+      System.out.println(e.getItem() + "ì´(ê°€) í•´ì œë¨");
+    }
+  }
 }
 
-// ½Ç½À°úÁ¦ : »õ·Î¿î Ã¼Å©¹Ú½º¸¦ Ãß°¡ÇÕ´Ï´Ù. Ãß°¡ÇÑ Ã¼Å©¹Ú½º´Â "±Ö"ÀÔ´Ï´Ù.
-// ½Ç½À°úÁ¦ : »õ·Î¿î ¶óµğ¿À ¹Ú½º¸¦ Ãß°¡ÇÕ´Ï´Ù. Ãß°¡ÇÑ ¶óµğ¿À ¹Ú½º´Â "Áß¼º"ÀÔ´Ï´Ù.
-// ½Ç½À°úÁ¦ : »õ·Î¿î ¶óµğ¿À ¹Ú½º ±×·ìÀ» Ãß°¡ÇÕ´Ï´Ù. Ãß°¡ÇÑ ±×·ìÀº "°¡À§", "¹ÙÀ§", "º¸"¸¦ °®½À´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : ìƒˆë¡œìš´ ì²´í¬ë°•ìŠ¤ë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤. ì¶”ê°€í•œ ì²´í¬ë°•ìŠ¤ëŠ” "ê·¤"ì…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ : ìƒˆë¡œìš´ ë¼ë””ì˜¤ ë°•ìŠ¤ë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤. ì¶”ê°€í•œ ë¼ë””ì˜¤ ë°•ìŠ¤ëŠ” "ì¤‘ì„±"ì…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ : ìƒˆë¡œìš´ ë¼ë””ì˜¤ ë°•ìŠ¤ ê·¸ë£¹ì„ ì¶”ê°€í•©ë‹ˆë‹¤. ì¶”ê°€í•œ ê·¸ë£¹ì€ "ê°€ìœ„", "ë°”ìœ„", "ë³´"ë¥¼ ê°–ìŠµë‹ˆë‹¤.

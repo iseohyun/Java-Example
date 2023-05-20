@@ -13,7 +13,8 @@
 		<ImageView fx:id="myImage" fitHeight="200.0"
 			fitWidth="170.0" layoutX="215.0" layoutY="113.0">
 			<image>
-				<Image url="@../../bin/maple.jpg" />
+				<!--<Image url="@../../bin/maple.jpg" />-->
+				<Image url="@../../source/maple.jpg" />
 			</image>
 		</ImageView>
 	</children>

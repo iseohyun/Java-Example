@@ -12,60 +12,60 @@ import javax.swing.tree.DefaultMutableTreeNode;
 
 @SuppressWarnings("serial")
 public class E_Tree extends JFrame implements TreeSelectionListener {
-	JPanel pn = new JPanel();
-	JTree tr;
-	JTextField path = new JTextField();
+  JPanel pn = new JPanel();
+  JTree tr;
+  JTextField path = new JTextField();
 
-	E_Tree() {
-		setSize(300, 400);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(true);
+  E_Tree() {
+    setSize(300, 400);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setVisible(true);
 
-		setContentPane(pn);
-		setLayout(new BorderLayout());
-		
-		DefaultMutableTreeNode style = new DefaultMutableTreeNode("½ºÅ¸ÀÏ");
-		
-		DefaultMutableTreeNode color = new DefaultMutableTreeNode("»ö»ó");
-		DefaultMutableTreeNode font = new DefaultMutableTreeNode("ÆùÆ®");
-		style.add(color);
-		style.add(font);
+    setContentPane(pn);
+    setLayout(new BorderLayout());
+    
+    DefaultMutableTreeNode style = new DefaultMutableTreeNode("ìŠ¤íƒ€ì¼");
+    
+    DefaultMutableTreeNode color = new DefaultMutableTreeNode("ìƒ‰ìƒ");
+    DefaultMutableTreeNode font = new DefaultMutableTreeNode("í°íŠ¸");
+    style.add(color);
+    style.add(font);
 
-		DefaultMutableTreeNode black = new DefaultMutableTreeNode("°ËÁ¤");
-		DefaultMutableTreeNode white = new DefaultMutableTreeNode("ÇÏ¾ç");
-		DefaultMutableTreeNode blue = new DefaultMutableTreeNode("ÆÄ¶û");
-		DefaultMutableTreeNode yellow = new DefaultMutableTreeNode("³ë¶û");
-		color.add(black);
-		color.add(white);
-		color.add(blue);
-		color.add(yellow);
-		
-		DefaultMutableTreeNode Bold = new DefaultMutableTreeNode("±½°Ô");
-		DefaultMutableTreeNode underline = new DefaultMutableTreeNode("¹ØÁÙ");
-		DefaultMutableTreeNode italics = new DefaultMutableTreeNode("ÀÌÅ×¸¯");
-		font.add(Bold);
-		font.add(underline);
-		font.add(italics);
-		
-		// size¸¦ ³Ö¾îº¸ÀÚ. 10, 15, 20
-		tr = new JTree(style);
-		
-		pn.add(tr);
-		tr.setBounds(0, 0, 300, 350);
-		tr.addTreeSelectionListener(this);
+    DefaultMutableTreeNode black = new DefaultMutableTreeNode("ê²€ì •");
+    DefaultMutableTreeNode white = new DefaultMutableTreeNode("í•˜ì–‘");
+    DefaultMutableTreeNode blue = new DefaultMutableTreeNode("íŒŒë‘");
+    DefaultMutableTreeNode yellow = new DefaultMutableTreeNode("ë…¸ë‘");
+    color.add(black);
+    color.add(white);
+    color.add(blue);
+    color.add(yellow);
+    
+    DefaultMutableTreeNode Bold = new DefaultMutableTreeNode("êµµê²Œ");
+    DefaultMutableTreeNode underline = new DefaultMutableTreeNode("ë°‘ì¤„");
+    DefaultMutableTreeNode italics = new DefaultMutableTreeNode("ì´í…Œë¦­");
+    font.add(Bold);
+    font.add(underline);
+    font.add(italics);
+    
+    // sizeë¥¼ ë„£ì–´ë³´ì. 10, 15, 20
+    tr = new JTree(style);
+    
+    pn.add(tr);
+    tr.setBounds(0, 0, 300, 350);
+    tr.addTreeSelectionListener(this);
 
-		pn.add(path, "South");
-		pn.setEnabled(false);
-	}
+    pn.add(path, "South");
+    pn.setEnabled(false);
+  }
 
-	public static void main(String[] args) {
-		new E_Tree();
-	}
+  public static void main(String[] args) {
+    new E_Tree();
+  }
 
-	@Override
-	public void valueChanged(TreeSelectionEvent e) {
-		// TODO Auto-generated method stub
-		path.setText(e.getPath().toString());
-		System.out.println(e.getPath().toString());
-	}
+  @Override
+  public void valueChanged(TreeSelectionEvent e) {
+    // TODO Auto-generated method stub
+    path.setText(e.getPath().toString());
+    System.out.println(e.getPath().toString());
+  }
 }

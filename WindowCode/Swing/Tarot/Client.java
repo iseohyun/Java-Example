@@ -6,67 +6,67 @@ import java.util.Random;
  * 
  * @author Seohyun Jung
  *
- *	Å¸·ÎÄ«µå ¿¹Á¦ : 
+ *         íƒ€ë¡œì¹´ë“œ ì˜ˆì œ :
  *
  */
 public class Client {
-	public static void main(String[] args) {
-		Random r = new Random();
-		Tarot myTarot = SetBySeed(r.nextInt());
-		
-		for(Time t: Time.values()) {
-			switch(t) {
-			case Past:
-				System.out.println("\n= °ú°Å ================");
-				break;
-			case Current:
-				System.out.println("\n= ÇöÀç ================");
-				break;
-			case Future:
-				System.out.println("\n= ¹Ì·¡ ================");
-				break;
-			}
-			System.out.print(myTarot.getString(t, InfoType.Name));
-			
-			if(myTarot.getCard(t).dir) {
-				System.out.print("(Á¤À§Ä¡) ");
-			}else {
-				System.out.print("(¿ªÀ§Ä¡) ");
-			}
-			
-			System.out.println(myTarot.getString(t, InfoType.Represent));
-			System.out.println(myTarot.getString(t, InfoType.Image));
-			
-			System.out.print("¾ÖÁ¤¿î : ");
-			System.out.println(myTarot.getString(t, InfoType.Love));
-		}
-	}
-	
-	static Tarot SetBySeed(int Seed) {
-		int a1, a2, a3;
-		boolean b1, b2, b3;
-		
-		if(Seed<0)
-			Seed *= -1;
-		
-		System.out.printf("Seed : %08X", Seed);
-			
-		a1 = Seed%22;
-		Seed -= a1;
-		Seed /= 22;
-		a2 = Seed%21;
-		Seed -= a2;
-		Seed /= 21;
-		a3 = Seed%20;
-		Seed -= a3;
-		Seed /= 20;
-		b1 = (Seed%2==0)?false:true;
-		Seed >>= 1;
-		b2 = (Seed%2==0)?false:true;
-		Seed >>= 1;
-		b3 = (Seed%2==0)?false:true;
-		
-		Tarot t = new Tarot(a1, b1, a2, b2, a3, b3);
-		return t;
-	}
+  public static void main(String[] args) {
+    Random r = new Random();
+    Tarot myTarot = SetBySeed(r.nextInt());
+
+    for (Time t : Time.values()) {
+      switch (t) {
+        case Past:
+          System.out.println("\n= ê³¼ê±° ================");
+          break;
+        case Current:
+          System.out.println("\n= í˜„ìž¬ ================");
+          break;
+        case Future:
+          System.out.println("\n= ë¯¸ëž˜ ================");
+          break;
+      }
+      System.out.print(myTarot.getString(t, InfoType.Name));
+
+      if (myTarot.getCard(t).dir) {
+        System.out.print("(ì •ìœ„ì¹˜) ");
+      } else {
+        System.out.print("(ì—­ìœ„ì¹˜) ");
+      }
+
+      System.out.println(myTarot.getString(t, InfoType.Represent));
+      System.out.println(myTarot.getString(t, InfoType.Image));
+
+      System.out.print("ì• ì •ìš´ : ");
+      System.out.println(myTarot.getString(t, InfoType.Love));
+    }
+  }
+
+  static Tarot SetBySeed(int Seed) {
+    int a1, a2, a3;
+    boolean b1, b2, b3;
+
+    if (Seed < 0)
+      Seed *= -1;
+
+    System.out.printf("Seed : %08X", Seed);
+
+    a1 = Seed % 22;
+    Seed -= a1;
+    Seed /= 22;
+    a2 = Seed % 21;
+    Seed -= a2;
+    Seed /= 21;
+    a3 = Seed % 20;
+    Seed -= a3;
+    Seed /= 20;
+    b1 = (Seed % 2 == 0) ? false : true;
+    Seed >>= 1;
+    b2 = (Seed % 2 == 0) ? false : true;
+    Seed >>= 1;
+    b3 = (Seed % 2 == 0) ? false : true;
+
+    Tarot t = new Tarot(a1, b1, a2, b2, a3, b3);
+    return t;
+  }
 }

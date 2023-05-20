@@ -14,104 +14,104 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class TrafficLight extends Frame implements ItemListener{
-	Panel p1 = new Panel();
-	Panel p2 = new Panel();
-	Panel p3 = new Panel();	
-	
-	Checkbox chkRed = new Checkbox("»¡°­");
-	Checkbox chkYellow = new Checkbox("³ë¶û");
-	Checkbox chkLeft = new Checkbox("ÁÂÈ¸Àü");
-	Checkbox chkGreen = new Checkbox("ÃÊ·Ï");
-	
-	Label lab1 = new Label("ÁÂÈ¸Àü ½ÅÈ£°¡ ÀÖ³ª¿ä?");
-	CheckboxGroup g1 = new CheckboxGroup();
-	Checkbox rdoThree = new Checkbox("¾ø¾î¿ä", g1, false);
-	Checkbox rdoFour = new Checkbox("ÀÖ¾î¿ä", g1, true);
-	
-	Label Red = new Label();
-	Label Yellow = new Label();
-	Label Left = new Label();
-	Label Green = new Label();
-	
-	public TrafficLight() {
-		setLayout(new GridLayout(3,1));
-		add(p1);
-		add(p2);
-		add(p3);
+  Panel p1 = new Panel();
+  Panel p2 = new Panel();
+  Panel p3 = new Panel();	
+  
+  Checkbox chkRed = new Checkbox("ë¹¨ê°•");
+  Checkbox chkYellow = new Checkbox("ë…¸ë‘");
+  Checkbox chkLeft = new Checkbox("ì¢ŒíšŒì „");
+  Checkbox chkGreen = new Checkbox("ì´ˆë¡");
+  
+  Label lab1 = new Label("ì¢ŒíšŒì „ ì‹ í˜¸ê°€ ìˆë‚˜ìš”?");
+  CheckboxGroup g1 = new CheckboxGroup();
+  Checkbox rdoThree = new Checkbox("ì—†ì–´ìš”", g1, false);
+  Checkbox rdoFour = new Checkbox("ìˆì–´ìš”", g1, true);
+  
+  Label Red = new Label();
+  Label Yellow = new Label();
+  Label Left = new Label();
+  Label Green = new Label();
+  
+  public TrafficLight() {
+    setLayout(new GridLayout(3,1));
+    add(p1);
+    add(p2);
+    add(p3);
 
-		p1.add(lab1);
-		p1.add(rdoThree);
-		p1.add(rdoFour);
-		
-		p2.add(chkRed);
-		p2.add(chkGreen);
-		p2.add(chkLeft);
-		p2.add(chkYellow);
+    p1.add(lab1);
+    p1.add(rdoThree);
+    p1.add(rdoFour);
+    
+    p2.add(chkRed);
+    p2.add(chkGreen);
+    p2.add(chkLeft);
+    p2.add(chkYellow);
 
-		p3.setLayout(new GridLayout(1,4));
-		Red.setBackground(Color.LIGHT_GRAY);
-		Left.setBackground(Color.LIGHT_GRAY);
-		p3.add(Red);
-		p3.add(Green);
-		p3.add(Left);
-		p3.add(Yellow);
-				
-		chkRed.addItemListener(this);
-		chkYellow.addItemListener(this);
-		chkGreen.addItemListener(this);
-		chkLeft.addItemListener(this);
-		
-		rdoFour.addItemListener(this);
-		rdoThree.addItemListener(this);
-		
-		addWindowListener(new WindowExit(this));
-		
-		pack();
-		setVisible(true);
-	}
-	
-	void rdoThree() {
-		if(rdoThree.getState()) {
-			Left.setEnabled(true);
-		}else {
-		}
-	}
-	
-	@Override
-	public void itemStateChanged(ItemEvent e) {
-		if(e.getSource().equals(rdoFour)) {
-			chkLeft.setVisible(true);
-		}else if(e.getSource().equals(rdoThree)) {
-			chkLeft.setVisible(false);
-			Left.setBackground(Color.LIGHT_GRAY);
-		}
-		if(chkRed.getState()) {
-			Red.setBackground(Color.RED);
-		}else {
-			Red.setBackground(Color.LIGHT_GRAY);
-		}
-		if(chkYellow.getState()) {
-			Yellow.setBackground(Color.YELLOW);
-		}else {
-			Yellow.setBackground(null);
-		}
-		if(chkGreen.getState()) {
-			Green.setBackground(Color.GREEN);
-		}else {
-			Green.setBackground(null);
-		}
-		if(chkLeft.getState() && rdoFour.getState()) {
-			Left.setText("<-");
-			Left.setBackground(Color.PINK);
-		}else {
-			rdoThree();
-			Left.setText("");
-			Left.setBackground(Color.LIGHT_GRAY);
-		}
-	}
-	public static void main(String[] args) {
-		new TrafficLight();
-	}
+    p3.setLayout(new GridLayout(1,4));
+    Red.setBackground(Color.LIGHT_GRAY);
+    Left.setBackground(Color.LIGHT_GRAY);
+    p3.add(Red);
+    p3.add(Green);
+    p3.add(Left);
+    p3.add(Yellow);
+        
+    chkRed.addItemListener(this);
+    chkYellow.addItemListener(this);
+    chkGreen.addItemListener(this);
+    chkLeft.addItemListener(this);
+    
+    rdoFour.addItemListener(this);
+    rdoThree.addItemListener(this);
+    
+    addWindowListener(new WindowExit(this));
+    
+    pack();
+    setVisible(true);
+  }
+  
+  void rdoThree() {
+    if(rdoThree.getState()) {
+      Left.setEnabled(true);
+    }else {
+    }
+  }
+  
+  @Override
+  public void itemStateChanged(ItemEvent e) {
+    if(e.getSource().equals(rdoFour)) {
+      chkLeft.setVisible(true);
+    }else if(e.getSource().equals(rdoThree)) {
+      chkLeft.setVisible(false);
+      Left.setBackground(Color.LIGHT_GRAY);
+    }
+    if(chkRed.getState()) {
+      Red.setBackground(Color.RED);
+    }else {
+      Red.setBackground(Color.LIGHT_GRAY);
+    }
+    if(chkYellow.getState()) {
+      Yellow.setBackground(Color.YELLOW);
+    }else {
+      Yellow.setBackground(null);
+    }
+    if(chkGreen.getState()) {
+      Green.setBackground(Color.GREEN);
+    }else {
+      Green.setBackground(null);
+    }
+    if(chkLeft.getState() && rdoFour.getState()) {
+      Left.setText("<-");
+      Left.setBackground(Color.PINK);
+    }else {
+      rdoThree();
+      Left.setText("");
+      Left.setBackground(Color.LIGHT_GRAY);
+    }
+  }
+  public static void main(String[] args) {
+    new TrafficLight();
+  }
 }
 
-// »¡°£ºÒÀÌ µé¾î¿À¸é, ÆÄ¶õºÒ°ú ÁÂÈ¸Àü ½ÅÈ£°¡ ¸ğµÎ ²¨Áöµµ·Ï ±â´ÉÀ» Ãß°¡ÇØ º¾´Ï´Ù.
+// ë¹¨ê°„ë¶ˆì´ ë“¤ì–´ì˜¤ë©´, íŒŒë€ë¶ˆê³¼ ì¢ŒíšŒì „ ì‹ í˜¸ê°€ ëª¨ë‘ êº¼ì§€ë„ë¡ ê¸°ëŠ¥ì„ ì¶”ê°€í•´ ë´…ë‹ˆë‹¤.

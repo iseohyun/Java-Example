@@ -1,29 +1,29 @@
 package d_Math;
 
 public class Quiz {
-	public static void main(String[] args) {
-		double b = 4;
-		double c = 6;
-		double h;
-		double degree = 50;
+    public static void main(String[] args) {
+        double b = 4;
+        double c = 6;
+        double h;
+        double degree = 50;
 
-		// Quiz: getH() ÇÔ¼ö ÀÇ·Ú.
-		// »ï°¢Çü ABCÀÇ °¢ º¯À» a, b, c¶ó°í ÇÏÀÚ.
-		// °¢ A´Â º¯ b¿Í c»çÀÌ¿¡ ÀÖ´Â °¢ÀÌ¶ó°í ÇÒ ¶§,
-		// °¢A, º¯b, º¯c¸¦ ÀÌ¿ëÇÏ¿©, ³ôÀÌh(¼±ºĞ BC¿¡¼­ Á¡A±îÁöÀÇ °Å¸®)¸¦ ±¸ÇÏ´Â ÇÔ¼ö¸¦ ¸¸µå½Ã¿À.
-		h = getH(b, c, degree);
+        // Quiz: getH() í•¨ìˆ˜ ì˜ë¢°.
+        // ì‚¼ê°í˜• ABCì˜ ê° ë³€ì„ a, b, cë¼ê³  í•˜ì.
+        // ê° AëŠ” ë³€ bì™€ cì‚¬ì´ì— ìˆëŠ” ê°ì´ë¼ê³  í•  ë•Œ,
+        // ê°A, ë³€b, ë³€cë¥¼ ì´ìš©í•˜ì—¬, ë†’ì´h(ì„ ë¶„ BCì—ì„œ ì Aê¹Œì§€ì˜ ê±°ë¦¬)ë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“œì‹œì˜¤.
+        h = getH(b, c, degree);
 
-		System.out.println("³ôÀÌ : " + h);
-	}
+        System.out.println("ë†’ì´ : " + h);
+    }
 
-	static double getH(double b, double c, double degree) {
-		// radian = Math.sin(40.0/180.0 * Math.PI); // (40µµ= 40/180PIÀÌ´Ù.)
-		// ÄÚ»çÀÎ ¹ıÄ¢ a^2 = b^2 + c^2 + bccosA
-		// S = 1/2*sinA*bc = 1/2 ah
+    static double getH(double b, double c, double degree) {
+        // radian = Math.sin(40.0/180.0 * Math.PI); // (40ë„= 40/180PIì´ë‹¤.)
+        // ì½”ì‚¬ì¸ ë²•ì¹™ a^2 = b^2 + c^2 + bccosA
+        // S = 1/2*sinA*bc = 1/2 ah
 
-		double ret = 0;
-		// TODO : insert your code here...
+        double ret = 0;
+        // TODO : insert your code here...
 
-		return ret;
-	}
+        return ret;
+    }
 }

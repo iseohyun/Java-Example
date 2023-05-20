@@ -1,0 +1,1439 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "G2_isPresent",
+            "request": "launch",
+            "mainClass": "k_Stream.G2_isPresent",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F7_Partition",
+            "request": "launch",
+            "mainClass": "k_Stream.F7_Partition",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F6_Collect",
+            "request": "launch",
+            "mainClass": "k_Stream.F6_Collect",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F5_SumAverage",
+            "request": "launch",
+            "mainClass": "k_Stream.F5_SumAverage",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F4_MinMax",
+            "request": "launch",
+            "mainClass": "k_Stream.F4_MinMax",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F3_Match",
+            "request": "launch",
+            "mainClass": "k_Stream.F3_Match",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F1_Terminal",
+            "request": "launch",
+            "mainClass": "k_Stream.F1_Terminal",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "G1_Optional",
+            "request": "launch",
+            "mainClass": "k_Stream.G1_Optional",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F_Terminal",
+            "request": "launch",
+            "mainClass": "k_Stream.F_Terminal",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F2_Find",
+            "request": "launch",
+            "mainClass": "k_Stream.F2_Find",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E_Intermediate_Filter",
+            "request": "launch",
+            "mainClass": "k_Stream.E_Intermediate_Filter",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E5_Peek",
+            "request": "launch",
+            "mainClass": "k_Stream.E5_Peek",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E4_Sort",
+            "request": "launch",
+            "mainClass": "k_Stream.E4_Sort",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E3_limit",
+            "request": "launch",
+            "mainClass": "k_Stream.E3_limit",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E2_Convert",
+            "request": "launch",
+            "mainClass": "k_Stream.E2_Convert",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_StreamTypes",
+            "request": "launch",
+            "mainClass": "k_Stream.D_StreamTypes",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_StreamOf",
+            "request": "launch",
+            "mainClass": "k_Stream.C_StreamOf",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Stream",
+            "request": "launch",
+            "mainClass": "k_Stream.A_Stream",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Array",
+            "request": "launch",
+            "mainClass": "k_Stream.B_Array",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D2_ThreadClient",
+            "request": "launch",
+            "mainClass": "i_Network.D2_ThreadClient",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D1_ThreadServer",
+            "request": "launch",
+            "mainClass": "i_Network.D1_ThreadServer",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_Client",
+            "request": "launch",
+            "mainClass": "i_Network.C2_Client",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C1_Server",
+            "request": "launch",
+            "mainClass": "i_Network.C1_Server",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B4_Https",
+            "request": "launch",
+            "mainClass": "i_Network.B4_Https",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B1_Socket",
+            "request": "launch",
+            "mainClass": "i_Network.B1_Socket",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B3_Http",
+            "request": "launch",
+            "mainClass": "i_Network.B3_Http",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B2_Socket_Info",
+            "request": "launch",
+            "mainClass": "i_Network.B2_Socket_Info",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_DNS",
+            "request": "launch",
+            "mainClass": "i_Network.A_DNS",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Quiz",
+            "request": "launch",
+            "mainClass": "h_FileIO.C_Quiz",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_MakeJavaFile",
+            "request": "launch",
+            "mainClass": "h_FileIO.B_MakeJavaFile",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_FileIO",
+            "request": "launch",
+            "mainClass": "h_FileIO.A1_FileIO",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_FileIO",
+            "request": "launch",
+            "mainClass": "h_FileIO.A_FileIO",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A2_HowToGetPath",
+            "request": "launch",
+            "mainClass": "h_FileIO.A2_HowToGetPath",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E_interrupted",
+            "request": "launch",
+            "mainClass": "g_Thread.E_interrupted",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_Synchonize",
+            "request": "launch",
+            "mainClass": "g_Thread.D_Synchonize",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E_suspend",
+            "request": "launch",
+            "mainClass": "g_Thread.E_suspend",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_sync",
+            "request": "launch",
+            "mainClass": "g_Thread.D_sync",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_status",
+            "request": "launch",
+            "mainClass": "g_Thread.D_status",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Multi",
+            "request": "launch",
+            "mainClass": "g_Thread.C_Multi",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Priority",
+            "request": "launch",
+            "mainClass": "g_Thread.B_Priority",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Thread",
+            "request": "launch",
+            "mainClass": "g_Thread.A_Thread",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "H2_Privious",
+            "request": "launch",
+            "mainClass": "f_Collection.H2_Privious",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "H1_Iterator",
+            "request": "launch",
+            "mainClass": "f_Collection.H1_Iterator",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "G3_SearchByValue",
+            "request": "launch",
+            "mainClass": "f_Collection.G3_SearchByValue",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "G1_Map",
+            "request": "launch",
+            "mainClass": "f_Collection.G1_Map",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "G2_ReverseExam",
+            "request": "launch",
+            "mainClass": "f_Collection.G2_ReverseExam",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F3_Tree_decending",
+            "request": "launch",
+            "mainClass": "f_Collection.F3_Tree_decending",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F2_Tree",
+            "request": "launch",
+            "mainClass": "f_Collection.F2_Tree",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F1_Tree_algorithm",
+            "request": "launch",
+            "mainClass": "f_Collection.F1_Tree_algorithm",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E2_WhatIsHash",
+            "request": "launch",
+            "mainClass": "f_Collection.E2_WhatIsHash",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E1_Hash",
+            "request": "launch",
+            "mainClass": "f_Collection.E1_Hash",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_Queue",
+            "request": "launch",
+            "mainClass": "f_Collection.D_Queue",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Stack",
+            "request": "launch",
+            "mainClass": "f_Collection.C_Stack",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A3_print",
+            "request": "launch",
+            "mainClass": "f_Collection.A3_print",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A2_Sort",
+            "request": "launch",
+            "mainClass": "f_Collection.A2_Sort",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_ArrayList",
+            "request": "launch",
+            "mainClass": "f_Collection.A1_ArrayList",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Time",
+            "request": "launch",
+            "mainClass": "e_Time.A_Time",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C3_Quiz10000Days",
+            "request": "launch",
+            "mainClass": "e_Time.C3_Quiz10000Days",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_Quiz100DayAfter",
+            "request": "launch",
+            "mainClass": "e_Time.C2_Quiz100DayAfter",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C1_HowManyDays",
+            "request": "launch",
+            "mainClass": "e_Time.C1_HowManyDays",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Compare",
+            "request": "launch",
+            "mainClass": "e_Time.B_Compare",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "Quiz",
+            "request": "launch",
+            "mainClass": "d_Math.Quiz",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Random",
+            "request": "launch",
+            "mainClass": "d_Math.C_Random",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Examples",
+            "request": "launch",
+            "mainClass": "d_Math.B_Examples",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Sqrt",
+            "request": "launch",
+            "mainClass": "d_Math.A_Sqrt",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_TextToInt",
+            "request": "launch",
+            "mainClass": "c_Boxing.D_TextToInt",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Compare",
+            "request": "launch",
+            "mainClass": "c_Boxing.C_Compare",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Unboxing",
+            "request": "launch",
+            "mainClass": "c_Boxing.B_Unboxing",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Boxing",
+            "request": "launch",
+            "mainClass": "c_Boxing.A_Boxing",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E3_Delete",
+            "request": "launch",
+            "mainClass": "b_String.E3_Delete",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E2_Capacity",
+            "request": "launch",
+            "mainClass": "b_String.E2_Capacity",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E1_Buffer",
+            "request": "launch",
+            "mainClass": "b_String.E1_Buffer",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_IndexOf",
+            "request": "launch",
+            "mainClass": "b_String.D_IndexOf",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Concat",
+            "request": "launch",
+            "mainClass": "b_String.C_Concat",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Case",
+            "request": "launch",
+            "mainClass": "b_String.B_Case",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A3_Hangul",
+            "request": "launch",
+            "mainClass": "b_String.A3_Hangul",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A2_Compare",
+            "request": "launch",
+            "mainClass": "b_String.A2_Compare",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_CompareNoStr",
+            "request": "launch",
+            "mainClass": "b_String.A1_CompareNoStr",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E_hashcode",
+            "request": "launch",
+            "mainClass": "a2_Array.E_hashcode",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_searchSort",
+            "request": "launch",
+            "mainClass": "a2_Array.D_searchSort",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_compare",
+            "request": "launch",
+            "mainClass": "a2_Array.C_compare",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B2_subArray",
+            "request": "launch",
+            "mainClass": "a2_Array.B2_subArray",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B1_Set",
+            "request": "launch",
+            "mainClass": "a2_Array.B1_Set",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Clone",
+            "request": "launch",
+            "mainClass": "a1_Object.C_Clone",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Equals",
+            "request": "launch",
+            "mainClass": "a1_Object.B_Equals",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Object",
+            "request": "launch",
+            "mainClass": "a1_Object.A_Object",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Annotation",
+            "request": "launch",
+            "mainClass": "c_Annotation.A_Annotation",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_new",
+            "request": "launch",
+            "mainClass": "b_Lambda.C2_new",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C1_FruitExample",
+            "request": "launch",
+            "mainClass": "b_Lambda.C1_FruitExample",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B4",
+            "request": "launch",
+            "mainClass": "b_Lambda.B4",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B3",
+            "request": "launch",
+            "mainClass": "b_Lambda.B3",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B2",
+            "request": "launch",
+            "mainClass": "b_Lambda.B2",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B1_Reference",
+            "request": "launch",
+            "mainClass": "b_Lambda.B1_Reference",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A3_2_parameter",
+            "request": "launch",
+            "mainClass": "b_Lambda.A3_2_parameter",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_Lambda",
+            "request": "launch",
+            "mainClass": "b_Lambda.A1_Lambda",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_WildCard",
+            "request": "launch",
+            "mainClass": "a_Generic.D_WildCard",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Extends",
+            "request": "launch",
+            "mainClass": "a_Generic.C_Extends",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B2_withClass",
+            "request": "launch",
+            "mainClass": "a_Generic.B2_withClass",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B1_inClass",
+            "request": "launch",
+            "mainClass": "a_Generic.B1_inClass",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_inMethod",
+            "request": "launch",
+            "mainClass": "a_Generic.A_inMethod",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E3_QuizAns",
+            "request": "launch",
+            "mainClass": "g_Exception.E3_QuizAns",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E3_Quiz",
+            "request": "launch",
+            "mainClass": "g_Exception.E3_Quiz",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E1_Quiz",
+            "request": "launch",
+            "mainClass": "g_Exception.E1_Quiz",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_UserDefine",
+            "request": "launch",
+            "mainClass": "g_Exception.D_UserDefine",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_CatchLoc",
+            "request": "launch",
+            "mainClass": "g_Exception.C2_CatchLoc",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C1_Throw",
+            "request": "launch",
+            "mainClass": "g_Exception.C1_Throw",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B4_NullPtr2",
+            "request": "launch",
+            "mainClass": "g_Exception.B4_NullPtr2",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B4_NullPtr",
+            "request": "launch",
+            "mainClass": "g_Exception.B4_NullPtr",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B3_ArrayIdxOoB",
+            "request": "launch",
+            "mainClass": "g_Exception.B3_ArrayIdxOoB",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B2_Typecast",
+            "request": "launch",
+            "mainClass": "g_Exception.B2_Typecast",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B1_DevidedBy0",
+            "request": "launch",
+            "mainClass": "g_Exception.B1_DevidedBy0",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A2_Exception",
+            "request": "launch",
+            "mainClass": "g_Exception.A2_Exception",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_NoException",
+            "request": "launch",
+            "mainClass": "g_Exception.A1_NoException",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "H_Main",
+            "request": "launch",
+            "mainClass": "f_Method.H_Main",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "G_Recursive",
+            "request": "launch",
+            "mainClass": "f_Method.G_Recursive",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F2_Orders",
+            "request": "launch",
+            "mainClass": "f_Method.F2_Orders",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F1_Overloading",
+            "request": "launch",
+            "mainClass": "f_Method.F1_Overloading",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E2_Static",
+            "request": "launch",
+            "mainClass": "f_Method.E2_Static",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E1_Local",
+            "request": "launch",
+            "mainClass": "f_Method.E1_Local",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D2_LottoQuiz",
+            "request": "launch",
+            "mainClass": "f_Method.D2_LottoQuiz",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D1_Call",
+            "request": "launch",
+            "mainClass": "f_Method.D1_Call",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_ToValue",
+            "request": "launch",
+            "mainClass": "f_Method.C2_ToValue",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C1_Return",
+            "request": "launch",
+            "mainClass": "f_Method.C1_Return",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B2_Arguments",
+            "request": "launch",
+            "mainClass": "f_Method.B2_Arguments",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B1_Argument",
+            "request": "launch",
+            "mainClass": "f_Method.B1_Argument",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Simple",
+            "request": "launch",
+            "mainClass": "f_Method.A_Simple",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Numbering",
+            "request": "launch",
+            "mainClass": "e_Enum.C_Numbering",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Loop",
+            "request": "launch",
+            "mainClass": "e_Enum.B_Loop",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Enum",
+            "request": "launch",
+            "mainClass": "e_Enum.A_Enum",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D_DblArray",
+            "request": "launch",
+            "mainClass": "d_Array.D_DblArray",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D3_Quiz",
+            "request": "launch",
+            "mainClass": "d_Array.D3_Quiz",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D2_DblArray2",
+            "request": "launch",
+            "mainClass": "d_Array.D2_DblArray2",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_ArrayMethod",
+            "request": "launch",
+            "mainClass": "d_Array.C_ArrayMethod",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_Quiz",
+            "request": "launch",
+            "mainClass": "d_Array.C2_Quiz",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Array",
+            "request": "launch",
+            "mainClass": "d_Array.B_Array",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_NoArray",
+            "request": "launch",
+            "mainClass": "d_Array.A_NoArray",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E_Break",
+            "request": "launch",
+            "mainClass": "c_Control.E_Break",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E1_Continue",
+            "request": "launch",
+            "mainClass": "c_Control.E1_Continue",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D4_For2",
+            "request": "launch",
+            "mainClass": "c_Control.D4_For2",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D3_For",
+            "request": "launch",
+            "mainClass": "c_Control.D3_For",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D2_DoWhile",
+            "request": "launch",
+            "mainClass": "c_Control.D2_DoWhile",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D1_While",
+            "request": "launch",
+            "mainClass": "c_Control.D1_While",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Switch",
+            "request": "launch",
+            "mainClass": "c_Control.C_Switch",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B4_3states",
+            "request": "launch",
+            "mainClass": "c_Control.B4_3states",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B3_ElseIF",
+            "request": "launch",
+            "mainClass": "c_Control.B3_ElseIF",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B2_Else",
+            "request": "launch",
+            "mainClass": "c_Control.B2_Else",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B1_If",
+            "request": "launch",
+            "mainClass": "c_Control.B1_If",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A3_input",
+            "request": "launch",
+            "mainClass": "c_Control.A3_input",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A2_Scan_String",
+            "request": "launch",
+            "mainClass": "c_Control.A2_Scan_String",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_Scanf",
+            "request": "launch",
+            "mainClass": "c_Control.A1_Scanf",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E2_Quiz",
+            "request": "launch",
+            "mainClass": "b_Operation.E2_Quiz",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E1_BitCompare",
+            "request": "launch",
+            "mainClass": "b_Operation.E1_BitCompare",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D2_Compare",
+            "request": "launch",
+            "mainClass": "b_Operation.D2_Compare",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D1_Compare",
+            "request": "launch",
+            "mainClass": "b_Operation.D1_Compare",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C_plusplus",
+            "request": "launch",
+            "mainClass": "b_Operation.C_plusplus",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Equal",
+            "request": "launch",
+            "mainClass": "b_Operation.B_Equal",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_AddSub",
+            "request": "launch",
+            "mainClass": "b_Operation.A_AddSub",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A2_Quiz",
+            "request": "launch",
+            "mainClass": "b_Operation.A2_Quiz",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_Bracket",
+            "request": "launch",
+            "mainClass": "b_Operation.A1_Bracket",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D5_double",
+            "request": "launch",
+            "mainClass": "a_BasicType.D5_double",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F_Float",
+            "request": "launch",
+            "mainClass": "a_BasicType.F_Float",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "F2_Float2",
+            "request": "launch",
+            "mainClass": "a_BasicType.F2_Float2",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "E_Typecast",
+            "request": "launch",
+            "mainClass": "a_BasicType.E_Typecast",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D4_BYTES",
+            "request": "launch",
+            "mainClass": "a_BasicType.D4_BYTES",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D3_char",
+            "request": "launch",
+            "mainClass": "a_BasicType.D3_char",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D2_int",
+            "request": "launch",
+            "mainClass": "a_BasicType.D2_int",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "D1_boolean",
+            "request": "launch",
+            "mainClass": "a_BasicType.D1_boolean",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_Print_Variable",
+            "request": "launch",
+            "mainClass": "a_BasicType.C2_Print_Variable",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Comment",
+            "request": "launch",
+            "mainClass": "a_BasicType.B_Comment",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "A_HelloWorld",
+            "request": "launch",
+            "mainClass": "a_BasicType.A_HelloWorld",
+            "projectName": "BasicCode"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "b_SceneBuilder.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main3",
+            "request": "launch",
+            "mainClass": "a_HowToStart.Main3",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main2",
+            "request": "launch",
+            "mainClass": "a_HowToStart.Main2",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main1",
+            "request": "launch",
+            "mainClass": "a_HowToStart.Main1",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "z_Music.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml --add-modules=javafx.controls,javafx.fxml,javafx.media"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "y_WebView.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml --add-modules=javafx.controls,javafx.fxml,javafx.web"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "x_Media.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml --add-modules=javafx.controls,javafx.fxml,javafx.media"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "w_Animation.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "v_KeyEvent.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "u_FlowPanel.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "t_MenuBar.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "s_TreeView.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "r_ListView.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "q_Spinner.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "p_Progress.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "o_Slider.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "n_ChoiceBox.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "m_Picker.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "l_Quiz.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "k_HowOldAreYou.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "j_ImageView.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "i_Logout.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "h_Login.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "g_Scene.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "f_CssStyle.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "e_Event.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "d_SceneBuilder.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "c_Drawing.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "a_Start.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "b_FullScreen.Main",
+            "projectName": "WindowCode",
+            "vmArgs": "--module-path ${cwd}\\WindowCode\\JavaFX-sdk-16\\lib --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}

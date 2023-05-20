@@ -17,12 +17,12 @@ public class Controllar {
 		try {
 			age = Integer.parseInt(input.getText());
 			if (age > 18) {
-				greeting.setText("¼ºÀÎÀÔ´Ï´Ù.");
+				greeting.setText("ì„±ì¸ì…ë‹ˆë‹¤.");
 			} else {
-				greeting.setText("¾Æµ¿ÀÔ´Ï´Ù.");
+				greeting.setText("ì•„ë™ì…ë‹ˆë‹¤.");
 			}
 		} catch (NumberFormatException e) {
-			greeting.setText("¼ıÀÚ°¡ ¾Æ´Ô!");
+			greeting.setText("ìˆ«ìê°€ ì•„ë‹˜!");
 		}
 	}
 }

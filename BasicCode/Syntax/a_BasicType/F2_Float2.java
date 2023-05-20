@@ -10,61 +10,61 @@ package a_BasicType;
  */
 
 public class F2_Float2 {
-  public static void main(String[] args) {
-    int option = 5;
-    final int repeat = 16;
+    public static void main(String[] args) {
+        int option = 5;
+        final int repeat = 16;
 
-    switch (option) {
-      case 0:
-        printFloats((float) Math.pow(0.5, 149), 2, 32, 0);
-        break;
-      case 1:
-        // 지수부
-        printFloats(1, 2, repeat, 0);
-        break;
-      case 2:
-        // 감소하는 예시
-        printFloats(1, 0.5, repeat, 0);
-        break;
-      case 3:
-        // 소수부 변경 예시 + 증가
-        printFloats(1, 2, repeat, 1);
-        break;
-      case 4:
-        // 소수부 변경 예시 + 감소
-        printFloats(1, 0.5, repeat, 1);
-        break;
-      case 5:
-        printFloats(-1, 0.5, repeat, 1);
-        break;
+        switch (option) {
+            case 0:
+                printFloats((float) Math.pow(0.5, 149), 2, 32, 0);
+                break;
+            case 1:
+                // 지수부
+                printFloats(1, 2, repeat, 0);
+                break;
+            case 2:
+                // 감소하는 예시
+                printFloats(1, 0.5, repeat, 0);
+                break;
+            case 3:
+                // 소수부 변경 예시 + 증가
+                printFloats(1, 2, repeat, 1);
+                break;
+            case 4:
+                // 소수부 변경 예시 + 감소
+                printFloats(1, 0.5, repeat, 1);
+                break;
+            case 5:
+                printFloats(-1, 0.5, repeat, 1);
+                break;
+        }
     }
-  }
 
-  static void printFloats(float num, double power, int repeat, float offset) {
+    static void printFloats(float num, double power, int repeat, float offset) {
 
-    for (int i = 0; i < repeat; i++) {
-      if ((offset + num) - (int) (offset + num) > 0)
-        if ((offset + num) < 0.000001)
-          System.out.printf("[%2d] " + (offset + num) + " \t = ", i);
-        else
-          System.out.printf("[%2d] %8f \t = ", i, offset + num);
-      else
-        System.out.printf("[%2d] %8d \t = ", i, (int) (offset + num));
-      printBits(Float.floatToIntBits(offset + num));
-      num *= power;
+        for (int i = 0; i < repeat; i++) {
+            if ((offset + num) - (int) (offset + num) > 0)
+                if ((offset + num) < 0.000001)
+                    System.out.printf("[%2d] " + (offset + num) + " \t = ", i);
+                else
+                    System.out.printf("[%2d] %8f \t = ", i, offset + num);
+            else
+                System.out.printf("[%2d] %8d \t = ", i, (int) (offset + num));
+            printBits(Float.floatToIntBits(offset + num));
+            num *= power;
+        }
     }
-  }
 
-  static void printBits(int num) {
-    for (int i = 31; i >= 0; i--) {
-      System.out.print(((num >> i) % 2 == 0) ? 0 : 1);
-      if (i % 4 == 0)
-        System.out.print(" ");
-      if (i == 31)
-        System.out.print("[");
-      if (i == 23)
-        System.out.print("]");
+    static void printBits(int num) {
+        for (int i = 31; i >= 0; i--) {
+            System.out.print(((num >> i) % 2 == 0) ? 0 : 1);
+            if (i % 4 == 0)
+                System.out.print(" ");
+            if (i == 31)
+                System.out.print("[");
+            if (i == 23)
+                System.out.print("]");
+        }
+        System.out.println();
     }
-    System.out.println();
-  }
 }

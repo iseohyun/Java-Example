@@ -3,14 +3,14 @@ package c_Control;
 import tools.Input;
 
 public class B2_Else {
-  public static void main(String[] args) {
-    int a = Input.getInt();
-    if (a > 5) {
-      System.out.println("좋아요.");
-    } else {
-      System.out.println("싫어요.");
+    public static void main(String[] args) {
+        int a = Input.getInt();
+        if (a > 5) {
+            System.out.println("좋아요.");
+        } else {
+            System.out.println("싫어요.");
+        }
     }
-  }
 }
 
 // 실습과제 1: "싫어요." 가 출력되는 조건은 무엇입니까?

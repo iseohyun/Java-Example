@@ -10,49 +10,49 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class D_Choice extends Frame implements ItemListener {
-	boolean isFirst = true;
-	Choice c = new Choice();
+  boolean isFirst = true;
+  Choice c = new Choice();
 
-	D_Choice() {
-		c.add("¿øÇÏ´Â »öÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.");
-		c.add("»¡°£»ö");
-		c.add("ÁÖÈ²»ö");
-		c.add("³ë¶õ»ö");
-		c.add("ÃÊ·Ï»ö");
-		add(c);
-		
-		
-		c.addItemListener(this);
-		
-		addWindowListener(new WindowExit(this));
+  D_Choice() {
+    c.add("ì›í•˜ëŠ” ìƒ‰ì„ ì„ íƒí•´ì£¼ì„¸ìš”.");
+    c.add("ë¹¨ê°„ìƒ‰");
+    c.add("ì£¼í™©ìƒ‰");
+    c.add("ë…¸ë€ìƒ‰");
+    c.add("ì´ˆë¡ìƒ‰");
+    add(c);
+    
+    
+    c.addItemListener(this);
+    
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new D_Choice();
-	}
+  public static void main(String[] args) {
+    new D_Choice();
+  }
 
-	@Override
-	public void itemStateChanged(ItemEvent e) {
-		System.out.println(e.getItem());
-		if(e.getItem() == "»¡°£»ö") {
-			setBackground(Color.red);
-		}else if(e.getItem() == "ÁÖÈ²»ö") {
-			setBackground(Color.orange);
-		}else if(e.getItem() == "³ë¶õ»ö") {
-			setBackground(Color.yellow);
-		}else if(e.getItem() == "ÃÊ·Ï»ö") {
-			setBackground(Color.green);
-		}
-		
-		if(isFirst) {
-			c.remove(0);
-			isFirst = false;
-		}
-	}
+  @Override
+  public void itemStateChanged(ItemEvent e) {
+    System.out.println(e.getItem());
+    if(e.getItem() == "ë¹¨ê°„ìƒ‰") {
+      setBackground(Color.red);
+    }else if(e.getItem() == "ì£¼í™©ìƒ‰") {
+      setBackground(Color.orange);
+    }else if(e.getItem() == "ë…¸ë€ìƒ‰") {
+      setBackground(Color.yellow);
+    }else if(e.getItem() == "ì´ˆë¡ìƒ‰") {
+      setBackground(Color.green);
+    }
+    
+    if(isFirst) {
+      c.remove(0);
+      isFirst = false;
+    }
+  }
 }
 
-// ½Ç½À°úÁ¦ "ÆÄ¶õ»ö"À» Ãß°¡ÇØº¾´Ï´Ù.
-// ½Ç½À°úÁ¦ ÃÖÃÊ¿¡ "»¡°£»ö"À» »èÁ¦ÇØ º¾´Ï´Ù. 
+// ì‹¤ìŠµê³¼ì œ "íŒŒë€ìƒ‰"ì„ ì¶”ê°€í•´ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ ìµœì´ˆì— "ë¹¨ê°„ìƒ‰"ì„ ì‚­ì œí•´ ë´…ë‹ˆë‹¤. 

@@ -21,12 +21,12 @@ public class Controllar {
 	public void logout(ActionEvent e) {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("logout");
-		alert.setHeaderText("´ç½ÅÀº Áö±İ ·Î±×¾Æ¿ô ÇÏ·Á°í ÇÏ°í ÀÖ¼Ò¸¸...");
-		alert.setContentText("ÁøÂ¥·ç °¥²¨³Ä°í?");
+		alert.setHeaderText("ë‹¹ì‹ ì€ ì§€ê¸ˆ ë¡œê·¸ì•„ì›ƒ í•˜ë ¤ê³  í•˜ê³  ìˆì†Œë§Œ...");
+		alert.setContentText("ì§„ì§œë£¨ ê°ˆêº¼ëƒê³ ?");
 
 		if (alert.showAndWait().get() == ButtonType.OK) {
 			stage = (Stage) LogoutPane.getScene().getWindow();
-			System.out.println("Àß°¡½Ã°Ô!");
+			System.out.println("ì˜ê°€ì‹œê²Œ!");
 			stage.close();
 		}
 	}

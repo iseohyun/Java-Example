@@ -7,15 +7,15 @@ package c_Control;
  */
 
 public class E_Break {
-  public static void main(String[] args) {
-    int i = 1;
-    while (i++ < 9999) {
-      System.out.println(i + ">");
-      if (i == 10) {
-        break;
-      }
+    public static void main(String[] args) {
+        int i = 1;
+        while (i++ < 9999) {
+            System.out.println(i + ">");
+            if (i == 10) {
+                break;
+            }
+        }
     }
-  }
 }
 
-//실습과제 : 15번 출력하고, 종료하도록 수정해 보세요.
+// 실습과제 : 15번 출력하고, 종료하도록 수정해 보세요.

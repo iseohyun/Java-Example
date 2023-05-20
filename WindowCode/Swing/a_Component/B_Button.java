@@ -15,86 +15,86 @@ import javax.swing.JTextField;
 
 @SuppressWarnings("serial")
 public class B_Button extends JFrame implements ActionListener {
-	JRadioButton rdoFemale = new JRadioButton("ø©º∫");
-	JRadioButton rdoMale = new JRadioButton("≥≤º∫");
-	ButtonGroup Sex = new ButtonGroup();
-	JCheckBox chkboxConfirm = new JCheckBox("»Æ¿Œ«œø¥Ω¿¥œ¥Ÿ.");
-	JButton btnSend = new JButton("¡¶√‚");
-	JTextField view = new JTextField("¡¶√‚«œººø‰.");
+  JRadioButton rdoFemale = new JRadioButton("Ïó¨ÏÑ±");
+  JRadioButton rdoMale = new JRadioButton("ÎÇ®ÏÑ±");
+  ButtonGroup Sex = new ButtonGroup();
+  JCheckBox chkboxConfirm = new JCheckBox("ÌôïÏù∏ÌïòÏòÄÏäµÎãàÎã§.");
+  JButton btnSend = new JButton("Ï†úÏ∂ú");
+  JTextField view = new JTextField("Ï†úÏ∂úÌïòÏÑ∏Ïöî.");
 
-	B_Button() {
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(true);
+  B_Button() {
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setVisible(true);
 
-		// Layout
-		GridBagLayout Grid = new GridBagLayout();
-		GridBagConstraints c = new GridBagConstraints();
-		setLayout(Grid);
+    // Layout
+    GridBagLayout Grid = new GridBagLayout();
+    GridBagConstraints c = new GridBagConstraints();
+    setLayout(Grid);
 
-		Sex.add(rdoMale);
-		Sex.add(rdoFemale);
+    Sex.add(rdoMale);
+    Sex.add(rdoFemale);
 
-		c.gridx = 0;
-		c.gridy = 0;
-		Grid.setConstraints(rdoMale, c);
-		add(rdoMale);
+    c.gridx = 0;
+    c.gridy = 0;
+    Grid.setConstraints(rdoMale, c);
+    add(rdoMale);
 
-		c.gridx = 1;
-		c.gridy = 0;
-		Grid.setConstraints(rdoMale, c);
-		add(rdoFemale);
+    c.gridx = 1;
+    c.gridy = 0;
+    Grid.setConstraints(rdoMale, c);
+    add(rdoFemale);
 
-		c.gridx = 1;
-		c.gridy = 1;
-		c.gridwidth = 2;
-		Grid.setConstraints(chkboxConfirm, c);
-		add(chkboxConfirm);
-		chkboxConfirm.setEnabled(false);
+    c.gridx = 1;
+    c.gridy = 1;
+    c.gridwidth = 2;
+    Grid.setConstraints(chkboxConfirm, c);
+    add(chkboxConfirm);
+    chkboxConfirm.setEnabled(false);
 
-		c.gridx = 1;
-		c.gridy = 2;
-		c.gridwidth = 2;
-		c.fill = GridBagConstraints.BOTH;
-		Grid.setConstraints(btnSend, c);
-		add(btnSend);
-		btnSend.setEnabled(false);
+    c.gridx = 1;
+    c.gridy = 2;
+    c.gridwidth = 2;
+    c.fill = GridBagConstraints.BOTH;
+    Grid.setConstraints(btnSend, c);
+    add(btnSend);
+    btnSend.setEnabled(false);
 
-		c.gridx = 1;
-		c.gridy = 3;
-		c.gridwidth = 2;
-		c.fill = GridBagConstraints.BOTH;
-		Grid.setConstraints(view, c);
-		add(view);
-		view.setEnabled(false);
-		view.setDisabledTextColor(Color.DARK_GRAY);
+    c.gridx = 1;
+    c.gridy = 3;
+    c.gridwidth = 2;
+    c.fill = GridBagConstraints.BOTH;
+    Grid.setConstraints(view, c);
+    add(view);
+    view.setEnabled(false);
+    view.setDisabledTextColor(Color.DARK_GRAY);
 
-		// Event Setting
-		rdoMale.addActionListener(this);
-		rdoFemale.addActionListener(this);
-		chkboxConfirm.addActionListener(this);
-		btnSend.addActionListener(this);
+    // Event Setting
+    rdoMale.addActionListener(this);
+    rdoFemale.addActionListener(this);
+    chkboxConfirm.addActionListener(this);
+    btnSend.addActionListener(this);
 
-		pack();
-	}
+    pack();
+  }
 
-	public static void main(String[] args) {
-		new B_Button();
-	}
+  public static void main(String[] args) {
+    new B_Button();
+  }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(chkboxConfirm)) {
-			btnSend.setEnabled(chkboxConfirm.isSelected());
-		} else if (e.getSource().equals(btnSend)) {
-			if (rdoMale.isSelected()) {
-				view.setText("≥≤º∫ º±≈√ µ ");
-			} else if (rdoFemale.isSelected()) {
-				view.setText("ø©º∫ º±≈√ µ ");
-			}
-		} else if (e.getSource().equals(rdoMale)) {
-			chkboxConfirm.setEnabled(true);
-		} else if (e.getSource().equals(rdoFemale)) {
-			chkboxConfirm.setEnabled(true);
-		}
-	}
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    if (e.getSource().equals(chkboxConfirm)) {
+      btnSend.setEnabled(chkboxConfirm.isSelected());
+    } else if (e.getSource().equals(btnSend)) {
+      if (rdoMale.isSelected()) {
+        view.setText("ÎÇ®ÏÑ± ÏÑ†ÌÉù Îê®");
+      } else if (rdoFemale.isSelected()) {
+        view.setText("Ïó¨ÏÑ± ÏÑ†ÌÉù Îê®");
+      }
+    } else if (e.getSource().equals(rdoMale)) {
+      chkboxConfirm.setEnabled(true);
+    } else if (e.getSource().equals(rdoFemale)) {
+      chkboxConfirm.setEnabled(true);
+    }
+  }
 }

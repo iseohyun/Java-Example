@@ -17,7 +17,7 @@ public class Controllar implements Initializable {
 	@FXML
 	private Label myLabel;
 
-	String[] food = { "ÇÇÀÚ", "ÃÊ¹ä", "¶ó¸é" };
+	String[] food = { "í”¼ì", "ì´ˆë°¥", "ë¼ë©´" };
 	String currentFood;
 
 	@Override

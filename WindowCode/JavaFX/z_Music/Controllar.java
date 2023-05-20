@@ -55,7 +55,8 @@ public class Controllar implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		songs = new ArrayList<File>();
-		directory = new File("Song");
+		//directory = new File("Song");
+		directory = new File("WindowCode/Song");
 		files = directory.listFiles();
 		if(files != null) {
 			for(File file : files) {

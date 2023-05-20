@@ -3,20 +3,20 @@ package c_Control;
 /**
  * 
  * while 문법:
- * 		while(조건, 거짓이 될때까지 반복){
- * 			바디;
- *      }
+ *   while(조건, 거짓이 될때까지 반복){
+ *     바디;
+ *   }
  *
  */
 
 public class D1_While {
-  public static void main(String[] args) {
-    int i = 5;
+    public static void main(String[] args) {
+        int i = 5;
 
-    while (--i > 0) {
-      System.out.println("while : " + i);
+        while (--i > 0) {
+            System.out.println("while : " + i);
+        }
     }
-  }
 }
 
 // 실습과제 1: 7번 실행되도록 i를 수정하세요.

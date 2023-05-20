@@ -13,7 +13,7 @@ public class Main1 extends Application {
 	@Override
 	public void start(Stage arg0) throws Exception {
 		// TODO Auto-generated method stub
-		arg0.setTitle("¿¬½ÀÄÚµå");
+		arg0.setTitle("ì—°ìŠµì½”ë“œ");
 		arg0.show();
 	}
 }

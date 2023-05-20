@@ -7,17 +7,17 @@ package d_Array;
  */
 
 public class A_NoArray {
-  public static void main(String[] agrs) {
-    int Math = 87;
-    int Eng = 92;
-    int Kor = 83;
-    int Scie = 71;
+    public static void main(String[] agrs) {
+        int Math = 87;
+        int Eng = 92;
+        int Kor = 83;
+        int Scie = 71;
 
-    System.out.println("1과목 : " + Math);
-    System.out.println("2과목 : " + Eng);
-    System.out.println("3과목 : " + Kor);
-    System.out.println("4과목 : " + Scie);
-  }
+        System.out.println("1과목 : " + Math);
+        System.out.println("2과목 : " + Eng);
+        System.out.println("3과목 : " + Kor);
+        System.out.println("4과목 : " + Scie);
+    }
 }
 
 // 실습과제 1: 모든 과목에 오류가 있었다고 합니다. 10점씩 올려주기로 하였습니다. 반영해주세요.

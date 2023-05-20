@@ -9,30 +9,30 @@ import javafx.stage.Stage;
 
 /**
  * 
- *	Å°º¸µå¿¡ Æ¯Á¤ Å°¸¦ ´©¸£¸é, È­¸éÀ» Á¾·áÇÒ ¼ö ÀÖ½À´Ï´Ù. ÄÚµå¸¦ º¸°í ÇØ¼®ÇØº¸¼¼¿ä.
+ *	í‚¤ë³´ë“œì— íŠ¹ì • í‚¤ë¥¼ ëˆ„ë¥´ë©´, í™”ë©´ì„ ì¢…ë£Œí•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. ì½”ë“œë¥¼ ë³´ê³  í•´ì„í•´ë³´ì„¸ìš”.
  * 
  */
 
 public class Main extends Application {
-	@Override
-	public void start(Stage primaryStage) {
-		Group root = new Group();
-		Scene scene = new Scene(root, Color.BLACK);
+  @Override
+  public void start(Stage primaryStage) {
+    Group root = new Group();
+    Scene scene = new Scene(root, Color.BLACK);
 
-		primaryStage.setWidth(400);
-		primaryStage.setHeight(400);
-		primaryStage.setTitle("Java FX : Hello");
-		primaryStage.setResizable(false);
-		primaryStage.setX(150);
-		primaryStage.setY(100);
-		primaryStage.setFullScreen(true);
-		primaryStage.setScene(scene);
-		primaryStage.setFullScreenExitHint("³Í ¸øÁö³ª°£´Ù.");
-		primaryStage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
-		primaryStage.show();
-	}
+    primaryStage.setWidth(400);
+    primaryStage.setHeight(400);
+    primaryStage.setTitle("Java FX : Hello");
+    primaryStage.setResizable(false);
+    primaryStage.setX(150);
+    primaryStage.setY(100);
+    primaryStage.setFullScreen(true);
+    primaryStage.setScene(scene);
+    primaryStage.setFullScreenExitHint("ë„Œ ëª»ì§€ë‚˜ê°„ë‹¤.");
+    primaryStage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));
+    primaryStage.show();
+  }
 
-	public static void main(String[] args) {
-		launch(args);
-	}
+  public static void main(String[] args) {
+    launch(args);
+  }
 }

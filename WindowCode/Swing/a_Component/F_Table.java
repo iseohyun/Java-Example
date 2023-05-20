@@ -18,93 +18,93 @@ import javax.swing.table.DefaultTableModel;
 
 @SuppressWarnings("serial")
 public class F_Table extends JFrame implements ActionListener {
-	JPanel p = new JPanel();
-	JPanel pBtn = new JPanel();
-	JScrollPane pTb;
-	JTable tb;
-	DefaultTableModel model;
-	JButton btnAdd = new JButton("Ãß°¡");
-	JButton btnDel = new JButton("»èÁ¦");
-	final static String[] header = { "¿µÈ­", "Àå¸£" };
-	JTextField txtMovie = new JTextField(header[0]);
-	JTextField txtInfo = new JTextField(header[1]);
-	JTextField inputMovie = new JTextField();
-	JTextField inputInfo = new JTextField();
+  JPanel p = new JPanel();
+  JPanel pBtn = new JPanel();
+  JScrollPane pTb;
+  JTable tb;
+  DefaultTableModel model;
+  JButton btnAdd = new JButton("ì¶”ê°€");
+  JButton btnDel = new JButton("ì‚­ì œ");
+  final static String[] header = { "ì˜í™”", "ì¥ë¥´" };
+  JTextField txtMovie = new JTextField(header[0]);
+  JTextField txtInfo = new JTextField(header[1]);
+  JTextField inputMovie = new JTextField();
+  JTextField inputInfo = new JTextField();
 
-	F_Table() {
-		// ÀüÃ¼ ¼³Á¤
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(true);
+  F_Table() {
+    // ì „ì²´ ì„¤ì •
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setVisible(true);
 
-		// Å×ÀÌºí Æä³Î
-		add("Center", p);
-		add("South", pBtn);
+    // í…Œì´ë¸” í˜ë„
+    add("Center", p);
+    add("South", pBtn);
 
-		// Å×ÀÌºí ¼³Á¤
-		DefaultTableModel col = new DefaultTableModel(header, 0);
-		tb = new JTable(col);
-		tb.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-		pTb = new JScrollPane(tb);
+    // í…Œì´ë¸” ì„¤ì •
+    DefaultTableModel col = new DefaultTableModel(header, 0);
+    tb = new JTable(col);
+    tb.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+    pTb = new JScrollPane(tb);
 
-		model = (DefaultTableModel) tb.getModel();
-		String[][] record = {
-				{"±ØÇÑÁ÷¾÷", "ÄÚ¹Ìµğ"},
-				{"½Å°ú ÇÔ²²", "ÆÇÅ¸Áö"},
-				{"°Ü¿ï¿Õ±¹", "¾Ö´Ï¸ŞÀÌ¼Ç"},
-				{"¾Æ¹ÙÅ¸", "SF"},
-				{"º£Å×¶û", "ÄÚ¹Ìµğ"},
-				{"»çµµ", "»ç±Ø"},
-				{"¾îº¥Á®½º", "ÆÇÅ¸Áö"},
-				{"¹İÁöÀÇ Á¦¿Õ", "ÆÇÅ¸Áö"},
-				{"±â»ıÃæ", "µå¶ó¸¶"},
-				{"ÀÎÅÍ½ºÅÚ¶ó", "SF"},
-				{"ÀÎ¼Á¼Ç", "µå¶ó¸¶"},
-				{"¹üÁËµµ½Ã", "¿¢¼Ç"},
-		};
-		for (String[] rcd : record) {
-			model.addRow(rcd);
-		}
-		p.add(pTb);
+    model = (DefaultTableModel) tb.getModel();
+    String[][] record = {
+        { "ê·¹í•œì§ì—…", "ì½”ë¯¸ë””" },
+        { "ì‹ ê³¼ í•¨ê»˜", "íŒíƒ€ì§€" },
+        { "ê²¨ìš¸ì™•êµ­", "ì• ë‹ˆë©”ì´ì…˜" },
+        { "ì•„ë°”íƒ€", "SF" },
+        { "ë² í…Œë‘", "ì½”ë¯¸ë””" },
+        { "ì‚¬ë„", "ì‚¬ê·¹" },
+        { "ì–´ë²¤ì ¸ìŠ¤", "íŒíƒ€ì§€" },
+        { "ë°˜ì§€ì˜ ì œì™•", "íŒíƒ€ì§€" },
+        { "ê¸°ìƒì¶©", "ë“œë¼ë§ˆ" },
+        { "ì¸í„°ìŠ¤í…”ë¼", "SF" },
+        { "ì¸ì…‰ì…˜", "ë“œë¼ë§ˆ" },
+        { "ë²”ì£„ë„ì‹œ", "ì—‘ì…˜" },
+    };
+    for (String[] rcd : record) {
+      model.addRow(rcd);
+    }
+    p.add(pTb);
 
-		// ¹öÆ° ¹× ÅØ½ºÆ®
-		pBtn.setLayout(new GridLayout(3, 2));
-		txtMovie.setEnabled(false);
-		txtMovie.setDisabledTextColor(Color.black);
-		pBtn.add(txtMovie);
-		pBtn.add(inputMovie);
-		txtInfo.setEnabled(false);
-		txtInfo.setDisabledTextColor(Color.black);
-		pBtn.add(txtInfo);
-		pBtn.add(inputInfo);
-		pBtn.add(btnAdd);
-		btnAdd.addActionListener(this);
-		pBtn.add(btnDel);
-		btnDel.addActionListener(this);
+    // ë²„íŠ¼ ë° í…ìŠ¤íŠ¸
+    pBtn.setLayout(new GridLayout(3, 2));
+    txtMovie.setEnabled(false);
+    txtMovie.setDisabledTextColor(Color.black);
+    pBtn.add(txtMovie);
+    pBtn.add(inputMovie);
+    txtInfo.setEnabled(false);
+    txtInfo.setDisabledTextColor(Color.black);
+    pBtn.add(txtInfo);
+    pBtn.add(inputInfo);
+    pBtn.add(btnAdd);
+    btnAdd.addActionListener(this);
+    pBtn.add(btnDel);
+    btnDel.addActionListener(this);
 
-		setSize(getPreferredSize());
-	}
+    setSize(getPreferredSize());
+  }
 
-	Border defaultMargin() {
-		return BorderFactory.createEmptyBorder(10, 10, 10, 10);
-	}
+  Border defaultMargin() {
+    return BorderFactory.createEmptyBorder(10, 10, 10, 10);
+  }
 
-	public static void main(String[] args) {
-		new F_Table();
-	}
+  public static void main(String[] args) {
+    new F_Table();
+  }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(btnAdd)) {
-			String[] rcd = { "", "" };
-			rcd[0] = inputMovie.getText();
-			rcd[1] = inputInfo.getText();
-			model.addRow(rcd);
-		} else {
-			if (tb.getSelectedRow() != -1) {
-				model.removeRow(tb.getSelectedRow());
-			} else {
-				model.removeRow(tb.getRowCount() - 1);
-			}
-		}
-	}
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    if (e.getSource().equals(btnAdd)) {
+      String[] rcd = { "", "" };
+      rcd[0] = inputMovie.getText();
+      rcd[1] = inputInfo.getText();
+      model.addRow(rcd);
+    } else {
+      if (tb.getSelectedRow() != -1) {
+        model.removeRow(tb.getSelectedRow());
+      } else {
+        model.removeRow(tb.getRowCount() - 1);
+      }
+    }
+  }
 }

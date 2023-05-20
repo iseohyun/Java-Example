@@ -12,82 +12,82 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class I_Menu extends Frame implements ActionListener {
-	MenuBar bar = new MenuBar();
-	TextArea ta = new TextArea();
-	Menu menu1 = new Menu("ÆÄÀÏ");
-	Menu menu2 = new Menu("ÆíÁı");
-	Menu menu3 = new Menu("µµ¿ò¸»");
-	MenuItem sub1_1 = new MenuItem("¿­±â");
-	Menu sub1_2 = new Menu("Ãß°¡");
-	MenuItem sub1_2_1 = new MenuItem("ÀÚ¹Ù¼ö¾÷");
-	MenuItem sub1_2_2 = new MenuItem("C¼ö¾÷");
-	MenuItem sub1_3 = new MenuItem("Á¾·á");
-	MenuItem sub2_1 = new MenuItem("Áö¿ì±â");
-	MenuItem sub2_2 = new MenuItem("¼û±â±â");
-	MenuItem help = new MenuItem("µµ¿ò¸»");
+  MenuBar bar = new MenuBar();
+  TextArea ta = new TextArea();
+  Menu menu1 = new Menu("íŒŒì¼");
+  Menu menu2 = new Menu("í¸ì§‘");
+  Menu menu3 = new Menu("ë„ì›€ë§");
+  MenuItem sub1_1 = new MenuItem("ì—´ê¸°");
+  Menu sub1_2 = new Menu("ì¶”ê°€");
+  MenuItem sub1_2_1 = new MenuItem("ìë°”ìˆ˜ì—…");
+  MenuItem sub1_2_2 = new MenuItem("Cìˆ˜ì—…");
+  MenuItem sub1_3 = new MenuItem("ì¢…ë£Œ");
+  MenuItem sub2_1 = new MenuItem("ì§€ìš°ê¸°");
+  MenuItem sub2_2 = new MenuItem("ìˆ¨ê¸°ê¸°");
+  MenuItem help = new MenuItem("ë„ì›€ë§");
 
-	public I_Menu() {
-		setMenuBar(bar);
-		add("Center", ta);
+  public I_Menu() {
+    setMenuBar(bar);
+    add("Center", ta);
 
-		bar.add(menu1);
-		bar.add(menu2);
-		bar.add(menu3);
-		menu1.add(sub1_1);
-		menu1.add(sub1_2);
-		sub1_2.add(sub1_2_1);
-		sub1_2.add(sub1_2_2);
-		menu1.addSeparator();
-		menu1.add(sub1_3);
-		menu2.add(sub2_1);
-		menu2.add(sub2_2);
-		menu3.add(help);
+    bar.add(menu1);
+    bar.add(menu2);
+    bar.add(menu3);
+    menu1.add(sub1_1);
+    menu1.add(sub1_2);
+    sub1_2.add(sub1_2_1);
+    sub1_2.add(sub1_2_2);
+    menu1.addSeparator();
+    menu1.add(sub1_3);
+    menu2.add(sub2_1);
+    menu2.add(sub2_2);
+    menu3.add(help);
 
-		sub1_1.addActionListener(this);
-		sub1_2_1.addActionListener(this);
-		sub1_2_2.addActionListener(this);
-		sub1_3.addActionListener(this);
-		sub2_1.addActionListener(this);
-		sub2_2.addActionListener(this);
-		help.addActionListener(this);
-		addWindowListener(new WindowExit(this));
+    sub1_1.addActionListener(this);
+    sub1_2_1.addActionListener(this);
+    sub1_2_2.addActionListener(this);
+    sub1_3.addActionListener(this);
+    sub2_1.addActionListener(this);
+    sub2_2.addActionListener(this);
+    help.addActionListener(this);
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new I_Menu();
-	}
+  public static void main(String[] args) {
+    new I_Menu();
+  }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(sub1_1)) {
-			ta.setText("ÆÄÀÏ ¿­±â\n" + ta.getText());
-		} else if (e.getSource().equals(sub1_2_1)) {
-			ta.setText("ÀÚ¹Ù ¼ö¾÷\n" + ta.getText());
-		} else if (e.getSource().equals(sub1_2_2)) {
-			ta.setText("C ¼ö¾÷\n" + ta.getText());
-		} else if (e.getSource().equals(sub1_3)) {
-			dispose();
-		} else if (e.getSource().equals(sub2_1)) {
-			ta.setText("");
-		} else if (e.getSource().equals(sub2_2)) {
-			if (sub2_2.getLabel().equals("¼û±â±â")) {
-				ta.setVisible(false);
-				sub2_2.setLabel("º¸ÀÌ±â");
-			} else {
-				ta.setVisible(true);
-				sub2_2.setLabel("¼û±â±â");
-			}
-		} else if (e.getSource().equals(help)) {
-			ta.setText("** ¸Ş´º ¿¹Á¦ **\n" + ta.getText());
-		}
-	}
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    if (e.getSource().equals(sub1_1)) {
+      ta.setText("íŒŒì¼ ì—´ê¸°\n" + ta.getText());
+    } else if (e.getSource().equals(sub1_2_1)) {
+      ta.setText("ìë°” ìˆ˜ì—…\n" + ta.getText());
+    } else if (e.getSource().equals(sub1_2_2)) {
+      ta.setText("C ìˆ˜ì—…\n" + ta.getText());
+    } else if (e.getSource().equals(sub1_3)) {
+      dispose();
+    } else if (e.getSource().equals(sub2_1)) {
+      ta.setText("");
+    } else if (e.getSource().equals(sub2_2)) {
+      if (sub2_2.getLabel().equals("ìˆ¨ê¸°ê¸°")) {
+        ta.setVisible(false);
+        sub2_2.setLabel("ë³´ì´ê¸°");
+      } else {
+        ta.setVisible(true);
+        sub2_2.setLabel("ìˆ¨ê¸°ê¸°");
+      }
+    } else if (e.getSource().equals(help)) {
+      ta.setText("** ë©”ë‰´ ì˜ˆì œ **\n" + ta.getText());
+    }
+  }
 }
 
-// ½Ç½À°úÁ¦ : ÆÄÀÏ ¿­±â¸¦ Å¬¸¯ÇÏ¸é, ÆÄÀÏ ¿­±â ´ÙÀÌ¾ó·Î±×°¡ ¿­¸®µµ·Ï ¼öÁ¤ÇÏ½Ã¿À.
-//		¿­±â ´ÙÀÌ¾ó·Î±×·Î ÆÄÀÏÀ» ¿­¸é, ¾Æ·¡ ÅØ½ºÆ® »óÀÚ¿¡ ÅØ½ºÆ®°¡ º¸¿©Áú ¼ö ÀÖµµ·Ï ¼öÁ¤ÇÏ½Ã¿À.
-// ½Ç½À°úÁ¦ : ÆÄÀÏ¿¡ ÀúÀå ¸Ş´º¸¦ Ãß°¡ÇÏ°í, ÀúÀå¸Ş´º ¾Æ·¡ Àı´Ü¼±À» Ãß°¡ÇÏ¿© Ãß°¡¿Í °æ°è¼±À» ¸¸µå½Ã¿À.
-//		ÀúÀå¸Ş´º´Â ÀúÀå ´ÙÀÌ¾ó·Î±×°¡ ¿­¸®°í, º¸¿©Áö´Â ÅØ½ºÆ®°¡ ÀúÀåµÇ´Â ±â´ÉÀÔ´Ï´Ù.
-// ½Ç½À°úÁ¦ : µµ¿ò¸»ÀÌ Å¬¸¯µÇ¸é, µµ¿ò¸»ÀÌ ¿­¸®´Â ±â´ÉÀ» Ãß°¡ÇØ º¾´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : íŒŒì¼ ì—´ê¸°ë¥¼ í´ë¦­í•˜ë©´, íŒŒì¼ ì—´ê¸° ë‹¤ì´ì–¼ë¡œê·¸ê°€ ì—´ë¦¬ë„ë¡ ìˆ˜ì •í•˜ì‹œì˜¤.
+//		ì—´ê¸° ë‹¤ì´ì–¼ë¡œê·¸ë¡œ íŒŒì¼ì„ ì—´ë©´, ì•„ë˜ í…ìŠ¤íŠ¸ ìƒìì— í…ìŠ¤íŠ¸ê°€ ë³´ì—¬ì§ˆ ìˆ˜ ìˆë„ë¡ ìˆ˜ì •í•˜ì‹œì˜¤.
+// ì‹¤ìŠµê³¼ì œ : íŒŒì¼ì— ì €ì¥ ë©”ë‰´ë¥¼ ì¶”ê°€í•˜ê³ , ì €ì¥ë©”ë‰´ ì•„ë˜ ì ˆë‹¨ì„ ì„ ì¶”ê°€í•˜ì—¬ ì¶”ê°€ì™€ ê²½ê³„ì„ ì„ ë§Œë“œì‹œì˜¤.
+//		ì €ì¥ë©”ë‰´ëŠ” ì €ì¥ ë‹¤ì´ì–¼ë¡œê·¸ê°€ ì—´ë¦¬ê³ , ë³´ì—¬ì§€ëŠ” í…ìŠ¤íŠ¸ê°€ ì €ì¥ë˜ëŠ” ê¸°ëŠ¥ì…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ : ë„ì›€ë§ì´ í´ë¦­ë˜ë©´, ë„ì›€ë§ì´ ì—´ë¦¬ëŠ” ê¸°ëŠ¥ì„ ì¶”ê°€í•´ ë´…ë‹ˆë‹¤.

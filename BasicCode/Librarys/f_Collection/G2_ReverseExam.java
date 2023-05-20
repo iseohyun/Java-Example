@@ -1,34 +1,20 @@
 package f_Collection;
 
-import java.util.Iterator;
 import java.util.TreeMap;
 
 public class G2_ReverseExam {
-	public static void main(String[] args) {
-		TreeMap<Integer, String> tm = new TreeMap<Integer, String>();
-		tm.put(30, "»ï½Ê");
-		tm.put(10, "½Ê");
-		tm.put(40, "»ç½Ê");
-		tm.put(20, "ÀÌ½Ê");
+    public static void main(String[] args) {
+        TreeMap<Integer, String> tm = new TreeMap<Integer, String>();
+        tm.put(30, "ì‚¼ì‹­");
+        tm.put(10, "ì‹­");
+        tm.put(40, "ì‚¬ì‹­");
+        tm.put(20, "ì´ì‹­");
+        System.out.println(tm);
 
-		System.out.println("¸Ê¿¡ ÀúÀåµÈ Å°µéÀÇ ÁıÇÕ : " + tm.keySet());
-		for (Integer key : tm.keySet()) {
-			System.out.println(String.format("Å° : %s, °ª : %s", key, tm.get(key)));
-		}
+        tm.remove(40);
+        System.out.println(tm);
 
-		tm.remove(40);
-		System.out.println("¸Ê¿¡ ÀúÀåµÈ Å°µéÀÇ ÁıÇÕ : " + tm.keySet());
-		Iterator<Integer> keys = tm.keySet().iterator();
-		while (keys.hasNext()) {
-			Integer key = keys.next();
-			System.out.println(String.format("Å° : %s, °ª : %s", key, tm.get(key)));
-		}
-
-		tm.replace(20, "twenty");
-		System.out.println("¸Ê¿¡ ÀúÀåµÈ Å°µéÀÇ ÁıÇÕ : " + tm.keySet());
-		for (Integer key : tm.keySet()) {
-			System.out.println(String.format("Å° : %s, °ª : %s", key, tm.get(key)));
-		}
-		System.out.println("¸ÊÀÇ Å©±â : " + tm.size());
-	}
+        tm.replace(20, "twenty");
+        System.out.println(tm);
+    }
 }

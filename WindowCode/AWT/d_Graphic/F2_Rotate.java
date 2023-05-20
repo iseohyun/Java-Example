@@ -13,63 +13,63 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class F2_Rotate extends Frame implements KeyListener {
-	int theta;
-	Graphics2D g2;
+  int theta;
+  Graphics2D g2;
 
-	public F2_Rotate() {
-		addWindowListener(new WindowExit(this));
-		
-		setTitle("ÁÂ¿ì¹öÆ°À» ÀÌ¿ëÇØ¼­ È¸ÀüÇØº¸¼¼¿ä");
-		setVisible(true);
-		setSize(300, 300);
+  public F2_Rotate() {
+    addWindowListener(new WindowExit(this));
+    
+    setTitle("ì¢Œìš°ë²„íŠ¼ì„ ì´ìš©í•´ì„œ íšŒì „í•´ë³´ì„¸ìš”");
+    setVisible(true);
+    setSize(300, 300);
 
-		setLayout(new FlowLayout());
+    setLayout(new FlowLayout());
 
-		addKeyListener(this);
-	}
+    addKeyListener(this);
+  }
 
-	public void paint(Graphics g) {
-		if (g2 == null) {
-			g2 = (Graphics2D) getGraphics();
-			g2.translate(150, 150);
-		}
+  public void paint(Graphics g) {
+    if (g2 == null) {
+      g2 = (Graphics2D) getGraphics();
+      g2.translate(150, 150);
+    }
 
-		g2.rotate(Math.toRadians(theta));
+    g2.rotate(Math.toRadians(theta));
 
-		g2.clearRect(-100, -100, 200, 200);
+    g2.clearRect(-100, -100, 200, 200);
 
-		g2.draw(new Line2D.Float(-100, 0, 100, 0));
+    g2.draw(new Line2D.Float(-100, 0, 100, 0));
 
-		g2.draw(new Line2D.Float(0, -100, 0, 100));
+    g2.draw(new Line2D.Float(0, -100, 0, 100));
 
-		g2.fill(new Ellipse2D.Float(50, 50, 20, 20));
-	}
+    g2.fill(new Ellipse2D.Float(50, 50, 20, 20));
+  }
 
-	public static void main(String[] args) {
-		new F2_Rotate();
-	}
+  public static void main(String[] args) {
+    new F2_Rotate();
+  }
 
-	@Override
-	public void keyTyped(KeyEvent e) {
-	}
+  @Override
+  public void keyTyped(KeyEvent e) {
+  }
 
-	@Override
-	public void keyPressed(KeyEvent e) {
-	}
+  @Override
+  public void keyPressed(KeyEvent e) {
+  }
 
-	@Override
-	public void keyReleased(KeyEvent e) {
-		switch (e.getKeyCode()) {
-		case 37: // left
-			theta = 15;
-			break;
-		case 39: // right
-			theta = -15;
-			break;
-		}
-		repaint();
-	}
+  @Override
+  public void keyReleased(KeyEvent e) {
+    switch (e.getKeyCode()) {
+    case 37: // left
+      theta = 15;
+      break;
+    case 39: // right
+      theta = -15;
+      break;
+    }
+    repaint();
+  }
 }
 
-// ½Ç½À°úÁ¦ : µ¹¾Æ°¡´Â ¼Óµµ¸¦ º¯°æÇØ º¸¼¼¿ä.
-// ½Ç½À°úÁ¦ : µ¹¾Æ°£ °¢µµ¸¦ Ãâ·ÂÇØ º¸¼¼¿ä.
+// ì‹¤ìŠµê³¼ì œ : ëŒì•„ê°€ëŠ” ì†ë„ë¥¼ ë³€ê²½í•´ ë³´ì„¸ìš”.
+// ì‹¤ìŠµê³¼ì œ : ëŒì•„ê°„ ê°ë„ë¥¼ ì¶œë ¥í•´ ë³´ì„¸ìš”.

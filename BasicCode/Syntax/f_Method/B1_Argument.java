@@ -9,17 +9,17 @@ import tools.Input;
  */
 
 public class B1_Argument {
-  static void func(int argv) {
-    System.out.println("변수  : " + argv);
-  }
+    static void func(int argv) {
+        System.out.println("변수  : " + argv);
+    }
 
-  public static void main(String[] args) {
-    func(2);
-    func(3);
-    
-    int num = Input.getInt();
-    func(num);
-  }
+    public static void main(String[] args) {
+        func(2);
+        func(3);
+
+        int num = Input.getInt();
+        func(num);
+    }
 }
 
 // 실습과제 : myFunc함수를 만듭니다. myFunc함수를 숫자를 인자로 받아서 +2를 출력하는 함수입니다.

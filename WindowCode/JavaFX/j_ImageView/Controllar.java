@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+/* WindowCode/bin에 그림파일을 붙여넣습니다. */
+
 public class Controllar {
 
 	@FXML

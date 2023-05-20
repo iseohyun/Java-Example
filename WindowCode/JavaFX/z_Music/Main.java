@@ -13,7 +13,7 @@ import javafx.stage.WindowEvent;
 
 /**
  * 
- *	¸ðµâ Ãß°¡ : javafx.media
+ *	ëª¨ë“ˆ ì¶”ê°€ : javafx.media
  *
  *	--add-modules=javafx.controls,javafx.fxml,javafx.media
  *

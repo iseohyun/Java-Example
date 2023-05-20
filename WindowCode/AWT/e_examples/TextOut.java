@@ -11,31 +11,31 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class TextOut extends Frame implements ActionListener{
-	Button btn1 = new Button("´­·¯ÁÖ¼¼¿ä");
-	TextArea ta = new TextArea();
-	
-	public TextOut() {
-		add("North", btn1);
-		add("Center", ta);
-		
-		btn1.addActionListener(this);
-		
-		addWindowListener(new WindowExit(this));
-		
-		setSize(300, 400);
-		setVisible(true);
-	}
-	
-	public static void main(String[] args) {
-		new TextOut();
-	}
-	
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		btn1.setBackground(Color.GREEN);
-		ta.setText(ta.getText()+"¹öÆ°ÀÌ ´­·È¾î¿ä.\n");
-	}
+  Button btn1 = new Button("ëˆŒëŸ¬ì£¼ì„¸ìš”");
+  TextArea ta = new TextArea();
+  
+  public TextOut() {
+    add("North", btn1);
+    add("Center", ta);
+    
+    btn1.addActionListener(this);
+    
+    addWindowListener(new WindowExit(this));
+    
+    setSize(300, 400);
+    setVisible(true);
+  }
+  
+  public static void main(String[] args) {
+    new TextOut();
+  }
+  
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    btn1.setBackground(Color.GREEN);
+    ta.setText(ta.getText()+"ë²„íŠ¼ì´ ëˆŒë ¸ì–´ìš”.\n");
+  }
 }
 
-// ½Ç½À°úÁ¦ : "¹öÆ°ÀÌ ´­·È¾î¿ä(¼ýÀÚ)"°¡ Ãâ·ÂµÇµµ·Ï ¸¸µé¾î ÁÖ¼¼¿ä.
-//     ¼ýÀÚ´Â °è¼ÓÇØ¼­ Áõ°¡ÇÕ´Ï´Ù. ¿¹¸¦µé¾î "¹öÆ°ÀÌ ´­·È¾î¿ä(1)" -> "¹öÆ°ÀÌ ´­·È¾î¿ä(2)" -> "¹öÆ°ÀÌ ´­·È¾î¿ä(3)"
+// ì‹¤ìŠµê³¼ì œ : "ë²„íŠ¼ì´ ëˆŒë ¸ì–´ìš”(ìˆ«ìž)"ê°€ ì¶œë ¥ë˜ë„ë¡ ë§Œë“¤ì–´ ì£¼ì„¸ìš”.
+//     ìˆ«ìžëŠ” ê³„ì†í•´ì„œ ì¦ê°€í•©ë‹ˆë‹¤. ì˜ˆë¥¼ë“¤ì–´ "ë²„íŠ¼ì´ ëˆŒë ¸ì–´ìš”(1)" -> "ë²„íŠ¼ì´ ëˆŒë ¸ì–´ìš”(2)" -> "ë²„íŠ¼ì´ ëˆŒë ¸ì–´ìš”(3)"

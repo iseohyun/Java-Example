@@ -13,73 +13,73 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class A_Label extends Frame implements MouseListener {
-	
-	boolean isStart = false;
-	Label lab1 = new Label("Àú¸¦ Å¬¸¯ÇØ º¸¼¼¿ä.");
-	Label lab2 = new Label("Àú¸¦ Å¬¸¯ÇÏ½Ã¸é, 5¾ï¿øÀ» µå¸³´Ï´Ù.");
+  
+  boolean isStart = false;
+  Label lab1 = new Label("ì €ë¥¼ í´ë¦­í•´ ë³´ì„¸ìš”.");
+  Label lab2 = new Label("ì €ë¥¼ í´ë¦­í•˜ì‹œë©´, 5ì–µì›ì„ ë“œë¦½ë‹ˆë‹¤.");
 
-	A_Label() {
-		setLayout(new FlowLayout());
-		
-		add(lab1);
-		add(lab2);
+  A_Label() {
+    setLayout(new FlowLayout());
+    
+    add(lab1);
+    add(lab2);
 
-		lab1.setBackground(Color.yellow);
-		lab2.setBackground(Color.red);
-		
-		lab1.addMouseListener(this);
-		lab2.addMouseListener(this);
-		
-		addWindowListener(new WindowExit(this));
+    lab1.setBackground(Color.yellow);
+    lab2.setBackground(Color.red);
+    
+    lab1.addMouseListener(this);
+    lab2.addMouseListener(this);
+    
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new A_Label();
-		
-	}
+  public static void main(String[] args) {
+    new A_Label();
+    
+  }
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("Å¬¸¯µÇ¾ú½À´Ï´Ù.");
-	}
+  @Override
+  public void mouseClicked(MouseEvent e) {
+    // TODO Auto-generated method stub
+    System.out.println("í´ë¦­ë˜ì—ˆìŠµë‹ˆë‹¤.");
+  }
 
-	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		if(e.getSource().equals(lab1)) {
-			System.out.println("¸¶¿ì½º ´­¸².");
-			lab2.setVisible(true);
-		}else {
-			if(!isStart) {
-				System.out.println("ÀÌº¥Æ® ½ÃÀÛ.");
-				JOptionPane.showMessageDialog(this, "¾ÆÁ÷ ½ÃÀÛ ¾ÈÇß½À´Ï´Ù. \n ÀÌÁ¦ °ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù.");
-				lab2.setVisible(false);
-			} else {
-				JOptionPane.showMessageDialog(this, "5¾ï¿ø¿¡ ´çÃ·µÇ¼Ì½À´Ï´Ù.");
-			}
-		}
-	}
+  @Override
+  public void mousePressed(MouseEvent e) {
+    // TODO Auto-generated method stub
+    if(e.getSource().equals(lab1)) {
+      System.out.println("ë§ˆìš°ìŠ¤ ëˆŒë¦¼.");
+      lab2.setVisible(true);
+    }else {
+      if(!isStart) {
+        System.out.println("ì´ë²¤íŠ¸ ì‹œì‘.");
+        JOptionPane.showMessageDialog(this, "ì•„ì§ ì‹œì‘ ì•ˆí–ˆìŠµë‹ˆë‹¤. \n ì´ì œ ê²Œì„ì„ ì‹œì‘í•©ë‹ˆë‹¤.");
+        lab2.setVisible(false);
+      } else {
+        JOptionPane.showMessageDialog(this, "5ì–µì›ì— ë‹¹ì²¨ë˜ì…¨ìŠµë‹ˆë‹¤.");
+      }
+    }
+  }
 
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("¸¶¿ì½º Å¬¸¯ ÇØÁ¦!");
-		lab2.setVisible(false);
-	}
+  @Override
+  public void mouseReleased(MouseEvent e) {
+    // TODO Auto-generated method stub
+    System.out.println("ë§ˆìš°ìŠ¤ í´ë¦­ í•´ì œ!");
+    lab2.setVisible(false);
+  }
 
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("ÀÔÀåÇÏ½Ê´Ï´Ù.");
-	}
+  @Override
+  public void mouseEntered(MouseEvent e) {
+    // TODO Auto-generated method stub
+    System.out.println("ì…ì¥í•˜ì‹­ë‹ˆë‹¤.");
+  }
 
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println("µµ¸Á°¡½Ê´Ï´Ù.");
-	}
+  @Override
+  public void mouseExited(MouseEvent e) {
+    // TODO Auto-generated method stub
+    System.out.println("ë„ë§ê°€ì‹­ë‹ˆë‹¤.");
+  }
 }

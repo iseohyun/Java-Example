@@ -1,41 +1,26 @@
 package f_Collection;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class B_LinkedList {
-	public static void main(String[] args) {
-		LinkedList<String> lnkList = new LinkedList<String>();
+    public static void main(String[] args) {
+        LinkedList<String> list = new LinkedList<String>();
+        list.addAll(Arrays.asList("ë„·", "ë‘˜", "ì…‹", "í•˜ë‚˜"));
 
-		lnkList.add("³Ý");
-		lnkList.add("µÑ");
-		lnkList.add("¼Â");
-		lnkList.add("ÇÏ³ª");
+        System.out.println(list);
 
-		for (int i = 0; i < lnkList.size(); i++) {
-			System.out.print(lnkList.get(i) + " ");
-		}
+        list.remove(1);
+        System.out.println(list);
 
-		System.out.println();
-		lnkList.remove(1);
-		for (String e : lnkList) {
-			System.out.print(e + " ");
-		}
+        list.set(2, "ë‘˜");
+        System.out.println(list);
 
-		System.out.println();
-		lnkList.set(2, "µÑ");
-		for (String e : lnkList) {
-			System.out.print(e + " ");
-		}
+        list.addAll(list);
+        System.out.println(list);
 
-		lnkList.addAll(lnkList);
-		System.out.println();
-		for (String e : lnkList) {
-			System.out.print(e + " ");
-		}
-		System.out.println();
-		System.out.println("===========");
-		System.out.println("First : " + lnkList.getFirst().toString());
-		System.out.println("Last : " + lnkList.getLast().toString());
-		System.out.println("¸®½ºÆ®ÀÇ Å©±â : " + lnkList.size());
-	}
+        System.out.println("First : " + list.getFirst());
+        System.out.println("Last : " + list.getLast());
+        System.out.println("ë¦¬ìŠ¤íŠ¸ì˜ í¬ê¸° : " + list.size());
+    }
 }

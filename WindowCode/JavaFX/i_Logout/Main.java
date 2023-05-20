@@ -13,8 +13,8 @@ import javafx.stage.Stage;
  * 
  * @author Seohyun Jung
  *
- *	Controllar¿¡¼­ logoutÀ» ½ÇÇàÇÏ´Â °ÍÀº ¹öÆ°¿¡ ÇÑÁ¤ÇØ¼­ µ¿ÀÛÇÕ´Ï´Ù. Áï, ¿ìÃø »ó´ÜÀÇ x¹öÆ°Àº ´ëÀÀÇÏÁö ¸øÇÑ´Ù´Â ¶æÀÔ´Ï´Ù.
- *	setOnCloseRequest¸¦ ÅëÇØ¼­ ÀÌ¸¦ ´ëÀÀÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ *	Controllarì—ì„œ logoutì„ ì‹¤í–‰í•˜ëŠ” ê²ƒì€ ë²„íŠ¼ì— í•œì •í•´ì„œ ë™ì‘í•©ë‹ˆë‹¤. ì¦‰, ìš°ì¸¡ ìƒë‹¨ì˜ xë²„íŠ¼ì€ ëŒ€ì‘í•˜ì§€ ëª»í•œë‹¤ëŠ” ëœ»ì…ë‹ˆë‹¤.
+ *	setOnCloseRequestë¥¼ í†µí•´ì„œ ì´ë¥¼ ëŒ€ì‘í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
  *
  */
 
@@ -36,11 +36,11 @@ public class Main extends Application {
 	public void logout(Stage stage) {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("logout");
-		alert.setHeaderText("´ç½ÅÀº Áö±İ ·Î±×¾Æ¿ô ÇÏ·Á°í ÇÏ°í ÀÖ¼Ò¸¸...");
-		alert.setContentText("ÁøÂ¥·ç °¥²¨³Ä°í?");
+		alert.setHeaderText("ë‹¹ì‹ ì€ ì§€ê¸ˆ ë¡œê·¸ì•„ì›ƒ í•˜ë ¤ê³  í•˜ê³  ìˆì†Œë§Œ...");
+		alert.setContentText("ì§„ì§œë£¨ ê°ˆêº¼ëƒê³ ?");
 
 		if (alert.showAndWait().get() == ButtonType.OK) {
-			System.out.println("Àß°¡½Ã°Ô!");
+			System.out.println("ì˜ê°€ì‹œê²Œ!");
 			stage.close();
 		}
 	}

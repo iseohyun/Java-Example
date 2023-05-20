@@ -12,15 +12,15 @@ package a_BasicType;
  */
 
 public class C1_Print {
-  public static void main(String[] args) {
-    // println
-    System.out.println("출력 1.");
-    System.out.println("출력 2.");
+    public static void main(String[] args) {
+        // println
+        System.out.println("출력 1.");
+        System.out.println("출력 2.");
 
-    // print
-    System.out.print("출력 3.");
-    System.out.print("출력 4.");
-  }
+        // print
+        System.out.print("출력 3.");
+        System.out.print("출력 4.");
+    }
 }
 
 // 실습과제 : 내 소개를 해봅시다.

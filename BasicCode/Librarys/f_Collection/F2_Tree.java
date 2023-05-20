@@ -1,33 +1,24 @@
 package f_Collection;
 
-import java.util.Iterator;
 import java.util.TreeSet;
 
 public class F2_Tree {
-	public static void main(String[] args) {
-		TreeSet<Integer> ts = new TreeSet<Integer>();
-		ts.add(6);
-		ts.add(4);
-		ts.add(3);
-		ts.add(5);
-		ts.add(8);
-		ts.add(7);
-		ts.add(9);
+    public static void main(String[] args) {
+        TreeSet<Integer> ts = new TreeSet<Integer>();
+        ts.add(6);
+        ts.add(4);
+        ts.add(3);
+        ts.add(5);
+        ts.add(8);
+        ts.add(7);
+        ts.add(9);
+        System.out.println(ts);
 
-		for (int e : ts) {
-			System.out.print(e + " ");
-		}
+        ts.remove(4);
+        System.out.println(ts);
 
-		System.out.println();
-		ts.remove(40);
-		Iterator<Integer> iter = ts.iterator();
-		while (iter.hasNext()) {
-			System.out.print(iter.next() + " ");
-		}
-
-		System.out.println();
-		System.out.println("ÀÌÁø °Ë»ö Æ®¸®ÀÇ Å©±â : " + ts.size());
-		System.out.println(ts.subSet(4, 8));
-		System.out.println(ts.subSet(4, true, 8, true));
-	}
+        System.out.println("ì´ì§„ ê²€ìƒ‰ íŠ¸ë¦¬ì˜ í¬ê¸° : " + ts.size());
+        System.out.println(ts.subSet(4, 8));
+        System.out.println(ts.subSet(5, false, 8, true));
+    }
 }

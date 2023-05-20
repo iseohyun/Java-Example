@@ -17,65 +17,65 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class H_File extends Frame implements ActionListener {
-	Button btnOpen = new Button("ÆÄÀÏ ¿­±â");
-	Button btnSave = new Button("´Ù¸¥ ÀÌ¸§À¸·Î ÀúÀå");
-	FileDialog fopen = new FileDialog(this, "ÆÄÀÏ ¿­±â", FileDialog.LOAD);
-	FileDialog fsave = new FileDialog(this, "´Ù¸¥ ÀÌ¸§À¸·Î ÀúÀå", FileDialog.SAVE);
-	TextArea ta = new TextArea("³»¿ë", 33, 80);
+  Button btnOpen = new Button("íŒŒì¼ ì—´ê¸°");
+  Button btnSave = new Button("ë‹¤ë¥¸ ì´ë¦„ìœ¼ë¡œ ì €ì¥");
+  FileDialog fopen = new FileDialog(this, "íŒŒì¼ ì—´ê¸°", FileDialog.LOAD);
+  FileDialog fsave = new FileDialog(this, "ë‹¤ë¥¸ ì´ë¦„ìœ¼ë¡œ ì €ì¥", FileDialog.SAVE);
+  TextArea ta = new TextArea("ë‚´ìš©", 33, 80);
 
-	public H_File() {
-		setLayout(new FlowLayout());
+  public H_File() {
+    setLayout(new FlowLayout());
 
-		add(btnOpen);
-		add(btnSave);
-		add(ta);
+    add(btnOpen);
+    add(btnSave);
+    add(ta);
 
-		btnOpen.addActionListener(this);
-		btnSave.addActionListener(this);
+    btnOpen.addActionListener(this);
+    btnSave.addActionListener(this);
 
-		addWindowListener(new WindowExit(this));
+    addWindowListener(new WindowExit(this));
 
-		setSize(600, 600);
-		setVisible(true);
-	}
+    setSize(600, 600);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new H_File();
-	}
+  public static void main(String[] args) {
+    new H_File();
+  }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(btnOpen)) {
-			fopen.setVisible(true);
-			System.out.print("¿­¸°ÆÄÀÏ : " + fopen.getDirectory());
-			System.out.println(fopen.getFile());
-			try {
-				File file = new File(fopen.getDirectory() + fopen.getFile());
-				ta.setText("");
-				BufferedReader br = new BufferedReader(new FileReader(file));
-				String line;
-				while ((line = br.readLine()) != null) {
-					ta.setText(ta.getText() + line + "\n");
-				}
-				br.close();
-			} catch (Throwable t) {
-				System.out.println("ÆÄÀÏÀÌ ¿­¸®Áö ¾Ê¾Ò½À´Ï´Ù.");
-			}
-		} else {
-			fsave.setVisible(true);
-			File file = new File(fsave.getDirectory()+fsave.getFile());
-			OutputStream stream;
-			try {
-				stream = new FileOutputStream(file);
-				stream.write(ta.getText().getBytes());
-				stream.close();
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
-		}
-	}
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    if (e.getSource().equals(btnOpen)) {
+      fopen.setVisible(true);
+      System.out.print("ì—´ë¦°íŒŒì¼ : " + fopen.getDirectory());
+      System.out.println(fopen.getFile());
+      try {
+        File file = new File(fopen.getDirectory() + fopen.getFile());
+        ta.setText("");
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String line;
+        while ((line = br.readLine()) != null) {
+          ta.setText(ta.getText() + line + "\n");
+        }
+        br.close();
+      } catch (Throwable t) {
+        System.out.println("íŒŒì¼ì´ ì—´ë¦¬ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
+      }
+    } else {
+      fsave.setVisible(true);
+      File file = new File(fsave.getDirectory()+fsave.getFile());
+      OutputStream stream;
+      try {
+        stream = new FileOutputStream(file);
+        stream.write(ta.getText().getBytes());
+        stream.close();
+      } catch (Exception e1) {
+        e1.printStackTrace();
+      }
+    }
+  }
 }
-// ½Ç½À°úÁ¦ : FileDialogÅ¬·¡½º¸¦ ¸¸µå½Ã¿À.
-//		FileDialog´Â 2°¡Áö ¸Ş¼Òµå¸¦ °®½À´Ï´Ù.
-//		1. open()Àº open ´ÙÀÌ¾ó·Î±×¸¦ È£ÃâÇÏ°í, ³»¿ëÀ» ¿¬°áµÈ Ãâ·Â»óÀÚ·Î Ãâ·ÂÇÕ´Ï´Ù.
-//		2. save()´Â save ´ÙÀÌ¾ó·Î±×¸¦ È£ÃâÇÏ°í, ¿¬°áµÈ Ãâ·Â»óÀÚÀÇ ³»¿ëÀ» ÀúÀåÇÕ´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : FileDialogí´ë˜ìŠ¤ë¥¼ ë§Œë“œì‹œì˜¤.
+//		FileDialogëŠ” 2ê°€ì§€ ë©”ì†Œë“œë¥¼ ê°–ìŠµë‹ˆë‹¤.
+//		1. open()ì€ open ë‹¤ì´ì–¼ë¡œê·¸ë¥¼ í˜¸ì¶œí•˜ê³ , ë‚´ìš©ì„ ì—°ê²°ëœ ì¶œë ¥ìƒìë¡œ ì¶œë ¥í•©ë‹ˆë‹¤.
+//		2. save()ëŠ” save ë‹¤ì´ì–¼ë¡œê·¸ë¥¼ í˜¸ì¶œí•˜ê³ , ì—°ê²°ëœ ì¶œë ¥ìƒìì˜ ë‚´ìš©ì„ ì €ì¥í•©ë‹ˆë‹¤.

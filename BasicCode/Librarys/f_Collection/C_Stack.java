@@ -3,24 +3,24 @@ package f_Collection;
 import java.util.Stack;
 
 public class C_Stack {
-	public static void main(String[] args) {
-		Stack<String> st = new Stack<String>();
-		st.push("¿ù¿äÀÏ");
-		System.out.println(st.peek() + st + st.size());
-		st.push("È­¿äÀÏ");
-		System.out.println(st.peek() + st + st.size());
-		st.push("¼ö¿äÀÏ");
-		System.out.println(st.peek() + st + st.size());
-		st.push("¸ñ¿äÀÏ");
-		System.out.println(st.peek() + st + st.size());
-		st.push("±İ¿äÀÏ");
-		System.out.println(st.peek() + st + st.size());
-		System.out.println(st.pop());
-		System.out.println(st.peek() + st + st.size());
-		System.out.println(st.pop());
-		System.out.println(st.peek() + st + st.size());
-		System.out.println("to ¿ù¿äÀÏ : " + st.search("¿ù¿äÀÏ"));
-		System.out.println("to È­¿äÀÏ : " + st.search("È­¿äÀÏ"));
-		System.out.println("to ±İ¿äÀÏ : " + st.search("±İ¿äÀÏ"));
-	}
+    public static void main(String[] args) {
+        Stack<String> st = new Stack<String>();
+        st.push("ì›”ìš”ì¼");
+        System.out.println(st.peek() + st + st.size());
+        st.push("í™”ìš”ì¼");
+        System.out.println(st.peek() + st + st.size());
+        st.push("ìˆ˜ìš”ì¼");
+        System.out.println(st.peek() + st + st.size());
+        st.push("ëª©ìš”ì¼");
+        System.out.println(st.peek() + st + st.size());
+        st.push("ê¸ˆìš”ì¼");
+        System.out.println(st.peek() + st + st.size());
+        System.out.println(st.pop());
+        System.out.println(st.peek() + st + st.size());
+        System.out.println(st.pop());
+        System.out.println(st.peek() + st + st.size());
+        System.out.println("to ì›”ìš”ì¼ : " + st.search("ì›”ìš”ì¼"));
+        System.out.println("to í™”ìš”ì¼ : " + st.search("í™”ìš”ì¼"));
+        System.out.println("to ê¸ˆìš”ì¼ : " + st.search("ê¸ˆìš”ì¼"));
+    }
 }

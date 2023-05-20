@@ -1,24 +1,24 @@
 package b_Operation;
 
 public class D2_Compare {
-  public static void main(String[] args) {
-    int num1 = -100;
+    public static void main(String[] args) {
+        int num1 = -100;
 
-    System.out.println("연산없음  [" + toBin(num1) + "] " + num1);
-    System.out.println("~ 연산    [" + toBin(~num1) + "] " + ~num1);
-    System.out.println("<< 연산   [" + toBin(num1 << 2) + "]" + (num1 << 2));
-    System.out.println(">> 연산   [" + toBin(num1 >> 2) + "] " + (num1 >> 2));
-    System.out.println(">>> 연산  [" + toBin(num1 >>> 2) + "] " + (num1 >>> 2));
-  }
-
-  static String toBin(int num) {
-    String str = "";
-    for (int i = 0; i < 32; i++) {
-      str = ((num % 2 == 0) ? "0" : "1") + str;
-      num >>= 1;
+        System.out.println("연산없음  [" + toBin(num1) + "] " + num1);
+        System.out.println("~ 연산    [" + toBin(~num1) + "] " + ~num1);
+        System.out.println("<< 연산   [" + toBin(num1 << 2) + "]" + (num1 << 2));
+        System.out.println(">> 연산   [" + toBin(num1 >> 2) + "] " + (num1 >> 2));
+        System.out.println(">>> 연산  [" + toBin(num1 >>> 2) + "] " + (num1 >>> 2));
     }
-    return str;
-  }
+
+    static String toBin(int num) {
+        String str = "";
+        for (int i = 0; i < 32; i++) {
+            str = ((num % 2 == 0) ? "0" : "1") + str;
+            num >>= 1;
+        }
+        return str;
+    }
 }
 
 // 실습과제 : 양수(예:8)를 입력해봅니다.

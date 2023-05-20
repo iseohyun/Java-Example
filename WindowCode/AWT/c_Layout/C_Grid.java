@@ -8,30 +8,30 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class C_Grid extends Frame {
-	Button b1 = new Button("1¹ø ¹öÆ°");
-	Button b2 = new Button("2¹ø ¹öÆ°");
-	Button b3 = new Button("3¹ø ¹öÆ°");
-	Button b4 = new Button("4¹ø ¹öÆ°");
-	Button b5 = new Button("5¹ø ¹öÆ°");
+  Button b1 = new Button("1ë²ˆ ë²„íŠ¼");
+  Button b2 = new Button("2ë²ˆ ë²„íŠ¼");
+  Button b3 = new Button("3ë²ˆ ë²„íŠ¼");
+  Button b4 = new Button("4ë²ˆ ë²„íŠ¼");
+  Button b5 = new Button("5ë²ˆ ë²„íŠ¼");
 
-	public C_Grid() {
-		setLayout(new GridLayout(2, 3, 5, 10));
+  public C_Grid() {
+    setLayout(new GridLayout(2, 3, 5, 10));
 
-		add(b1);
-		add(b2);
-		add(b3);
-		add(b4);
-		add(b5);
+    add(b1);
+    add(b2);
+    add(b3);
+    add(b4);
+    add(b5);
 
-		addWindowListener(new WindowExit(this));
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] agrs) {
-		new C_Grid();
-	}
+  public static void main(String[] agrs) {
+    new C_Grid();
+  }
 }
 
-// ½Ç½À°úÁ¦ : ¹öÆ°À» ÇÏ³ª ´õ Ãß°¡ ÇØ º¾´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : ë²„íŠ¼ì„ í•˜ë‚˜ ë” ì¶”ê°€ í•´ ë´…ë‹ˆë‹¤.

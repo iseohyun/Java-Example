@@ -8,32 +8,32 @@ import javafx.stage.Stage;
 
 /**
  * 
- * SceneBuilder ¼³Ä¡¹æ¹ý(´Ù¿î·Îµå: ¾Æ·¡)
+ * SceneBuilder ì„¤ì¹˜ë°©ë²•(ë‹¤ìš´ë¡œë“œ: ì•„ëž˜)
  * https://gluonhq.com/products/scene-builder/
- * Window -> Preference -> JavaFx -> SceneBuilder excutable : µð·ºÅä¸® ¼³Á¤ -> ¼³Ä¡µÈ µð·ºÅä¸®
- *  ¿¹ : C:\Users\Seohyun Jung\AppData\Local\SceneBuilder\SceneBuilder.exe ¶Ç´Â
- *  ¿¹ : C:\Program Files\SceneBuilder\SceneBuilder.exe
+ * Window -> Preference -> JavaFx -> SceneBuilder excutable : ë””ë ‰í† ë¦¬ ì„¤ì • -> ì„¤ì¹˜ëœ ë””ë ‰í† ë¦¬
+ *  ì˜ˆ : C:\Users\Seohyun Jung\AppData\Local\SceneBuilder\SceneBuilder.exe ë˜ëŠ”
+ *  ì˜ˆ : C:\Program Files\SceneBuilder\SceneBuilder.exe
  *  
- *  ½ÇÇà ¹æ¹ý
- *  ???.fxml ¿ìÅ¬¸¯ ->  Open with SceneBuilder
+ *  ì‹¤í–‰ ë°©ë²•
+ *  ???.fxml ìš°í´ë¦­ ->  Open with SceneBuilder
  *
  */
 
 
 public class Main extends Application {
-	@Override
-	public void start(Stage primaryStage) {
-		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
-			Scene scene = new Scene(root);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+  @Override
+  public void start(Stage primaryStage) {
+    try {
+      Parent root = FXMLLoader.load(getClass().getResource("Scene.fxml"));
+      Scene scene = new Scene(root);
+      primaryStage.setScene(scene);
+      primaryStage.show();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
 
-	public static void main(String[] args) {
-		launch(args);
-	}
+  public static void main(String[] args) {
+    launch(args);
+  }
 }

@@ -9,25 +9,25 @@ package f_Method;
  */
 
 public class D1_Call {
-  public static void main(String[] args) {
-    func1();
-  }
+    public static void main(String[] args) {
+        func1();
+    }
 
-  static void func1() {
-    System.out.println("1: 시작한다.");
-    func2();
-    System.out.println("1: 끝난다.");
-  }
+    static void func1() {
+        System.out.println("1: 시작한다.");
+        func2();
+        System.out.println("1: 끝난다.");
+    }
 
-  static void func2() {
-    System.out.println("2: 시작한다.");
-    func3();
-    System.out.println("2: 끝난다.");
-  }
+    static void func2() {
+        System.out.println("2: 시작한다.");
+        func3();
+        System.out.println("2: 끝난다.");
+    }
 
-  static void func3() {
-    System.out.println("3: 시작한다.");
-    // 실습과제 : func1()을 호출한다면 어떤 일이 발생할까?
-    System.out.println("3: 끝난다.");
-  }
+    static void func3() {
+        System.out.println("3: 시작한다.");
+        // 실습과제 : func1()을 호출한다면 어떤 일이 발생할까?
+        System.out.println("3: 끝난다.");
+    }
 }

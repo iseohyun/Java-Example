@@ -20,106 +20,98 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-/**
- * 
- * ÄÚµå ½ÇÇà ¸ğ½À
- * 
- * https://example-code.tistory.com/15
- *
- */
-
 @SuppressWarnings("serial")
 public class A_TextOut extends JFrame {
-	JPanel pTextField = new JPanel();
-	JPanel pPlainText = new JPanel();
-	JPanel pStyledText = new JPanel();
+  JPanel pTextField = new JPanel();
+  JPanel pPlainText = new JPanel();
+  JPanel pStyledText = new JPanel();
 
-	JLabel labelText;
-	JLabel labelPassWord;
-	JLabel labelFormatted;
-	JTextField TextField = new JTextField();
-	JPasswordField PassWord = new JPasswordField();
-	JFormattedTextField FormaedText;
-	JTextArea TextArea = new JTextArea(20, 20);
-	JTextPane TextPane01;
-	final String MsgTxtArea = "JTextArea´Â ±âº»ÀûÀ¸·Î ÅØ½ºÆ®¸¦ Ãâ·ÂÇÏ±â À§ÇÑ µµ±¸ ÀÔ´Ï´Ù."
-			+ "ÆùÆ®¸¦ ÁöÁ¤ÇÒ ¼ö´Â ÀÖÁö¸¸, ÇÏ³ªÀÇ JTextArea¿¡ ÀÖ´Â ¸ğµç ¹®ÀÚ´Â ÇÏ³ªÀÇ ¼³Á¤¸¸ µû¸¨´Ï´Ù.";
-	final String html = "<font size=\"2em\" color=\"green\">\r\n"
-			+ "±ÛÀÚ¸¶´Ù <U>´Ù¸¥ ¼Ó¼º</u>À» ºÎ¿© ÇÒ ¼ö ÀÖ½À´Ï´Ù.<br>\r\n"
-			+ "</font>"
-			+ "<span style = \" font-size:1.5em;  color: Red;\">\r\n"
-			+ "Áö±İÀº <b>HTML</b>À» »ç¿ëÇÏ°í ÀÖ½À´Ï´Ù.\r\n"
-			+ "</span>";
-	
-	A_TextOut() {
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(true);
+  JLabel labelText;
+  JLabel labelPassWord;
+  JLabel labelFormatted;
+  JTextField TextField = new JTextField();
+  JPasswordField PassWord = new JPasswordField();
+  JFormattedTextField FormaedText;
+  JTextArea TextArea = new JTextArea(20, 20);
+  JTextPane TextPane01;
+  final String MsgTxtArea = "JTextAreaëŠ” ê¸°ë³¸ì ìœ¼ë¡œ í…ìŠ¤íŠ¸ë¥¼ ì¶œë ¥í•˜ê¸° ìœ„í•œ ë„êµ¬ ì…ë‹ˆë‹¤."
+      + "í°íŠ¸ë¥¼ ì§€ì •í•  ìˆ˜ëŠ” ìˆì§€ë§Œ, í•˜ë‚˜ì˜ JTextAreaì— ìˆëŠ” ëª¨ë“  ë¬¸ìëŠ” í•˜ë‚˜ì˜ ì„¤ì •ë§Œ ë”°ë¦…ë‹ˆë‹¤.";
+  final String html = "<font size=\"2em\" color=\"green\">\r\n"
+      + "ê¸€ìë§ˆë‹¤ <U>ë‹¤ë¥¸ ì†ì„±</u>ì„ ë¶€ì—¬ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.<br>\r\n"
+      + "</font>"
+      + "<span style = \" font-size:1.5em;  color: Red;\">\r\n"
+      + "ì§€ê¸ˆì€ <b>HTML</b>ì„ ì‚¬ìš©í•˜ê³  ìˆìŠµë‹ˆë‹¤.\r\n"
+      + "</span>";
+  
+  A_TextOut() {
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setVisible(true);
 
-		// layout
-		GridBagLayout GridBag = new GridBagLayout();
-		GridBagConstraints c = new GridBagConstraints();
-		setLayout(GridBag);
+    // layout
+    GridBagLayout GridBag = new GridBagLayout();
+    GridBagConstraints c = new GridBagConstraints();
+    setLayout(GridBag);
 
-		c.gridx = 0;
-		c.gridy = 0;
-		GridBag.setConstraints(pTextField, c);
-		add(pTextField);
+    c.gridx = 0;
+    c.gridy = 0;
+    GridBag.setConstraints(pTextField, c);
+    add(pTextField);
 
-		c.gridx = 1;
-		c.gridy = 0;
-		c.gridheight = 2;
-		GridBag.setConstraints(pStyledText, c);
-		add(pStyledText);
+    c.gridx = 1;
+    c.gridy = 0;
+    c.gridheight = 2;
+    GridBag.setConstraints(pStyledText, c);
+    add(pStyledText);
 
-		c.gridx = 0;
-		c.gridy = 1;
-		GridBag.setConstraints(pPlainText, c);
-		add(pPlainText);
+    c.gridx = 0;
+    c.gridy = 1;
+    GridBag.setConstraints(pPlainText, c);
+    add(pPlainText);
 
-		// ÁÂ»ó´Ü
-		pTextField.setLayout(new GridLayout(3, 2));
+    // ì¢Œìƒë‹¨
+    pTextField.setLayout(new GridLayout(3, 2));
 
-		labelText = new JLabel("Plain Text : ");
-		pTextField.add(labelText);
-		TextField.setText("ÀÌ¸§");
-		pTextField.add(TextField);
-		labelPassWord = new JLabel("Password : ");
-		pTextField.add(labelPassWord);
-		PassWord.setText("Password");
-		pTextField.add(PassWord);
-		labelFormatted = new JLabel("Formatted Text : ");
-		pTextField.add(labelFormatted);
-		DateFormat df = new SimpleDateFormat("yyyy.mm.dd");
-		FormaedText = new JFormattedTextField(df);
-		FormaedText.setText("2020.12.31");
-		FormaedText.revalidate();
-		pTextField.add(FormaedText);
+    labelText = new JLabel("Plain Text : ");
+    pTextField.add(labelText);
+    TextField.setText("ì´ë¦„");
+    pTextField.add(TextField);
+    labelPassWord = new JLabel("Password : ");
+    pTextField.add(labelPassWord);
+    PassWord.setText("Password");
+    pTextField.add(PassWord);
+    labelFormatted = new JLabel("Formatted Text : ");
+    pTextField.add(labelFormatted);
+    DateFormat df = new SimpleDateFormat("yyyy.mm.dd");
+    FormaedText = new JFormattedTextField(df);
+    FormaedText.setText("2020.12.31");
+    FormaedText.revalidate();
+    pTextField.add(FormaedText);
 
-		// ÁÂÇÏ´Ü
-		pPlainText.add(TextArea);
-		JScrollPane scroll = new JScrollPane(TextArea);
-		pPlainText.add(scroll);
+    // ì¢Œí•˜ë‹¨
+    pPlainText.add(TextArea);
+    JScrollPane scroll = new JScrollPane(TextArea);
+    pPlainText.add(scroll);
 
-		TextArea.setText(MsgTxtArea);
-		TextArea.setLineWrap(true);
-		TextArea.setSelectedTextColor(Color.yellow);
-		TextArea.setSelectionColor(Color.black);
-		TextArea.setFont(new Font("±Ã¼­", Font.PLAIN, 12));
+    TextArea.setText(MsgTxtArea);
+    TextArea.setLineWrap(true);
+    TextArea.setSelectedTextColor(Color.yellow);
+    TextArea.setSelectionColor(Color.black);
+    TextArea.setFont(new Font("ê¶ì„œ", Font.PLAIN, 12));
 
-		// ¿ìÃø
-		pStyledText.setLayout(new BorderLayout());
-		TextPane01 = new JTextPane();
+    // ìš°ì¸¡
+    pStyledText.setLayout(new BorderLayout());
+    TextPane01 = new JTextPane();
 
-		pStyledText.add(TextPane01);
-		pStyledText.setPreferredSize(new Dimension(300, 400));
+    pStyledText.add(TextPane01);
+    pStyledText.setPreferredSize(new Dimension(300, 400));
 
-		TextPane01.setContentType("text/html");
-		TextPane01.setText(html);
+    TextPane01.setContentType("text/html");
+    TextPane01.setText(html);
 
-		pack();
-	}
+    pack();
+  }
 
-	public static void main(String[] args) {
-		new A_TextOut();
-	}
+  public static void main(String[] args) {
+    new A_TextOut();
+  }
 }

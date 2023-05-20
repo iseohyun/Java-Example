@@ -11,32 +11,32 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class B2_InetImage extends Frame {
-	Image img;
-	Toolkit tkit;
+  Image img;
+  Toolkit tkit;
 
-	B2_InetImage() {
-		addWindowListener(new WindowExit(this));
-		
-		setVisible(true);
-		setSize(650, 507);
-		tkit = getToolkit();
-		URL url;
-		try {
-			url = new URL("https://dimg.donga.com/ugc/CDB/WEEKLY/Article/5b/b3/22/85/5bb32285000ed2738de6.jpg");
-			img = tkit.getImage(url);
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
-		tkit.prepareImage(img, -1, -1, this);
-	}
+  B2_InetImage() {
+    addWindowListener(new WindowExit(this));
+    
+    setVisible(true);
+    setSize(650, 507);
+    tkit = getToolkit();
+    URL url;
+    try {
+      url = new URL("https://dimg.donga.com/ugc/CDB/WEEKLY/Article/5b/b3/22/85/5bb32285000ed2738de6.jpg");
+      img = tkit.getImage(url);
+    } catch (MalformedURLException e) {
+      e.printStackTrace();
+    }
+    tkit.prepareImage(img, -1, -1, this);
+  }
 
-	public void paint(Graphics g) {
-		g.drawImage(img, 0, 0, this);
-	}
+  public void paint(Graphics g) {
+    g.drawImage(img, 0, 0, this);
+  }
 
-	public static void main(String[] args) {
-		new B2_InetImage();
-	}
+  public static void main(String[] args) {
+    new B2_InetImage();
+  }
 }
 
-// ½Ç½À°úÁ¦ : ´Ù¸¥ ÀÎÅÍ³İÀÇ »çÁøÀ» ·ÎµùÇØ º¾´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : ë‹¤ë¥¸ ì¸í„°ë„·ì˜ ì‚¬ì§„ì„ ë¡œë”©í•´ ë´…ë‹ˆë‹¤.

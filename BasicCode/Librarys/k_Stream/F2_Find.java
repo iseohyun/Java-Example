@@ -1,17 +1,17 @@
 package k_Stream;
 
+import java.util.Arrays;
 import java.util.stream.IntStream;
 
 public class F2_Find {
-	public static void main(String[] args) {
-		IntStream stream1 = IntStream.of(4, 2, 7, 3, 5, 1, 6);
-		IntStream stream2 = IntStream.of(4, 2, 7, 3, 5, 1, 6);
-		IntStream stream3 = IntStream.of(4, 2, 7, 3, 5, 1, 6);
-		IntStream stream4 = IntStream.of(4, 2, 7, 3, 5, 1, 6);
+    public static void main(String[] args) {
+        int[] numbers = new int[] { 4, 2, 7, 3, 5, 1, 6 };
 
-		System.out.println(stream1.sorted().findFirst().getAsInt());
-		System.out.println(stream2.findFirst().getAsInt());
-		System.out.println(stream3.sorted().findAny().getAsInt());
-		System.out.println(stream4.findAny().getAsInt());
-	}
+        // getAsInt : Optional을 int로 바꿉니다.
+        IntStream stream = Arrays.stream(numbers);
+        System.out.println("1> 첫번 째 : " + stream.findFirst().getAsInt());
+
+        stream = Arrays.stream(numbers);
+        System.out.println("2> 정렬 후, 첫번 째 : " + stream.sorted().findFirst().getAsInt());
+    }
 }

@@ -7,27 +7,27 @@ import javax.swing.JFrame;
 
 @SuppressWarnings("serial")
 public class B_Border extends JFrame {
-	JButton b1 = new JButton("1¹ø ¹öÆ°");
-	JButton b2 = new JButton("2¹ø ¹öÆ°");
-	JButton b3 = new JButton("3¹ø ¹öÆ°");
-	JButton b4 = new JButton("4¹ø ¹öÆ°");
-	JButton b5 = new JButton("5¹ø ¹öÆ°");
+  JButton b1 = new JButton("1ë²ˆ ë²„íŠ¼");
+  JButton b2 = new JButton("2ë²ˆ ë²„íŠ¼");
+  JButton b3 = new JButton("3ë²ˆ ë²„íŠ¼");
+  JButton b4 = new JButton("4ë²ˆ ë²„íŠ¼");
+  JButton b5 = new JButton("5ë²ˆ ë²„íŠ¼");
 
-	public B_Border() {
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLayout(new BorderLayout());
+  public B_Border() {
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setLayout(new BorderLayout());
 
-		add("North", b1);
-		add("South", b2);
-		add("East", b3);
-		add("West", b4);
-		add("Center", b5);
+    add("North", b1);
+    add("South", b2);
+    add("East", b3);
+    add("West", b4);
+    add("Center", b5);
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] agrs) {
-		new B_Border();
-	}
+  public static void main(String[] agrs) {
+    new B_Border();
+  }
 }

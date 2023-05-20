@@ -23,18 +23,18 @@ import tools.Input;
  */
 
 public class C1_Return {
-  public static void main(String[] args) {
-    int ret = 0;
-    int input = Input.getInt();
+    public static void main(String[] args) {
+        int ret = 0;
+        int input = Input.getInt();
 
-    ret = func1(input);
-    System.out.println("출력 : " + ret); // 리턴 출력
-  }
+        ret = func1(input);
+        System.out.println("출력 : " + ret); // 리턴 출력
+    }
 
-  static int func1(int input) {
-    System.out.println("입력 : " + input);
-    return input + 1;
-  }
+    static int func1(int input) {
+        System.out.println("입력 : " + input);
+        return input + 1;
+    }
 }
 
 // 실습과제 : 입력한 숫자의 2배를 리턴하는 함수를 작성해봅니다.

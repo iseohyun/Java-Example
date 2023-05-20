@@ -2,8 +2,8 @@ package x_Media;
 
 /**
  * 
- * javafx.media¸ğµâÀÌ Ãß°¡ µË´Ï´Ù.
- * ±âÁ¸ ¸ğµâ ºÒ·¯¿À±â¿¡ Ãß°¡ÇØÁÖ¼¼¿ä.
+ * javafx.mediaëª¨ë“ˆì´ ì¶”ê°€ ë©ë‹ˆë‹¤.
+ * ê¸°ì¡´ ëª¨ë“ˆ ë¶ˆëŸ¬ì˜¤ê¸°ì— ì¶”ê°€í•´ì£¼ì„¸ìš”.
  * 
  * --add-modules=javafx.controls,javafx.fxml,javafx.media
  * 

@@ -23,20 +23,21 @@ public class Controllar implements Initializable {
 	@SuppressWarnings("unchecked")
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		TreeItem<String> rootItem = new TreeItem<>("ÀüÃ¼Æú´õ", new ImageView(new Image("globe.png")));
+		// ì´ë¯¸ì§€ì˜ ìœ„ì¹˜ëŠ” WindowCode/binì…ë‹ˆë‹¤.
+		TreeItem<String> rootItem = new TreeItem<>("ì „ì²´í´ë”", new ImageView(new Image("globe.png")));
 
-		TreeItem<String> branchItem1 = new TreeItem<>("³» ±×¸²");
-		TreeItem<String> branchItem2 = new TreeItem<>("³» ºñµğ¿À");
-		TreeItem<String> branchItem3 = new TreeItem<>("³» À½¾Ç");
+		TreeItem<String> branchItem1 = new TreeItem<>("ë‚´ ê·¸ë¦¼");
+		TreeItem<String> branchItem2 = new TreeItem<>("ë‚´ ë¹„ë””ì˜¤");
+		TreeItem<String> branchItem3 = new TreeItem<>("ë‚´ ìŒì•…");
 
-		TreeItem<String> leafItem1 = new TreeItem<>("»çÁø");
-		TreeItem<String> leafItem2 = new TreeItem<>("µµ¸é");
-		TreeItem<String> leafItem3 = new TreeItem<>("ºêÀÌ·Î±×");
-		TreeItem<String> leafItem4 = new TreeItem<>("±¹³»");
-		TreeItem<String> leafItem5 = new TreeItem<>("Å¬·¡½Ä");
-		TreeItem<String> leafItem6 = new TreeItem<>("¹ß¶óµå");
-		TreeItem<String> leafItem7 = new TreeItem<>("ÀçÁî");
-		TreeItem<String> leafItem8 = new TreeItem<>("ÆË");
+		TreeItem<String> leafItem1 = new TreeItem<>("ì‚¬ì§„");
+		TreeItem<String> leafItem2 = new TreeItem<>("ë„ë©´");
+		TreeItem<String> leafItem3 = new TreeItem<>("ë¸Œì´ë¡œê·¸");
+		TreeItem<String> leafItem4 = new TreeItem<>("êµ­ë‚´");
+		TreeItem<String> leafItem5 = new TreeItem<>("í´ë˜ì‹");
+		TreeItem<String> leafItem6 = new TreeItem<>("ë°œë¼ë“œ");
+		TreeItem<String> leafItem7 = new TreeItem<>("ì¬ì¦ˆ");
+		TreeItem<String> leafItem8 = new TreeItem<>("íŒ");
 
 		rootItem.getChildren().addAll(branchItem1, branchItem2, branchItem3);
 
@@ -49,7 +50,7 @@ public class Controllar implements Initializable {
 		branchItem3.getChildren().addAll(leafItem7);
 		branchItem3.getChildren().addAll(leafItem8);
 
-		// TODO: ÁÖ¼®ÀÌ ÀÖ´Â °Í°ú ¾ø´Â °ÍÀÌ ¾î¶°ÇÑ Â÷ÀÌ°¡ ÀÖÀ»±î?
+		// TODO: ì£¼ì„ì´ ìˆëŠ” ê²ƒê³¼ ì—†ëŠ” ê²ƒì´ ì–´ë– í•œ ì°¨ì´ê°€ ìˆì„ê¹Œ?
 		// myTreeView.setShowRoot(false);
 		myTreeView.setRoot(rootItem);
 	}

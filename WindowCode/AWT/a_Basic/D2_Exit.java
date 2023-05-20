@@ -2,19 +2,19 @@ package a_Basic;
 
 import java.awt.Frame;
 
-// ¾Õ¼± ¿¹Á¦¿¡¼­ WindowListener¸¦ »ó¼Ó¹ŞÀ½À¸·Î ÀÎÇØ¼­ ºÒÇÊ¿äÇÑ ¸Ş¼­µå°¡ ¹İµå½Ã ÀçÁ¤ÀÇ µÇ¾î¾ß ÇÏ´Â ºÒÆíÇÔÀ» º¸¾Ò½À´Ï´Ù.
-// WindowAdapter¸¦ ÀÌ¿ëÇÏ¿©, ºÒÇÊ¿äÇÑ ÄÚµå¸¦ ÁÙÀÏ ¼ö ÀÖ½À´Ï´Ù.
+// ì•ì„  ì˜ˆì œì—ì„œ WindowListenerë¥¼ ìƒì†ë°›ìŒìœ¼ë¡œ ì¸í•´ì„œ ë¶ˆí•„ìš”í•œ ë©”ì„œë“œê°€ ë°˜ë“œì‹œ ì¬ì •ì˜ ë˜ì–´ì•¼ í•˜ëŠ” ë¶ˆí¸í•¨ì„ ë³´ì•˜ìŠµë‹ˆë‹¤.
+// WindowAdapterë¥¼ ì´ìš©í•˜ì—¬, ë¶ˆí•„ìš”í•œ ì½”ë“œë¥¼ ì¤„ì¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 
 @SuppressWarnings("serial")
 public class D2_Exit extends Frame {
-	public D2_Exit() {
-		addWindowListener(new WindowExit(this));
+  public D2_Exit() {
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new D2_Exit();
-	}
+  public static void main(String[] args) {
+    new D2_Exit();
+  }
 }

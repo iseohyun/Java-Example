@@ -25,7 +25,8 @@ public class Controllar implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		file = new File("movie.mp4");
+		//file = new File("movie.mp4");
+		file = new File("WindowCode/source/movie.mp4");
 		media = new Media(file.toURI().toString());
 		mediaPlayer = new MediaPlayer(media);
 		myMediaView.setMediaPlayer(mediaPlayer);

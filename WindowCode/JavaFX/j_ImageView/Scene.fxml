@@ -21,7 +21,7 @@
 			onMousePressed="#displayImage" pickOnBounds="true"
 			preserveRatio="true">
 			<image>
-				<Image url="@../../cat.jpg" />
+				<Image url="@../../source/cat.jpg" />
 			</image>
 			<effect>
 				<DisplacementMap>

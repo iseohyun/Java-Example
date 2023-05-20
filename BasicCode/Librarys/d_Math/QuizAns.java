@@ -1,33 +1,33 @@
 package d_Math;
 
 public class QuizAns {
-	public static void main(String[] args) {
-		double b = 4;
-		double c = 6;
-		double h;
-		double degree = 50;
+    public static void main(String[] args) {
+        double b = 4;
+        double c = 6;
+        double h;
+        double degree = 50;
 
-		// Quiz: getH() ÇÔ¼ö ÀÇ·Ú.
-		// »ï°¢Çü ABCÀÇ °¢ º¯À» a, b, c¶ó°í ÇÏÀÚ.
-		// °¢ A´Â º¯ b¿Í c»çÀÌ¿¡ ÀÖ´Â °¢ÀÌ¶ó°í ÇÒ ¶§,
-		// °¢A, º¯b, º¯c¸¦ ÀÌ¿ëÇÏ¿©, ³ôÀÌh(¼±ºĞ BC¿¡¼­ Á¡A±îÁöÀÇ °Å¸®)¸¦ ±¸ÇÏ´Â ÇÔ¼ö¸¦ ¸¸µå½Ã¿À.
-		h = getH(b, c, degree);
+        // Quiz: getH() í•¨ìˆ˜ ì˜ë¢°.
+        // ì‚¼ê°í˜• ABCì˜ ê° ë³€ì„ a, b, cë¼ê³  í•˜ì.
+        // ê° AëŠ” ë³€ bì™€ cì‚¬ì´ì— ìˆëŠ” ê°ì´ë¼ê³  í•  ë•Œ,
+        // ê°A, ë³€b, ë³€cë¥¼ ì´ìš©í•˜ì—¬, ë†’ì´h(ì„ ë¶„ BCì—ì„œ ì Aê¹Œì§€ì˜ ê±°ë¦¬)ë¥¼ êµ¬í•˜ëŠ” í•¨ìˆ˜ë¥¼ ë§Œë“œì‹œì˜¤.
+        h = getH(b, c, degree);
 
-		System.out.println("³ôÀÌ : " + h);
-	}
+        System.out.println("ë†’ì´ : " + h);
+    }
 
-	static double getH(double b, double c, double degree) {
-		// radian = Math.sin(40.0/180.0 * Math.PI); // (40µµ= 40/180PIÀÌ´Ù.)
+    static double getH(double b, double c, double degree) {
+        // radian = Math.sin(40.0/180.0 * Math.PI); // (40ë„= 40/180PIì´ë‹¤.)
 
-		// ÄÚ»çÀÎ ¹ıÄ¢ a^2 = b^2 + c^2 - 2bccosA
-		double a = Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - 2 * b * c * Math.cos(Math.toRadians(degree)));
+        // ì½”ì‚¬ì¸ ë²•ì¹™ a^2 = b^2 + c^2 - 2bccosA
+        double a = Math.sqrt(Math.pow(b, 2) + Math.pow(c, 2) - 2 * b * c * Math.cos(Math.toRadians(degree)));
 
-		// ³ĞÀÌ S = 1/2*sinA*bc = 1/2 ah
-		// h = sinA*bc/a
-		double ret = Math.sin(Math.toRadians(degree)) * b * c / a;
+        // ë„“ì´ S = 1/2*sinA*bc = 1/2 ah
+        // h = sinA*bc/a
+        double ret = Math.sin(Math.toRadians(degree)) * b * c / a;
 
-		// Á¤´ã È®ÀÎ (https://www.desmos.com/calculator/p83wgrjq95)
-		// ³ôÀÌ : 3.9980580410364297
-		return ret;
-	}
+        // ì •ë‹´ í™•ì¸ (https://www.desmos.com/calculator/p83wgrjq95)
+        // ë†’ì´ : 3.9980580410364297
+        return ret;
+    }
 }

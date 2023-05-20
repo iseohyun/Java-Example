@@ -14,10 +14,10 @@ package a_BasicType;
  */
 
 public class D1_boolean {
-  public static void main(String[] args) {
-    boolean data = true;
-    System.out.println("Boolean : " + data);
-  }
+    public static void main(String[] args) {
+        boolean data = true;
+        System.out.println("Boolean : " + data);
+    }
 }
 
 // 실습과제 1: 거짓(false)를 출력해봅니다.

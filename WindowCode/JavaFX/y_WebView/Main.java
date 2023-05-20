@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *	¸ðµâ Ãß°¡ : javafx.web
+ *	ëª¨ë“ˆ ì¶”ê°€ : javafx.web
  *
  *	--add-modules=javafx.controls,javafx.fxml,javafx.web
  *

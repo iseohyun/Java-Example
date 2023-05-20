@@ -12,28 +12,28 @@ import tools.Input;
  */
 
 public class C2_ToValue {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    int ret, input;
-    input = Input.getInt();
+        int ret, input;
+        input = Input.getInt();
 
-    System.out.println("1. 입력 : " + input);
+        System.out.println("1. 입력 : " + input);
 
-    // 기존 방법
-    ret = func1(input);
-    System.out.println("2. 기존 방법 출력 : " + ret);
+        // 기존 방법
+        ret = func1(input);
+        System.out.println("2. 기존 방법 출력 : " + ret);
 
-    // 저장할 필요가 없다면?
-    System.out.println("3. 바로 출력 : " + func1(input));
+        // 저장할 필요가 없다면?
+        System.out.println("3. 바로 출력 : " + func1(input));
 
-    // 심지어 본인의 출력을 본인의 입력으로 사용하는 경우도 가능합니다.
-    ret = func1(func1(input));
-    System.out.println("4. 내함수(내함수()) : " + ret);
-  }
+        // 심지어 본인의 출력을 본인의 입력으로 사용하는 경우도 가능합니다.
+        ret = func1(func1(input));
+        System.out.println("4. 내함수(내함수()) : " + ret);
+    }
 
-  static int func1(int input) {
-    return input + 1;
-  }
+    static int func1(int input) {
+        return input + 1;
+    }
 }
 
 // 실습과제 : func1( func1 (func1 (func1 (input))))은 어떤 수가 출력이 될까요?

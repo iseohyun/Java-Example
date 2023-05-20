@@ -11,73 +11,73 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class E_List extends Frame implements ItemListener {
-	Panel p1 = new Panel();
-	Panel p2 = new Panel();
-	
-	Panel p2_1 = new Panel();
-	Panel p2_2 = new Panel();
-	
-	List list1 = new List(3, true);
-	List list2 = new List(5);
-	List list3 = new List(10);
+  Panel p1 = new Panel();
+  Panel p2 = new Panel();
+  
+  Panel p2_1 = new Panel();
+  Panel p2_2 = new Panel();
+  
+  List list1 = new List(3, true);
+  List list2 = new List(5);
+  List list3 = new List(10);
 
-	E_List() {
-		setLayout(new FlowLayout());
+  E_List() {
+    setLayout(new FlowLayout());
 
-		add(p1);
-		add(p2);
-		p2.add(p2_1);
-		p2.add(p2_2);
-		
-		p1.add(list1);
-		p2_1.add(list2);
-		p2_2.add(list3);
+    add(p1);
+    add(p2);
+    p2.add(p2_1);
+    p2.add(p2_2);
+    
+    p1.add(list1);
+    p2_1.add(list2);
+    p2_2.add(list3);
 
-		list1.add("»ç°ú");
-		list1.add("¹è");
-		list1.add("Æ÷µµ");
-		list1.add("±Ö");
-		list1.add("·¹¸ó");
+    list1.add("ì‚¬ê³¼");
+    list1.add("ë°°");
+    list1.add("í¬ë„");
+    list1.add("ê·¤");
+    list1.add("ë ˆëª¬");
 
-		list2.add("Â¥Àå¸é");
-		list2.add("¿ï¸é");
-		list2.add("¶ó¸é");
-		list2.add("ººÀ½¸é");
-		list2.add("Â«Â¥¸é");
+    list2.add("ì§œìž¥ë©´");
+    list2.add("ìš¸ë©´");
+    list2.add("ë¼ë©´");
+    list2.add("ë³¶ìŒë©´");
+    list2.add("ì§¬ì§œë©´");
 
-		list1.addItemListener(this);
-		list2.addItemListener(this);
+    list1.addItemListener(this);
+    list2.addItemListener(this);
 
-		addWindowListener(new WindowExit(this));
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new E_List();
-	}
+  public static void main(String[] args) {
+    new E_List();
+  }
 
-	@Override
-	public void itemStateChanged(ItemEvent e) {
-		if (e.getSource().equals(list1)) {
-			String[] items = list1.getSelectedItems();
-			System.out.print("Áßº¹ ¸®½ºÆ®" + e.getItem() + ((e.getStateChange() == 1) ? "(¼±ÅÃ)" : "(ÇØÁ¦)") + " : ");
-			for (String item : items) {
-				System.out.print(item + ", ");
-			}
-			System.out.println();
-		} else if (e.getSource().equals(list2)){
-			System.out.println("¸®½ºÆ® ÀÏ¹Ý (" + e.getItem() + ") : " + list2.getSelectedItem());
-			list3.add(list2.getSelectedItem());
-		}
-	}
+  @Override
+  public void itemStateChanged(ItemEvent e) {
+    if (e.getSource().equals(list1)) {
+      String[] items = list1.getSelectedItems();
+      System.out.print("ì¤‘ë³µ ë¦¬ìŠ¤íŠ¸" + e.getItem() + ((e.getStateChange() == 1) ? "(ì„ íƒ)" : "(í•´ì œ)") + " : ");
+      for (String item : items) {
+        System.out.print(item + ", ");
+      }
+      System.out.println();
+    } else if (e.getSource().equals(list2)){
+      System.out.println("ë¦¬ìŠ¤íŠ¸ ì¼ë°˜ (" + e.getItem() + ") : " + list2.getSelectedItem());
+      list3.add(list2.getSelectedItem());
+    }
+  }
 }
 
-// ½Ç½À°úÁ¦ : "°¨"À» Ãß°¡ÇØ º¾´Ï´Ù.
-// ½Ç½À°úÁ¦ : ¸®½ºÆ® 3¿¡´Â ¸®½ºÆ®2(Â¥Àå¸é, ¿ï¸é.. ) ¿¡¼­ ¼±ÅÃµÈ ¸®½ºÆ®°¡ °è¼ÓÇØ¼­ Ãß°¡µË´Ï´Ù.
-//		   ÀÏÁ¾ÀÇ ÁÖ¹®¼­¿Í °°½À´Ï´Ù. ¸®½ºÆ®¿¡ Ãß°¡ÇÏ·Á°í ÇÒ ¶§, ÀÌ¹Ì ÇØ´ç ¸Þ´º°¡ ÀÖ´Ù¸é, ÇØ´ç ¸Þ´º¿¡ ¼ýÀÚ¸¦ Ãß°¡ÇÏ´Â ¹æ½ÄÀ¸·Î ¼öÁ¤ÇØº¸¼¼¿ä.
-//			¿¹ ) Â¥Àå¸é -> Â¥Àå¸é2 -> Â¥Àå¸é3
+// ì‹¤ìŠµê³¼ì œ : "ê°"ì„ ì¶”ê°€í•´ ë´…ë‹ˆë‹¤.
+// ì‹¤ìŠµê³¼ì œ : ë¦¬ìŠ¤íŠ¸ 3ì—ëŠ” ë¦¬ìŠ¤íŠ¸2(ì§œìž¥ë©´, ìš¸ë©´.. ) ì—ì„œ ì„ íƒëœ ë¦¬ìŠ¤íŠ¸ê°€ ê³„ì†í•´ì„œ ì¶”ê°€ë©ë‹ˆë‹¤.
+//		   ì¼ì¢…ì˜ ì£¼ë¬¸ì„œì™€ ê°™ìŠµë‹ˆë‹¤. ë¦¬ìŠ¤íŠ¸ì— ì¶”ê°€í•˜ë ¤ê³  í•  ë•Œ, ì´ë¯¸ í•´ë‹¹ ë©”ë‰´ê°€ ìžˆë‹¤ë©´, í•´ë‹¹ ë©”ë‰´ì— ìˆ«ìžë¥¼ ì¶”ê°€í•˜ëŠ” ë°©ì‹ìœ¼ë¡œ ìˆ˜ì •í•´ë³´ì„¸ìš”.
+//			ì˜ˆ ) ì§œìž¥ë©´ -> ì§œìž¥ë©´2 -> ì§œìž¥ë©´3
 //		   list3.getItemCount()
 //		   list3.replaceItem()
-// ½Ç½À°úÁ¦ : ¸®½ºÆ® 3¿¡¼­ ¸Þ´º¸¦ Å¬¸¯ÇÏ¸é ÇÏ³ª¾¿ Ãë¼ÒÇÏ´Â ±â´ÉÀ» Ãß°¡ÇØ ÁÖ¼¼¿ä.
+// ì‹¤ìŠµê³¼ì œ : ë¦¬ìŠ¤íŠ¸ 3ì—ì„œ ë©”ë‰´ë¥¼ í´ë¦­í•˜ë©´ í•˜ë‚˜ì”© ì·¨ì†Œí•˜ëŠ” ê¸°ëŠ¥ì„ ì¶”ê°€í•´ ì£¼ì„¸ìš”.

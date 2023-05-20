@@ -12,62 +12,62 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class B_Button extends Frame implements ActionListener {
-	Panel p1 = new Panel();
-	Panel p2 = new Panel();
-	Button a1 = new Button("ÆĞ³Î 2 º¸ÀÌ±â");
-	Button a2 = new Button("ÆĞ³Î 2 ¾Èº¸ÀÌ±â");
-	Button b1 = new Button("ÆĞ³Î 1 °¨Ãß±â");
+  Panel p1 = new Panel();
+  Panel p2 = new Panel();
+  Button a1 = new Button("íŒ¨ë„ 2 ë³´ì´ê¸°");
+  Button a2 = new Button("íŒ¨ë„ 2 ì•ˆë³´ì´ê¸°");
+  Button b1 = new Button("íŒ¨ë„ 1 ê°ì¶”ê¸°");
 
-	B_Button() {
-		setLayout(new FlowLayout());
-		
-		p1.setBackground(Color.BLUE);
-		add(p1);
-		
-		p2.setBackground(Color.MAGENTA);
-		add(p2);
+  B_Button() {
+    setLayout(new FlowLayout());
+    
+    p1.setBackground(Color.BLUE);
+    add(p1);
+    
+    p2.setBackground(Color.MAGENTA);
+    add(p2);
 
-		p1.add(a1);
-		p1.add(a2);
-		p2.add(b1);
+    p1.add(a1);
+    p1.add(a2);
+    p2.add(b1);
 
-		a1.addActionListener(this);
-		a2.addActionListener(this);
-		b1.addActionListener(this);
+    a1.addActionListener(this);
+    a2.addActionListener(this);
+    b1.addActionListener(this);
 
-		addWindowListener(new WindowExit(this));
+    addWindowListener(new WindowExit(this));
 
-		setSize(300, 400);
-		setVisible(true);
-	}
+    setSize(300, 400);
+    setVisible(true);
+  }
 
-	public static void main(String[] args) {
-		new B_Button();
-	}
+  public static void main(String[] args) {
+    new B_Button();
+  }
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource().equals(a1)) {
-			p2.setVisible(true);
-			a1.setEnabled(false);
-			a2.setEnabled(true);
-		} else if (e.getSource().equals(a2)) {
-			p2.setVisible(false);
-			a2.setEnabled(false);
-			a1.setEnabled(true);
-		} else if (e.getSource().equals(b1)) {
-			if(p1.isVisible()) {
-				System.out.println("1");
-				p1.setVisible(false);
-				b1.setLabel("ÆĞ³Î1 º¸ÀÌ±â");
-			}else {
-				System.out.println("2");
-				p1.setVisible(true);
-				b1.setLabel("ÆĞ³Î1 °¨Ãß±â");
-			}
-		}
-	}
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    if (e.getSource().equals(a1)) {
+      p2.setVisible(true);
+      a1.setEnabled(false);
+      a2.setEnabled(true);
+    } else if (e.getSource().equals(a2)) {
+      p2.setVisible(false);
+      a2.setEnabled(false);
+      a1.setEnabled(true);
+    } else if (e.getSource().equals(b1)) {
+      if(p1.isVisible()) {
+        System.out.println("1");
+        p1.setVisible(false);
+        b1.setLabel("íŒ¨ë„1 ë³´ì´ê¸°");
+      }else {
+        System.out.println("2");
+        p1.setVisible(true);
+        b1.setLabel("íŒ¨ë„1 ê°ì¶”ê¸°");
+      }
+    }
+  }
 }
 
-// ½Ç½À°úÁ¦ : ÆĞ³ÎÀ» Ãß°¡ »ı¼ºÇÏ°í ÀÌ¸§Àº "ÆĞ³Î 1,2 º¸ÀÌ±â", "ÆĞ³Î 1,2 ¾Èº¸ÀÌ±â"·Î ÇÕ´Ï´Ù.
-//			ÇØ´ç ±â´ÉÀ» ±¸ÇöÇÕ´Ï´Ù.
+// ì‹¤ìŠµê³¼ì œ : íŒ¨ë„ì„ ì¶”ê°€ ìƒì„±í•˜ê³  ì´ë¦„ì€ "íŒ¨ë„ 1,2 ë³´ì´ê¸°", "íŒ¨ë„ 1,2 ì•ˆë³´ì´ê¸°"ë¡œ í•©ë‹ˆë‹¤.
+//			í•´ë‹¹ ê¸°ëŠ¥ì„ êµ¬í˜„í•©ë‹ˆë‹¤.

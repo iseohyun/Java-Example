@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class Main3 extends Application implements EventHandler<ActionEvent>{
-	Button btn1 = new Button("¹öÆ°");
+	Button btn1 = new Button("ë²„íŠ¼");
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -30,6 +30,6 @@ public class Main3 extends Application implements EventHandler<ActionEvent>{
 	@Override
 	public void handle(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		System.out.println("¹öÆ°ÀÌ Å¬¸¯µÇ¾ú½À´Ï´Ù.");
+		System.out.println("ë²„íŠ¼ì´ í´ë¦­ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}
 }
