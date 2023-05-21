@@ -18,7 +18,7 @@ public class F2_Rotate extends Frame implements KeyListener {
 
   public F2_Rotate() {
     addWindowListener(new WindowExit(this));
-    
+
     setTitle("좌우버튼을 이용해서 회전해보세요");
     setVisible(true);
     setSize(300, 300);
@@ -60,12 +60,14 @@ public class F2_Rotate extends Frame implements KeyListener {
   @Override
   public void keyReleased(KeyEvent e) {
     switch (e.getKeyCode()) {
-    case 37: // left
-      theta = 15;
-      break;
-    case 39: // right
-      theta = -15;
-      break;
+      case 37: // left
+        theta = 15;
+        break;
+      case 39: // right
+        theta = -15;
+        break;
+      default:
+        theta = 0;
     }
     repaint();
   }

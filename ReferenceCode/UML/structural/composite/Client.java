@@ -4,82 +4,82 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- *	ÃâÃ³ : https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%8F%AC%EC%A7%80%ED%8A%B8_%ED%8C%A8%ED%84%B4
+ *	ì¶œì²˜ : https://ko.wikipedia.org/wiki/%EC%BB%B4%ED%8F%AC%EC%A7%80%ED%8A%B8_%ED%8C%A8%ED%84%B4
  *
  * @author Seohyun Jung
  *
- *		ÄÄÆ÷ÁöÆ® ÆĞ³Î : ÇÏÀ§ °´Ã¼¸¦ ´Ù·ç±â À§ÇØ¼­ ÄÄÆ÷ÁöÆ®(Composite)¸¦ »ç¿ëÇÏ´Âµ¥, ÄÄÆ÷ÁöÆ® ¿ª½Ã ÄÄÆ÷ÁşÀÇ ¸â¹ö·Î µé¾î°¥ ¼ö ÀÖ´Ù.
- *			±âÁ¸ÀÇ ÄÚµåÀÇ ¼öÁ¤À» ÃÖ¼ÒÈ­ ÇÏ¸é¼­ ´ÜÀÏ °´Ã¼¸¦ »ı¼º ÇÒ ¼ö ÀÖ´Ù´Â ÀåÁ¡ÀÌ ÀÖ´Ù. 
+ *		ì»´í¬ì§€íŠ¸ íŒ¨ë„ : í•˜ìœ„ ê°ì²´ë¥¼ ë‹¤ë£¨ê¸° ìœ„í•´ì„œ ì»´í¬ì§€íŠ¸(Composite)ë¥¼ ì‚¬ìš©í•˜ëŠ”ë°, ì»´í¬ì§€íŠ¸ ì—­ì‹œ ì»´í¬ì§“ì˜ ë©¤ë²„ë¡œ ë“¤ì–´ê°ˆ ìˆ˜ ìˆë‹¤.
+ *			ê¸°ì¡´ì˜ ì½”ë“œì˜ ìˆ˜ì •ì„ ìµœì†Œí™” í•˜ë©´ì„œ ë‹¨ì¼ ê°ì²´ë¥¼ ìƒì„± í•  ìˆ˜ ìˆë‹¤ëŠ” ì¥ì ì´ ìˆë‹¤. 
  *
- *		ÄÚµåÇØ¼³)
+ *		ì½”ë“œí•´ì„¤)
  *		Eclipse 1,2,3,4 -> Composite II 	-> Composite I
- *		Eclipse 4		-> Composite III	¡è
+ *		Eclipse 4		-> Composite III	â†‘
  *
- *		** ¿øº» ¿¹Á¦¿¡¼­ Coposite IÀ» ¼öÇàÇÏ¸é ÇÏ³ªÀÇ ¸®½ºÆ®·Î ÅëÇÕÀÌ µÇ¾î ÀÖ´Â °Í Ã³·³ º¸ÀÌÁö¸¸ »ç½ÇÀº,
- *		µÎ°³ÀÇ ¸®½ºÆ®°¡ ¿¬¼ÓÇØ¼­ Ãâ·ÂÇÏ´Â °á°úÀÌ´Ù.
+ *		** ì›ë³¸ ì˜ˆì œì—ì„œ Coposite Iì„ ìˆ˜í–‰í•˜ë©´ í•˜ë‚˜ì˜ ë¦¬ìŠ¤íŠ¸ë¡œ í†µí•©ì´ ë˜ì–´ ìˆëŠ” ê²ƒ ì²˜ëŸ¼ ë³´ì´ì§€ë§Œ ì‚¬ì‹¤ì€,
+ *		ë‘ê°œì˜ ë¦¬ìŠ¤íŠ¸ê°€ ì—°ì†í•´ì„œ ì¶œë ¥í•˜ëŠ” ê²°ê³¼ì´ë‹¤.
  *
  */
 
 public class Client {
-	public static void main(String[] args) {
-		Ellipse ellipse1 = new Ellipse("One");
-		Ellipse ellipse2 = new Ellipse("Two");
-		Ellipse ellipse3 = new Ellipse("Three");
-		Ellipse ellipse4 = new Ellipse("Four");
+    public static void main(String[] args) {
+        Ellipse ellipse1 = new Ellipse("One");
+        Ellipse ellipse2 = new Ellipse("Two");
+        Ellipse ellipse3 = new Ellipse("Three");
+        Ellipse ellipse4 = new Ellipse("Four");
 
-		CompositeGraphic graphic = new CompositeGraphic("I");
-		CompositeGraphic graphic1 = new CompositeGraphic("II");
-		CompositeGraphic graphic2 = new CompositeGraphic("III");
+        CompositeGraphic graphic = new CompositeGraphic("I");
+        CompositeGraphic graphic1 = new CompositeGraphic("II");
+        CompositeGraphic graphic2 = new CompositeGraphic("III");
 
-		graphic1.add(ellipse1);
-		graphic1.add(ellipse2);
-		graphic1.add(ellipse3);
-		graphic2.add(ellipse4);
+        graphic1.add(ellipse1);
+        graphic1.add(ellipse2);
+        graphic1.add(ellipse3);
+        graphic2.add(ellipse4);
 
-		graphic.add(graphic1);
-		graphic.add(graphic2);
+        graphic.add(graphic1);
+        graphic.add(graphic2);
 
-		graphic.print();
-	}
+        graphic.print();
+    }
 }
 
 interface Graphic {
-	public void print();
+    public void print();
 }
 
 class CompositeGraphic implements Graphic {
-	private String ID;
+    private String ID;
 
-	CompositeGraphic(String ID) {
-		this.ID = ID;
-	}
+    CompositeGraphic(String ID) {
+        this.ID = ID;
+    }
 
-	private List<Graphic> mChildGraphics = new ArrayList<Graphic>();
+    private List<Graphic> mChildGraphics = new ArrayList<Graphic>();
 
-	public void print() {
-		System.out.println(this + " - " + ID);
-		for (Graphic graphic : mChildGraphics) {
-			graphic.print();
-		}
-	}
+    public void print() {
+        System.out.println(this + " - " + ID);
+        for (Graphic graphic : mChildGraphics) {
+            graphic.print();
+        }
+    }
 
-	public void add(Graphic graphic) {
-		mChildGraphics.add(graphic);
-	}
+    public void add(Graphic graphic) {
+        mChildGraphics.add(graphic);
+    }
 
-	public void remove(Graphic graphic) {
-		mChildGraphics.remove(graphic);
-	}
+    public void remove(Graphic graphic) {
+        mChildGraphics.remove(graphic);
+    }
 }
 
 class Ellipse implements Graphic {
-	private String ID;
+    private String ID;
 
-	Ellipse(String ID) {
-		this.ID = ID;
-	}
+    Ellipse(String ID) {
+        this.ID = ID;
+    }
 
-	public void print() {
-		System.out.println("Ellipse " + ID);
-	}
+    public void print() {
+        System.out.println("Ellipse " + ID);
+    }
 }

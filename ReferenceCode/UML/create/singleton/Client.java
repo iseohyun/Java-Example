@@ -3,76 +3,76 @@ package create.singleton;
 /**
  * @author Seohyun Jung
  * 
- * 		½Ì±ÛÅæ ÆĞÅÏ : ÇÑ¹ø¸¸ »ı¼ºÀÌ µÈ ÈÄ¿¡ ¿©·¯°³ÀÇ ¸ğµå¿¡¼­ °¡Á®¿Í¾ß ÇÏ´Â °æ¿ì¿¡ »ç¿ë
- * 			¸Ş¸ğ¸®¸¦ ¾Æ³¢°í, ÄÚµå¸¦ °£°áÇÏ°Ô ÇÔ.
+ * 		ì‹±ê¸€í†¤ íŒ¨í„´ : í•œë²ˆë§Œ ìƒì„±ì´ ëœ í›„ì— ì—¬ëŸ¬ê°œì˜ ëª¨ë“œì—ì„œ ê°€ì ¸ì™€ì•¼ í•˜ëŠ” ê²½ìš°ì— ì‚¬ìš©
+ * 			ë©”ëª¨ë¦¬ë¥¼ ì•„ë¼ê³ , ì½”ë“œë¥¼ ê°„ê²°í•˜ê²Œ í•¨.
  * 
  */
 
 @SuppressWarnings("static-access")
 public class Client {
-	public static void main(String[] args) {
-		views view = new views();
-		view.main.Setting.MenuBar = MenuPos.top;
+    public static void main(String[] args) {
+        views view = new views();
+        view.main.Setting.MenuBar = MenuPos.top;
 
-		System.out.println(view.setting.MenuBar + " / " + view.setting.ViewMode);
+        System.out.println(view.setting.MenuBar + " / " + view.setting.ViewMode);
 
-		view.login.Setting.ViewMode = ViewColor.Dark;
+        view.login.Setting.ViewMode = ViewColor.Dark;
 
-		System.out.println(view.setting.MenuBar + " / " + view.setting.ViewMode);
+        System.out.println(view.setting.MenuBar + " / " + view.setting.ViewMode);
 
-		view.premium.Setting.MenuBar = MenuPos.left;
+        view.premium.Setting.MenuBar = MenuPos.left;
 
-		System.out.println(view.setting.MenuBar + " / " + view.setting.ViewMode);
-	}
+        System.out.println(view.setting.MenuBar + " / " + view.setting.ViewMode);
+    }
 }
 
 class views {
-	MainPage main = new MainPage();
-	loginPage login = new loginPage();
-	PremiumPage premium = new PremiumPage();
-	static PageSetting setting = new PageSetting();
+    MainPage main = new MainPage();
+    loginPage login = new loginPage();
+    PremiumPage premium = new PremiumPage();
+    static PageSetting setting = new PageSetting();
 
-	class MainPage {
-		Button next;
-		View news;
-		Button login;
-		PageSetting Setting = setting;
-	}
+    class MainPage {
+        Button next;
+        View news;
+        Button login;
+        PageSetting Setting = setting;
+    }
 
-	class loginPage {
-		Input ID;
-		Input PW;
-		Button SignIn;
-		Button ForgetPW;
-		PageSetting Setting = setting;
-	}
+    class loginPage {
+        Input ID;
+        Input PW;
+        Button SignIn;
+        Button ForgetPW;
+        PageSetting Setting = setting;
+    }
 
-	class PremiumPage {
-		View Video;
-		Input chatting;
-		Button like;
-		PageSetting Setting = setting;
-	}
+    class PremiumPage {
+        View Video;
+        Input chatting;
+        Button like;
+        PageSetting Setting = setting;
+    }
 
-	static class PageSetting {
-		ViewColor ViewMode; // Dark, White, Pupple
-		MenuPos MenuBar; // bottom, top, left, right
+    static class PageSetting {
+        ViewColor ViewMode; // Dark, White, Pupple
+        MenuPos MenuBar; // bottom, top, left, right
 
-		PageSetting() {
-			ViewMode = ViewColor.White;
-			MenuBar = MenuPos.bot;
-		}
-	}
+        PageSetting() {
+            ViewMode = ViewColor.White;
+            MenuBar = MenuPos.bot;
+        }
+    }
 
-	class Button {
-	}
+    class Button {
+    }
 
-	class Menu {
-	}
+    class Menu {
+    }
 
-	class Input {
-	}
+    class Input {
+    }
 
-	class View {
-	}
+    class View {
+    }
 }

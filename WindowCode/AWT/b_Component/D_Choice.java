@@ -10,49 +10,48 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class D_Choice extends Frame implements ItemListener {
-  boolean isFirst = true;
-  Choice c = new Choice();
+    boolean isFirst = true;
+    Choice c = new Choice();
 
-  D_Choice() {
-    c.add("원하는 색을 선택해주세요.");
-    c.add("빨간색");
-    c.add("주황색");
-    c.add("노란색");
-    c.add("초록색");
-    add(c);
-    
-    
-    c.addItemListener(this);
-    
-    addWindowListener(new WindowExit(this));
+    D_Choice() {
+        c.add("원하는 색을 선택해주세요.");
+        c.add("빨간색");
+        c.add("주황색");
+        c.add("노란색");
+        c.add("초록색");
+        add(c);
 
-    setSize(300, 400);
-    setVisible(true);
-  }
+        c.addItemListener(this);
 
-  public static void main(String[] args) {
-    new D_Choice();
-  }
+        addWindowListener(new WindowExit(this));
 
-  @Override
-  public void itemStateChanged(ItemEvent e) {
-    System.out.println(e.getItem());
-    if(e.getItem() == "빨간색") {
-      setBackground(Color.red);
-    }else if(e.getItem() == "주황색") {
-      setBackground(Color.orange);
-    }else if(e.getItem() == "노란색") {
-      setBackground(Color.yellow);
-    }else if(e.getItem() == "초록색") {
-      setBackground(Color.green);
+        setSize(300, 400);
+        setVisible(true);
     }
-    
-    if(isFirst) {
-      c.remove(0);
-      isFirst = false;
+
+    public static void main(String[] args) {
+        new D_Choice();
     }
-  }
+
+    @Override
+    public void itemStateChanged(ItemEvent e) {
+        System.out.println(e.getItem());
+        if (e.getItem() == "빨간색") {
+            setBackground(Color.red);
+        } else if (e.getItem() == "주황색") {
+            setBackground(Color.orange);
+        } else if (e.getItem() == "노란색") {
+            setBackground(Color.yellow);
+        } else if (e.getItem() == "초록색") {
+            setBackground(Color.green);
+        }
+
+        if (isFirst) {
+            c.remove(0);
+            isFirst = false;
+        }
+    }
 }
 
 // 실습과제 "파란색"을 추가해봅니다.
-// 실습과제 최초에 "빨간색"을 삭제해 봅니다. 
+// 실습과제 최초에 "빨간색"을 삭제해 봅니다.

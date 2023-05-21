@@ -1,15 +1,15 @@
 package create.factory;
 
 /**
- *	ÃâÃ³ : https://ko.wikipedia.org/wiki/Ãß»ó_ÆÑÅä¸®_ÆÐÅÏ 
+ *	ì¶œì²˜ : https://ko.wikipedia.org/wiki/ì¶”ìƒ_íŒ©í† ë¦¬_íŒ¨í„´ 
  * 
  * @author Seohyun Jung
  *
- *		Ãß»ó ÆÑÅä¸® ÆÐÅÏ : °¢°¢ÀÇ °´Ã¼°¡ °øÅëÀÇ Æ¯Â¡ÀÌ ÀÖ´Ù°í °¡Á¤ ÇÒ ¶§,
- *			ÀÎÅÍÆäÀÌ½º¸¦(Ãß»ó¸Þ¼­µå) ±¸Á¶È­¿¡ ³Ö¾î¼­ »ý¼º°úÁ¤À» ±¸Á¶È­(ÆÐÅÏÈ­)½ÃÅ²´Ù.
+ *		ì¶”ìƒ íŒ©í† ë¦¬ íŒ¨í„´ : ê°ê°ì˜ ê°ì²´ê°€ ê³µí†µì˜ íŠ¹ì§•ì´ ìžˆë‹¤ê³  ê°€ì • í•  ë•Œ,
+ *			ì¸í„°íŽ˜ì´ìŠ¤ë¥¼(ì¶”ìƒë©”ì„œë“œ) êµ¬ì¡°í™”ì— ë„£ì–´ì„œ ìƒì„±ê³¼ì •ì„ êµ¬ì¡°í™”(íŒ¨í„´í™”)ì‹œí‚¨ë‹¤.
  *
- *	  ÄÚµå (±¸Á¶È­ °úÁ¤):
- *		GUIÅ¸ÀÔ	-->	IGUIFactory	-->	IButton
+ *	  ì½”ë“œ (êµ¬ì¡°í™” ê³¼ì •):
+ *		GUIíƒ€ìž…	-->	IGUIFactory	-->	IButton
  *	  ----------------------------------------
  *		 Win	-->	WinFactory	-->	WinButton
  *		 iOS	-->	OSXFactory	-->	OSXButton
@@ -17,54 +17,54 @@ package create.factory;
  */
 
 public class Client {
-	static public void main(String[] args) {
-		int OSStyle = 1;
-		IGUIFactory factory = null;
+    static public void main(String[] args) {
+        int OSStyle = 1;
+        IGUIFactory factory = null;
 
-		switch (OSStyle) {
-		case 1:
-			factory = new WinFactory();
-			break;
-		case 2:
-			factory = new OSXFactory();
-			break;
-		}
+        switch (OSStyle) {
+        case 1:
+            factory = new WinFactory();
+            break;
+        case 2:
+            factory = new OSXFactory();
+            break;
+        }
 
-		IButton button = factory.CreateButton();
-		button.Paint();
-	}
+        IButton button = factory.CreateButton();
+        button.Paint();
+    }
 }
 
 //	IGUIFactory
 interface IGUIFactory {
-	IButton CreateButton();
+    IButton CreateButton();
 }
 
 class WinFactory implements IGUIFactory {
-	public IButton CreateButton() {
-		return new WinButton();
-	}
+    public IButton CreateButton() {
+        return new WinButton();
+    }
 }
 
 class OSXFactory implements IGUIFactory {
-	public IButton CreateButton() {
-		return new OSXButton();
-	}
+    public IButton CreateButton() {
+        return new OSXButton();
+    }
 }
 
 //	IButton
 interface IButton {
-	void Paint();
+    void Paint();
 }
 
 class WinButton implements IButton {
-	public void Paint() {
-		System.out.println("Render a button in a Windows style");
-	}
+    public void Paint() {
+        System.out.println("Render a button in a Windows style");
+    }
 }
 
 class OSXButton implements IButton {
-	public void Paint() {
-		System.out.println("Render a button in a Mac OS X style");
-	}
+    public void Paint() {
+        System.out.println("Render a button in a Mac OS X style");
+    }
 }

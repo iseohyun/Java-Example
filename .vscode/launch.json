@@ -7,6 +7,629 @@
     "configurations": [
         {
             "type": "java",
+            "name": "A_Chatting",
+            "request": "launch",
+            "mainClass": "Chatting.A_Chatting",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "TyppingTranning",
+            "request": "launch",
+            "mainClass": "Typeing.TyppingTranning",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "structural.proxy.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "structural.flyweight.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "structural.facade.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "structural.decorator.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "structural.composite.origin.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "structural.composite.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "structural.bridge.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "structural.adapter.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "create.singleton.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Change",
+            "request": "launch",
+            "mainClass": "create.singleton.B_Change",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Regular",
+            "request": "launch",
+            "mainClass": "create.singleton.A_Regular",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "create.prototype.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "create.factoryMethod.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "create.factory.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "create.builder.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.visitor.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "NoUse",
+            "request": "launch",
+            "mainClass": "behavioral.stratagy.NoUse",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.stratagy.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.state.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.observer.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.memento.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client2",
+            "request": "launch",
+            "mainClass": "behavioral.iterator.Client2",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.iterator.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client2",
+            "request": "launch",
+            "mainClass": "behavioral.interpreter.Client2",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.interpreter.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.design.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.command.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "behavioral.chainOfResp.Client",
+            "projectName": "ReferenceCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Mouse",
+            "request": "launch",
+            "mainClass": "c_Event.A_Mouse",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_GridBagBig",
+            "request": "launch",
+            "mainClass": "b_Layout.C2_GridBagBig",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C1_GridBag",
+            "request": "launch",
+            "mainClass": "b_Layout.C1_GridBag",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Border",
+            "request": "launch",
+            "mainClass": "b_Layout.B_Border",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A2_Alignment",
+            "request": "launch",
+            "mainClass": "b_Layout.A2_Alignment",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_Layout",
+            "request": "launch",
+            "mainClass": "b_Layout.A1_Layout",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "K3_OptionPane",
+            "request": "launch",
+            "mainClass": "a_Component.K3_OptionPane",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "K2_LayerPanel",
+            "request": "launch",
+            "mainClass": "a_Component.K2_LayerPanel",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "K1_Panel",
+            "request": "launch",
+            "mainClass": "a_Component.K1_Panel",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "J_Image",
+            "request": "launch",
+            "mainClass": "a_Component.J_Image",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "I_Chooser",
+            "request": "launch",
+            "mainClass": "a_Component.I_Chooser",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "H_Toolbar",
+            "request": "launch",
+            "mainClass": "a_Component.H_Toolbar",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "G2_PopupMenu",
+            "request": "launch",
+            "mainClass": "a_Component.G2_PopupMenu",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "G1_Menu",
+            "request": "launch",
+            "mainClass": "a_Component.G1_Menu",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "F_Table",
+            "request": "launch",
+            "mainClass": "a_Component.F_Table",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "E_Tree",
+            "request": "launch",
+            "mainClass": "a_Component.E_Tree",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "D_SliderProgress",
+            "request": "launch",
+            "mainClass": "a_Component.D_SliderProgress",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C_ComboBox",
+            "request": "launch",
+            "mainClass": "a_Component.C_ComboBox",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Button",
+            "request": "launch",
+            "mainClass": "a_Component.B_Button",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A_TextOut",
+            "request": "launch",
+            "mainClass": "a_Component.A_TextOut",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "TrafficLight",
+            "request": "launch",
+            "mainClass": "e_examples.TrafficLight",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "TextOut",
+            "request": "launch",
+            "mainClass": "e_examples.TextOut",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "G_Buffer",
+            "request": "launch",
+            "mainClass": "d_Graphic.G_Buffer",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "F3_Scale",
+            "request": "launch",
+            "mainClass": "d_Graphic.F3_Scale",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "F2_Rotate",
+            "request": "launch",
+            "mainClass": "d_Graphic.F2_Rotate",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "F1_Transform",
+            "request": "launch",
+            "mainClass": "d_Graphic.F1_Transform",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "E_Alpha",
+            "request": "launch",
+            "mainClass": "d_Graphic.E_Alpha",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "D2_Texture",
+            "request": "launch",
+            "mainClass": "d_Graphic.D2_Texture",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "D1_Fill",
+            "request": "launch",
+            "mainClass": "d_Graphic.D1_Fill",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C3_StrokeTypes",
+            "request": "launch",
+            "mainClass": "d_Graphic.C3_StrokeTypes",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_LineTo2",
+            "request": "launch",
+            "mainClass": "d_Graphic.C2_LineTo2",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C2_LineTo",
+            "request": "launch",
+            "mainClass": "d_Graphic.C2_LineTo",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C1_2D",
+            "request": "launch",
+            "mainClass": "d_Graphic.C1_2D",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "B4_SetClip",
+            "request": "launch",
+            "mainClass": "d_Graphic.B4_SetClip",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "B2_InetImage",
+            "request": "launch",
+            "mainClass": "d_Graphic.B2_InetImage",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "B3_WaitLoading",
+            "request": "launch",
+            "mainClass": "d_Graphic.B3_WaitLoading",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "B1_Image",
+            "request": "launch",
+            "mainClass": "d_Graphic.B1_Image",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A3_MouseDraw",
+            "request": "launch",
+            "mainClass": "d_Graphic.A3_MouseDraw",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A2_DrawCurve",
+            "request": "launch",
+            "mainClass": "d_Graphic.A2_DrawCurve",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_DrawFigures",
+            "request": "launch",
+            "mainClass": "d_Graphic.A1_DrawFigures",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "D_Card",
+            "request": "launch",
+            "mainClass": "c_Layout.D_Card",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Grid",
+            "request": "launch",
+            "mainClass": "c_Layout.C_Grid",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Border",
+            "request": "launch",
+            "mainClass": "c_Layout.B_Border",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Layout",
+            "request": "launch",
+            "mainClass": "c_Layout.A_Layout",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "I_Menu",
+            "request": "launch",
+            "mainClass": "b_Component.I_Menu",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "H_File",
+            "request": "launch",
+            "mainClass": "b_Component.H_File",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "G_Dialog",
+            "request": "launch",
+            "mainClass": "b_Component.G_Dialog",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "F_TextArea",
+            "request": "launch",
+            "mainClass": "b_Component.F_TextArea",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "E_List",
+            "request": "launch",
+            "mainClass": "b_Component.E_List",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "D_Choice",
+            "request": "launch",
+            "mainClass": "b_Component.D_Choice",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C_CheckBox",
+            "request": "launch",
+            "mainClass": "b_Component.C_CheckBox",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Button",
+            "request": "launch",
+            "mainClass": "b_Component.B_Button",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A_Label",
+            "request": "launch",
+            "mainClass": "b_Component.A_Label",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "D2_Exit",
+            "request": "launch",
+            "mainClass": "a_Basic.D2_Exit",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "D1_ExitInterface",
+            "request": "launch",
+            "mainClass": "a_Basic.D1_ExitInterface",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "C_Event",
+            "request": "launch",
+            "mainClass": "a_Basic.C_Event",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "B_Button",
+            "request": "launch",
+            "mainClass": "a_Basic.B_Button",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A2_title",
+            "request": "launch",
+            "mainClass": "a_Basic.A2_title",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
+            "name": "A1_Create",
+            "request": "launch",
+            "mainClass": "a_Basic.A1_Create",
+            "projectName": "WindowCode"
+        },
+        {
+            "type": "java",
             "name": "G2_isPresent",
             "request": "launch",
             "mainClass": "k_Stream.G2_isPresent",

@@ -5,61 +5,61 @@ import java.util.List;
 
 /**
  * 
- * Generalization(ÀÏ¹İÈ­)		Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¢¹	End
- * Realization(½ÇÃ¼È­)		Start ------------¢¹	End
- * Dependency(ÀÇÁ¸)			Start ------------>	End
- * Association(¿¬°ü)			Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End 
- * Directed Association(Á÷Á¢)Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
- * Aggregation(ÁıÇÕ)			start ¢·¢¹-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End	[1 : 0..*]
- * 			  (ÁıÇÕ¿¬°ü)		start ¢·¢¹-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
- * Composition(ÇÕ¼º)			start ¢¸¢º-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End
- * 			  (º¹ÇÕ¿¬°ü)		start ¢¸¢º-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
+ * Generalization(ì¼ë°˜í™”)       Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–· End
+ * Realization(ì‹¤ì²´í™”)          Start -----------â–· End
+ * Dependency(ì˜ì¡´)             Start -----------> End
+ * Association(ì—°ê´€)            Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ End
+ * Directed Association(ì§ì ‘)   Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€> End
+ * Aggregation(ì§‘í•©)            start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â—â–· End
+ *            (ì§‘í•©ì—°ê´€)        start -â”€â”€â”€â”€â”€â”€â”€â”€â”€â—â–· End
+ * Composition(í•©ì„±)            start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â—€â–¶ End
+ *            (ë³µí•©ì—°ê´€)        start -â”€â”€â”€â”€â”€â”€â”€â”€â”€â—€â–¶ End
  */
 
 public class D_Association {
-	public static void main(String[] args) {
-		ArrayUnit end = new ArrayUnit();
-		Unit[] starts = new Unit[10];
+    public static void main(String[] args) {
+        ArrayUnit end = new ArrayUnit();
+        Unit[] starts = new Unit[10];
 
-		for (int i = 0; i < starts.length; i++) {
-			starts[i] = new Unit(i);
-			starts[i].setD(end);
-		}
+        for (int i = 0; i < starts.length; i++) {
+            starts[i] = new Unit(i);
+            starts[i].setD(end);
+        }
 
-		for (int i = 0; i < starts.length; i++) {
-			System.out.println("Association : " + end.get(i).getId());
-		}
-	}
+        for (int i = 0; i < starts.length; i++) {
+            System.out.println("Association : " + end.get(i).getId());
+        }
+    }
 }
 
 class ArrayUnit {
-	private List<Unit> ds = new ArrayList<>();
+    private List<Unit> ds = new ArrayList<>();
 
-	public void addD(Unit unit) {
-		ds.add(unit);
-	}
+    public void addD(Unit unit) {
+        ds.add(unit);
+    }
 
-	public Unit get(int index) {
-		return ds.get(index);
-	}
+    public Unit get(int index) {
+        return ds.get(index);
+    }
 }
 
 @SuppressWarnings("unused")
 class Unit {
-	private int ID;
+    private int ID;
 
-	public Unit(int ID) {
-		this.ID = ID;
-	}
+    public Unit(int ID) {
+        this.ID = ID;
+    }
 
-	public int getId() {
-		return ID;
-	}
+    public int getId() {
+        return ID;
+    }
 
-	private ArrayUnit end;
+    private ArrayUnit end;
 
-	public void setD(ArrayUnit end) {
-		this.end = end;
-		end.addD(this);
-	}
+    public void setD(ArrayUnit end) {
+        this.end = end;
+        end.addD(this);
+    }
 }

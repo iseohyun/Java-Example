@@ -7,38 +7,38 @@ import java.util.ArrayList;
  * 
  * @author Seohyun Jung
  * 
- *		Àü·«ÆĞÅÏ : ±â´ÉÀÌ Ãß°¡ µÇ´õ¶óµµ, '±â´ÉÃß°¡'¸¦ ÀÌ¿ëÇÏ¿©
- *			ÄÚµù·®ÀÌ ´Ã¾î³ªÁö ¾Ê°í, °ü¸®°¡ ½±µµ·Ï ÇÏ´Â Àü·«
+ *		ì „ëµíŒ¨í„´ : ê¸°ëŠ¥ì´ ì¶”ê°€ ë˜ë”ë¼ë„, 'ê¸°ëŠ¥ì¶”ê°€'ë¥¼ ì´ìš©í•˜ì—¬
+ *			ì½”ë”©ëŸ‰ì´ ëŠ˜ì–´ë‚˜ì§€ ì•Šê³ , ê´€ë¦¬ê°€ ì‰½ë„ë¡ í•˜ëŠ” ì „ëµ
  *
- *		¿¹¸¦ µé¾î, ¾Æ·¡¿¡¼­´Â btn.add()¸¦ Ãß°¡/»èÁ¦¸¸À¸·Î ±â´ÉÀÌ Ãß°¡°¡ µÇ¾ú´Ù¸é,
- *			¹«Àü·«¿¡¼­´Â Ãß°¡ÇØ¾ßÇÏ´Â ±â´É(¶Ç´Â ÆÄÀÏ)¿¡ Ã£¾Æ°¡¼­ ±â´ÉÀ» ±¸Çö ¶Ç´Â º¯°æÇØ¾ßÇÏ¹Ç·Î,
- *			º¯°æÁ¡ÀÌ È¥ÀâÇØÁö°í °ü¸®°¡ ¾î·Á¿öÁü.
+ *		ì˜ˆë¥¼ ë“¤ì–´, ì•„ë˜ì—ì„œëŠ” btn.add()ë¥¼ ì¶”ê°€/ì‚­ì œë§Œìœ¼ë¡œ ê¸°ëŠ¥ì´ ì¶”ê°€ê°€ ë˜ì—ˆë‹¤ë©´,
+ *			ë¬´ì „ëµì—ì„œëŠ” ì¶”ê°€í•´ì•¼í•˜ëŠ” ê¸°ëŠ¥(ë˜ëŠ” íŒŒì¼)ì— ì°¾ì•„ê°€ì„œ ê¸°ëŠ¥ì„ êµ¬í˜„ ë˜ëŠ” ë³€ê²½í•´ì•¼í•˜ë¯€ë¡œ,
+ *			ë³€ê²½ì ì´ í˜¼ì¡í•´ì§€ê³  ê´€ë¦¬ê°€ ì–´ë ¤ì›Œì§.
  *
  */
 
 public class Client {
-	public static void main(String[] args) throws IOException {
-		Button btn = new Button();
-		btn.add("Search all...");
-		btn.add("Search image...");
-		btn.add("Search news...");
-		btn.add("Search map...");
+    public static void main(String[] args) throws IOException {
+        Button btn = new Button();
+        btn.add("Search all...");
+        btn.add("Search image...");
+        btn.add("Search news...");
+        btn.add("Search map...");
 
-		System.out.print("Input Number[1-4] : ");
-		int mode = System.in.read() - '1';
+        System.out.print("Input Number[1-4] : ");
+        int mode = System.in.read() - '1';
 
-		btn.clicked(mode);
-	}
+        btn.clicked(mode);
+    }
 
-	static class Button {
-		ArrayList<String> func = new ArrayList<String>();
+    static class Button {
+        ArrayList<String> func = new ArrayList<String>();
 
-		void clicked(int mode) {
-			System.out.println(func.get(mode));
-		}
+        void clicked(int mode) {
+            System.out.println(func.get(mode));
+        }
 
-		void add(String function) {
-			func.add(function);
-		}
-	}
+        void add(String function) {
+            func.add(function);
+        }
+    }
 }

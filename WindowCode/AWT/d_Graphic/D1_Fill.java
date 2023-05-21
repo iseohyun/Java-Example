@@ -12,34 +12,34 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class D1_Fill extends Frame {
-  Paint gPaint1, gPaint2, gPaint3, gPaint4;
+    Paint gPaint1, gPaint2, gPaint3, gPaint4;
 
-  public D1_Fill() {
-    addWindowListener(new WindowExit(this));
-    
-    setVisible(true);
-    setSize(400, 300);
+    public D1_Fill() {
+        addWindowListener(new WindowExit(this));
 
-    gPaint1 = new GradientPaint(10, 50, Color.white, 20, 60, Color.blue, true);
-    gPaint2 = new GradientPaint(100, 50, Color.white, 100, 30, Color.blue, true);
-    gPaint3 = new GradientPaint(190, 50, Color.white, 270, 250, Color.blue, false);
-    gPaint4 = new GradientPaint(280, 50, Color.white, 280, 250, Color.blue, false);
-  }
+        setVisible(true);
+        setSize(400, 300);
 
-  public void paint(Graphics g) {
-    Graphics2D g2 = (Graphics2D) g;
+        gPaint1 = new GradientPaint(10, 50, Color.white, 20, 60, Color.blue, true);
+        gPaint2 = new GradientPaint(100, 50, Color.white, 100, 30, Color.blue, true);
+        gPaint3 = new GradientPaint(190, 50, Color.white, 270, 250, Color.blue, false);
+        gPaint4 = new GradientPaint(280, 50, Color.white, 280, 250, Color.blue, false);
+    }
 
-    g2.setPaint(gPaint1);
-    g2.fill(new Rectangle2D.Double(10, 50, 80, 200));
-    g2.setPaint(gPaint2);
-    g2.fill(new Rectangle2D.Double(100, 50, 80, 200));
-    g2.setPaint(gPaint3);
-    g2.fill(new Rectangle2D.Double(190, 50, 80, 200));
-    g2.setPaint(gPaint4);
-    g2.fill(new Rectangle2D.Double(280, 50, 80, 200));
-  }
+    public void paint(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
 
-  public static void main(String[] args) {
-    new D1_Fill();
-  }
+        g2.setPaint(gPaint1);
+        g2.fill(new Rectangle2D.Double(10, 50, 80, 200));
+        g2.setPaint(gPaint2);
+        g2.fill(new Rectangle2D.Double(100, 50, 80, 200));
+        g2.setPaint(gPaint3);
+        g2.fill(new Rectangle2D.Double(190, 50, 80, 200));
+        g2.setPaint(gPaint4);
+        g2.fill(new Rectangle2D.Double(280, 50, 80, 200));
+    }
+
+    public static void main(String[] args) {
+        new D1_Fill();
+    }
 }

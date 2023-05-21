@@ -4,60 +4,60 @@ package create.factoryMethod;
  * 
  * @author Seohyun Jung
  *
- *		ÆÑÅä¸® ¸Ş¼­µå : Ãß»ó Å¬·¹½º¸¦ ÀÌ¿ëÇÏ¿©, ¿øÇÏ°íÀÚ ÇÏ´Â Å¬·¡½º¸¦ »ı¼ºÇÏ´Â ¹æ¹ı
- *			°á·ĞÀûÀ¸·Î, new¿¬»êÀÚ¸¦ ÀÌ¿ëÇØ¾ß ÀÎ½ºÅÏ½º°¡ »ı¼ºµÈ´Ù´Â Á¡¿¡ ÁÖÀÇÇØ¾ß ÇÕ´Ï´Ù.
+ *		íŒ©í† ë¦¬ ë©”ì„œë“œ : ì¶”ìƒ í´ë ˆìŠ¤ë¥¼ ì´ìš©í•˜ì—¬, ì›í•˜ê³ ì í•˜ëŠ” í´ë˜ìŠ¤ë¥¼ ìƒì„±í•˜ëŠ” ë°©ë²•
+ *			ê²°ë¡ ì ìœ¼ë¡œ, newì—°ì‚°ìë¥¼ ì´ìš©í•´ì•¼ ì¸ìŠ¤í„´ìŠ¤ê°€ ìƒì„±ëœë‹¤ëŠ” ì ì— ì£¼ì˜í•´ì•¼ í•©ë‹ˆë‹¤.
  *
- *		ÄÚµå ¼³¸í)
- *			Object´Â ÈÑÀÌÅ©ÀÌ°í, GetObj¿¡¼­ ½ÇÁ¦·Î »ı¼ºÇÏ°íÀÚÇÏ´Â ¸Ş¼­µå¸¦ »ı¼ºÇÏ´Â ¹æ¹ı
- *			ÀåÁ¡À¸·Î, »ı¼ºÇÏ°íÀÚ ÇÏ´Â class°¡ ³ëÃâµÇÁö ¾Ê´Â´Ù´Â Á¡
+ *		ì½”ë“œ ì„¤ëª…)
+ *			ObjectëŠ” í›¼ì´í¬ì´ê³ , GetObjì—ì„œ ì‹¤ì œë¡œ ìƒì„±í•˜ê³ ìí•˜ëŠ” ë©”ì„œë“œë¥¼ ìƒì„±í•˜ëŠ” ë°©ë²•
+ *			ì¥ì ìœ¼ë¡œ, ìƒì„±í•˜ê³ ì í•˜ëŠ” classê°€ ë…¸ì¶œë˜ì§€ ì•ŠëŠ”ë‹¤ëŠ” ì 
  *		
  */
 
 public class Client {
-	public static void main(String[] args) {
-		System.out.println(Object.GetObj(Object.Types.T1).GetContents());
-		System.out.println(Object.GetObj(Object.Types.T2).GetContents());
-		System.out.println(Object.GetObj(Object.Types.T3).GetContents());
-	}
+    public static void main(String[] args) {
+        System.out.println(Object.GetObj(Object.Types.T1).GetContents());
+        System.out.println(Object.GetObj(Object.Types.T2).GetContents());
+        System.out.println(Object.GetObj(Object.Types.T3).GetContents());
+    }
 }
 
 abstract class Object {
-	public abstract String GetContents();
+    public abstract String GetContents();
 
-	public enum Types {
-		T1, T2, T3
-	}
+    public enum Types {
+        T1, T2, T3
+    }
 
-	public static Object GetObj(Types t) {
-		switch (t) {
-		case T1:
-			return new T1_Obj();
-		case T2:
-			return new T2_Obj();
-		case T3:
-			return new T3_Obj();
-		}
-		return new T1_Obj();
-	}
+    public static Object GetObj(Types t) {
+        switch (t) {
+        case T1:
+            return new T1_Obj();
+        case T2:
+            return new T2_Obj();
+        case T3:
+            return new T3_Obj();
+        }
+        return new T1_Obj();
+    }
 }
 
 class T1_Obj extends Object {
-	@Override
-	public String GetContents() {
-		return "Type 1 : Factory Method";
-	}
+    @Override
+    public String GetContents() {
+        return "Type 1 : Factory Method";
+    }
 }
 
 class T2_Obj extends Object {
-	@Override
-	public String GetContents() {
-		return "Type 2 : Factory Method";
-	}
+    @Override
+    public String GetContents() {
+        return "Type 2 : Factory Method";
+    }
 }
 
 class T3_Obj extends Object {
-	@Override
-	public String GetContents() {
-		return "Type 3 : Factory Method";
-	}
+    @Override
+    public String GetContents() {
+        return "Type 3 : Factory Method";
+    }
 }

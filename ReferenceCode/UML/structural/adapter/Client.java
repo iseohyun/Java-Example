@@ -1,115 +1,115 @@
 package structural.adapter;
 
 /**
- * ÃâÃ³ : https://jusungpark.tistory.com/22
+ * ì¶œì²˜ : https://jusungpark.tistory.com/22
  * 
  * @author Seohyun Jung
  *
- *		¾Æ´äÅÍ ÆĞÅÏ : ¿ì¸® È¸»ç¿¡¼­ ¸¸µç ÆĞÅ°Áö´Â ¿ì¸® È¸»çÀÇ ½Ã½ºÅÛ¿¡ ¹Ù·Î Àû¿ëÇÏ¸é µÈ´Ù.
- *			Å¸»ç¿¡¼­ ÀÛ¼ºµÈ SW¸¦ ¿ì¸®È¸»ç¿¡ ½Ã½ºÅÛ¿¡ ¹Ù·Î Àû¿ëÇÒ ¼ö ¾ø´Ù.
- *			Å¸»ç¿¡¼­ ¸¸µç SW¸¦ ¿ì¸®È¸»ç¿¡ ¸Â°Ô ¼öÁ¤ÇÏ·Á¸é, ¿©·¯°¡Áö ¾Ö·Î»çÇ×ÀÌ »ı±ä´Ù.
- *			(ÄÚµåµµ ¾Ë¾Æ¾ß µÇ°í, º¯°æÇÏ¸é A/S°¡ ¾ÈµÈ´Ù´øÁö, ¼öÁ¤ÇÏ´Âµ¥ ½Ã°£ÀÌ ³Ê¹« ¸¹ÀÌ °É¸°´Ù´øÁö..)
- *			µû¶ó¼­, IF¸¸ ÀÏÄ¡½ÃÄÑ¼­ µ¹¾Æ°¡µµ·Ï ¸¸µå´Â °ÍÀÌ ÇÙ½ÉÀÌ´Ù.
+ *		ì•„ë‹µí„° íŒ¨í„´ : ìš°ë¦¬ íšŒì‚¬ì—ì„œ ë§Œë“  íŒ¨í‚¤ì§€ëŠ” ìš°ë¦¬ íšŒì‚¬ì˜ ì‹œìŠ¤í…œì— ë°”ë¡œ ì ìš©í•˜ë©´ ëœë‹¤.
+ *			íƒ€ì‚¬ì—ì„œ ì‘ì„±ëœ SWë¥¼ ìš°ë¦¬íšŒì‚¬ì— ì‹œìŠ¤í…œì— ë°”ë¡œ ì ìš©í•  ìˆ˜ ì—†ë‹¤.
+ *			íƒ€ì‚¬ì—ì„œ ë§Œë“  SWë¥¼ ìš°ë¦¬íšŒì‚¬ì— ë§ê²Œ ìˆ˜ì •í•˜ë ¤ë©´, ì—¬ëŸ¬ê°€ì§€ ì• ë¡œì‚¬í•­ì´ ìƒê¸´ë‹¤.
+ *			(ì½”ë“œë„ ì•Œì•„ì•¼ ë˜ê³ , ë³€ê²½í•˜ë©´ A/Sê°€ ì•ˆëœë‹¤ë˜ì§€, ìˆ˜ì •í•˜ëŠ”ë° ì‹œê°„ì´ ë„ˆë¬´ ë§ì´ ê±¸ë¦°ë‹¤ë˜ì§€..)
+ *			ë”°ë¼ì„œ, IFë§Œ ì¼ì¹˜ì‹œì¼œì„œ ëŒì•„ê°€ë„ë¡ ë§Œë“œëŠ” ê²ƒì´ í•µì‹¬ì´ë‹¤.
  *
- *		ÄÚµå ÇØ¼³)
- *			¿ì¸®È¸»ç¿¡¼­ »ç¿ëÇÏ´Â ¾îÇÃ¸®ÄÉÀÌ¼ÇÀÌ Bird¶ó´Â °ÍÀÌ´Ù.
- *			¿À¸®¿Í Âü»õ´Â ±¸ÇöÀ» Çß´Âµ¥, ºñµÑ±â¸¦ °³¹ßÇÏ´Â°Íº¸´Ù ±¸ÀÔÇÏ´Â °ÍÀÌ Àü·«ÀûÀ¸·Î ÁÁ´Ù°í ÇÏÀÚ.
- *			ºñµÑ±â¸¦ ±¸¸ÅÇß´Âµ¥, ¿ì¸®°¡ °¡Áø Interface°¡ Á¶±İ ´Ş¶ó¼­, ºñµÑ±â¸¦ Á÷Á¢ ¼öÁ¤ÇÏ´Â °Íº¸´Ù
- *			adaptor¸¦ ¸¸µé¾î¼­ µ¿ÀÛÇÏ°Ô²ûÇÏ·Á°í ÇÑ´Ù.
+ *		ì½”ë“œ í•´ì„¤)
+ *			ìš°ë¦¬íšŒì‚¬ì—ì„œ ì‚¬ìš©í•˜ëŠ” ì–´í”Œë¦¬ì¼€ì´ì…˜ì´ Birdë¼ëŠ” ê²ƒì´ë‹¤.
+ *			ì˜¤ë¦¬ì™€ ì°¸ìƒˆëŠ” êµ¬í˜„ì„ í–ˆëŠ”ë°, ë¹„ë‘˜ê¸°ë¥¼ ê°œë°œí•˜ëŠ”ê²ƒë³´ë‹¤ êµ¬ì…í•˜ëŠ” ê²ƒì´ ì „ëµì ìœ¼ë¡œ ì¢‹ë‹¤ê³  í•˜ì.
+ *			ë¹„ë‘˜ê¸°ë¥¼ êµ¬ë§¤í–ˆëŠ”ë°, ìš°ë¦¬ê°€ ê°€ì§„ Interfaceê°€ ì¡°ê¸ˆ ë‹¬ë¼ì„œ, ë¹„ë‘˜ê¸°ë¥¼ ì§ì ‘ ìˆ˜ì •í•˜ëŠ” ê²ƒë³´ë‹¤
+ *			adaptorë¥¼ ë§Œë“¤ì–´ì„œ ë™ì‘í•˜ê²Œë”í•˜ë ¤ê³  í•œë‹¤.
  *
- *			main¿¡¼­ ¿ì¸®È¸»ç ½Ã½ºÅÛ(31ÁÙ for¹®)ÀÇ º¯°æ ¾øÀÌ Àû¿ëÇÏ¿©¾ß ÇÑ´Ù.
+ *			mainì—ì„œ ìš°ë¦¬íšŒì‚¬ ì‹œìŠ¤í…œ(31ì¤„ forë¬¸)ì˜ ë³€ê²½ ì—†ì´ ì ìš©í•˜ì—¬ì•¼ í•œë‹¤.
  *
  */
 
 public class Client {
-	public static void main(String[] args) {
-		Bird duck = new Duck();
-		Bird sparrow = new Sparrow();
-		WildPigeon pigeonOrigin = new WildPigeon();
-		PigeonAdapter pigeon = new PigeonAdapter(pigeonOrigin);
-		Bird[] birds = { duck, sparrow, pigeon };
+    public static void main(String[] args) {
+        Bird duck = new Duck();
+        Bird sparrow = new Sparrow();
+        WildPigeon pigeonOrigin = new WildPigeon();
+        PigeonAdapter pigeon = new PigeonAdapter(pigeonOrigin);
+        Bird[] birds = { duck, sparrow, pigeon };
 
-		for (Bird bird : birds) { // ¿ì¸®È¸»ç ½Ã½ºÅÛ
-			System.out.println(bird);
-			bird.cry();
-			bird.fly();
-		}
-	}
+        for (Bird bird : birds) { // ìš°ë¦¬íšŒì‚¬ ì‹œìŠ¤í…œ
+            System.out.println(bird);
+            bird.cry();
+            bird.fly();
+        }
+    }
 }
 
-// -> ¿ì¸® È¸»ç¿¡¼­ ¸¸µç ÆĞÅ°Áö
+// -> ìš°ë¦¬ íšŒì‚¬ì—ì„œ ë§Œë“  íŒ¨í‚¤ì§€
 interface Bird {
-	public void cry();
+    public void cry();
 
-	public void fly();
+    public void fly();
 }
 
 class Duck implements Bird {
-	@Override
-	public void cry() {
-		System.out.println("²Ğ²Ğ~");
-	}
+    @Override
+    public void cry() {
+        System.out.println("ê½¥ê½¥~");
+    }
 
-	@Override
-	public void fly() {
-		System.out.println("Çªµå´ö Çªµå´ö");
-	}
+    @Override
+    public void fly() {
+        System.out.println("í‘¸ë“œë• í‘¸ë“œë•");
+    }
 }
 
 class Sparrow implements Bird {
-	@Override
-	public void cry() {
-		System.out.println("Â±.Â±Â±.");
-	}
+    @Override
+    public void cry() {
+        System.out.println("ì§¹.ì§¹ì§¹.");
+    }
 
-	@Override
-	public void fly() {
-		System.out.println("ÆÄ´ÚÆÄ´Ú");
-	}
+    @Override
+    public void fly() {
+        System.out.println("íŒŒë‹¥íŒŒë‹¥");
+    }
 
 }
 
-// -> ±¸¸ÅÇÑ ÆĞÅ°Áö
+// -> êµ¬ë§¤í•œ íŒ¨í‚¤ì§€
 interface Pigeon {
-	public void voice();
+    public void voice();
 
-	public void fly();
+    public void fly();
 
-	public void gogo();
+    public void gogo();
 }
 
 class WildPigeon implements Pigeon {
-	@Override
-	public void voice() {
-		System.out.println("±¸±¸±¸±¸±¸±¸");
-	}
+    @Override
+    public void voice() {
+        System.out.println("êµ¬êµ¬êµ¬êµ¬êµ¬êµ¬");
+    }
 
-	@Override
-	public void fly() {
-		System.out.println("ÈÄµåµåµåµå");
-	}
+    @Override
+    public void fly() {
+        System.out.println("í›„ë“œë“œë“œë“œ");
+    }
 
-	@Override
-	public void gogo() {
-		System.out.println("ÃÑ~ÃÑ~ÃÑ~");
-	}
+    @Override
+    public void gogo() {
+        System.out.println("ì´~ì´~ì´~");
+    }
 }
 
-// -> ±¸¸ÅÇÑ ÆĞÅ°Áö¸¦ Á÷Á¢ ¼öÁ¤ÇÏÁö ¾Ê°í, Áß°£¿¡ ¾î´ğÅÍ¸¦ ÀÛ¼º
+// -> êµ¬ë§¤í•œ íŒ¨í‚¤ì§€ë¥¼ ì§ì ‘ ìˆ˜ì •í•˜ì§€ ì•Šê³ , ì¤‘ê°„ì— ì–´ëŒ‘í„°ë¥¼ ì‘ì„±
 class PigeonAdapter implements Bird {
-	Pigeon pigeon;
+    Pigeon pigeon;
 
-	public PigeonAdapter(Pigeon pigeon) {
-		this.pigeon = pigeon;
-	}
+    public PigeonAdapter(Pigeon pigeon) {
+        this.pigeon = pigeon;
+    }
 
-	@Override
-	public void fly() {
-		pigeon.fly();
-	}
+    @Override
+    public void fly() {
+        pigeon.fly();
+    }
 
-	@Override
-	public void cry() {
-		pigeon.voice();
-	}
+    @Override
+    public void cry() {
+        pigeon.voice();
+    }
 }

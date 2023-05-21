@@ -22,135 +22,135 @@ import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 
 public class Controllar implements Initializable {
-	@FXML
-	private Label name;
-	
-	@FXML
-	private Slider volumn;
-	
-	@FXML
-	private ProgressBar time;
-	
-	@FXML
-	private Button play, pause, reset, previous, next;
-	
-	@FXML
-	private ComboBox<String> speed;
-	
-	private Media media;
-	private MediaPlayer mediaPlayer;
-	
-	private File directory;
-	private File[] files;
-	
-	private ArrayList<File> songs;
-	
-	private int songNumber;
-	private int[] speedOpt = {25, 50, 75, 100, 125, 150, 175, 200};
-	
-	private Timer timer;
-	private TimerTask task;
-	private boolean running;
-	
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		songs = new ArrayList<File>();
-		//directory = new File("Song");
-		directory = new File("WindowCode/Song");
-		files = directory.listFiles();
-		if(files != null) {
-			for(File file : files) {
-				songs.add(file);
-			}
-		}
-		media = new Media(songs.get(songNumber).toURI().toString());
-		mediaPlayer = new MediaPlayer(media);
-		name.setText(songs.get(songNumber).getName());
-		
-		for(int spd : speedOpt) {
-			speed.getItems().add(Integer.toString(spd)+"%");
-		}
-		speed.setOnAction(this::changeSpeed);
-		
-		volumn.valueProperty().addListener(new ChangeListener<Number>() {
-			@Override
-			public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
-				mediaPlayer.setVolume(volumn.getValue()*0.01);
-			}
-		});
-	}
+    @FXML
+    private Label name;
+    
+    @FXML
+    private Slider volumn;
+    
+    @FXML
+    private ProgressBar time;
+    
+    @FXML
+    private Button play, pause, reset, previous, next;
+    
+    @FXML
+    private ComboBox<String> speed;
+    
+    private Media media;
+    private MediaPlayer mediaPlayer;
+    
+    private File directory;
+    private File[] files;
+    
+    private ArrayList<File> songs;
+    
+    private int songNumber;
+    private int[] speedOpt = {25, 50, 75, 100, 125, 150, 175, 200};
+    
+    private Timer timer;
+    private TimerTask task;
+    private boolean running;
+    
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        songs = new ArrayList<File>();
+        //directory = new File("Song");
+        directory = new File("WindowCode/Song");
+        files = directory.listFiles();
+        if(files != null) {
+            for(File file : files) {
+                songs.add(file);
+            }
+        }
+        media = new Media(songs.get(songNumber).toURI().toString());
+        mediaPlayer = new MediaPlayer(media);
+        name.setText(songs.get(songNumber).getName());
+        
+        for(int spd : speedOpt) {
+            speed.getItems().add(Integer.toString(spd)+"%");
+        }
+        speed.setOnAction(this::changeSpeed);
+        
+        volumn.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
+                mediaPlayer.setVolume(volumn.getValue()*0.01);
+            }
+        });
+    }
 
-	public void play() {
-		begin();
-		changeSpeed(null);
-		mediaPlayer.setVolume(volumn.getValue()*0.01);
-		mediaPlayer.play();
-	}
+    public void play() {
+        begin();
+        changeSpeed(null);
+        mediaPlayer.setVolume(volumn.getValue()*0.01);
+        mediaPlayer.play();
+    }
 
-	public void pause() {
-		end();
-		mediaPlayer.pause();
-	}
+    public void pause() {
+        end();
+        mediaPlayer.pause();
+    }
 
-	public void reset() {
-		time.setProgress(0);
-		mediaPlayer.seek(Duration.seconds(0));
-	}
+    public void reset() {
+        time.setProgress(0);
+        mediaPlayer.seek(Duration.seconds(0));
+    }
 
-	public void previous() {
-		if(songNumber > 0) {
-			songNumber--;
-			mediaPlayer.stop();
-			if(running) {
-				end();
-			}
-			media = new Media(songs.get(songNumber).toURI().toString());
-			mediaPlayer = new MediaPlayer(media);
-			name.setText(songs.get(songNumber).getName());
-			play();
-		}
-	}
+    public void previous() {
+        if(songNumber > 0) {
+            songNumber--;
+            mediaPlayer.stop();
+            if(running) {
+                end();
+            }
+            media = new Media(songs.get(songNumber).toURI().toString());
+            mediaPlayer = new MediaPlayer(media);
+            name.setText(songs.get(songNumber).getName());
+            play();
+        }
+    }
 
-	public void next() {
-		if(songNumber < songs.size()-1) {
-			songNumber++;
-			mediaPlayer.stop();
-			if(running) {
-				end();
-			}
-			media = new Media(songs.get(songNumber).toURI().toString());
-			mediaPlayer = new MediaPlayer(media);
-			name.setText(songs.get(songNumber).getName());
-			play();
-		}
-	}
+    public void next() {
+        if(songNumber < songs.size()-1) {
+            songNumber++;
+            mediaPlayer.stop();
+            if(running) {
+                end();
+            }
+            media = new Media(songs.get(songNumber).toURI().toString());
+            mediaPlayer = new MediaPlayer(media);
+            name.setText(songs.get(songNumber).getName());
+            play();
+        }
+    }
 
-	public void changeSpeed(ActionEvent event) {
-		if(speed.getValue() == null) {
-			mediaPlayer.setRate(1);
-		}else		{
-			mediaPlayer.setRate(Integer.parseInt(speed.getValue().substring(0, speed.getValue().length()-1))*0.01);
-		}
-	}
-	public void begin() {
-		timer = new Timer();
-		task = new TimerTask() {
-			@Override
-			public void run() {
-				running = true;
-				double current = mediaPlayer.getCurrentTime().toSeconds();
-				double end = media.getDuration().toSeconds();
-				time.setProgress(current/end);
-				
-				if(current/end == 1) {
-					end();
-				}
-			}
-		};
-		timer.scheduleAtFixedRate(task, 0, 1000);
-	}
-	public void end() {
-		running = false;
-		timer.cancel();
-	}
+    public void changeSpeed(ActionEvent event) {
+        if(speed.getValue() == null) {
+            mediaPlayer.setRate(1);
+        }else		{
+            mediaPlayer.setRate(Integer.parseInt(speed.getValue().substring(0, speed.getValue().length()-1))*0.01);
+        }
+    }
+    public void begin() {
+        timer = new Timer();
+        task = new TimerTask() {
+            @Override
+            public void run() {
+                running = true;
+                double current = mediaPlayer.getCurrentTime().toSeconds();
+                double end = media.getDuration().toSeconds();
+                time.setProgress(current/end);
+                
+                if(current/end == 1) {
+                    end();
+                }
+            }
+        };
+        timer.scheduleAtFixedRate(task, 0, 1000);
+    }
+    public void end() {
+        running = false;
+        timer.cancel();
+    }
 }

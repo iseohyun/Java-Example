@@ -1,3 +1,5 @@
 ## 강의자료
+  
+  https://iseohyun.com/tutorial/java/setting.html
 
-  https://example-code.tistory.com/pages/Java-Program
+  구, https://example-code.tistory.com/pages/Java-Program

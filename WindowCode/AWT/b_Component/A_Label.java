@@ -1,3 +1,8 @@
+/*
+ * 레이블을 실습합니다. 이벤트에 따라 visible특성을 toggle할 수 있습니다.
+ * 
+ */
+
 package b_Component;
 
 import java.awt.Color;
@@ -13,73 +18,73 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class A_Label extends Frame implements MouseListener {
-  
-  boolean isStart = false;
-  Label lab1 = new Label("저를 클릭해 보세요.");
-  Label lab2 = new Label("저를 클릭하시면, 5억원을 드립니다.");
 
-  A_Label() {
-    setLayout(new FlowLayout());
-    
-    add(lab1);
-    add(lab2);
+    boolean isStart = false;
+    Label lab1 = new Label("저를 클릭해 보세요.");
+    Label lab2 = new Label("저를 클릭하시면, 5억원을 드립니다.");
 
-    lab1.setBackground(Color.yellow);
-    lab2.setBackground(Color.red);
-    
-    lab1.addMouseListener(this);
-    lab2.addMouseListener(this);
-    
-    addWindowListener(new WindowExit(this));
+    A_Label() {
+        setLayout(new FlowLayout());
 
-    setSize(300, 400);
-    setVisible(true);
-  }
+        add(lab1);
+        add(lab2);
 
-  public static void main(String[] args) {
-    new A_Label();
-    
-  }
+        lab1.setBackground(Color.yellow);
+        lab2.setBackground(Color.red);
 
-  @Override
-  public void mouseClicked(MouseEvent e) {
-    // TODO Auto-generated method stub
-    System.out.println("클릭되었습니다.");
-  }
+        lab1.addMouseListener(this);
+        lab2.addMouseListener(this);
 
-  @Override
-  public void mousePressed(MouseEvent e) {
-    // TODO Auto-generated method stub
-    if(e.getSource().equals(lab1)) {
-      System.out.println("마우스 눌림.");
-      lab2.setVisible(true);
-    }else {
-      if(!isStart) {
-        System.out.println("이벤트 시작.");
-        JOptionPane.showMessageDialog(this, "아직 시작 안했습니다. \n 이제 게임을 시작합니다.");
-        lab2.setVisible(false);
-      } else {
-        JOptionPane.showMessageDialog(this, "5억원에 당첨되셨습니다.");
-      }
+        addWindowListener(new WindowExit(this));
+
+        setSize(300, 400);
+        setVisible(true);
     }
-  }
 
-  @Override
-  public void mouseReleased(MouseEvent e) {
-    // TODO Auto-generated method stub
-    System.out.println("마우스 클릭 해제!");
-    lab2.setVisible(false);
-  }
+    public static void main(String[] args) {
+        new A_Label();
 
-  @Override
-  public void mouseEntered(MouseEvent e) {
-    // TODO Auto-generated method stub
-    System.out.println("입장하십니다.");
-  }
+    }
 
-  @Override
-  public void mouseExited(MouseEvent e) {
-    // TODO Auto-generated method stub
-    System.out.println("도망가십니다.");
-  }
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        // TODO Auto-generated method stub
+        System.out.println("클릭되었습니다.");
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        // TODO Auto-generated method stub
+        if (e.getSource().equals(lab1)) {
+            System.out.println("마우스 눌림.");
+            lab2.setVisible(true);
+        } else {
+            if (!isStart) {
+                System.out.println("이벤트 시작.");
+                JOptionPane.showMessageDialog(this, "아직 시작 안했습니다. \n 이제 게임을 시작합니다.");
+                lab2.setVisible(false);
+            } else {
+                JOptionPane.showMessageDialog(this, "5억원에 당첨되셨습니다.");
+            }
+        }
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        // TODO Auto-generated method stub
+        System.out.println("마우스 클릭 해제!");
+        lab2.setVisible(false);
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        // TODO Auto-generated method stub
+        System.out.println("입장하십니다.");
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        // TODO Auto-generated method stub
+        System.out.println("도망가십니다.");
+    }
 }

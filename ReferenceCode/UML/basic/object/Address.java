@@ -2,7 +2,7 @@ package basic.object;
 
 /**
  * 
- * ÂüÁ¶ : https://example-code.tistory.com/8
+ * ì°¸ì¡° : https://example-code.tistory.com/8
  *
  */
 

@@ -4,79 +4,79 @@ package behavioral.command;
  * 
  * @author Seohyun Jung
  *
- *		Ä¿¸àµå(¸í·É) ÆĞÅÏ : Áö½ÃÀÚ(command) -> °¨µ¶°ü/¹ßµ¿ÀÚ(invoker) -> ³ë¿¹/¼ö½ÅÀÚ(receiver) (+¸í·É)ÀÇ 4¹ÚÀÚ·Î ÀÌ·ç¾îÁı´Ï´Ù.
- *			³ë¿¹°¡ ¼öÇà °¡´ÉÇÑ ¸í·É¾î¸¦ ¸ğµç °³Ã¼°¡ °øÀ¯µÇ¾î¾ßÇÏ´Â Æ¯Â¡ÀÌ ÀÖ½À´Ï´Ù.
- *			ÃÊ±â¼³Á¤¿¡¼­ °¨µ¶°ü¿¡°Ô ³ë¿¹°¡ ¼öÇà°¡´ÉÇÑ ¸í·É¾î¸¦ ÀÔ·Â½ÃÅ°¸é, ³ë¿¹¸¦ Á÷Á¢ ´ë¸éÇÏÁö ¾Ê¾Æµµ ¸í·ÉÀ» ¼öÇà°¡´ÉÇÏ°Ô ÇÒ ¼öÀÖ½À´Ï´Ù.
+ *		ì»¤ë©˜ë“œ(ëª…ë ¹) íŒ¨í„´ : ì§€ì‹œì(command) -> ê°ë…ê´€/ë°œë™ì(invoker) -> ë…¸ì˜ˆ/ìˆ˜ì‹ ì(receiver) (+ëª…ë ¹)ì˜ 4ë°•ìë¡œ ì´ë£¨ì–´ì§‘ë‹ˆë‹¤.
+ *			ë…¸ì˜ˆê°€ ìˆ˜í–‰ ê°€ëŠ¥í•œ ëª…ë ¹ì–´ë¥¼ ëª¨ë“  ê°œì²´ê°€ ê³µìœ ë˜ì–´ì•¼í•˜ëŠ” íŠ¹ì§•ì´ ìˆìŠµë‹ˆë‹¤.
+ *			ì´ˆê¸°ì„¤ì •ì—ì„œ ê°ë…ê´€ì—ê²Œ ë…¸ì˜ˆê°€ ìˆ˜í–‰ê°€ëŠ¥í•œ ëª…ë ¹ì–´ë¥¼ ì…ë ¥ì‹œí‚¤ë©´, ë…¸ì˜ˆë¥¼ ì§ì ‘ ëŒ€ë©´í•˜ì§€ ì•Šì•„ë„ ëª…ë ¹ì„ ìˆ˜í–‰ê°€ëŠ¥í•˜ê²Œ í•  ìˆ˜ìˆìŠµë‹ˆë‹¤.
  *
- *			³ë¿¹¸¦ ¾÷µ¥ÀÌÆ® ½ÃÅ³ ¼ö ¾ø´Â »óÈ²ÀÎ °æ¿ì, ¶Ç´Â ¸í·ÉÀ» ±â¾ïÇØ¼­ ¼öÇàÇÏ°Å³ª, ¶Ç´Â ¸í·ÉÀ» ±â¾ïÇØµÎ¾î¾ß ÇÒ ¶§ À¯¿ëÇÏ°Ô ½á¸ÔÀ» ¼ö ÀÖ½À´Ï´Ù.
+ *			ë…¸ì˜ˆë¥¼ ì—…ë°ì´íŠ¸ ì‹œí‚¬ ìˆ˜ ì—†ëŠ” ìƒí™©ì¸ ê²½ìš°, ë˜ëŠ” ëª…ë ¹ì„ ê¸°ì–µí•´ì„œ ìˆ˜í–‰í•˜ê±°ë‚˜, ë˜ëŠ” ëª…ë ¹ì„ ê¸°ì–µí•´ë‘ì–´ì•¼ í•  ë•Œ ìœ ìš©í•˜ê²Œ ì¨ë¨¹ì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
  *
  */
 
 public class Client {
-	public static void main(String[] args) {
-		Receiver r = new Receiver();
-		Command cmd1 = new Cmd1(r);
-		Command cmd2 = new Cmd2(r);
+    public static void main(String[] args) {
+        Receiver r = new Receiver();
+        Command cmd1 = new Cmd1(r);
+        Command cmd2 = new Cmd2(r);
 
-		Invoker s = new Invoker(cmd1, cmd2);
+        Invoker s = new Invoker(cmd1, cmd2);
 
-		s.doIt1();
-		s.doIt2();
-	}
+        s.doIt1();
+        s.doIt2();
+    }
 }
 
 class Invoker {
-	private Command[] cmd = new Command[2];
+    private Command[] cmd = new Command[2];
 
-	public Invoker(Command c1, Command c2) {
-		cmd[0] = c1;
-		cmd[1] = c2;
-	}
+    public Invoker(Command c1, Command c2) {
+        cmd[0] = c1;
+        cmd[1] = c2;
+    }
 
-	public void doIt1() {
-		cmd[0].execute();
-	}
+    public void doIt1() {
+        cmd[0].execute();
+    }
 
-	public void doIt2() {
-		cmd[1].execute();
-	}
+    public void doIt2() {
+        cmd[1].execute();
+    }
 }
 
-// ¸í·ÉÀ» ¼öÇàÇÒ °³Ã¼
+// ëª…ë ¹ì„ ìˆ˜í–‰í•  ê°œì²´
 class Receiver {
-	public void cmd1() {
-		System.out.println("Command 1 Received.");
-	}
+    public void cmd1() {
+        System.out.println("Command 1 Received.");
+    }
 
-	public void cmd2() {
-		System.out.println("Command 2 Received.");
-	}
+    public void cmd2() {
+        System.out.println("Command 2 Received.");
+    }
 }
 
 interface Command {
-	void execute();
+    void execute();
 }
 
 class Cmd1 implements Command {
-	private Receiver robot;
+    private Receiver robot;
 
-	public Cmd1(Receiver robot) {
-		this.robot = robot;
-	}
+    public Cmd1(Receiver robot) {
+        this.robot = robot;
+    }
 
-	public void execute() {
-		robot.cmd1();
-	}
+    public void execute() {
+        robot.cmd1();
+    }
 }
 
 class Cmd2 implements Command {
-	private Receiver robot;
+    private Receiver robot;
 
-	public Cmd2(Receiver robot) {
-		this.robot = robot;
-	}
+    public Cmd2(Receiver robot) {
+        this.robot = robot;
+    }
 
-	public void execute() {
-		robot.cmd2();
-	}
+    public void execute() {
+        robot.cmd2();
+    }
 }

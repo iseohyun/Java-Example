@@ -1,13 +1,13 @@
 package structural.bridge;
 /**
- * ÃâÃ³ : https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A6%AC%EC%A7%80_%ED%8C%A8%ED%84%B4
+ * ì¶œì²˜ : https://ko.wikipedia.org/wiki/%EB%B8%8C%EB%A6%AC%EC%A7%80_%ED%8C%A8%ED%84%B4
  * 
  * @author Seohyun Jung
  *
- *		ºê¸´Áö ÆÐÅÏ : ±¸ÇöÇÏ°íÀÚ ÇÏ´Â ´ë»óÀ» ¿©·¯´Ü°è(·¹ÀÌ¾î)·Î ³ª´©¾î¼­ ±¸Çö
+ *		ë¸Œë¦¿ì§€ íŒ¨í„´ : êµ¬í˜„í•˜ê³ ìž í•˜ëŠ” ëŒ€ìƒì„ ì—¬ëŸ¬ë‹¨ê³„(ë ˆì´ì–´)ë¡œ ë‚˜ëˆ„ì–´ì„œ êµ¬í˜„
  *
- *		ÄÚµå ÇØ¼®)
- *			ÃÖÁ¾ ±¸ÇöÇÒ ´ë»ó : Shape
+ *		ì½”ë“œ í•´ì„)
+ *			ìµœì¢… êµ¬í˜„í•  ëŒ€ìƒ : Shape
  *
  *			1) draw			-> DrawingAPI(DrawingAPI1, DrawingAPI2...)
  *			2) resize
@@ -15,56 +15,56 @@ package structural.bridge;
  */
 
 public class Client {
-	public static void main(String[] args) {
-		Shape[] shapes = new Shape[2];
-		shapes[0] = new CircleShape(1, 2, 3, new DrawingAPI1());
-		shapes[1] = new CircleShape(5, 7, 11, new DrawingAPI2());
+    public static void main(String[] args) {
+        Shape[] shapes = new Shape[2];
+        shapes[0] = new CircleShape(1, 2, 3, new DrawingAPI1());
+        shapes[1] = new CircleShape(5, 7, 11, new DrawingAPI2());
 
-		for (Shape shape : shapes) {
-			shape.resize(2.5);
-			shape.draw();
-		}
-	}
+        for (Shape shape : shapes) {
+            shape.resize(2.5);
+            shape.draw();
+        }
+    }
 }
 
 interface Shape {
-	public void draw(); // level 1
+    public void draw(); // level 1
 
-	public void resize(double pct); // level 2
+    public void resize(double pct); // level 2
 }
 
 class CircleShape implements Shape {
-	private double x, y, radius;
-	private DrawingAPI drawingAPI;
+    private double x, y, radius;
+    private DrawingAPI drawingAPI;
 
-	public CircleShape(double x, double y, double radius, DrawingAPI drawingAPI) {
-		this.x = x;
-		this.y = y;
-		this.radius = radius;
-		this.drawingAPI = drawingAPI;
-	}
+    public CircleShape(double x, double y, double radius, DrawingAPI drawingAPI) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.drawingAPI = drawingAPI;
+    }
 
-	public void draw() {
-		drawingAPI.drawCircle(x, y, radius);
-	}
+    public void draw() {
+        drawingAPI.drawCircle(x, y, radius);
+    }
 
-	public void resize(double pct) {
-		radius *= pct;
-	}
+    public void resize(double pct) {
+        radius *= pct;
+    }
 }
 
 interface DrawingAPI {
-	public void drawCircle(double x, double y, double radius);
+    public void drawCircle(double x, double y, double radius);
 }
 
 class DrawingAPI1 implements DrawingAPI {
-	public void drawCircle(double x, double y, double radius) {
-		System.out.printf("API1.circle at %f:%f radius %f\n", x, y, radius);
-	}
+    public void drawCircle(double x, double y, double radius) {
+        System.out.printf("API1.circle at %f:%f radius %f\n", x, y, radius);
+    }
 }
 
 class DrawingAPI2 implements DrawingAPI {
-	public void drawCircle(double x, double y, double radius) {
-		System.out.printf("API2.circle at %f:%f radius %f\n", x, y, radius);
-	}
+    public void drawCircle(double x, double y, double radius) {
+        System.out.printf("API2.circle at %f:%f radius %f\n", x, y, radius);
+    }
 }

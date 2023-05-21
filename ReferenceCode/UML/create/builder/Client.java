@@ -4,81 +4,81 @@ package create.builder;
  * 
  * @author Seohyun Jung
  *
- *		ºô´õ ÆĞÅÏ : »ı¼º°úÁ¤À» ºĞ¸®ÇÏ¿© »ı¼ºÇÔ
+ *		ë¹Œë” íŒ¨í„´ : ìƒì„±ê³¼ì •ì„ ë¶„ë¦¬í•˜ì—¬ ìƒì„±í•¨
  *
- *	  ÄÚµå ÇØ¼³:
- *		Origin <- ÃÖÁ¾À¸·Î ÄÁÆ®·Ñ ÇÏ°í ½ÍÀº °³Ã¼
- *		Builder : OriginÀ» ·¹½ÃÇÇ ´ë·Î »ı¼ºÇÏ´Â µµ±¸
- *		Director : Builder¸¦ »ı¼ºÇØ¼­ µ¿ÀÛ½ÃÅ´
+ *	  ì½”ë“œ í•´ì„¤:
+ *		Origin <- ìµœì¢…ìœ¼ë¡œ ì»¨íŠ¸ë¡¤ í•˜ê³  ì‹¶ì€ ê°œì²´
+ *		Builder : Originì„ ë ˆì‹œí”¼ ëŒ€ë¡œ ìƒì„±í•˜ëŠ” ë„êµ¬
+ *		Director : Builderë¥¼ ìƒì„±í•´ì„œ ë™ì‘ì‹œí‚´
  */
 
 public class Client {
-	public static void main(String[] args) {
-		Director dir = new Director();
-		Builder type1 = new NewType1();
-		Builder type2 = new NewType2();
+    public static void main(String[] args) {
+        Director dir = new Director();
+        Builder type1 = new NewType1();
+        Builder type2 = new NewType2();
 
-		dir.setBuilder(type1);
+        dir.setBuilder(type1);
 
-		Origin object = dir.getObject();
-		System.out.println(object.get());
+        Origin object = dir.getObject();
+        System.out.println(object.get());
 
-		dir.setBuilder(type2);
-		object = dir.getObject();
-		System.out.println(object.get());
-	}
+        dir.setBuilder(type2);
+        object = dir.getObject();
+        System.out.println(object.get());
+    }
 }
 
 class Origin {
-	private String Contents = "";
+    private String Contents = "";
 
-	public void set(String c) {
-		Contents = c;
-	}
+    public void set(String c) {
+        Contents = c;
+    }
 
-	public String get() {
-		return Contents;
-	}
+    public String get() {
+        return Contents;
+    }
 }
 
 abstract class Builder {
-	protected Origin origin;
+    protected Origin origin;
 
-	public Origin get() {
-		return origin;
-	}
+    public Origin get() {
+        return origin;
+    }
 
-	public void create() {
-		origin = new Origin();
-	}
+    public void create() {
+        origin = new Origin();
+    }
 
-	public abstract void buildContents();
+    public abstract void buildContents();
 }
 
 class NewType1 extends Builder {
-	@Override
-	public void buildContents() {
-		origin.set("new type 1");
-	}
+    @Override
+    public void buildContents() {
+        origin.set("new type 1");
+    }
 }
 
 class NewType2 extends Builder {
-	@Override
-	public void buildContents() {
-		origin.set("new type 2");
-	}
+    @Override
+    public void buildContents() {
+        origin.set("new type 2");
+    }
 }
 
 class Director {
-	private Builder builder;
+    private Builder builder;
 
-	public void setBuilder(Builder b) {
-		builder = b;
-		builder.create();
-		builder.buildContents();
-	}
+    public void setBuilder(Builder b) {
+        builder = b;
+        builder.create();
+        builder.buildContents();
+    }
 
-	public Origin getObject() {
-		return builder.get();
-	}
+    public Origin getObject() {
+        return builder.get();
+    }
 }

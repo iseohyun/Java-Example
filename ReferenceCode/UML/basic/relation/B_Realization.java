@@ -2,41 +2,41 @@ package basic.relation;
 
 /**
  * 
- * Generalization(ÀÏ¹İÈ­)		Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¢¹	End
- * Realization(½ÇÃ¼È­)		Start ------------¢¹	End
- * Dependency(ÀÇÁ¸)			Start ------------>	End
- * Association(¿¬°ü)			Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End
- * Directed Association(Á÷Á¢)Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
- * Aggregation(ÁıÇÕ)			start ¢·¢¹-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End
- * 			  (ÁıÇÕ¿¬°ü)		start ¢·¢¹-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
- * Composition(ÇÕ¼º)			start ¢¸¢º-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End
- * 			  (º¹ÇÕ¿¬°ü)		start ¢¸¢º-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
+ * Generalization(ì¼ë°˜í™”)       Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–· End
+ * Realization(ì‹¤ì²´í™”)          Start -----------â–· End
+ * Dependency(ì˜ì¡´)             Start -----------> End
+ * Association(ì—°ê´€)            Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ End
+ * Directed Association(ì§ì ‘)   Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€> End
+ * Aggregation(ì§‘í•©)            start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â—â–· End
+ *            (ì§‘í•©ì—°ê´€)        start -â”€â”€â”€â”€â”€â”€â”€â”€â”€â—â–· End
+ * Composition(í•©ì„±)            start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â—€â–¶ End
+ *            (ë³µí•©ì—°ê´€)        start -â”€â”€â”€â”€â”€â”€â”€â”€â”€â—€â–¶ End
  */
 
 public class B_Realization {
-	public static void main(String[] args) {
-		Irreal b1 = new Real1();
-		Irreal b2 = new Real2();
+    public static void main(String[] args) {
+        Irreal b1 = new Real1();
+        Irreal b2 = new Real2();
 
-		b1.func();
-		b2.func();
-	}
+        b1.func();
+        b2.func();
+    }
 }
 
 interface Irreal {
-	void func();
+    void func();
 }
 
 class Real1 implements Irreal {
-	@Override
-	public void func() {
-		System.out.println("Realization 1");
-	}
+    @Override
+    public void func() {
+        System.out.println("Realization 1");
+    }
 }
 
 class Real2 implements Irreal {
-	@Override
-	public void func() {
-		System.out.println("Realization 2");
-	}
+    @Override
+    public void func() {
+        System.out.println("Realization 2");
+    }
 }

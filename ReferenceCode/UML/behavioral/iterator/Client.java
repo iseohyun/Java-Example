@@ -15,34 +15,34 @@ import java.util.LinkedList;
  */
 
 public class Client {
-	public static void main(String[] args) {
-		LinkedList<Aggregate> list = new LinkedList<Aggregate>();
-		list.add(new Aggregate1(1));
-		list.add(new Aggregate1(2));
-		list.add(new Aggregate1(3));
-		list.add(new Aggregate1(4));
-		list.add(new Aggregate1(5));
+    public static void main(String[] args) {
+        LinkedList<Aggregate> list = new LinkedList<Aggregate>();
+        list.add(new Aggregate1(1));
+        list.add(new Aggregate1(2));
+        list.add(new Aggregate1(3));
+        list.add(new Aggregate1(4));
+        list.add(new Aggregate1(5));
 
-		Iterator<Aggregate> iter = list.iterator();
-		while (iter.hasNext()) {
-			iter.next().iterator();
-		}
-	}
+        Iterator<Aggregate> iter = list.iterator();
+        while (iter.hasNext()) {
+            iter.next().iterator();
+        }
+    }
 }
 
 interface Aggregate {
-	public void iterator();
+    public void iterator();
 }
 
 class Aggregate1 implements Aggregate {
-	private int ID;
+    private int ID;
 
-	Aggregate1(int ID) {
-		this.ID = ID;
-	}
+    Aggregate1(int ID) {
+        this.ID = ID;
+    }
 
-	@Override
-	public void iterator() {
-		System.out.println("iterator : " + ID);
-	}
+    @Override
+    public void iterator() {
+        System.out.println("iterator : " + ID);
+    }
 }

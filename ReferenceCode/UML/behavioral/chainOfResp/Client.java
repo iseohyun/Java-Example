@@ -1,89 +1,91 @@
 package behavioral.chainOfResp;
+
 /**
- * 	ÃâÃ³ : https://ko.wikipedia.org/wiki/%EC%B1%85%EC%9E%84_%EC%97%B0%EC%87%84_%ED%8C%A8%ED%84%B4
+ * ì¶œì²˜ :
+ * https://ko.wikipedia.org/wiki/%EC%B1%85%EC%9E%84_%EC%97%B0%EC%87%84_%ED%8C%A8%ED%84%B4
  * 
  * @author Seohyun Jung
  *
- *		Ã¥ÀÓ ¿¬¼â ÆĞÅÏ : ¿¬¼âÀûÀ¸·Î Ã³¸®ÇØ¾ß ÇÒ ¶§, ±¸Á¶È­ÇÑ °æ¿ì¸¦ ÀÌ¾ß±â ÇÕ´Ï´Ù.
+ *         ì±…ì„ ì—°ì‡„ íŒ¨í„´ : ì—°ì‡„ì ìœ¼ë¡œ ì²˜ë¦¬í•´ì•¼ í•  ë•Œ, êµ¬ì¡°í™”í•œ ê²½ìš°ë¥¼ ì´ì•¼ê¸° í•©ë‹ˆë‹¤.
  *
- *		ÄÚµåÇØ¼®)
- *			1> Logger <- Stdout.., Email.., Stderr..
+ *         ì½”ë“œí•´ì„)
+ *         1> Logger <- Stdout.., Email.., Stderr..
  *
- *			2> DEBUG(3) -> NOTICE(5) -> ERR(7)
- *	
- *			3>	("¸í·É¾î1", 3) -> DEBUG  
- *				("¸í·É¾î2", 5) -> DEBUG -> NOTICE
- *				("¸í·É¾î3", 7) -> DEBUG -> NOTICE -> ERR
+ *         2> DEBUG(3) -> NOTICE(5) -> ERR(7)
+ * 
+ *         3> ("ëª…ë ¹ì–´1", 3) -> DEBUG
+ *         ("ëª…ë ¹ì–´2", 5) -> DEBUG -> NOTICE
+ *         ("ëª…ë ¹ì–´3", 7) -> DEBUG -> NOTICE -> ERR
  *
  */
 
 public class Client {
-	public static void main(String[] args) {
-		Logger logger1, logger2;
-		logger1 = logger2 = new StdoutLogger(Logger.DEBUG);
-		logger2 = logger2.setNext(new EmailLogger(Logger.NOTICE)); // 2>
-		logger2 = logger2.setNext(new StderrLogger(Logger.ERR)); // 2>
+    public static void main(String[] args) {
+        Logger logger1, logger2;
+        logger1 = logger2 = new StdoutLogger(Logger.DEBUG);
+        logger2 = logger2.setNext(new EmailLogger(Logger.NOTICE)); // 2>
+        logger2 = logger2.setNext(new StderrLogger(Logger.ERR)); // 2>
 
-		logger1.message("¸í·É¾î 1", Logger.DEBUG);
-		logger1.message("¸í·É¾î 2", Logger.NOTICE);
-		logger1.message("¸í·É¾î 3", Logger.ERR);
-	}
+        logger1.message("ëª…ë ¹ì–´ 1", Logger.DEBUG);
+        logger1.message("ëª…ë ¹ì–´ 2", Logger.NOTICE);
+        logger1.message("ëª…ë ¹ì–´ 3", Logger.ERR);
+    }
 }
 
 abstract class Logger {
-	public static int ERR = 3;
-	public static int NOTICE = 5;
-	public static int DEBUG = 7;
-	protected int mask;
+    public static int ERR = 3;
+    public static int NOTICE = 5;
+    public static int DEBUG = 7;
+    protected int mask;
 
-	protected Logger next;
+    protected Logger next;
 
-	public Logger setNext(Logger log) {
-		next = log;
-		return log;
-	}
+    public Logger setNext(Logger log) {
+        next = log;
+        return log;
+    }
 
-	public void message(String msg, int priority) {
-		if (priority <= mask) {
-			writeMessage(msg);
-		}
-		if (next != null) {
-			next.message(msg, priority);
-		}
-	}
+    public void message(String msg, int priority) {
+        if (priority <= mask) {
+            writeMessage(msg);
+        }
+        if (next != null) {
+            next.message(msg, priority);
+        }
+    }
 
-	abstract protected void writeMessage(String msg);
+    abstract protected void writeMessage(String msg);
 }
 
 class StdoutLogger extends Logger { // 1>
-	public StdoutLogger(int mask) {
-		this.mask = mask;
-	}
+    public StdoutLogger(int mask) {
+        this.mask = mask;
+    }
 
-	@Override
-	protected void writeMessage(String msg) {
-		System.out.println(" * ·Î±× ¹ß»ı : " + msg);
-	}
+    @Override
+    protected void writeMessage(String msg) {
+        System.out.println(" * ë¡œê·¸ ë°œìƒ : " + msg);
+    }
 }
 
 class EmailLogger extends Logger { // 1>
-	public EmailLogger(int mask) {
-		this.mask = mask;
-	}
+    public EmailLogger(int mask) {
+        this.mask = mask;
+    }
 
-	@Override
-	protected void writeMessage(String msg) {
-		System.out.println(" * ¸ŞÀÏ ¹ß¼Û : " + msg);
-	}
+    @Override
+    protected void writeMessage(String msg) {
+        System.out.println(" * ë©”ì¼ ë°œì†¡ : " + msg);
+    }
 }
 
 class StderrLogger extends Logger { // 1>
-	public StderrLogger(int mask) {
-		this.mask = mask;
-	}
+    public StderrLogger(int mask) {
+        this.mask = mask;
+    }
 
-	@Override
-	protected void writeMessage(String msg) {
-		System.err.println(" * ¿¡·¯ ¹ß»ı : " + msg);
-	}
+    @Override
+    protected void writeMessage(String msg) {
+        System.err.println(" * ì—ëŸ¬ ë°œìƒ : " + msg);
+    }
 }

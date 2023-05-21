@@ -8,92 +8,92 @@ import java.util.Set;
 import java.util.WeakHashMap;
 
 /**
- *	¿øº» : https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%9B%A8%EC%9D%B4%ED%8A%B8_%ED%8C%A8%ED%84%B4
+ *	ì›ë³¸ : https://ko.wikipedia.org/wiki/%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%9B%A8%EC%9D%B4%ED%8A%B8_%ED%8C%A8%ED%84%B4
  * @author Seohyun Jung
  *
- *		ÇÃ¶óÀÌ¿şÀÌÆ® ÆĞÅÏ : ¸Ş¸ğ¸® ÇÒ´ç½Ã °ãÄ¡´Â ºÎºĞÀ» ÃÖ´ëÇÑ È°¿ëÇÏ±â À§ÇÑ ±â¹ıÀÔ´Ï´Ù.
+ *		í”Œë¼ì´ì›¨ì´íŠ¸ íŒ¨í„´ : ë©”ëª¨ë¦¬ í• ë‹¹ì‹œ ê²¹ì¹˜ëŠ” ë¶€ë¶„ì„ ìµœëŒ€í•œ í™œìš©í•˜ê¸° ìœ„í•œ ê¸°ë²•ì…ë‹ˆë‹¤.
  *
- *		ÄÚµå ¼³¸í :
- *			¸Ş¸ğ¸®¿¡ ÀûÀçµÉ ÆùÆ®¸¦ (ÆùÆ®¸í, Å©±â, »ö, Æ¯Â¡)À» ÀÌ¿ëÇÏ¿© ÇÏ³ªÀÇ ÄÚµå(ÇØ½¬ÄÚµå)·Î º¯È¯ÇÏ°í, ±×°ÍÀ» Å×ÀÌºí·Î °¡Áö°í ÀÖ´Ù°¡,
- *			¸¸¾à µ¿ÀÏÇÑ Çü½ÄÀ¸·Î
+ *		ì½”ë“œ ì„¤ëª… :
+ *			ë©”ëª¨ë¦¬ì— ì ì¬ë  í°íŠ¸ë¥¼ (í°íŠ¸ëª…, í¬ê¸°, ìƒ‰, íŠ¹ì§•)ì„ ì´ìš©í•˜ì—¬ í•˜ë‚˜ì˜ ì½”ë“œ(í•´ì‰¬ì½”ë“œ)ë¡œ ë³€í™˜í•˜ê³ , ê·¸ê²ƒì„ í…Œì´ë¸”ë¡œ ê°€ì§€ê³  ìˆë‹¤ê°€,
+ *			ë§Œì•½ ë™ì¼í•œ í˜•ì‹ìœ¼ë¡œ
  *
  */
 
 @SuppressWarnings("unused")
 public class Client {
-	public static void main(String[] args) {
-		EnumSet<FontEffect> set = EnumSet.noneOf(FontEffect.class);
+    public static void main(String[] args) {
+        EnumSet<FontEffect> set = EnumSet.noneOf(FontEffect.class);
 
-		System.out.println("> ½Å±Ô ÇÒ´ç");
-		FontData fd = FontData.create(13, "±¼¸²", Color.black, FontEffect.BOLD);
+        System.out.println("> ì‹ ê·œ í• ë‹¹");
+        FontData fd = FontData.create(13, "êµ´ë¦¼", Color.black, FontEffect.BOLD);
 
-		System.out.println("> »çÀÌÁî ´Ù¸£°Ô ÇÒ´ç");
-		fd = FontData.create(10, "±¼¸²", Color.black, FontEffect.BOLD);
+        System.out.println("> ì‚¬ì´ì¦ˆ ë‹¤ë¥´ê²Œ í• ë‹¹");
+        fd = FontData.create(10, "êµ´ë¦¼", Color.black, FontEffect.BOLD);
 
-		System.out.println("> ±Û²Ã ´Ù¸£°Ô ÇÒ´ç");
-		fd = FontData.create(13, "µ¸¿ò", Color.black, FontEffect.BOLD);
+        System.out.println("> ê¸€ê¼´ ë‹¤ë¥´ê²Œ í• ë‹¹");
+        fd = FontData.create(13, "ë‹ì›€", Color.black, FontEffect.BOLD);
 
-		System.out.println("> »ö»ó ´Ù¸£°Ô ÇÒ´ç");
-		fd = FontData.create(13, "±¼¸²", Color.blue, FontEffect.BOLD);
+        System.out.println("> ìƒ‰ìƒ ë‹¤ë¥´ê²Œ í• ë‹¹");
+        fd = FontData.create(13, "êµ´ë¦¼", Color.blue, FontEffect.BOLD);
 
-		System.out.println("> Æ¯¼º Ãß°¡ ÇÒ´ç");
-		fd = FontData.create(13, "±¼¸²", Color.black, FontEffect.BOLD, FontEffect.ITALIC);
+        System.out.println("> íŠ¹ì„± ì¶”ê°€ í• ë‹¹");
+        fd = FontData.create(13, "êµ´ë¦¼", Color.black, FontEffect.BOLD, FontEffect.ITALIC);
 
-		System.out.println("> ¿øº»°ú µ¿ÀÏÇÏ°Ô ÇÒ´ç");
-		fd = FontData.create(13, "±¼¸²", Color.black, FontEffect.BOLD);
+        System.out.println("> ì›ë³¸ê³¼ ë™ì¼í•˜ê²Œ í• ë‹¹");
+        fd = FontData.create(13, "êµ´ë¦¼", Color.black, FontEffect.BOLD);
 
-		System.out.println("> µ¸¿ò µ¿ÀÏÇÏ°Ô ÇÒ´ç");
-		fd = FontData.create(13, "µ¸¿ò", Color.black, FontEffect.BOLD);
-	}
+        System.out.println("> ë‹ì›€ ë™ì¼í•˜ê²Œ í• ë‹¹");
+        fd = FontData.create(13, "ë‹ì›€", Color.black, FontEffect.BOLD);
+    }
 }
 
 enum FontEffect {
-	BOLD, ITALIC, SUPERSCRIPT, SUBSCRIPT, STRIKETHROUGH
+    BOLD, ITALIC, SUPERSCRIPT, SUBSCRIPT, STRIKETHROUGH
 }
 
 @SuppressWarnings({ "unchecked", "rawtypes" })
 final class FontData {
-	private static final WeakHashMap<FontData, WeakReference<FontData>> flyweightData = new WeakHashMap<FontData, WeakReference<FontData>>();
-	private final int pointSize;
-	private final String fontFace;
-	private final Color color;
-	private final Set<FontEffect> effects;
+    private static final WeakHashMap<FontData, WeakReference<FontData>> flyweightData = new WeakHashMap<FontData, WeakReference<FontData>>();
+    private final int pointSize;
+    private final String fontFace;
+    private final Color color;
+    private final Set<FontEffect> effects;
 
-	private FontData(int pointSize, String fontFace, Color color, EnumSet<FontEffect> effects) {
-		this.pointSize = pointSize;
-		this.fontFace = fontFace;
-		this.color = color;
-		this.effects = Collections.unmodifiableSet(effects);
-	}
+    private FontData(int pointSize, String fontFace, Color color, EnumSet<FontEffect> effects) {
+        this.pointSize = pointSize;
+        this.fontFace = fontFace;
+        this.color = color;
+        this.effects = Collections.unmodifiableSet(effects);
+    }
 
-	public static FontData create(int pointSize, String fontFace, Color color, FontEffect... effects) {
-		EnumSet<FontEffect> effectsSet = EnumSet.noneOf(FontEffect.class);
-		for (FontEffect fontEffect : effects) {
-			effectsSet.add(fontEffect);
-		}
-		FontData data = new FontData(pointSize, fontFace, color, effectsSet);
-		if (!flyweightData.containsKey(data)) {
-			System.out.println("¸Ş¸ğ¸® ÇÒ´ç");
-			flyweightData.put(data, new WeakReference(data));
-		} else {
-			System.out.println("ÀÌ¹Ì ÀûÀçµÈ ¸Ş¸ğ¸® »ç¿ë");
-		}
-		return flyweightData.get(data).get();
-	}
+    public static FontData create(int pointSize, String fontFace, Color color, FontEffect... effects) {
+        EnumSet<FontEffect> effectsSet = EnumSet.noneOf(FontEffect.class);
+        for (FontEffect fontEffect : effects) {
+            effectsSet.add(fontEffect);
+        }
+        FontData data = new FontData(pointSize, fontFace, color, effectsSet);
+        if (!flyweightData.containsKey(data)) {
+            System.out.println("ë©”ëª¨ë¦¬ í• ë‹¹");
+            flyweightData.put(data, new WeakReference(data));
+        } else {
+            System.out.println("ì´ë¯¸ ì ì¬ëœ ë©”ëª¨ë¦¬ ì‚¬ìš©");
+        }
+        return flyweightData.get(data).get();
+    }
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this.hashCode() == obj.hashCode()) {
-			return true;
-		}
-		return false;
-	}
+    @Override
+    public boolean equals(Object obj) {
+        if (this.hashCode() == obj.hashCode()) {
+            return true;
+        }
+        return false;
+    }
 
-	@Override
-	public int hashCode() {
-		return pointSize + effects.hashCode() + fontFace.hashCode() + color.hashCode(); // ³·Àº È®·ü·Î overflow¿¡·¯°¡ ÀÖÀ» ¼ö ÀÖ½À´Ï´Ù.
-																						// ¿¹½ÃÀÏ »Ó, Àç¼³°è°¡ ÇÊ¿äÇÑ °ÍÀº ¸Â½À´Ï´Ù.
-		// return pointSize + effects.hashCode() + fontFace.hashCode(); // ´ÙÀ½°ú °°ÀÌ ¼öÁ¤ÇßÀ»
-		// ¶§, ´Ù¸¥ Á¡Àº?
-	}
+    @Override
+    public int hashCode() {
+        return pointSize + effects.hashCode() + fontFace.hashCode() + color.hashCode(); // ë‚®ì€ í™•ë¥ ë¡œ overflowì—ëŸ¬ê°€ ìˆì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+                                                                                        // ì˜ˆì‹œì¼ ë¿, ì¬ì„¤ê³„ê°€ í•„ìš”í•œ ê²ƒì€ ë§ìŠµë‹ˆë‹¤.
+        // return pointSize + effects.hashCode() + fontFace.hashCode(); // ë‹¤ìŒê³¼ ê°™ì´ ìˆ˜ì •í–ˆì„
+        // ë•Œ, ë‹¤ë¥¸ ì ì€?
+    }
 }

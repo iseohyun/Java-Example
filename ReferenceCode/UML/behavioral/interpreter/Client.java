@@ -4,85 +4,85 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 	ÃâÃ³ : https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0_%ED%8C%A8%ED%84%B4
+ * 	ì¶œì²˜ : https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0_%ED%8C%A8%ED%84%B4
  * 
  * @author Seohyun Jung
  *
- *		ÀÎÅÍÇÁ¸®ÅÍ ÆĞÅÏ : °°Àº Çü½ÄÀ¸·Î µÈ °³Ã¼¶ó°í ÇÒ Áö¶óµµ Á¾´ÜÀ¸·Î ÁöÁ¤µÈ °³Ã¼ÀÇ ¿ªÇÒ°ú Á¾´ÜÀÌ ¾Æ´Ñ °³Ã¼ÀÇ µ¿ÀÛÀÌ ´Ş¶ó¾ß ÇÕ´Ï´Ù.
- *			ºñÁ¾´Ü °³Ã¼´Â ´ç¿¬È÷ ÀÚ½Ä °³Ã¼¸¦ °¡Áö°í ÀÖ¾î¾ß ÇÕ´Ï´Ù.
+ *		ì¸í„°í”„ë¦¬í„° íŒ¨í„´ : ê°™ì€ í˜•ì‹ìœ¼ë¡œ ëœ ê°œì²´ë¼ê³  í•  ì§€ë¼ë„ ì¢…ë‹¨ìœ¼ë¡œ ì§€ì •ëœ ê°œì²´ì˜ ì—­í• ê³¼ ì¢…ë‹¨ì´ ì•„ë‹Œ ê°œì²´ì˜ ë™ì‘ì´ ë‹¬ë¼ì•¼ í•©ë‹ˆë‹¤.
+ *			ë¹„ì¢…ë‹¨ ê°œì²´ëŠ” ë‹¹ì—°íˆ ìì‹ ê°œì²´ë¥¼ ê°€ì§€ê³  ìˆì–´ì•¼ í•©ë‹ˆë‹¤.
  *
- *		ÄÚµåÇØ¼³)
- *			ÀÎÅÍÇÁ¸®ÅÍ_ÆĞÅÏ(ÃâÃ³)ÀÇ Å¬·¹½º ´ÙÀÌ¾î±×·¥À» ÄÚµåÈ­ ÇÏ¿´½À´Ï´Ù.(¾Æ·¡)
+ *		ì½”ë“œí•´ì„¤)
+ *			ì¸í„°í”„ë¦¬í„°_íŒ¨í„´(ì¶œì²˜)ì˜ í´ë ˆìŠ¤ ë‹¤ì´ì–´ê·¸ë¨ì„ ì½”ë“œí™” í•˜ì˜€ìŠµë‹ˆë‹¤.(ì•„ë˜)
  *
- *				¦£ Node 10
- *				¡é			¦£---- Node 30
+ *				â”Œ Node 10
+ *				â†“			â”Œ---- Node 30
  *			Node1 <----- Node2 <- Node 40
- *				¡è			¦¦---- Node 50
- *				¦¦ Node 20
+ *				â†‘			â””---- Node 50
+ *				â”” Node 20
  *
  */
 
 public class Client {
-	public static void main(String[] args) {
-		Node ntExpr1 = new Nonterminal(1);
-		Node ntExpr2 = new Nonterminal(2);
-		Node tExpr1 = new Terminal(10);
-		Node tExpr2 = new Terminal(20);
-		Node tExpr3 = new Terminal(30);
-		Node tExpr4 = new Terminal(40);
-		Node tExpr5 = new Terminal(50);
+    public static void main(String[] args) {
+        Node ntExpr1 = new Nonterminal(1);
+        Node ntExpr2 = new Nonterminal(2);
+        Node tExpr1 = new Terminal(10);
+        Node tExpr2 = new Terminal(20);
+        Node tExpr3 = new Terminal(30);
+        Node tExpr4 = new Terminal(40);
+        Node tExpr5 = new Terminal(50);
 
-		ntExpr1.addN(ntExpr2);
-		ntExpr1.addN(tExpr1);
-		ntExpr1.addN(tExpr2);
-		ntExpr2.addN(tExpr3);
-		ntExpr2.addN(tExpr4);
-		ntExpr2.addN(tExpr5);
+        ntExpr1.addN(ntExpr2);
+        ntExpr1.addN(tExpr1);
+        ntExpr1.addN(tExpr2);
+        ntExpr2.addN(tExpr3);
+        ntExpr2.addN(tExpr4);
+        ntExpr2.addN(tExpr5);
 
-		ntExpr1.ShowAll();
-	}
+        ntExpr1.ShowAll();
+    }
 }
 
 interface Abstract {
-	public void ShowAll();
+    public void ShowAll();
 
-	public void addN(Node N);
+    public void addN(Node N);
 }
 
 abstract class Node implements Abstract {
-	int ID;
-	List<Node> N = new ArrayList<>();
+    int ID;
+    List<Node> N = new ArrayList<>();
 
-	public void addN(Node N) {
-		this.N.add(N);
-	}
+    public void addN(Node N) {
+        this.N.add(N);
+    }
 
-	public void ShowAll() {
-		System.out.println(ID);
-		for (Node n : N)
-			n.ShowAll();
-	}
+    public void ShowAll() {
+        System.out.println(ID);
+        for (Node n : N)
+            n.ShowAll();
+    }
 }
 
 class Terminal extends Node {
-	Terminal(int i) {
-		ID = i;
-	}
+    Terminal(int i) {
+        ID = i;
+    }
 
-	@Override
-	public void ShowAll() {
-		System.out.println("Á¾´ÜÁ¡ : " + (ID + 1));
-	}
+    @Override
+    public void ShowAll() {
+        System.out.println("ì¢…ë‹¨ì  : " + (ID + 1));
+    }
 }
 
 class Nonterminal extends Node {
-	Nonterminal(int i) {
-		ID = i;
-	}
+    Nonterminal(int i) {
+        ID = i;
+    }
 
-	@Override
-	public void ShowAll() {
-		System.out.print("ºñÁ¾´ÜÁ¡ : ");
-		super.ShowAll();
-	}
+    @Override
+    public void ShowAll() {
+        System.out.print("ë¹„ì¢…ë‹¨ì  : ");
+        super.ShowAll();
+    }
 }

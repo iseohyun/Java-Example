@@ -11,47 +11,47 @@ import java.util.ArrayList;
  */
 
 public class Client {
-	public static void main(String[] args) {
-		List<Originator.Memento> savedStates = new ArrayList<Originator.Memento>();
-		Originator originator = new Originator();
-		originator.set("State1");
-		originator.set("State2");
-		savedStates.add(originator.saveToMemento());
-		originator.set("State3");
-		savedStates.add(originator.saveToMemento());
-		originator.set("State4");
-		originator.restoreFromMemento(savedStates.get(1));
-		originator.restoreFromMemento(savedStates.get(0));
-	}
+    public static void main(String[] args) {
+        List<Originator.Memento> savedStates = new ArrayList<Originator.Memento>();
+        Originator originator = new Originator();
+        originator.set("State1");
+        originator.set("State2");
+        savedStates.add(originator.saveToMemento());
+        originator.set("State3");
+        savedStates.add(originator.saveToMemento());
+        originator.set("State4");
+        originator.restoreFromMemento(savedStates.get(1));
+        originator.restoreFromMemento(savedStates.get(0));
+    }
 }
 
 class Originator {
-	private String state;
+    private String state;
 
-	public void set(String state) {
-		this.state = state;
-		System.out.println("Originator: Setting state to " + state);
-	}
+    public void set(String state) {
+        this.state = state;
+        System.out.println("Originator: Setting state to " + state);
+    }
 
-	public Memento saveToMemento() {
-		System.out.println("Originator: Saving to Memento.");
-		return new Memento(this.state);
-	}
+    public Memento saveToMemento() {
+        System.out.println("Originator: Saving to Memento.");
+        return new Memento(this.state);
+    }
 
-	public void restoreFromMemento(Memento memento) {
-		this.state = memento.getSavedState();
-		System.out.println("Originator: State after restoring from Memento: " + state);
-	}
+    public void restoreFromMemento(Memento memento) {
+        this.state = memento.getSavedState();
+        System.out.println("Originator: State after restoring from Memento: " + state);
+    }
 
-	public static class Memento {
-		private final String state;
+    public static class Memento {
+        private final String state;
 
-		public Memento(String stateToSave) {
-			state = stateToSave;
-		}
+        public Memento(String stateToSave) {
+            state = stateToSave;
+        }
 
-		private String getSavedState() {
-			return state;
-		}
-	}
+        private String getSavedState() {
+            return state;
+        }
+    }
 }

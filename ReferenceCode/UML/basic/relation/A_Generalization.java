@@ -2,44 +2,44 @@ package basic.relation;
 
 /**
  * 
- * Generalization(ÀÏ¹İÈ­)		Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¢¹	End
- * Realization(½ÇÃ¼È­)		Start ------------¢¹	End
- * Dependency(ÀÇÁ¸)			Start ------------>	End
- * Association(¿¬°ü)			Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End
- * Directed Association(Á÷Á¢)Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
- * Aggregation(ÁıÇÕ)			start ¢·¢¹-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End
- * 			  (ÁıÇÕ¿¬°ü)		start ¢·¢¹-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
- * Composition(ÇÕ¼º)			start ¢¸¢º-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End
- * 			  (º¹ÇÕ¿¬°ü)		start ¢¸¢º-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
+ * Generalization(ì¼ë°˜í™”)       Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–· End
+ * Realization(ì‹¤ì²´í™”)          Start -----------â–· End
+ * Dependency(ì˜ì¡´)             Start -----------> End
+ * Association(ì—°ê´€)            Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ End
+ * Directed Association(ì§ì ‘)   Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€> End
+ * Aggregation(ì§‘í•©)            start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â—â–· End
+ *            (ì§‘í•©ì—°ê´€)        start -â”€â”€â”€â”€â”€â”€â”€â”€â”€â—â–· End
+ * Composition(í•©ì„±)            start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â—€â–¶ End
+ *            (ë³µí•©ì—°ê´€)        start -â”€â”€â”€â”€â”€â”€â”€â”€â”€â—€â–¶ End
  */
 
 public class A_Generalization {
-	public static void main(String[] args) {
-		Start s = new Start(1, 11);
-		Start s2 = new Start(2, 22);
+    public static void main(String[] args) {
+        Start s = new Start(1, 11);
+        Start s2 = new Start(2, 22);
 
-		s.show();
-		s2.show();
-	}
+        s.show();
+        s2.show();
+    }
 }
 
 class End {
-	protected int ID;
+    protected int ID;
 
-	int getID() {
-		return ID;
-	}
+    int getID() {
+        return ID;
+    }
 }
 
 class Start extends End {
-	private int PW;
+    private int PW;
 
-	Start(int ID, int PW) {
-		this.PW = PW;
-		this.ID = ID;
-	}
+    Start(int ID, int PW) {
+        this.PW = PW;
+        this.ID = ID;
+    }
 
-	public void show() {
-		System.out.println("Generalization : " + this.getID() + " / " + PW);
-	}
+    public void show() {
+        System.out.println("Generalization : " + this.getID() + " / " + PW);
+    }
 }

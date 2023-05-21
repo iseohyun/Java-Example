@@ -1,3 +1,8 @@
+/*
+ * 마우스를 드레그하면, 따라서 선을 그립니다.
+ * 
+ */
+
 package d_Graphic;
 
 import java.awt.Color;
@@ -11,38 +16,38 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class A3_MouseDraw extends Frame {
-  int x, y, ox, oy;
+    int x, y, ox, oy;
 
-  A3_MouseDraw() {
-    addWindowListener(new WindowExit(this));
-    
-    setSize(300, 400);
-    setVisible(true);
+    A3_MouseDraw() {
+        addWindowListener(new WindowExit(this));
 
-    Graphics g = getGraphics();
+        setSize(300, 400);
+        setVisible(true);
 
-    g.setColor(Color.red);
+        Graphics g = getGraphics();
 
-    addMouseMotionListener(new MouseMotionAdapter() {
-      public void mouseDragged(MouseEvent e) {
-        x = e.getX();
-        y = e.getY();
-        g.drawLine(ox, oy, x, y);
+        g.setColor(Color.red);
 
-        ox = x;
-        oy = y;
-      }
-    });
+        addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseDragged(MouseEvent e) {
+                x = e.getX();
+                y = e.getY();
+                g.drawLine(ox, oy, x, y);
 
-    addMouseListener(new MouseAdapter() {
-      public void mousePressed(MouseEvent e) {
-        ox = e.getX();
-        oy = e.getY();
-      }
-    });
-  }
+                ox = x;
+                oy = y;
+            }
+        });
 
-  public static void main(String[] args) {
-    new A3_MouseDraw();
-  }
+        addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                ox = e.getX();
+                oy = e.getY();
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        new A3_MouseDraw();
+    }
 }

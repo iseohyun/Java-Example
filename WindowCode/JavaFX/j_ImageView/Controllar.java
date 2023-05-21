@@ -9,14 +9,14 @@ import javafx.scene.image.ImageView;
 
 public class Controllar {
 
-	@FXML
-	ImageView myImageView;
-	Button ChangeImgBtn;
+    @FXML
+    ImageView myImageView;
+    Button ChangeImgBtn;
 
-	Image myImage = new Image(getClass().getResourceAsStream("../dog.jpg"));
+    Image myImage = new Image(getClass().getResourceAsStream("../dog.jpg"));
 
-	public void displayImage() {
+    public void displayImage() {
 
-		myImageView.setImage(myImage);
-	}
+        myImageView.setImage(myImage);
+    }
 }

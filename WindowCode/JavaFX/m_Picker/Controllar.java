@@ -15,26 +15,26 @@ import javafx.scene.paint.Color;
 
 public class Controllar {
 
-	@FXML
-	DatePicker myDate;
+    @FXML
+    DatePicker myDate;
 
-	@FXML
-	Label TextOut;
+    @FXML
+    Label TextOut;
 
-	@FXML
-	ColorPicker ColorPick;
+    @FXML
+    ColorPicker ColorPick;
 
-	@FXML
-	Pane myPane;
+    @FXML
+    Pane myPane;
 
-	public void DatePick(ActionEvent event) {
-		LocalDate local = myDate.getValue();
-		String FormattedDate = local.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-		TextOut.setText(FormattedDate);
-	}
+    public void DatePick(ActionEvent event) {
+        LocalDate local = myDate.getValue();
+        String FormattedDate = local.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        TextOut.setText(FormattedDate);
+    }
 
-	public void ColorPick(ActionEvent event) {
-		Color myColor = ColorPick.getValue();
-		myPane.setBackground(new Background(new BackgroundFill(myColor, null, null)));
-	}
+    public void ColorPick(ActionEvent event) {
+        Color myColor = ColorPick.getValue();
+        myPane.setBackground(new Background(new BackgroundFill(myColor, null, null)));
+    }
 }

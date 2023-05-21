@@ -2,47 +2,47 @@ package basic.relation;
 
 /**
  * 
- * Generalization(ÀÏ¹İÈ­)		Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¢¹	End
- * Realization(½ÇÃ¼È­)		Start ------------¢¹	End
- * Dependency(ÀÇÁ¸)			Start ------------>	End
- * Association(¿¬°ü)			Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End 
- * Directed Association(Á÷Á¢)Start ¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
- * Aggregation(ÁıÇÕ)			start ¢·¢¹-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End	[1 : 0..*]
- * 			  (ÁıÇÕ¿¬°ü)		start ¢·¢¹-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
- * Composition(ÇÕ¼º)			start ¢¸¢º-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡	End
- * 			  (º¹ÇÕ¿¬°ü)		start ¢¸¢º-¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡>	End
+ * Generalization(ì¼ë°˜í™”)       Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–· End
+ * Realization(ì‹¤ì²´í™”)          Start -----------â–· End
+ * Dependency(ì˜ì¡´)             Start -----------> End
+ * Association(ì—°ê´€)            Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ End
+ * Directed Association(ì§ì ‘)   Start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€> End
+ * Aggregation(ì§‘í•©)            start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â—â–· End
+ *            (ì§‘í•©ì—°ê´€)        start -â”€â”€â”€â”€â”€â”€â”€â”€â”€â—â–· End
+ * Composition(í•©ì„±)            start â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â—€â–¶ End
+ *            (ë³µí•©ì—°ê´€)        start -â”€â”€â”€â”€â”€â”€â”€â”€â”€â—€â–¶ End
  */
 
 public class E_Composition {
-	public static void main(String[] args) {
-		Group s = new Group(1);
-		s.show();
+    public static void main(String[] args) {
+        Group s = new Group(1);
+        s.show();
 
-		s = new Group(2);
-		s.show();
-	}
+        s = new Group(2);
+        s.show();
+    }
 }
 
 class Member {
-	private int ID;
+    private int ID;
 
-	Member(int ID) {
-		this.ID = ID;
-	}
+    Member(int ID) {
+        this.ID = ID;
+    }
 
-	public int getID() {
-		return ID;
-	}
+    public int getID() {
+        return ID;
+    }
 }
 
 class Group {
-	Member member;
+    Member member;
 
-	Group(int ID) {
-		member = new Member(ID);
-	}
+    Group(int ID) {
+        member = new Member(ID);
+    }
 
-	public void show() {
-		System.out.println("Composition : " + member.getID());
-	}
+    public void show() {
+        System.out.println("Composition : " + member.getID());
+    }
 }

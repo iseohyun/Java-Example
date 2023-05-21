@@ -8,33 +8,33 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class C1_GridBag extends JFrame {
-  final int N_BUTTONS = 10;
-  JPanel pn = new JPanel();
-  JButton[] bt = new JButton[N_BUTTONS];
+    final int N_BUTTONS = 10;
+    JPanel pn = new JPanel();
+    JButton[] bt = new JButton[N_BUTTONS];
 
-  C1_GridBag() {
-    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    C1_GridBag() {
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-    GridBagConstraints[] gbc = new GridBagConstraints[N_BUTTONS];
-    GridBagLayout gbl = new GridBagLayout();
+        GridBagConstraints[] gbc = new GridBagConstraints[N_BUTTONS];
+        GridBagLayout gbl = new GridBagLayout();
 
-    pn.setLayout(gbl);
-    for (int i = 0; i < N_BUTTONS; i++) {
-      bt[i] = new JButton(Integer.toString(i));
-      gbc[i] = new GridBagConstraints();
-      gbc[i].gridx = (i*2+(i/5))%5;
-      gbc[i].gridy = i%5;
-      pn.add(bt[i], gbc[i]);
+        pn.setLayout(gbl);
+        for (int i = 0; i < N_BUTTONS; i++) {
+            bt[i] = new JButton(Integer.toString(i));
+            gbc[i] = new GridBagConstraints();
+            gbc[i].gridx = (i * 2 + (i / 5)) % 5;
+            gbc[i].gridy = i % 5;
+            pn.add(bt[i], gbc[i]);
+        }
+        setContentPane(pn);
+
+        pack();
+        setVisible(true);
     }
-    setContentPane(pn);
 
-    pack();
-    setVisible(true);
-  }
-
-  public static void main(String[] args) {
-    new C1_GridBag();
-  }
+    public static void main(String[] args) {
+        new C1_GridBag();
+    }
 }
 
 // 실습과제 : 버튼으로 하트를 만들어 봅니다.

@@ -14,14 +14,14 @@
 				<Font name="Arial" size="14.0" />
 			</font>
 		</TextArea>
-		<RadioButton fx:id="choice1" layoutX="25.0" layoutY="160.0" mnemonicParsing="false" text="다형성은 작은 것에 큰 것을 적용하는 기술이다.">
+		<RadioButton fx:id="choice1" layoutX="25.0" layoutY="160.0" mnemonicParsing="false" text="다형성에 의해 부모 객체 타입에 자식 객체를 대입 할 수 있다.">
 			<toggleGroup>
 				<ToggleGroup fx:id="choice" />
 			</toggleGroup>
 		</RadioButton>
 		<RadioButton fx:id="choice2" layoutX="25.0" layoutY="200.0" mnemonicParsing="false" text="자식 객체는 언제나 부모 객체보다 크다." toggleGroup="$choice" />
 		<RadioButton fx:id="choice3" layoutX="25.0" layoutY="240.0" mnemonicParsing="false" text="클래스는 변수와 상수로 구성되어 있다." toggleGroup="$choice" />
-		<RadioButton fx:id="choice4" layoutX="25.0" layoutY="280.0" mnemonicParsing="false" text="상속을 통해서 복잡한 객체를 좀 더 단순하게 표현 할 수 있다." toggleGroup="$choice" />
+		<RadioButton fx:id="choice4" layoutX="25.0" layoutY="280.0" mnemonicParsing="false" text="상속을 통해서 복잡한 객체를 좀 더 체계적으로 표현 할 수 있다." toggleGroup="$choice" />
 		<Button layoutX="152.0" layoutY="319.0" mnemonicParsing="false" onAction="#submit" text="제출하기">
 			<font>
 				<Font size="18.0" />

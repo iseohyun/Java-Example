@@ -11,11 +11,11 @@ package basic.object;
 
 @SuppressWarnings("unused")
 public class Person {
-	private String Name;
-	protected String Phone_Number;
-	String Email_Address;
-	
-	public void PurchaseParkingPass() {
-		
-	}
+    private String Name;
+    protected String Phone_Number;
+    String Email_Address;
+    
+    public void PurchaseParkingPass() {
+        
+    }
 }

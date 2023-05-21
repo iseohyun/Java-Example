@@ -1,3 +1,9 @@
+/*
+ * 아래 작은 text box에 텍스트를 입력하면, 위 box에 출력됩니다. 
+ * 
+ * enter를 누르면 입력이 초기화되고, 출력창은 줄바꿈이 됩니다.
+ * 
+ */
 package b_Component;
 
 import java.awt.Frame;
@@ -12,54 +18,54 @@ import a_Basic.WindowExit;
 
 @SuppressWarnings("serial")
 public class F_TextArea extends Frame implements TextListener, KeyListener {
-  TextField tf = new TextField();
-  TextArea ta = new TextArea();
+    TextField tf = new TextField();
+    TextArea ta = new TextArea();
 
-  public F_TextArea() {
-    ta.getScrollbarVisibility();
-    add("Center", ta);
-    add("South", tf);
+    public F_TextArea() {
+        ta.getScrollbarVisibility();
+        add("Center", ta);
+        add("South", tf);
 
-    tf.addTextListener(this);
-    tf.addKeyListener(this);
+        tf.addTextListener(this);
+        tf.addKeyListener(this);
 
-    addWindowListener(new WindowExit(this));
+        addWindowListener(new WindowExit(this));
 
-    setSize(300, 400);
-    setVisible(true);
-  }
-
-  public static void main(String[] args) {
-    new F_TextArea();
-  }
-
-  @Override
-  public void keyPressed(KeyEvent e) {
-    switch (e.getKeyChar()) {
-    case KeyEvent.VK_BACK_SPACE:
-      tf.setText("");
-      break;
-    case KeyEvent.VK_ENTER:
-      tf.setText("");
-      ta.setText(ta.getText() + "\n");
-      break;
-    default:
-      ta.setText(ta.getText() + e.getKeyChar());
+        setSize(300, 400);
+        setVisible(true);
     }
-  }
 
-  @Override
-  public void keyTyped(KeyEvent e) {
-  }
+    public static void main(String[] args) {
+        new F_TextArea();
+    }
 
-  @Override
-  public void keyReleased(KeyEvent e) {
-  }
+    @Override
+    public void keyPressed(KeyEvent e) {
+        switch (e.getKeyChar()) {
+            case KeyEvent.VK_BACK_SPACE:
+                tf.setText("");
+                break;
+            case KeyEvent.VK_ENTER:
+                tf.setText("");
+                ta.setText(ta.getText() + "\n");
+                break;
+            default:
+                ta.setText(ta.getText() + e.getKeyChar());
+        }
+    }
 
-  @Override
-  public void textValueChanged(TextEvent e) {
-  }
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+    }
+
+    @Override
+    public void textValueChanged(TextEvent e) {
+    }
 }
 
 // 실습과제 : 현재는 키보드를 누르면 바로 업로드 되도록 되어 있습니다.
-//		엔터를 누를 때 한꺼번에 업데이트 되도록 기능을 수정해 봅니다.
+// 엔터를 누를 때 한꺼번에 업데이트 되도록 기능을 수정해 봅니다.

@@ -1,94 +1,94 @@
 package structural.decorator;
 
 /**
- * ÃâÃ³ : https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0_%ED%8C%A8%ED%84%B4
+ * ì¶œì²˜ : https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%BD%94%EB%A0%88%EC%9D%B4%ED%84%B0_%ED%8C%A8%ED%84%B4
  * 
  * @author Seohyun Jung
  *
- *		µ¥ÄÚ·¹ÀÌÆ® ÆÐÅÏ : ÇÁ·Î±×·¥¿¡ ±â´ÉÀÌ °è¼ÓÇØ¼­ Ãß°¡µÈ´Ù°í ÇÏ¸é, Ãß°¡µÇ´Â ±â´ÉÀÌ ¸¹À»¼ö·Ï °èÃþÀÌ ¸¹¾Æ Áú °ÍÀÌ°í,
- *			¾î´À¼ø°£ °ü¸®°¡ ¾î·Á¿öÁö±â ¶§¹®¿¡, °èÃþÀ» ÃÖ¼ÒÈ­ÇÏ±â À§ÇÑ µðÀÚÀÎ ¹æ¹ý
+ *		ë°ì½”ë ˆì´íŠ¸ íŒ¨í„´ : í”„ë¡œê·¸ëž¨ì— ê¸°ëŠ¥ì´ ê³„ì†í•´ì„œ ì¶”ê°€ëœë‹¤ê³  í•˜ë©´, ì¶”ê°€ë˜ëŠ” ê¸°ëŠ¥ì´ ë§Žì„ìˆ˜ë¡ ê³„ì¸µì´ ë§Žì•„ ì§ˆ ê²ƒì´ê³ ,
+ *			ì–´ëŠìˆœê°„ ê´€ë¦¬ê°€ ì–´ë ¤ì›Œì§€ê¸° ë•Œë¬¸ì—, ê³„ì¸µì„ ìµœì†Œí™”í•˜ê¸° ìœ„í•œ ë””ìžì¸ ë°©ë²•
  *
- *		ÄÚµåÇØ¼³)
- *			Window <- À©µµ¿ì
- *				   <- ¼öÁ÷½ºÅ©·Ñ±â´É
- *				   <- ¼öÆò½ºÅ©·Ñ±â´É
+ *		ì½”ë“œí•´ì„¤)
+ *			Window <- ìœˆë„ìš°
+ *				   <- ìˆ˜ì§ìŠ¤í¬ë¡¤ê¸°ëŠ¥
+ *				   <- ìˆ˜í‰ìŠ¤í¬ë¡¤ê¸°ëŠ¥
  */
 
 public class Client {
-	public static void main(String[] args) {
-		Window decoratedWindow = new SimpleWindow();
-		System.out.println(decoratedWindow.getDescription());
+    public static void main(String[] args) {
+        Window decoratedWindow = new SimpleWindow();
+        System.out.println(decoratedWindow.getDescription());
 
-		decoratedWindow = new HScrollBar(new SimpleWindow());
-		System.out.println(decoratedWindow.getDescription());
+        decoratedWindow = new HScrollBar(new SimpleWindow());
+        System.out.println(decoratedWindow.getDescription());
 
-		decoratedWindow = new VScrollBar(new SimpleWindow());
-		System.out.println(decoratedWindow.getDescription());
+        decoratedWindow = new VScrollBar(new SimpleWindow());
+        System.out.println(decoratedWindow.getDescription());
 
-		decoratedWindow = new HScrollBar(new VScrollBar(new SimpleWindow()));
-		System.out.println(decoratedWindow.getDescription());
-	}
+        decoratedWindow = new HScrollBar(new VScrollBar(new SimpleWindow()));
+        System.out.println(decoratedWindow.getDescription());
+    }
 }
 
 interface Window {
-	public void draw();
+    public void draw();
 
-	public String getDescription();
+    public String getDescription();
 }
 
 class SimpleWindow implements Window {
-	public void draw() {
-	}
+    public void draw() {
+    }
 
-	public String getDescription() {
-		return "simple window";
-	}
+    public String getDescription() {
+        return "simple window";
+    }
 }
 
 abstract class WindowDecorator implements Window {
-	protected Window decoratedWindow;
+    protected Window decoratedWindow;
 
-	public WindowDecorator(Window decoratedWindow) {
-		this.decoratedWindow = decoratedWindow;
-	}
+    public WindowDecorator(Window decoratedWindow) {
+        this.decoratedWindow = decoratedWindow;
+    }
 }
 
 class VScrollBar extends WindowDecorator {
-	public VScrollBar(Window decoratedWindow) {
-		super(decoratedWindow);
-	}
+    public VScrollBar(Window decoratedWindow) {
+        super(decoratedWindow);
+    }
 
-	@Override
-	public void draw() {
-		drawVerticalScrollBar();
-		decoratedWindow.draw();
-	}
+    @Override
+    public void draw() {
+        drawVerticalScrollBar();
+        decoratedWindow.draw();
+    }
 
-	@Override
-	public String getDescription() {
-		return decoratedWindow.getDescription() + " + vertical scroll";
-	}
+    @Override
+    public String getDescription() {
+        return decoratedWindow.getDescription() + " + vertical scroll";
+    }
 
-	private void drawVerticalScrollBar() {
-	}
+    private void drawVerticalScrollBar() {
+    }
 }
 
 class HScrollBar extends WindowDecorator {
-	public HScrollBar(Window decoratedWindow) {
-		super(decoratedWindow);
-	}
+    public HScrollBar(Window decoratedWindow) {
+        super(decoratedWindow);
+    }
 
-	@Override
-	public void draw() {
-		drawHorizontalScrollBar();
-		decoratedWindow.draw();
-	}
+    @Override
+    public void draw() {
+        drawHorizontalScrollBar();
+        decoratedWindow.draw();
+    }
 
-	@Override
-	public String getDescription() {
-		return decoratedWindow.getDescription() + " + horizontal scroll";
-	}
+    @Override
+    public String getDescription() {
+        return decoratedWindow.getDescription() + " + horizontal scroll";
+    }
 
-	private void drawHorizontalScrollBar() {
-	}
+    private void drawHorizontalScrollBar() {
+    }
 }

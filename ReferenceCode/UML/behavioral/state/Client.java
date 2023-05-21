@@ -1,17 +1,17 @@
 package behavioral.state;
 /**
- * ÃâÃ³ : https://ko.wikipedia.org/w/index.php?title=%EC%83%81%ED%83%9C_%ED%8C%A8%ED%84%B4
+ * ì¶œì²˜ : https://ko.wikipedia.org/w/index.php?title=%EC%83%81%ED%83%9C_%ED%8C%A8%ED%84%B4
  * 
  * @author Seohyun Jung
  *	
- *		»óÅÂ ÆĞÅÏ : °°Àº ¸í·ÉÀ¸·Î(¿¹Á¦¿¡¼­, writeName) ¼­·Î ´Ù¸¥ ±â´ÉÀ» ±¸ÇöÇØ¾ß ÇÒ ¶§ »ç¿ëÇÏ´Â ÆĞÅÏ
- *			»óÅÂ°¡ Ãß°¡ µÉ ¶§, »óÀ§ °´Ã¼¸¦ ¼öÁ¤ÇÒ ÇÊ¿ä¾øÀÌ, ÀÚ½ÅÀÇ ±â´É°ú Ãß°¡ÇÒ ¼ö ÀÖ´Ù.
- *			Àü·« ÆĞÅÏ°ú Â÷ÀÌ°¡ ÀÖ´Ù¸é, »óÀ§ °´Ã¼¿¡ »óÅÂ¿¡ °üÇÑ ÀÎÅÍÆäÀÌ½º¸¦ ÃÊ±â¿¡ ±¸ÇöÇØµÎ¾î¾ß ÇÑ´Ù´Â °ÍÀÌ´Ù.
+ *		ìƒíƒœ íŒ¨í„´ : ê°™ì€ ëª…ë ¹ìœ¼ë¡œ(ì˜ˆì œì—ì„œ, writeName) ì„œë¡œ ë‹¤ë¥¸ ê¸°ëŠ¥ì„ êµ¬í˜„í•´ì•¼ í•  ë•Œ ì‚¬ìš©í•˜ëŠ” íŒ¨í„´
+ *			ìƒíƒœê°€ ì¶”ê°€ ë  ë•Œ, ìƒìœ„ ê°ì²´ë¥¼ ìˆ˜ì •í•  í•„ìš”ì—†ì´, ìì‹ ì˜ ê¸°ëŠ¥ê³¼ ì¶”ê°€í•  ìˆ˜ ìˆë‹¤.
+ *			ì „ëµ íŒ¨í„´ê³¼ ì°¨ì´ê°€ ìˆë‹¤ë©´, ìƒìœ„ ê°ì²´ì— ìƒíƒœì— ê´€í•œ ì¸í„°í˜ì´ìŠ¤ë¥¼ ì´ˆê¸°ì— êµ¬í˜„í•´ë‘ì–´ì•¼ í•œë‹¤ëŠ” ê²ƒì´ë‹¤.
  *	
- *		¿¹Á¦ ¼³¸í :
- *			StateContext ¡ç myState
- *				State1		  ¡è
- *				State2	¦¡¦¡¦¡¦¡¦¡¦¡¦¥ 
+ *		ì˜ˆì œ ì„¤ëª… :
+ *			StateContext â† myState
+ *				State1		  â†‘
+ *				State2	â”€â”€â”€â”€â”€â”€â”˜ 
  *				State3
  *
  */
@@ -48,7 +48,7 @@ interface StateIf {
 class State1 implements StateIf {
 	@Override
 	public void Action(final StateContext context, final String name) {
-		System.out.println("¼Ò¹®ÀÚ Ãâ·Â : " + name.toLowerCase());
+		System.out.println("ì†Œë¬¸ì ì¶œë ¥ : " + name.toLowerCase());
 		context.setState(new State2());
 	}
 }
@@ -56,7 +56,7 @@ class State1 implements StateIf {
 class State2 implements StateIf {
 	@Override
 	public void Action(final StateContext context, final String name) {
-		System.out.println("´ë¹®ÀÚ Ãâ·Â : " + name.toUpperCase());
+		System.out.println("ëŒ€ë¬¸ì ì¶œë ¥ : " + name.toUpperCase());
 		context.setState(new State3());
 	}
 }
@@ -64,7 +64,7 @@ class State2 implements StateIf {
 class State3 implements StateIf {
 	@Override
 	public void Action(StateContext context, String name) {
-		System.out.println("±×´ë·Î Ãâ·Â : " + name);
+		System.out.println("ê·¸ëŒ€ë¡œ ì¶œë ¥ : " + name);
 		context.setState(new State1());
 	}
 }

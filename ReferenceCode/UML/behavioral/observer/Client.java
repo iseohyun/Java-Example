@@ -8,18 +8,18 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
- * ÃâÃ³ : https://ko.wikipedia.org/wiki/%EC%98%B5%EC%84%9C%EB%B2%84_%ED%8C%A8%ED%84%B4
+ * ì¶œì²˜ : https://ko.wikipedia.org/wiki/%EC%98%B5%EC%84%9C%EB%B2%84_%ED%8C%A8%ED%84%B4
  *
  * @author Seohyun Jung
  *
- *		¿ÉÀú¹ö ÆĞÅÏ : »óÅÂ¸¦ °¨ÁöÇÏ´Â ¾²·¹µå¸¦ µ¿ÀÛ½ÃÅ² ÈÄ¿¡ µ¿ÀÛÀÌ ¹ß»ıÇÏ¸é ÇØ´ç µ¿ÀÛÀ» ¼öÇà		
+ *		ì˜µì €ë²„ íŒ¨í„´ : ìƒíƒœë¥¼ ê°ì§€í•˜ëŠ” ì“°ë ˆë“œë¥¼ ë™ì‘ì‹œí‚¨ í›„ì— ë™ì‘ì´ ë°œìƒí•˜ë©´ í•´ë‹¹ ë™ì‘ì„ ìˆ˜í–‰		
  *
  */
 
 @SuppressWarnings("deprecation")
 public class Client {
 	public static void main(String args[]) {
-		System.out.println("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä >");
+		System.out.println("ë¬¸ìì—´ì„ ì…ë ¥í•˜ì„¸ìš” >");
 		final EventSource evSrc = new EventSource();
 		final ResponseHandler respHandler = new ResponseHandler();
 
@@ -54,7 +54,7 @@ class ResponseHandler implements Observer {
 	public void update(Observable obj, Object arg) {
 		if (arg instanceof String) {
 			resp = (String) arg;
-			System.out.println("ÀÔ·Â¹ŞÀº ¹®ÀÚ¿­ [" + resp.length() + "]±ÛÀÚ - " + resp);
+			System.out.println("ì…ë ¥ë°›ì€ ë¬¸ìì—´ [" + resp.length() + "]ê¸€ì - " + resp);
 		}
 	}
 }

@@ -1,73 +1,74 @@
 package structural.proxy;
 
 /**
- *	ÃâÃ³ : https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9D%EC%8B%9C_%ED%8C%A8%ED%84%B4
+ * ì¶œì²˜ :
+ * https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9D%EC%8B%9C_%ED%8C%A8%ED%84%B4
  * 
  * @author Seohyun Jung
  *
- *		ÇÁ·Ï½Ã ÆĞÅÏ : »ç¿ëÀÚ°¡ Ã¼°¨ÇÏ±â¿¡ ·ÎµùÀÌ ±æ¸é, °°Àº ¼Òºñ½Ã°£ÀÌ °É¸®´õ¶óµµ ´À¸®´Ù°í ÆÇ´Ü ÇÒ ¼ö ÀÖ½À´Ï´Ù.
- *			ÇÁ·Ï½Ã ÆĞÅÏÀº Á÷Á¢Ãâ·ÂÀÇ Áß°£¿¡ Á¸Àç(proxy)ÇÏ¿© ±¸µ¿À» ¿øÈ°ÇÏ°Ô ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ *         í”„ë¡ì‹œ íŒ¨í„´ : ì‚¬ìš©ìê°€ ì²´ê°í•˜ê¸°ì— ë¡œë”©ì´ ê¸¸ë©´, ê°™ì€ ì†Œë¹„ì‹œê°„ì´ ê±¸ë¦¬ë”ë¼ë„ ëŠë¦¬ë‹¤ê³  íŒë‹¨ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+ *         í”„ë¡ì‹œ íŒ¨í„´ì€ ì§ì ‘ì¶œë ¥ì˜ ì¤‘ê°„ì— ì¡´ì¬(proxy)í•˜ì—¬ êµ¬ë™ì„ ì›í™œí•˜ê²Œ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
  *
- *		ÄÚµå ÇØ¼³)
- *			RealImage <- Proxy <- client(main)
+ *         ì½”ë“œ í•´ì„¤)
+ *         RealImage <- Proxy <- client(main)
  */
 
 class Client {
-	public static void main(String[] args) {
-		System.out.println("> ·Îµù Áß...");
-		Image image1 = new ProxyImage("HiRes_10MB_Photo1");
-		Image image2 = new ProxyImage("HiRes_10MB_Photo2");
-		Image image3 = new RealImage("HiRes_10MB_Photo3"); // ¼±¾ğ½Ã ·Îµù
+    public static void main(String[] args) {
+        System.out.println("> ë¡œë”© ì¤‘...");
+        Image image1 = new ProxyImage("HiRes_10MB_Photo1");
+        Image image2 = new ProxyImage("HiRes_10MB_Photo2");
+        Image image3 = new RealImage("HiRes_10MB_Photo3"); // ì„ ì–¸ì‹œ ë¡œë”©
 
-		System.out.println("> ½Ã½ºÅÛ ÁØºñ ¿Ï·á");
-		image1.displayImage(); // ÇÊ¿ä½Ã ·Îµù
-		image2.displayImage(); // ÇÊ¿ä½Ã ·Îµù
-		image3.displayImage();
+        System.out.println("> ì‹œìŠ¤í…œ ì¤€ë¹„ ì™„ë£Œ");
+        image1.displayImage(); // í•„ìš”ì‹œ ë¡œë”©
+        image2.displayImage(); // í•„ìš”ì‹œ ë¡œë”©
+        image3.displayImage();
 
-		System.out.println("> Àç»ç¿ë");
-		image1.displayImage();
-		image2.displayImage();
-		image3.displayImage();
-	}
+        System.out.println("> ì¬ì‚¬ìš©");
+        image1.displayImage();
+        image2.displayImage();
+        image3.displayImage();
+    }
 }
 
 interface Image {
-	public void displayImage();
+    public void displayImage();
 }
 
-//on System A
+// on System A
 class RealImage implements Image {
-	private String filename;
+    private String filename;
 
-	public RealImage(String filename) {
-		this.filename = filename;
-		loadImageFromDisk();
-	}
+    public RealImage(String filename) {
+        this.filename = filename;
+        loadImageFromDisk();
+    }
 
-	private void loadImageFromDisk() {
-		System.out.println("Loading	 " + filename);
-	}
+    private void loadImageFromDisk() {
+        System.out.println("Loading	 " + filename);
+    }
 
-	@Override
-	public void displayImage() {
-		System.out.println("Displaying " + filename);
-	}
+    @Override
+    public void displayImage() {
+        System.out.println("Displaying " + filename);
+    }
 }
 
-//on System B
+// on System B
 class ProxyImage implements Image {
-	private String filename;
-	private Image image;
+    private String filename;
+    private Image image;
 
-	public ProxyImage(String filename) {
-		this.filename = filename;
-	}
+    public ProxyImage(String filename) {
+        this.filename = filename;
+    }
 
-	@Override
-	public void displayImage() {
-		if (image == null)
-			image = new RealImage(filename);
+    @Override
+    public void displayImage() {
+        if (image == null)
+            image = new RealImage(filename);
 
-		image.displayImage();
-	}
+        image.displayImage();
+    }
 }
